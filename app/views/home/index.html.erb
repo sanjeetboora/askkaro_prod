@@ -93,9 +93,9 @@ cursor: default; }
           </div>
 
           <% if @trend.follow_string(current_user.id,@trend.id)== true%>
-              <%= link_to(('<span class="">Unfollow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
+              <%= link_to(('<span class="">Unfollow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow1_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
           <%else%>
-              <%= link_to(('<span class="">follow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
+              <%= link_to(('<span class="">follow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow1_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
           <%end%>
 
       <%end%>
