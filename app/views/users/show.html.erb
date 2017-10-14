@@ -19,7 +19,7 @@
     }
     .card1 .rowone{
       padding: 20px;
-background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+      background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
 
     }
     .card1 .rowone .first,    .card1 .rowone .second{
@@ -169,19 +169,19 @@ background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, 
           <!-- <div class="col l3 s12"><img src="http://images.contactmusic.com/newsimages/david_beckham_1133321.jpg" alt=""></div> -->
           <div class="col l8 s12 desc">    <h3><%= @user.name %></h3>
            <!--  <span class="spanfollow">Follow</span> -->
-            <p><%= @user.bio %></p>
-          </div>
+           <p><%= @user.bio %></p>
+         </div>
 
-        </div>
-        <div class="col l6 s12 second">
-          <div class="row rowtwo">
-            <div class="col l4 s4 one">
-                <h1><%= @user.followees(User).count %></h1>
-              <span>Following</span>
-            </div>
-            <div class="col l4 s4 two">
+       </div>
+       <div class="col l6 s12 second">
+        <div class="row rowtwo">
+          <div class="col l4 s4 one">
+            <h1><%= @user.followees(User).count %></h1>
+            <span>Following</span>
+          </div>
+          <div class="col l4 s4 two">
             <h1><%= @user.followers(User).count %></h1>
-              <span>Followers</span></div>
+            <span>Followers</span></div>
             <div class="col l3 s4 three"><h1><%= @user.questions.count %></h1>
               <span>Questions</span>
             </div>
@@ -205,67 +205,133 @@ background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, 
       <div id="ques-swipe-1" class="col s12 ">
 
         <%@question.each do |q|%>
-            <!-- <div class="row s12"> -->
-            <div class="col s12 m12 l6 ">
-              <div class="card z-depth-4 hoverable" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
-                <div class="card-content white-text">
-                  <span class="card-title truncate"><%=q.title%></span>
-                  <p class="truncate"><%=q.content%></p>
-                </div>
-                <div class="card-action" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
-                  <%= link_to 'Show', q ,params[id: q.id]%>
-                  <div class="right">
-                    <%if can? :update,q%>
-                        <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_question_path(q) %>
-                    <%end%>
-                    <%if can? :destroy,q%>
-                        <%= link_to ('<i class="material-icons right">delete</i>').html_safe, q, method: :delete, data: {confirm: "Are you sure?"}%>
-                    <%end%>
-                  </div>
-                </div>
+        <!-- <div class="row s12"> -->
+        <div class="col s12 m12 l6 ">
+          <div class="card z-depth-4 hoverable" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
+            <div class="card-content white-text">
+              <span class="card-title truncate"><%=q.title%></span>
+              <p class="truncate"><%=q.content%></p>
+            </div>
+            <div class="card-action" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
+              <%= link_to 'Show', q ,params[id: q.id]%>
+              <div class="right">
+                <%if can? :update,q%>
+                <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_question_path(q) %>
+                <%end%>
+                <%if can? :destroy,q%>
+                <%= link_to ('<i class="material-icons right">delete</i>').html_safe, q, method: :delete, data: {confirm: "Are you sure?"}%>
+                <%end%>
               </div>
             </div>
-            <!-- </div> -->
+          </div>
+        </div>
+        <!-- </div> -->
 
         <%end%>
       </div>
     </div>
     <div id="ans-swipe-2" class="col s12">
       <%@answer.each do |a|%>
-          <!-- <div class="row s12"> -->
-          <div class="col s12 m12 l6">
-            <div class="card z-depth-4 hoverable" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
-              <div class="card-content white-text">
-                <span class="card-title truncate"><%=a.question.title%></span>
-                 
-                <p class="truncate"><%= raw a.content.truncate(100) %></p>
-              </div>
-              <div class="card-action" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
-                <%= link_to 'Show', a ,params[id: a.id]%>
-                <div class="right">
-                  <%if can? :update,a%>
-                      <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_answer_path(a) %>
-                  <%end%>
-                  <%if can? :destroy,a%>
-                      <%= link_to ('<i class="material-icons right">delete</i>').html_safe, a, method: :delete, data: {confirm: "Are you sure?"}%>
-                  <%end%>
-                </div>
-              </div>
+      <!-- <div class="row s12"> -->
+      <div class="col s12 m12 l6">
+        <div class="card z-depth-4 hoverable" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
+          <div class="card-content white-text">
+            <span class="card-title truncate"><%=a.question.title%></span>
+
+            <p class="truncate"><%= raw a.content.truncate(100) %></p>
+          </div>
+          <div class="card-action" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
+            <%= link_to 'Show', a ,params[id: a.id]%>
+            <div class="right">
+              <%if can? :update,a%>
+              <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_answer_path(a) %>
+              <%end%>
+              <%if can? :destroy,a%>
+              <%= link_to ('<i class="material-icons right">delete</i>').html_safe, a, method: :delete, data: {confirm: "Are you sure?"}%>
+              <%end%>
             </div>
           </div>
-          <!-- </div> -->
+        </div>
+      </div>
+      <!-- </div> -->
 
       <%end%>
 
     </div>
-    <div id="follow-swipe-3" class="col s12 green">
-       <%@user.followers(User).each do |f|%>
-         <%= f.name%>
-       <%end%>
+    <div id="follow-swipe-3" class="col s12 white">
+    <style type="text/css">
+    #follow-swipe-3{
+padding: 0px;
+border: 1px solid #d1d1d1;
+border-radius: 6px;
+    }
+      .user-list-wrapper {
+ 
+  max-width: 100%;
+  margin:  0;
+}
+
+.user-list-wrapper .list {
+ background: #fff;
+border-radius: 2px;
+list-style: none;
+padding: 0px 20px;
+}
+
+.user-list-wrapper .list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.user-list-wrapper .list-item:last-child {
+  border-bottom: none;
+}
+.user-list-wrapper .list-item-image {
+  border-radius: 50%;
+  width: 64px;
+}
+.user-list-wrapper .list-item-content {
+  margin-left: 20px;
+}
+.user-list-wrapper .list-item-content h4, .user-list-wrapper .list-item-content p {
+  margin: 0;
+}
+.user-list-wrapper .list-item-content h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.user-list-wrapper .list-item-content p {
+  margin-top: 5px;
+  color: #aaa;
+}
+
+
+    </style>
+      <div class="user-list-wrapper">
+      <ul class="list">
+     <%@user.followers(User).each do |f|%>
+   
+        <li class="list-item">
+          <div>
+          <%= avatar_for(@user,size: 23) %>
+          </div>
+          <div class="list-item-content">
+            <h4><%= f.name%></h4>
+            <p><%= f.email%></p>
+          </div>
+        </li>   
+         <%end%>
+          </ul>
     </div>
-    <div id="profile-swipe-4" class="col s12">
-      <%= render :partial => 'users/edit'%>
-    </div>
+
   </div>
+  <div id="profile-swipe-4" class="col s12">
+    <%= render :partial => 'users/edit'%>
+  </div>
+</div>
 </div>
 </div>
