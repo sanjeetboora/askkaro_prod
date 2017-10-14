@@ -127,10 +127,10 @@
       <div class="card-title row" style="padding-bottom: 0px;">
         <div class="fakeimage left" style="margin-left: 10px;">
 
-          <div class="picture"><%=avatar_for(current_user,size: 25)%></div>
+          <div class="picture"><%=avatar_for(answer.user,size: 40)%></div>
         </div>
         <div class="left details">
-          <h5 id="head"><%= answer.user.name %></h5>
+          <h5 id="head"><%= link_to answer.user.name,user_path(answer.user.id) %></h5>
           <p id="head" style="font-weight: 700"><%= time_ago_in_words(answer.created_at) unless answer.created_at.blank? %> ago</p>
           <br>
         </div>

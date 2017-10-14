@@ -1,7 +1,7 @@
 <figure class="snip1515 hoverable">
-  <div class="profile-image"><%=avatar_for(current_user,size: 70)%></div>
+  <div class="profile-image"><%=avatar_for(user,size: 70)%></div>
   <figcaption>
-    <h3><%=user.name %></h3>
+    <h3><%= link_to user.name,user_path(user.id) %></h3>
     <h4>Public Relations</h4>
     <p>The only skills I have the patience to learn are those that have no real application in life. </p>
     <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
