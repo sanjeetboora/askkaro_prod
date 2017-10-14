@@ -151,7 +151,7 @@
         </ul>
       </li>
       <%if user_signed_in?%>
-      <li><a href="#"><%=avatar_for(current_user,size: 25)%></a>
+      <li><a href="#"><%=avatar_for(current_user,size: 40)%></a>
         <ul class="nav-dropdown">
           <li>
             <a href="/users/<%= current_user.id %>">My Profile</a>
@@ -194,7 +194,7 @@
           <img src="images/office.jpg">
         </div> -->
         <%if user_signed_in?%>
-        <a class="left" href="#!user"><%=avatar_for(current_user,size: 20)%></a>
+        <a class="left" href="#!user"><%=avatar_for(current_user,size: 40)%></a>
         <a href="#!name"><span class="white-text name"><%= link_to current_user.name , user_path(current_user.id)%></span></a>
         <a href="#!email"><span class="white-text email"><%= link_to current_user.email , user_path(current_user.id)%></span></a>
         <% end %>
@@ -256,7 +256,7 @@
     <!--  <nav id="small-device-nav"class> -->
     <ul class="nav-list right">
      <%if user_signed_in?%>
-     <li class="right"><a href="#"><%=avatar_for(current_user,size: 25)%></a>
+     <li class="right"><a href="#"><%=avatar_for(current_user,size: 40)%></a>
       <ul class="nav-dropdown">
         <li>
           <a href="#!">Web Design</a>
@@ -336,7 +336,7 @@
          <% User.all.each do |user|%> 
          <%if user != current_user%>
          <div class="userfollow">
-         <figure><a href="#"><%=avatar_for(current_user,size: 25)%></a></figure>
+         <figure><a href="#"><%=avatar_for(user,size: 40)%></a></figure>
          
           <div class="usertext">
             <h5 class="" style="font-size: 1.2em; top: 2px;font-family: 'Fresca', sans-serif;"><%= link_to user.name,user_path(user.id) %></h5>
