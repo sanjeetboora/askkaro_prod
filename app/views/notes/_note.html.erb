@@ -1,0 +1,125 @@
+<style type="text/css">
+
+
+
+
+
+  .carall.wrapper {
+    font-family:sans;
+    margin: 0px;
+    margin-top: 20px;
+  }
+
+  /* Note styles */
+  .carall.wrapper .note-wrap {
+    width: 235px;
+    min-height: 235px;
+    padding: 8px;
+    padding-top: 15px;
+    margin: 0 22px 44px 22px;
+    position: relative;
+    font-size: 24px;
+    vertical-align: top;
+    display: inline-block;
+    font-family: Englebert, Arial;
+    color: #4b453c;
+    background: #F7E999;
+    line-height: 34px;
+    text-align: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+
+  }
+  .carall.wrapper .note-wrap:before {
+    display: block;
+    content: "";
+    background: rgba(227, 200, 114, 0.4);
+    width: 130px;
+    height: 28px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 6px/18px 0;
+    position: absolute;
+    top: -13px;
+    left: 50px;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  .carall.wrapper .note-blue {
+    background: #b9dcf4;
+
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  .carall.wrapper .note-yellow {
+   background: #F7E999;
+   -webkit-transform: rotate(-2deg);
+   -moz-transform: rotate(-2deg);
+   -o-transform: rotate(-2deg);
+   -ms-transform: rotate(-2deg);
+   transform: rotate(-2deg);
+ }
+ .carall.wrapper .note-yellow .fixed-action-btn{
+  right: 2px;
+  bottom: 2px;
+
+}
+aside.note-wrap.note-yellow div.fixed-action-btn.horizontal ul li a i.material-icons.btn-floating{
+  font-size: 25px;
+}
+div.carall.wrapper aside.note-wrap.note-yellow h5{
+font-size: 17px;
+font-weight: 800;
+font-family: Fresca,sans-serif;
+margin: 0px;
+margin-top: 10px;
+}
+div.carall.wrapper aside.note-wrap.note-yellow p#notetitle{
+text-transform: uppercase;
+margin: 0px;
+font-weight: bold;
+font-family: 'Lato, sans-serif';
+}
+div.carall.wrapper aside.note-wrap.note-yellow p#notecontent{
+
+margin: 0px;
+margin-top: 4px; 
+overflow-y: scroll;
+height: 160px;
+}
+</style>
+<div class="col s12 m6">
+
+ <div class="carall wrapper">
+
+  <aside class="note-wrap note-yellow">
+   <h5><%= time_ago_in_words(note.created_at) unless note.created_at.blank? %> ago</h5>
+   <p id="notetitle"><%= note.title %></p>
+   <p id="notecontent"><%= note.content %></p>
+   <br>
+   <div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large waves-effect waves-light red z-depth-4">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a href="#modaladdnote" class="btn-floating green"><i class="material-icons">mode_edit</i></a></li>
+
+      <li><%= link_to ('<i class="material-icons btn-floating blue tooltipped" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, note, method: :delete, data: {confirm: "Are you sure?"}%></li>
+     <li><%= link_to ('<i class=" material-icons btn-floating yellow darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Edit">create</i>').html_safe, edit_note_path(note)%></li>
+        
+      </ul>
+    </div>
+  </aside>
+</div>
+
+
+</div>
+
+
+

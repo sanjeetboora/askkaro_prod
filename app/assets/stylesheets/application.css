@@ -1,0 +1,445 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@charset "UTF-8";
+ body{
+  background-color: #E6ECF0;
+}
+
+
+.navigation {
+  height: 70px;
+  background: #FAFAFB;
+  box-shadow: 0 1px 20px 0 rgba(46,61,73,.2);
+  z-index: 8000;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #6D6E72;
+  text-decoration: none;
+}
+
+.brand a .image-logo1{
+  background: url("re3logo1.jpg") no-repeat 9px 0px;
+    display: inline-block;
+  height: 70px;
+  margin-left: 0;
+  margin-top: 6px;
+  width: 70px;
+  
+}
+.brand a .image-name1{
+  background: url("askname21.jpg") no-repeat 9px 0px;
+display: inline-block;
+height: 55px;
+margin-left: 0px;
+margin-top: 6px;
+width: 170px;
+  
+}
+.nav-container {
+  max-width: 90%;
+  margin: 0 auto;
+
+}
+
+nav#mininav {
+  float: right;
+  width: 48%;
+  background: #FAFAFB; 
+  box-shadow: none;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #FAFAFB;
+  color: #6D6E72;
+  text-decoration: none;
+  height: 70px;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #d1d1d1;
+  color: #ffffff;
+  border-bottom: 2px solid #F48024;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+nav#small-device-nav {
+  float: right;
+  width: 48%;
+  background: #FAFAFB; 
+  box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html body div#mithu.container div.col.s12.m12.l4.left.taguser{
+height: 595px;
+  width: 22%;
+  margin-top: 53px;
+  padding-left: 15px;
+  margin-left: -35px;
+  margin-right: 35px;
+}
+.card.small.userf {
+  height: 595px;
+  width: 297px;
+  margin-top: 43px;
+  padding-left: 15px;
+  margin-left: -35px;
+  margin-right: 35px;
+}
+
+.card.small.userf:hover {
+
+  box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+
+}
+#user_cloud {
+  padding: 2px;
+  padding-left: -13px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+#user_cloud  div.userfollow{
+padding: 5px 0px;
+  border-bottom: 1px solid #e6ecf0;
+
+}
+
+  #user_cloud div.userfollow figure {
+      width: 40px;
+      height: 40px;
+        margin: 0 16px 0 0;
+      padding: 0;
+      border-radius: 50%;
+      float: left;
+    }
+   /* #user_cloud div.userfollow  div.usertext{
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }*/
+     #user_cloud div.userfollow  div.usertext h5{
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 1;
+      padding: 0;
+      margin: 4px;
+      margin-left: 62px;
+    }
+    
+#user_cloud .chip{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  display: inline-block;
+height: 26px;
+font-size: 13px;
+font-weight: 500;
+color: rgba(0,0,0,0.6);
+line-height: 25px;
+padding: 0 15px;
+border-radius: 16px;
+background-color: #ffffff;
+margin-bottom: 5px;
+margin-right: 5px;
+margin-left: 12px;
+  border: 1px solid #039BE5;
+}
+#user_cloud .chip:hover{
+ background-color: #039BE5;
+ color: #ffffff;
+ z-index: 8000;
+ /*  background-color: #e0f7fa ;*/
+
+}
+
+#user_cloud .chip a:hover{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+
+  color:#ffffff;
+}
+
+
+
+
+.card.small.tag {
+  height: 595px;
+  width: 297px;
+  margin-top: 43px;
+  padding-left: 15px;
+  margin-left: -35px;
+  margin-right: 35px;
+}
+
+.card.small.tag:hover {
+
+  box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+
+}
+
+#tag_cloud {
+  padding: 2px;
+  padding-left: 5px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+
+
+}
+
+#tag_cloud .chip{
+  font-family: 'Capriola, sans-serif';font-size: 12px;
+  /*font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;*/
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 28px;
+  border: 1px solid #00b8d4;
+  background-color: white;
+  height: 28px;
+  color: #00b8d4 ;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 32px;
+}
+#tag_cloud .chip:hover{
+ background-color: #00b8d4;
+ color: #ffffff;
+ z-index: 8000;
+ /*  background-color: #e0f7fa ;*/
+
+}
+#tag_cloud .chip a{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#00b8d4;
+}
+#tag_cloud .chip a:hover{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#ffffff;
+}
+
+/*#tag_cloud .chip a:hover{
+  color:white;
+  }*/
+  #tag_cloud .chip a.sml{
+    font-size: 0.8em;
+
+  }
+  #tag_cloud .chip a.med{
+
+    font-size: 1em;
+
+  }
+  #tag_cloud .chip a.lar{
+
+   font-size: 1.4em;
+ }
+ #tag_cloud .chip a .material-icons{
+  font-size: 16px;
+}
+.car1.small.note {
+  
+  height: 300px;
+  width: 18%;
+  margin-top: 43px;
+}
+
+
+
+
+.car1.small.note .wrapper {
+  font-family:sans;
+  margin: auto 0 auto;
+}
+
+/* Note styles */
+.car1.small.note .note-wrap {
+  font-size: 24px;
+font-family: Englebert, Arial;
+color: #777471;
+line-height: 28px;
+text-align: center;
+  width: 235px;
+  min-height: 235px;
+  padding: 11px;
+  margin: 0 22px 44px 22px;
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  background: #F7E999;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  height: 425px;
+}
+.car1.small.note .note-wrap:before {
+  display: block;
+  content: "";
+  background: rgba(227, 200, 114, 0.4);
+  width: 130px;
+  height: 28px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 6px/18px 0;
+  position: absolute;
+  top: -13px;
+  left: 50px;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.car1.small.note .note-yellow {
+  background: #F7E999;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+.car1.small.note .note-blue {
+  background: #b9dcf4;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+aside.note-wrap.note-yellow div p#note1{
+text-transform: uppercase;
+margin: 0px;
+margin-top: 10px;
+font-weight: bold;
+font-family: 'Lato, sans-serif';
+}
+aside.note-wrap.note-yellow div p#note1cont{
+
+margin: 0px;
+margin-top: 4px;    
+}
+
+
+.card-image{
+ background: url("trending.jpg") no-repeat -39px -59px;
+ height: 250px;
+ margin-left: -15px;
+}
+
+
+.image-inside{
+ background: url("trendinginside.png") no-repeat 9px 0px;
+ height: 142px;
+ margin-left: 56px;
+ margin-top: 30px;
+ width: 150px;
+
+}
+
+
+.modal{
+  z-index: 8000;
+}
+
+div.card.small.tag div.card-action.center a.waves-effect.waves-light.cyan.btn.modal-trigger{
+
+border-radius: 4%;
+height: 30px;
+line-height: 30px;
+padding: 0 0.5rem;
+}
+
+div.card.small.userf div.card-action.center a.waves-effect.waves-light.cyan.btn.modal-trigger{
+border-radius: 4%;
+height: 30px;
+line-height: 30px;
+padding: 0 0.5rem;
+}
+
+  /*.card.small.note:hover {
+  box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+  }*/
+
+/*.input-field input[type="search"]{
+  background-color: white;
+}
+nav .input-field label i {
+  color: rgba(53, 38, 38, 0.7);
+  transition: color .3s;
+}
+nav ul#nav-mobile.right li{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+*/

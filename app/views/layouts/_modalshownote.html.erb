@@ -1,0 +1,8 @@
+ <%if Note.where(:user_id => current_user.id).length>0%>
+
+        <p class="truncate">  <%= Note.where(:user_id => current_user.id).last.content %></p><%end%>
+        <br>
+        <hr><%if Note.where(:user_id => current_user.id).length>=2%>
+        <br>
+        <p class="truncate"><%= Note.where(:user_id => current_user.id)[-2].content %><%end%>
+        </p>

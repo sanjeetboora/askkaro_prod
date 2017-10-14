@@ -1,0 +1,220 @@
+
+<head>
+  <!--Import Google Icon Font-->
+  <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <!-- <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'> -->
+  <!--Import materialize.css-->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"> -->
+
+  <!--Let browser know website is optimized for mobile-->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+
+  <style type="text/css">
+
+    /* Imports */
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+
+
+    .card{
+      transition-duration: 0.3s;
+      transition-property: box-shadow;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      transform: translateZ(3);
+      /*box-shadow: 0 0 1px rgba(0, 0, 0, 0);*/
+    }
+
+    div.card:hover {
+
+      box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+
+
+    }
+    .card-title{
+      /*min-height: 11rem;*/
+      /*line-height: 1.5rem;*/
+      padding:1rem;
+      border-bottom: 0px;
+      font-size: 19px;
+      font-weight: 300;
+    }
+
+
+    .card-title .fakeimage {
+      width: 50px;
+      height: 50px;
+      /*margin: 0px 20px 0px 10px;*/
+      float: left;
+      border-radius: 100%;
+      /*background: #aaa;*/
+    }
+    .card-title h2,  .card-title .wrap > p {
+      margin-bottom: 10px;
+      font-family: Lato, sans-serif;
+      font-size: 1.2em;
+      color: #222;
+    }
+    .card-title p {
+      color: #696a6e;
+      margin-right: 10px;
+      margin-left: 10px;
+      font-family: Lato, sans-serif;
+      font-size: 0.9em;
+      color: #aaa;
+      float: left;
+    }
+    .card-title h5#head{
+      color: #696a6e;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 110%;
+      margin: 0 0 0 0;
+      /*line-height: 3rem;*/
+    }
+    .card-title p#head{
+      color: #696a6e;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      /*line-height: 3rem;*/
+    }
+    .card-title p i {
+      color: #696a6e;
+      margin-right: 0;
+      margin-left: 0;
+      font-family: Lato, sans-serif;
+      font-size: 0.7em;
+      float: left;
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+
+    }
+    html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div.row div.col.s12.m12.l12 div.answer div.userDetail div.card div.card-content.grey-text.text-darken-3{
+      padding: 24px;
+      padding-top: 0px;
+      padding-bottom: 24px;
+      border-radius: 0 0 2px 2px;
+      padding-bottom: 2px;
+      padding-top: 0px;
+    }
+    html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div.row div.col.s12.m12.l12 div.answer div.userDetail div.card div.card-title.row{
+      margin-bottom:0px;
+    }
+    html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div.row div.col.s12.m12.l12 div.answer div.userDetail div.card div.card-title.row div.left.details{
+      margin-left: 10px;
+
+    }
+    html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div.row div.col.s12.m12.l12 div.answer div.userDetail div.card div.card-content.grey-text.text-darken-3 div.row a i.material-icons.right{
+      color:#949599;
+    }
+    html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div.row div.col.s12.m12.l12 div.answer div.userDetail div.card div.card-content.grey-text.text-darken-3 div.row a i.material-icons.right:hover{
+      color:#0091ea;
+    }
+    html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div#modal1.modal.modal-fixed-footer.open div.modal-footer{
+      height: 122px;
+    }
+.modal .modal-footer .btn-flat{
+      background-color: #81d4fa;
+    }
+  </style>
+
+</head>
+
+<div class="answer">
+  <div class="userDetail">
+    <div class="card hoverable">
+      <!--  answer.created_at.strftime("%B %d, %Y")-->
+      <div class="card-title row" style="padding-bottom: 0px;">
+        <div class="fakeimage left" style="margin-left: 10px;">
+
+          <div class="picture"><%=avatar_for(current_user,size: 25)%></div>
+        </div>
+        <div class="left details">
+          <h5 id="head"><%= @answer.user.name %></h5>
+          <p id="head" style="font-weight: 700"><%= time_ago_in_words(@answer.created_at) unless @answer.created_at.blank? %> ago</p>
+          <br>
+        </div>
+
+      </div>
+      <div class="card-content grey-text text-darken-3" style="padding-top: 0px; padding-bottom: 5px;">
+        <p style="font-family: Lato"><%= raw @answer.content %></p>
+        <br>
+        <div class="row" style="padding-bottom: 0px;">
+          <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Comment">forum</i>').html_safe, @answer ,params[id: @answer.id]%></button>
+
+          <%if can? :update,@answer%>
+              <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Edit Answer">create</i>').html_safe, @answer %>
+
+          <% end %>
+          <%if can? :destroy,@answer%>
+
+              <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, @answer, method: :delete, data: {confirm: "Are you sure?"}%>
+
+          <% end %>
+
+          <a class="waves-effect waves-light grey btn tooltipped modal-trigger" data-position="bottom" data-delay="50" data-tooltip="Comment" href="#modal1">Comment</a>
+          <% if @answer.like_string(current_user.id,@answer.id)== true%>
+              <%= link_to ('<i class="material-icons right" >favorite</i>').html_safe, answer_like_path(@answer), remote:true,method: :post ,id: "like_#{@answer.id}" %>
+          <%else%>
+              <%= link_to ('<i class="material-icons right" >favorite_border</i>').html_safe, answer_like_path(@answer), remote:true,method: :post ,id: "like_#{@answer.id}" %>
+          <%end%>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer">
+  <div class="modal-content">
+    <div id="comments">
+      <% @commentfeed.each do |comment| %>
+          <%= render 'comment' , comment: comment %>
+      <% end %>
+
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <div class="createComment">
+      <%= form_for @comment, :url => comments_path(answer_id:@answer.id), remote: true do |task|%>
+          <%= task.label :comment %><br>
+          <%= task.text_area :content %><br>
+          <div class="actions">
+            <%= task.submit id: 'create_comment_submit', class:"modal-action modal-close waves-effect waves-green btn-flat"%>
+          </div>
+      <% end %>
+      <% if @comment.errors.any? %>
+          <% @comment.errors.full_messages.each do |message| %>
+              <%= message %>
+          <% end %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> -->
+<!-- <script type="text/javascript">
+$(document).ready(function(){
+  $('.collapsible').collapsible({
+      accordion : true
+  });
+});
+</script> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('#modal1').modal();
+        $('#modal1').modal('open');
+        $('.trigger-modal').modal();
+        $('#modal1').modal('close');
+        $('.tooltipped').tooltip({delay: 50});
+    });
+</script>

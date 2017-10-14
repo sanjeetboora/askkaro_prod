@@ -1,0 +1,13 @@
+
+<% if @is_followed %>
+$('#follow_<%= @question.id%>').html("UnFollow");
+
+noty({text: 'Question was Followed', type: 'success', timeout: 3500, progressBar: true});
+
+<% else %>
+
+$('#follow_<%= @question.id%>').html("Follow");
+
+noty({text: 'Question was UnFollowed', type: 'success', timeout: 3500, progressBar: true});
+
+<% end %>

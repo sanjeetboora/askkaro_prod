@@ -1,0 +1,228 @@
+<head>
+  <style type="text/css">
+
+
+    div.card.ques {
+      font-family: 'Roboto', sans-serif;
+      display: block;
+      width: 90%;
+      height:auto;
+      margin: 20px auto 40px;
+      background-color: #ffffff;
+      border-radius: 2px;
+      overflow-y: hidden;
+      overflow-wrap: normal;
+      overflow-x: hidden;
+      /*display: inline-block;*/
+      transition-duration: 0.3s;
+      transition-property: box-shadow;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      transform: translateZ(3);
+      /*box-shadow: 0 0 1px rgba(0, 0, 0, 0);*/
+    }
+
+    div.card.ques:hover {
+
+      box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+
+    }
+    div.card.ques div.card-title{
+      padding: 16px;
+    }
+
+    div.card.ques div.card-title figure {
+      width: 40px;
+      height: 40px;
+   /*   background-color: #dddddd;
+      background-image: url(http://www.msudenver.edu/media/sampleassets/profile-placeholder.png);*/
+     /* background-size: cover;*/
+      margin: 0 16px 0 0;
+      padding: 0;
+      border-radius: 50%;
+      float: left;
+    }
+    div.card.ques div.card-title div.text h1{
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 1;
+      padding: 0;
+      margin: 8px;
+    }
+    div.card.ques div.card-title div.text h2{
+      color: #757575;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    div.card.ques div.card-title div.text.small h1{
+      margin-top: 1px;
+      margin-left: 1px;
+      font-size: 20px;
+    }
+
+    div.card.ques div.supporting_text {
+      /*padding: 16px;*/
+    }
+
+    div.card.ques div.supporting_text h3{
+      padding-left: 16px;
+      font-size: 17px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    div.card.ques div.supporting_text p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 2px 5px 4px 13px;
+    }
+    div.card.ques div.row{
+      padding: 1px;
+      height: auto;
+      margin-bottom: 0px;
+    }
+
+    div.card.ques div.card-action {
+      position: relative;
+      background-color: inherit;
+      border-top: 1px solid rgba(160,160,160,0.2);
+      padding: 4px 24px;
+    }
+    div.card.ques div.card-action div.right {
+      float: right;
+    }
+    div.card.ques div.card-action a {
+      color: #757575;
+      /*height: 36px;*/
+      margin: 0;
+      margin-right: 0px;
+      padding: 0px;
+      background-color: #ffffff;
+      border: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      border-radius: 2px;
+    }
+
+    div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a i.material-icons{
+      color:#949599;
+      border-radius: 50%; 
+    }
+    div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a i.material-icons:hover{
+      color:#0091ea;
+    }
+    div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a{
+      color:#949599;
+      border-radius: 50%; 
+    }
+    div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a:hover{
+      color:#0091ea;
+    }
+div.question div.userDetail div.card.ques.hoverable div.supporting_text.text.small div.row div.card-action a i.btn , 
+ div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a.btn{
+  color: #fff;
+  background-color: #949599;
+  border: none;
+border-radius: 20px;
+display: inline-block;
+height: 30px;
+line-height: 30px;
+padding: 0 1rem;
+text-transform: uppercase;
+vertical-align: middle;
+}
+div.question div.userDetail div.card.ques.hoverable div.supporting_text.text.small div.row div.card-action a i.btn:hover,
+     div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a.btn:hover{
+      color: #fff;
+      background-color:#00b8d4 ;
+      z-index: 8000;
+     
+    }
+
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
+      margin-right: 0px;
+    }
+    [elevation='1'] {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    [elevation='2'] {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    [elevation='3'] {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    [elevation='4'] {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    [elevation='5'] {
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    }
+  </style>
+</head>
+<div class="question">
+  <div class="userDetail">
+    <!-- <div class="col s12 m6 l6"> -->
+    <div class="card ques hoverable" elevation="2">
+      <div class="card-title">
+        <figure elevation="1">
+          <%=avatar_for(question.user,size: 20)%>
+        </figure>
+        <div class="text small">
+          <h1 style="font-family: 'Fresca', sans-serif;"><%= question.user.name %></h1>
+          <h2><%= time_ago_in_words(question.created_at) unless question.created_at.blank? %> ago</h2>
+        </div>
+
+      </div>
+      <div class="supporting_text text small">
+        <h3 style=" font-family: 'Cantarell, sans-serif';font-size: 22px;font-weight: bold;" class="truncate" ><%= link_to question.title ,question%></h3>
+
+ <% if question.answers.first != nil %>
+        <% ans = question.answers.first %>
+        <p style="font-family: 'Josefin Slab', serif;" ><%= raw ans.content.truncate(500) %></p>
+
+<% end %>
+      
+        <p style=" font-family: 'Capriola, sans-serif';font-size: 14px;">Tags:  <%= raw question.tag_list.map { |t| link_to t , tag_path(t) }.join(', ') %></p>
+
+
+
+
+        <div class="row">
+          <div class="card-action">
+            <%= link_to ('<i class="btn">Answer</i>').html_safe, question ,params[id: question.id] %>
+            <% if question.follow_string(current_user.id,question.id)== true%>
+                <%= link_to(('<span class="">Unfollow</span>').html_safe, question_follow_path(question), remote:true,method: :post,id: "follow_#{question.id}",:class =>"waves-effect waves-light btn") %>
+            <%else%>
+                <%= link_to(('<span class="">follow</span>').html_safe, question_follow_path(question), remote:true,method: :post,id: "follow_#{question.id}",:class =>"waves-effect waves-light btn") %>
+            <%end%>
+            <div class="right">
+              <% if question.like_string(current_user.id,question.id)== true%>
+                  <%= link_to ('<i class="material-icons right">favorite_border</i>').html_safe, question_like_path(question), remote:true,method: :post ,id: "like_#{question.id}" %>
+              <%else%>
+                  <%= link_to ('<i class="material-icons right tooltipped" data-position="bottom" data-delay="50" data-tooltip="Like">favorite_border</i>').html_safe, question_like_path(question), remote:true,method: :post ,id: "like_#{question.id}" %>
+              <%end%>
+
+              <%if can? :update,question%>
+                  <%= link_to ('<i class="material-icons right tooltipped" data-position="bottom" data-delay="50" data-tooltip="Edit">create</i>').html_safe, edit_question_path(question)%>
+              <%end%>
+              <%if can? :destroy,question%>
+                  <%= link_to ('<i class="material-icons right tooltipped" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, question, method: :delete, data: {confirm: "Are you sure?"}%>
+              <%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('.tooltipped').tooltip({delay: 50});
+</script>

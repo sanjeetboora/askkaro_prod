@@ -1,0 +1,11 @@
+
+Welcome to InquisitiveQuencher
+
+Hi! <%= @question.user.email%>
+
+A new answer was posted for your <%= @question.title %> :
+<%= @answer.content %>
+
+
+To see this answer , please visit the question page :
+<%= question_url(@question) %>

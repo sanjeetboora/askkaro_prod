@@ -1,0 +1,16 @@
+<div class="comment">
+  <div class="userDetail">
+  <%=avatar_for(current_user,size: 20)%>
+    <%= comment.user.name %>
+    <br>
+    <%= comment.content %>
+    <br>
+     <%if can? :update,comment%>
+    <%= link_to 'Edit', comment %>
+    <% end %>.
+    <%if can? :destroy,comment%>
+    <%= link_to "Delete", comment, method: :delete, data: {confirm: "Are you sure?"}%>
+    <% end %>
+
+  </div>
+</div>

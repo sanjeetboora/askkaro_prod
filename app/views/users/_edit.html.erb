@@ -1,0 +1,36 @@
+<%= form_for(@user,html:{multipart:true}) do |f| %>
+<div class="card z-depth-4 center">
+  <div class="green darken-3 z-depth-4"style="padding-bottom:20px;">
+    <br>
+    <span class="card-title white-text">Edit profile</span>
+    <br>
+  </div>
+  <form>
+    <div class="col s12" style="padding:40px;">
+<br>
+<br>
+      <div class="input-field">
+        <%= f.text_field :name ,class:"validate"%>
+        <label for="user_name" data-error="wrong" data-success="right">Name</label>
+      </div>
+      <div class="input-field">
+       <%= f.text_field :bio ,class:"validate"%>
+        <label for="user_bio" data-error="wrong" data-success="right">Headline</label>
+      </div>
+    </div>
+    <br>
+    <div class="file-field input-field" style="padding:40px;">
+      <div class="waves-effect waves-light btn green darken-3">
+        <span>Browse photo</span>
+        <%= f.file_field :avatar %>
+      </div>
+    </div>
+    <br>
+    <div class="action" style="padding:40px;">
+      <%= f.submit "Save" , class:"waves-effect waves-light btn green darken-3"%>
+    </div>
+<br>
+<br>
+  </form>
+</div>
+<% end %>

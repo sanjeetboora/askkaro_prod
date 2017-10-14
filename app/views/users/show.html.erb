@@ -1,0 +1,271 @@
+<head>
+
+  <style type="text/css">
+
+    /* Imports */
+    @import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+    *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing: border-box; }
+
+    .cad1{
+      background: #E2e2e2;
+      color: #333;
+      font-weight: normal;
+      font-size: 1em;
+      font-family: 'Roboto', Arial, sans-serif;
+      margin-top: 20px;
+    }
+    .row{
+      margin-bottom: 0px;
+    }
+    .card1 .rowone{
+      padding: 20px;
+background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+
+    }
+    .card1 .rowone .first,    .card1 .rowone .second{
+      padding: 0 10px 0 0;
+    }
+    .card1 .rowone .first{
+      line-height: 35px;
+      position: relative;
+      border-right:1px solid #a2a2a2;
+      float: left;
+    }
+
+    .card1 .rowone .col.s12.first{
+      line-height: 23px;
+      border-right: 0px;
+
+    }
+    .card1 .rowone .second{
+      float: right;
+    }
+    .card1 .rowone .first h3{
+      font-weight: normal;
+      font-size: 2em;
+      margin-bottom: 10px;
+      margin-top: 0.5rem;
+      text-transform: capitalize;
+    }
+    .card1 .rowone .first p{
+      font-size: 14px;
+    }
+    .card1 .rowone .first span.spanfollow{
+      position: absolute;
+      right: 15px;
+      top: 16px;
+      background: #6AAFEA;
+      padding: 5px 11px;
+      font-size: 12px;
+      line-height: 1;
+      border-radius: 2px;
+      color: #fff;
+      cursor:pointer;
+    }
+    html body div#mithu.container div.row div.col.s12.m12.l7 div div.col.l12 div.card1.z-depth-4 div.row.rowone div.col.s12.l6.first div.col.l8.s12.desc{
+      padding-left: 40px;
+      color: #5d5555;
+    }
+    .card1 .rowone .first img {
+      border-radius: 50%;
+      /*    margin: 0 20px;*/
+      width: 120px;
+      border:2px solid #f1f1f1;
+      padding: 2px;
+      float: left;
+    }
+    .card1 .rowone .first .col.l3{
+      margin-right: 20px;
+
+    }
+    .rowtwo .one,.rowtwo .two,.rowtwo .three{
+      float: left;
+      /*            margin-right: 11px;*/
+    }
+
+    .card1 .rowone .second .col span {
+      color: #878080;
+      font-size: 14px;
+    }
+    .card1 .rowone .second .col h1 {
+      color: #ef5350;
+    }
+    .card1 .rowone .second .col.s4 h1{
+      font-size: 2.2rem;
+    }
+
+    .card1 .rowone .second .col {
+      text-align: center;
+      line-height: 30px;
+      border-right: 1px solid #9c9797;
+    }
+    .card1 .rowone .second .col.three {
+      border-right: 0;
+    }
+    @media only screen and (max-width: 1300px) {
+      .card1 .rowone .col.s4 {
+
+      }
+      .card1 .rowone .second .col.three {
+        margin-right: 0;
+      }
+    }
+
+    @media only screen and (max-width: 1060px) {
+      .card1 .rowone .second,.card1 .rowone .first {
+        width: 100%;
+        border-right:0 !important;
+        padding: 0;
+      }
+    }
+
+    @media only screen and (max-width: 660px) {
+      .card1 .rowone .first {
+        text-align: center;
+      }
+      .card1 .rowone .first img {
+        display: inline-block;
+        float: none;
+      }
+      .card1 .rowone .first span {
+        position: relative;
+        right: 0;
+      }
+      .card1 .rowone .second {
+        margin-top:25px;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+
+
+      .card1 .rowone .second .col.s4 span {
+        font-size: 10px;
+      }
+      .card1 .rowone .second .col.s4 h1 {
+        font-size: 18px;
+      }
+
+    }
+    #tabs-swipe-demo a{color:#d32f2f;
+    }
+    #tabs-swipe-demo a.active{
+      /*background-color: #FFAB40 ;*/
+      color:#fff;
+      background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
+    }
+    #tabs-swipe-demo a:hover{
+      background-color: #ffecb3 ;
+
+    }
+  </style>
+</head>
+<div>
+  <div class="col l12">
+    <div class="card1 z-depth-4 ">
+      <div class="row rowone">
+        <div class="col s12 l6 first ">
+
+          <div class="col l3 s12"><%= avatar_for(@user,size: 25) %></div>
+          <!-- <div class="col l3 s12"><img src="http://images.contactmusic.com/newsimages/david_beckham_1133321.jpg" alt=""></div> -->
+          <div class="col l8 s12 desc">    <h3><%= @user.name %></h3>
+           <!--  <span class="spanfollow">Follow</span> -->
+            <p><%= @user.bio %></p>
+          </div>
+
+        </div>
+        <div class="col l6 s12 second">
+          <div class="row rowtwo">
+            <div class="col l4 s4 one">
+                <h1><%= @user.followees(User).count %></h1>
+              <span>Following</span>
+            </div>
+            <div class="col l4 s4 two">
+            <h1><%= @user.followers(User).count %></h1>
+              <span>Followers</span></div>
+            <div class="col l3 s4 three"><h1><%= @user.questions.count %></h1>
+              <span>Questions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col s12">
+
+      <ul id="tabs-swipe-demo" class="tabs z-depth-5">
+        <li class="tab col s3"><a href="#ques-swipe-1">QUESTIONS</a></li>
+        <li class="tab col s3"><a class="active" href="#ans-swipe-2">ANSWERS</a></li>
+        <li class="tab col s3"><a href="#follow-swipe-3">FOLLOW</a></li>
+        <li class="tab col s3"><a href="#profile-swipe-4">PROFILE</a></li>
+      </ul>
+      <br>
+      <div id="ques-swipe-1" class="col s12 ">
+
+        <%@question.each do |q|%>
+            <!-- <div class="row s12"> -->
+            <div class="col s12 m12 l6 ">
+              <div class="card z-depth-4 hoverable" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
+                <div class="card-content white-text">
+                  <span class="card-title truncate"><%=q.title%></span>
+                  <p class="truncate"><%=q.content%></p>
+                </div>
+                <div class="card-action" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
+                  <%= link_to 'Show', q ,params[id: q.id]%>
+                  <div class="right">
+                    <%if can? :update,q%>
+                        <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_question_path(q) %>
+                    <%end%>
+                    <%if can? :destroy,q%>
+                        <%= link_to ('<i class="material-icons right">delete</i>').html_safe, q, method: :delete, data: {confirm: "Are you sure?"}%>
+                    <%end%>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- </div> -->
+
+        <%end%>
+      </div>
+    </div>
+    <div id="ans-swipe-2" class="col s12">
+      <%@answer.each do |a|%>
+          <!-- <div class="row s12"> -->
+          <div class="col s12 m12 l6">
+            <div class="card z-depth-4 hoverable" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
+              <div class="card-content white-text">
+                <span class="card-title truncate"><%=a.question.title%></span>
+                 
+                <p class="truncate"><%= raw a.content.truncate(100) %></p>
+              </div>
+              <div class="card-action" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
+                <%= link_to 'Show', a ,params[id: a.id]%>
+                <div class="right">
+                  <%if can? :update,a%>
+                      <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_answer_path(a) %>
+                  <%end%>
+                  <%if can? :destroy,a%>
+                      <%= link_to ('<i class="material-icons right">delete</i>').html_safe, a, method: :delete, data: {confirm: "Are you sure?"}%>
+                  <%end%>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+
+      <%end%>
+
+    </div>
+    <div id="follow-swipe-3" class="col s12 green">
+       <%@user.followers(User).each do |f|%>
+         <%= f.name%>
+       <%end%>
+    </div>
+    <div id="profile-swipe-4" class="col s12">
+      <%= render :partial => 'users/edit'%>
+    </div>
+  </div>
+</div>
+</div>

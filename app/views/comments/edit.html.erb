@@ -1,0 +1,8 @@
+<%if can? :update,@comment%>
+<h1>Editing Comment</h1>
+<%= render 'form' %>
+<%= link_to 'Show', @comment %> |
+<%= link_to 'Back', comments_path %>
+<%else%>
+<%= render file: 'public/404', status: 404, formats: [:html] %>
+<%end%>

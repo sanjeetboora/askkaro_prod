@@ -1,0 +1,3 @@
+<% @users.each do |u| %>
+$('#users').append("<%= escape_javascript (render 'home/user_list', user: u) %>");
+<% end %>

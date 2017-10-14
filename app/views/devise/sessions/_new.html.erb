@@ -1,0 +1,123 @@
+<div class="modal-dialog modal-sm">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button class="close" data-dismiss="modal">x</button>
+      <h2 class="dark">Log in</h2>
+    </div>
+    <div class="modal-body">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "Log in", class: "btn btn-md btn-black-line" %>
+      </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
+
+
+
+
+<html>
+<head>
+  <title>Welcome!</title>
+
+</head>
+
+<body>
+
+
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+        <%= devise_error_messages! %>
+        <div class="form form-signup">
+          <form action="#">
+            <lable style="font-size: 20px;color: white">FULL NAME</lable>
+            <%=f.text_field :name, autofocus: true,style:'font-size:25px;color: #fff;width: 100%;border: none;font-size: 16px;font-weight: 200;margin-bottom: 35px;padding: 5px 0 10px 0;background: transparent;border-bottom: 1px solid #4c5c72;'%>
+            <lable style="font-size: 20px;color: white">PHONE</lable>
+            <%=f.hidden_field :phno, autofocus: true,style:'font-size:25px;color: #fff;width: 100%;border: none;font-size: 16px;font-weight: 200;margin-bottom: 35px;padding: 5px 0 10px 0;background: transparent;border-bottom: 1px solid #4c5c72;'%>
+            <lable style="font-size: 20px;color: white">E-MAIL</lable>
+            <<input type="email"
+            placeholder="Your e-mail">
+            <%= f.email_field :email, autofocus: true ,style:'font-size:25px;color:white;'%>
+            <lable style="font-size: 20px;color: white">PASSWORD</lable>
+            <input type="password"
+            placeholder="Your password">
+            <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "off",style:'font-size:25px;color:white;' %>
+            <lable style="font-size: 20px;color: white">CONFIRM PASSWORD</lable>
+            <%= f.password_field :password_confirmation, autocomplete: "off",style:'font-size:25px;color:white;' %>
+            <p class="terms">
+              <input type="checkbox">
+              I agree all statments in
+              <a href="#" class="lined-link">terms of service</a>
+            </p>
+            <input type="submit"
+                   class="form-btn"
+                   value="Sign Up"/>
+
+          </form>
+        </div>
+    <%end%>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form form-signin">
+          <form action="#">
+            <lable style="font-size: 26px;color: white">E-MAIL</lable>
+            <%= f.email_field :email, autofocus: true ,style:'font-size:25px;color:white;'%>
+            <lable style="font-size: 26px;color: white">PASSWORD</lable>
+            <%= f.password_field :password, autocomplete: "off",style:'font-size:25px;color:white;' %>
+            <input type="submit"
+                   class="form-btn"
+                   value="Sign In"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="lined-link to-signup-link" style="font-size: 20px;color: white">Create new account</a>
+            <p class="terms"><% if devise_mapping.rememberable? -%>
+                  <br><br>
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me %>
+
+              <% end -%></p>
+            <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                <%= link_to "Forgot your password?", new_password_path(resource_name),style:'font-size:15px;color:white;' %><br />
+            <% end -%>
+            <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+                <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name),style:'font-size:15px;color:white;' %><br />
+            <% end -%>
+            <%- if devise_mapping.omniauthable? %>
+                <%- resource_class.omniauth_providers.each do |provider| %>
+                    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, :facebook) ,style:'font-size:15px;color:white;'%><br />
+                <% end -%>
+            <% end -%>
+          </form>
+        </div>
+    <%end%>
+  </div>
+  <div class="clear-fix"></div>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js'></script>
+
+
+
+</body>
+</html>
+
+</html>

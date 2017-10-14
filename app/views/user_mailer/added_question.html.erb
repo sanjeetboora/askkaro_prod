@@ -1,0 +1,18 @@
+
+
+ <h1>Welcome to InquisitiveQuencher</h1>
+ <h2>Hi! <%= @user.email%></h2>
+<p>
+your question :  <%= @question.title %>
+ is added
+</p>
+
+<blockquote >
+  <em>question description: <%= @question.content %></em>
+</blockquote>
+
+<p>
+  To see this question , please visit the question page :
+          <%= link_to "ques page", @question %>
+</p>
+<h4>Thanks!</h4>

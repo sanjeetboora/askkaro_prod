@@ -1,0 +1,130 @@
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home</title>
+  <style media="screen">
+    .card.trend, .card.latest{
+      height: 360px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      border: 1px solid #e2e2e2;
+
+    }
+
+  </style>
+</head>
+<body>
+  <!--   <a class="waves-effect waves-light cyan btn modal-trigger" href="#modal2">Ask Question !</a> -->
+  <a href="#trendingquestions" class="right btn btn-floating btn-large waves-effect waves-light indigo darken-2 pulse z-depth-4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Trending"><i class="material-icons">trending_up</i></a>
+
+  <!-- <div class="col s12"> -->
+  <!-- <div class="container"> -->
+
+  <div class="z-depth-0 transparent latest">
+  <a href="#modal2" class="modal-trigger" data-target="modal2">
+    <div class=card class="z-depth-1" style="width: 93%;
+    height: 72px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-left: 25px;
+    padding-left: 24px;
+    padding-top: 0.5px;
+    background: #ffffff;
+    border: 2px solid #949599;">
+    <h5 style="color: #949599; margin-bottom: 10px;">Ask your Question ?</h5>
+  </div>
+</a>
+
+<div id="modal2" class="modal modal-fixed-footer">
+  <div class="createQuestion">
+    <div class="modal-content">
+      <h4>ASK QUESTION</h4>
+      
+      <%= form_for @question, remote: true do |task|%>
+      <div class="input-field">
+        <%= task.text_field :title, class:'validate', id:'title' %>
+        <%= task.label :title, for:'title' %><br>
+      </div>
+      <div class="input-field">
+        <%= task.text_field :content, class:'validate materialize-textarea',id:'content'%><br>
+        <%= task.label :content, for:'content' %><br>
+        <!-- <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea> -->
+
+      </div>
+
+      <div class="input-field">
+        <%= task.label :tag_list, "Tags (separated by commas)" %>
+        <%= task.text_field :tag_list %>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+          <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
+        --> <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
+        <%= task.submit id: 'create_question_submit' %>
+      </div>
+
+    </div>
+    <% end %>
+    <% if @question.errors.any? %>
+    <% @question.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+    <% end %>
+
+  </div>
+</div>
+
+
+
+
+<div id="questions">
+  <div class="row">
+
+    <% @latestfeed.each do |question| %>
+    <!-- <div class="col s12 m12 l12"> -->
+    <%= render 'question' , question: question %>
+    <!-- </div> -->
+    <% end %>
+  </div>
+
+</div>
+
+
+<!-- </div> -->
+<!-- <div class="container"> -->
+</div>
+<div id="trendingquestions" class="z-depth-0 transparent trend">
+  <div id="questions">
+    <div class="row">
+      <% @trendingfeed.each do |question| %>
+      <!-- <div class="col s12 m12 l12"> -->
+      <%= render 'question' , question: question %>
+      <!-- </div> -->
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
+<!-- </div> -->
+<!-- </div> -->
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.modal').modal();
+      $('#modal2').on('click', function() {
+      });
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('#modal2').modal({
+      dismissible: true
+    });
+    $('#modal2').modal('open');
+    $('.trigger-modal').modal();
+    $('#modal2').modal('close');
+    $('input#title, textarea#content').characterCounter();
+  });
+</script>
+
+
+</body>

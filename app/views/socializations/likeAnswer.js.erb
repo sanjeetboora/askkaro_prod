@@ -1,0 +1,13 @@
+
+<% if @is_liked %>
+$('#like_<%= @answer.id%>')[0].children[0].innerHTML="favorite";
+console.log($('#like_<%= @answer.id%>')[0].children[0].innerHTML);
+noty({text: 'Answer was Liked', type: 'success', timeout: 3500, progressBar: true});
+
+<% else %>
+
+$('#like_<%= @answer.id%>')[0].children[0].innerHTML="favorite_border";
+console.log($('#like_<%= @answer.id%>')[0].children[0].innerHTML);
+noty({text: 'Answer was UnLiked', type: 'success', timeout: 3500, progressBar: true});
+
+<% end %>
