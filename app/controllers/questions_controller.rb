@@ -56,7 +56,7 @@ class QuestionsController < ApplicationController
     end
     respond_to do |format|
       if @question.save
-        # Resque.enqueue(QuestionMailer,@question.id,current_user.id)
+         Resque.enqueue(QuestionMailer,@question.id,current_user.id)
 
         format.html { redirect_to '/', notice: 'Question was successfully created.' }
         format.js{  }

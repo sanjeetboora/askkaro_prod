@@ -78,15 +78,15 @@ config.action_mailer.raise_delivery_errors = true
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = { host: '13.126.16.219'}
-   config.action_mailer.smtp_settings = {
-  :user_name => 'apikey',
-  :password => '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',
-  :domain => 'askkaro.com',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-}
+  config.action_mailer.default_url_options = { host: '13.126.63.81'}
+  config.action_mailer.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'gmail.com',
+      user_name:            'helpermail41@gmail.com',
+      password:             'sanketpglet',
+      authentication:       :plain,
+      enable_starttls_auto: true
+  }
 
 end 

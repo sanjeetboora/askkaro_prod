@@ -36,15 +36,15 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-    ActionMailer::Base.smtp_settings = {
-  :user_name => 'apikey',
-  :password => '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',
-  :domain => 'askkaro.com',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-}
+  config.action_mailer.smtp_settings = {
+      address:              'smtp.gmail.com',
+      port:                 587,
+      domain:               'gmail.com',
+      user_name:            'helpermail41@gmail.com',
+      password:             'sanketpglet',
+      authentication:       :plain,
+      enable_starttls_auto: true
+  }
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
