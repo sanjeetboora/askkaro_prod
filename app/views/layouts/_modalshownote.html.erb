@@ -6,3 +6,6 @@
         <br>
         <p class="truncate"><%= Note.where(:user_id => current_user.id)[-2].content %><%end%>
         </p>
+<div class="modal-footer">
+      <a class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+    </div>

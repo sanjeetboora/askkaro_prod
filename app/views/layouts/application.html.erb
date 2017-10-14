@@ -31,13 +31,6 @@
     noty({text: '<%= alert %>', type: 'error', timeout: 5000, progressBar: true});
   </script>
   <% end %>
-
-
-
-
-
-
-
   <style type="text/css">
    .search-wrapper {
     position: absolute;
@@ -110,9 +103,11 @@
 
 
         </div></li>
+          <%if user_signed_in?%>
         <li>
           <a href="/users_list">All Users</a>
         </li>
+        <% end %>
         <li>
           <a href="#!">Read</a>
           <ul class="nav-dropdown">
@@ -136,8 +131,10 @@
          <a class="waves-effect modal-trigger" href="#modal7">Log In</a>
        </li>
        <%end%>
+
+        <%if user_signed_in?%>
        <li>
-        <a href="#!"><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification</a>
+        <a href=""><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification</a>
         <ul id="dropdownnoty" class="nav-dropdown">
           <li>
             <a href="#!"></a>
@@ -150,6 +147,7 @@
           </li>
         </ul>
       </li>
+      <%end%>
       <%if user_signed_in?%>
       <li><a href="#"><%=avatar_for(current_user,size: 40)%></a>
         <ul class="nav-dropdown">
@@ -161,6 +159,9 @@
           </li>
           <li>
             <a href="/home/index">All Questions</a>
+          </li>
+           <li>
+            <a href="/users/<%= current_user.id %>">All Users</a>
           </li>
           <li>
             <a href="#!">Chat Room</a>

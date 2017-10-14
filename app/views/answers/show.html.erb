@@ -262,9 +262,10 @@ background: linear-gradient(to left, #D39D38, #4DA0B0); /* W3C, IE 10+/ Edge, Fi
           <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Comment">forum</i>').html_safe, @answer ,params[id: @answer.id]%></button>
 
           <%if can? :update,@answer%>
-              <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Edit Answer">create</i>').html_safe, @answer %>
+              <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Edit Answer">create</i>').html_safe,edit_answer_path(@answer) %>
 
           <% end %>
+
           <%if can? :destroy,@answer%>
 
               <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, @answer, method: :delete, data: {confirm: "Are you sure?"}%>

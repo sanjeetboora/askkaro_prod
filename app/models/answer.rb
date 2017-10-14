@@ -3,7 +3,8 @@ class Answer < ActiveRecord::Base
   belongs_to :user
   has_many :likes
   has_many :comments ,dependent: :destroy
-  validates :content ,presence: true,length:{maximum:20000}
+  validates :content ,presence: true,length:{maximum:20000,
+    too_long: "%{count} characters is the maximum allowed" }
   acts_as_likeable
   def commentfeed answer_id
     Comment.where(answer_id: answer_id).order(created_at: :desc)

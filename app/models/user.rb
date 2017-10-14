@@ -10,9 +10,11 @@ class User < ActiveRecord::Base
     has_many :follows, dependent: :destroy
   has_many :notifications, foreign_key: :recipient_id
   enum role: {guest: 0, member: 1, moderator: 2, admin: 3}
-  validates :phno, length: {is: 10}
+  validates :phno, length: {is: 10,
+    too_long: "%{count} characters allowed" }
   validates :name, presence: true
-  validates :bio,length:{maximum:60}
+  validates :bio,length:{maximum:60,
+    too_long: "%{count} characters is the maximum allowed" }
   mount_uploader :avatar, AvatarUploader
   acts_as_followable
   acts_as_liker
