@@ -174,7 +174,7 @@ div.question div.userDetail div.card.ques.hoverable div.supporting_text.text.sma
           <%=avatar_for(question.user,size: 20)%>
         </figure>
         <div class="text small">
-          <h1 style="font-family: 'Fresca', sans-serif;"><%= question.user.name %></h1>
+          <h1 style="font-family: 'Fresca', sans-serif;"><%= link_to question.user.name,user_path(question.user.id) %></h1>
           <h2><%= time_ago_in_words(question.created_at) unless question.created_at.blank? %> ago</h2>
         </div>
 

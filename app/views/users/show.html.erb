@@ -199,7 +199,9 @@
         <li class="tab col s3"><a href="#ques-swipe-1">QUESTIONS</a></li>
         <li class="tab col s3"><a class="active" href="#ans-swipe-2">ANSWERS</a></li>
         <li class="tab col s3"><a href="#follow-swipe-3">FOLLOW</a></li>
+         <%if @user == current_user%>
         <li class="tab col s3"><a href="#profile-swipe-4">PROFILE</a></li>
+        <% end %>
       </ul>
       <br>
       <div id="ques-swipe-1" class="col s12 ">
@@ -215,10 +217,10 @@
             <div class="card-action" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
               <%= link_to 'Show', q ,params[id: q.id]%>
               <div class="right">
-                <%if can? :update,q%>
+                 <%if @user == current_user%>
                 <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_question_path(q) %>
                 <%end%>
-                <%if can? :destroy,q%>
+                 <%if @user == current_user%>
                 <%= link_to ('<i class="material-icons right">delete</i>').html_safe, q, method: :delete, data: {confirm: "Are you sure?"}%>
                 <%end%>
               </div>
@@ -243,10 +245,10 @@
           <div class="card-action" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
             <%= link_to 'Show', a ,params[id: a.id]%>
             <div class="right">
-              <%if can? :update,a%>
+               <%if @user == current_user%>
               <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_answer_path(a) %>
               <%end%>
-              <%if can? :destroy,a%>
+               <%if @user == current_user%>
               <%= link_to ('<i class="material-icons right">delete</i>').html_safe, a, method: :delete, data: {confirm: "Are you sure?"}%>
               <%end%>
             </div>
@@ -329,9 +331,11 @@ padding: 0px 20px;
     </div>
 
   </div>
+    <%if @user == current_user%>
   <div id="profile-swipe-4" class="col s12">
     <%= render :partial => 'users/edit'%>
   </div>
+  <% end %>
 </div>
 </div>
 </div>

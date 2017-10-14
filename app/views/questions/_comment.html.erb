@@ -83,7 +83,7 @@
   <div class="triangle"></div>
   <div class="avatar"><%=avatar_for(current_user,size: 20)%></div>
    
-  <p><strong><%= comment.user.name %>,<em><%= time_ago_in_words(comment.created_at) unless comment.created_at.blank? %> ago</em></strong>
+  <p><strong><%= link_to comment.user.name,user_path(comment.user.id) %>,<em><%= time_ago_in_words(comment.created_at) unless comment.created_at.blank? %> ago</em></strong>
      <%= comment.content %>
      <br>
      

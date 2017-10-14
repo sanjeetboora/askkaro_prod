@@ -7,7 +7,8 @@
 <br>
 <p>
   <strong>User:</strong>
-  <%= @note.user.name %>
+  <%= link_to @note.user.name,user_path(@note.user.id) %>
+ 
 </p>
 
 <%= link_to 'Edit', edit_note_path(@note) %> |
