@@ -41,7 +41,7 @@ class AnswersController < ApplicationController
     respond_to do |format|
       if @answer.save
 
-         # Resque.enqueue(AnswerMailer,@answer.id,current_user.id)
+         Resque.enqueue(AnswerMailer,@answer.id,current_user.id)
         (@question.users.uniq-[current_user]).each do |user|
           Notification.create(recipient: user,actor: current_user,action: "Posted",notifiable: @answer)
         end
