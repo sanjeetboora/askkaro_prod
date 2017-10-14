@@ -207,7 +207,7 @@ background: linear-gradient(to left, #D39D38, #4DA0B0); /* W3C, IE 10+/ Edge, Fi
   <!--  answer.created_at.strftime("%B %d, %Y")-->
   <div class="card-title">
     <div class="fakeimage">
-      <div class="circle responsive-img valign profile-image"><%=avatar_for(current_user,size: 25)%></div>
+      <div class="circle responsive-img valign profile-image"><%=avatar_for(@answer.question.user,size: 25)%></div>
     </div>
     <div id="quesuserdetail">
 
@@ -246,7 +246,7 @@ background: linear-gradient(to left, #D39D38, #4DA0B0); /* W3C, IE 10+/ Edge, Fi
       <div class="card-title row" style="padding-bottom: 0px;">
         <div class="fakeimage left" style="margin-left: 10px;">
 
-          <div class="picture"><%=avatar_for(current_user,size: 25)%></div>
+          <div class="picture"><%=avatar_for(@answer.user,size: 25)%></div>
         </div>
         <div class="left details">
           <h5 id="head"><%= @answer.user.name %></h5>

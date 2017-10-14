@@ -127,7 +127,7 @@
       <div class="card-title row" style="padding-bottom: 0px;">
         <div class="fakeimage left" style="margin-left: 10px;">
 
-          <div class="picture"><%=avatar_for(current_user,size: 25)%></div>
+          <div class="picture"><%=avatar_for(answer.user,size: 25)%></div>
         </div>
         <div class="left details">
           <h5 id="head"><%= link_to answer.user.name,user_path(answer.user.id) %></h5>
