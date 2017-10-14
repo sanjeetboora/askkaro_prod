@@ -162,7 +162,7 @@ z-index: 8000;
         <%= task.label :content %><br>
       </div>
       <div>
-        <%= task.cktext_area :content, rows: 10 %>
+        <%= task.cktext_area :content, rows: 10,id: 'ckeditid' %>
       </div>
       <div class="actions">
         <%= task.submit id: 'create_answer_submit', class: 'btn right'%>
@@ -193,4 +193,10 @@ z-index: 8000;
   </div>
 
 </div>
+<script type="text/javascript" charset="utf-8">
+    $("#create_answer_submit").click(function(){
+        setTimeout(function(){ CKEDITOR.instances['ckeditid'].setData('');}, 50);
+
+    });
+</script>
 
