@@ -8,17 +8,16 @@ class ApplicationController < ActionController::Base
   def addnotes
    @note = Note.new
    @question=Question.new
-
  end
+
  def sideques
   @questagfeed = []
- 
-
   if params[:question_id]
    @question=Question.find(params[:id])
    @question.tag_list.each do |tag| 
     @questagfeed += Question.tagged_with(tag) 
   end
+
 elsif params[:tag]
   @trend=Trend.where(name: params[:tag]).first
    @trendtagusers = []
@@ -28,9 +27,7 @@ else
   @tftags.each do |tag| 
    @questagfeed += Question.tagged_with(tag) 
  end
-
 end
-
 end
 
 protected
