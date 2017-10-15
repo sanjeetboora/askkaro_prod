@@ -110,6 +110,24 @@ z-index: 8000;
     .createAnswer{
     margin-bottom: 60px;
   }
+
+  html body div#mithu.container div.row div.col.s12.m12.l7 div#cardques.card.hoverable div#quescontent.card-content.grey-text div.row a.waves-effect.waves-light.btn.follow.right{
+color: #fff;
+  background-color: #949599;
+  border: none;
+border-radius: 20px;
+display: inline-block;
+height: 30px;
+line-height: 30px;
+padding: 0 1rem;
+text-transform: uppercase;
+vertical-align: middle;
+  }
+   html body div#mithu.container div.row div.col.s12.m12.l7 div#cardques.card.hoverable div#quescontent.card-content.grey-text div.row a.waves-effect.waves-light.btn.follow.right:hover{
+ color: #fff;
+      background-color:#00b8d4 ;
+      z-index: 8000;
+  }
   </style>
 
 </head>
@@ -145,6 +163,11 @@ z-index: 8000;
           <%= link_to ('<i class="material-icons right">delete</i>').html_safe, @question, method: :delete, data: {confirm: "Are you sure?"}%>
 
       <% end %>
+        <% if @question.follow_string(current_user.id,@question.id)== true%>
+                <%= link_to(('<span class="">Unfollow</span>').html_safe, question_follow_path(@question), remote:true,method: :post,id: "follow_#{@question.id}",:class =>"waves-effect waves-light btn follow right") %>
+            <%else%>
+                <%= link_to(('<span class="">follow</span>').html_safe, question_follow_path(@question), remote:true,method: :post,id: "follow_#{@question.id}",:class =>"waves-effect waves-light btn follow right") %>
+            <%end%>
 
     </div>
   </div>
