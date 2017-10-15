@@ -11,11 +11,7 @@ class Answer < ActiveRecord::Base
   end
 
   def liked_by user_id, answer_id
-    # Like.where(likeable_type: "Question",liker_id: user_id).length > 0
-    # puts "*****************************************************************"
     Like.where(likeable_type: "Answer",liker_id: user_id,likeable_id: answer_id).length > 0
-
-
   end
   def like_string user_id,answer_id
     if (liked_by user_id,answer_id)
