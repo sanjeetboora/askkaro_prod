@@ -211,7 +211,7 @@ background: linear-gradient(to left, #D39D38, #4DA0B0); /* W3C, IE 10+/ Edge, Fi
     </div>
     <div id="quesuserdetail">
 
-      <h4><%= @answer.question.user.name %></h4>
+      <h4><%= link_to @answer.question.user.name,user_path(@answer.question.user.id) %></h4>
       <p ><%= time_ago_in_words(@answer.question.created_at) unless @answer.question.created_at.blank? %> ago</p>
 
     </div>
