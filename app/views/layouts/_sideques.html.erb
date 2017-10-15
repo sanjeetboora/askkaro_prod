@@ -4,29 +4,43 @@
 	.card.quesrelate{
 		width:270px;
 	}
-		.card.quesrelate hr{
-			    color: #dddfe7;
+	.card.quesrelate hr{
+		color: #dddfe7;
 
-		}
+	}
 </style>
-
-
 
 <% if @questagfeed != nil %>
 
-
- <div class="card quesrelate"> 
-<div class="card-title center" style="color:#696a6e;font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;"> 
-Related Questions
+<div class="card quesrelate"> 
+	<div class="card-title center" style="color:#696a6e;font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;"> 
+		Related Questions
+	</div>
+	<div class="card-content">
+		<% @questagfeed.each do |ques| %>
+		<%= link_to ques.title, ques %>
+		<hr>
+		<% end %>
+	</div>
 </div>
-<div class="card-content">
-	
+<% end %>
 
- <% @questagfeed.each do |ques| %>
-   <%= link_to ques.title, ques %>
-   <hr>
-   <% end %>
+
+
+<% if @trend!= nil %>
+<div class="card quesrelate"> 
+	<div class="card-title center" style="color:#696a6e;font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;"> 
+		Trend Followers
+	</div>
+	<div class="card-content">
+	<% @trendusers = @trend.followers(User) %>
+		<% @trendusers.each do |trenduser| %>
+		
+		<%= link_to trenduser.name, trenduser %>
+		<hr>
+		<% end %>
+	</div>
 </div>
- </div>
-     <% end %>
+<% end %>
+
 

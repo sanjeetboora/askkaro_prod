@@ -15,6 +15,9 @@
       transition-property: box-shadow;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       transform: translateZ(3);
+background: #acb6e5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
       /*box-shadow: 0 0 1px rgba(0, 0, 0, 0);*/
     }
@@ -141,7 +144,7 @@ vertical-align: middle;
     </div>
     <div id="quesuserdetail">
 
-      <h4><%= @question.user.name %></h4>
+      <h4><%= link_to @question.user.name,user_path(@question.user.id) %></h4>
       <p ><%= time_ago_in_words(@question.created_at) unless @question.created_at.blank? %> ago</p>
 
     </div>
