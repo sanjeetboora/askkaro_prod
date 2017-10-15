@@ -8,7 +8,7 @@ class Question < ActiveRecord::Base
 
   acts_as_followable
   acts_as_likeable
-  # attr_accessible :title
+
   has_many :taggings
   has_many :tags, through: :taggings
 

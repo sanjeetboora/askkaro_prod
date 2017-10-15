@@ -6,32 +6,32 @@ class ApplicationController < ActionController::Base
   before_action :addnotes
 
   def addnotes
-   @note = Note.new
-   @question=Question.new
- end
-
- def sideques
-  @questagfeed = []
-  if params[:question_id]
-   @question=Question.find(params[:id])
-   @question.tag_list.each do |tag| 
-    @questagfeed += Question.tagged_with(tag) 
+    @note = Note.new
+    @question=Question.new
   end
 
-elsif params[:tag]
-  @trend=Trend.where(name: params[:tag]).first
-   @trendtagusers = []
+  def sideques
+    @questagfeed = []
+    if params[:question_id]
+      @question=Question.find(params[:id])
+      @question.tag_list.each do |tag|
+        @questagfeed += Question.tagged_with(tag)
+      end
 
-else
-  @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
-  @tftags.each do |tag| 
-   @questagfeed += Question.tagged_with(tag) 
- end
-end
-end
+    elsif params[:tag]
+      @trend=Trend.where(name: params[:tag]).first
+      @trendtagusers = []
 
-protected
-def configure_permitted_parameters
-  devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-end
+    else
+      @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
+      @tftags.each do |tag|
+        @questagfeed += Question.tagged_with(tag)
+      end
+    end
+  end
+
+  protected
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+  end
 end
