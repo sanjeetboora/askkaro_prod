@@ -96,7 +96,7 @@ cursor: default; }
           <% if @trend.follow_string(current_user.id,@trend.id)== true%>
               <%= link_to(('<span class="">Unfollow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow1_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
           <%else%>
-              <%= link_to(('<span class="">follow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
+              <%= link_to(('<span class="">follow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow1_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
           <%end%>
 
       <%end%>
@@ -133,6 +133,33 @@ cursor: default; }
     $('input#title, textarea#content').characterCounter();
   });
   </script>
+<script type="text/javascript" charset="utf-8">
+    $("#create_question_submit").click(function(){
+        if($('#title').val().length<6) {
+            noty({
+                text: 'The length of title of your question must be greater than 6!',
+                type: 'error',
+                timeout: 3500,
+                progressBar: true
+            });
+        } else if($('#title').val().length>240){
+            noty({
+                text: 'The length of title of your question must be less than 240!',
+                type: 'error',
+                timeout: 3500,
+                progressBar: true
+            });
+        } else {
+            noty({
+                text: 'You successfully posted a new Question!',
+                type: 'success',
+                timeout: 3500,
+                progressBar: true
+            });
+        }
+    });
 
+
+</script>
 
 </body>
