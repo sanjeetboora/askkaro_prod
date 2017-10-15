@@ -34,14 +34,17 @@
     border: 2px solid #949599;
     border: 1px solid #d1d1d1;
 border-radius: 6px;">
-    <h5 style="color: #949599; margin-bottom: 10px;">Ask your Question ?</h5>
+    <h5 style="color: #949599; margin-bottom: 10px;">Ask Your Question ?</h5>
   </div>
 </a>
 
 <div id="modal2" class="modal modal-fixed-footer">
   <div class="createQuestion">
     <div class="modal-content">
-      <h4>ASK QUESTION</h4>
+    <span><h4 style="display: inline-block;">ASK QUESTION</h4>
+    <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;"><i class="material-icons">close</i></button>
+    </span>
+      
       
       <%= form_for @question, remote: true do |task|%>
       <div class="input-field">
