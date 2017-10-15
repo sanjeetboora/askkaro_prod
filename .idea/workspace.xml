@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5eb5578-fbb0-4ad3-948a-bfb4ee94a9eb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/answer.rb" afterPath="$PROJECT_DIR$/app/models/answer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.js.erb" afterPath="$PROJECT_DIR$/app/views/home/index.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/indexmain.html.erb" afterPath="$PROJECT_DIR$/app/views/home/indexmain.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -18,133 +22,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="questions_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/questions_controller.rb">
+      <file leaf-file-name="index.js.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+            <state relative-caret-position="51">
+              <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="question.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/question.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_helper.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="answer_mailer.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/workers/answer_mailer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="98" column="134" lean-forward="false" selection-start-line="98" selection-start-column="134" selection-end-line="98" selection-end-column="134" />
-              <folding>
-                <marker date="1508017520201" expanded="true" signature="1042:2346" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="1074:2337" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="1137:2326" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="1184:2150" ph="do ... end" />
-                <marker date="1508017520201" expanded="true" signature="1228:1365" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="1399:1671" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="1697:1805" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="1840:2134" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="1856:1949" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="2037:2118" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="2165:2311" ph="if ... end" />
-                <marker date="1508017520201" expanded="true" signature="2240:2293" ph="do ... end" />
-                <marker date="1508017520201" expanded="true" signature="2437:3993" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="2482:2928" ph="..." />
-                <marker date="1508017520201" expanded="false" signature="2531:2779" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="2780:2919" ph="..." />
-                <marker date="1508017520201" expanded="false" signature="2837:2873" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="2950:3811" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="2961:3629" ph="unless ... end" />
-                <marker date="1508017520201" expanded="false" signature="3018:3069" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="3070:3115" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="3131:3614" ph="if ... end" />
-                <marker date="1508017520201" expanded="true" signature="3652:3798" ph="do ... end" />
-                <marker date="1508017520201" expanded="true" signature="3846:3983" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="3874:3922" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="4119:4485" ph="..." />
-                <marker date="1508017520201" expanded="true" signature="4151:4472" ph="{...}" />
-                <marker date="1508017520201" expanded="true" signature="4278:4309" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/questions/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
-              <folding>
-                <marker date="1508017520197" expanded="true" signature="2951:4065" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="3029:3371" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="3057:3177" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="3207:3362" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="3434:4058" ph="..." />
-                <marker date="1508017520197" expanded="false" signature="3452:3524" ph="..." />
-                <marker date="1508017520197" expanded="false" signature="3568:3621" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="3674:4049" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="3684:3837" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="3849:4035" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="4095:4673" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4182:4660" ph="do ... end" />
-                <marker date="1508017520197" expanded="true" signature="4204:4354" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="4383:4435" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4447:4526" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4554:4650" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4695:5017" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4715:5009" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4743:4998" ph="do ... end" />
-                <marker date="1508017520197" expanded="true" signature="4794:4986" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="5065:5215" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -152,148 +35,39 @@
       <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="433" column="0" lean-forward="false" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
-              <folding>
-                <marker date="1508017520197" expanded="true" signature="4872:4892" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4872:5157" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4872:5169" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4872:5206" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="4872:5217" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4872:5226" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4872:5234" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4872:9724" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4872:9731" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4907:4962" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="4977:5030" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="5045:5143" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="5282:9713" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="5640:9057" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="5745:7814" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="5768:7805" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="5781:5863" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="5877:6250" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="6292:6588" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="6306:6572" ph="if ... end" />
-                <marker date="1508017520197" expanded="false" signature="6510:6525" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="6652:7792" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="6665:6839" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="7317:7778" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="7821:8205" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="8738:9044" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9088:9198" ph="..." />
-                <marker date="1508017520197" expanded="false" signature="9140:9176" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9278:9686" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9287:9676" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="9330:9643" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9416:9632" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9429:9481" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9494:9551" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9564:9620" ph="..." />
-                <marker date="1508017520197" expanded="false" signature="9777:9796" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9797:15588" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9831:10079" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9863:9921" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="9933:10068" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10115:10358" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10147:10208" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10218:10349" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10362:12923" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="10416:12916" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10460:12909" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10480:12902" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10516:11416" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10549:10739" ph="..." />
-                <marker date="1508017520197" expanded="false" signature="10636:10700" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10812:11196" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="10904:11178" ph="do ... end" />
-                <marker date="1508017520197" expanded="true" signature="10940:11158" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="10995:11140" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="11237:11403" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="11453:12895" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="11486:11675" ph="..." />
-                <marker date="1508017520197" expanded="false" signature="11573:11637" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="11749:12693" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="11777:12661" ph="do ... end" />
-                <marker date="1508017520197" expanded="true" signature="11801:12642" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="11859:12626" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="11975:12611" ph="..." />
-                <marker date="1508017520197" expanded="false" signature="12009:12070" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="12150:12595" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="12241:12575" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="12731:12886" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="12928:15220" ph="if ... end" />
-                <marker date="1508017520197" expanded="true" signature="12989:15212" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13020:15205" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13060:15198" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13092:15097" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13106:13177" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13225:14914" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13237:13592" ph="if ... end" />
-                <marker date="1508017520197" expanded="false" signature="13311:13358" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13359:13579" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13605:13931" ph="if ... end" />
-                <marker date="1508017520197" expanded="false" signature="13680:13693" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13694:13916" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13717:13799" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="13825:13910" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="14006:14899" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="14090:14158" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="14173:14884" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="14960:15084" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="14996:15070" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15125:15187" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15240:15304" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15271:15297" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15344:15579" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15374:15435" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15443:15570" ph="..." />
-                <marker date="1508017520197" expanded="false" signature="15640:15689" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15690:17153" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15718:16952" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15740:16939" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15771:15950" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="15985:16371" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16040:16358" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16405:16494" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16430:16488" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16528:16639" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16562:16626" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16673:16783" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16707:16770" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16817:16928" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="16851:16915" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="17004:17143" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="17030:17136" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="17357:21475" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="17422:21078" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="17457:17873" ph="{&quot;alignment&quot;: 'right'...}" />
-                <marker date="1508017520197" expanded="true" signature="18049:18394" ph="{&quot;startingTop&quot;: '4%'...}" />
-                <marker date="1508017520197" expanded="true" signature="18466:18811" ph="{&quot;startingTop&quot;: '4%'...}" />
-                <marker date="1508017520197" expanded="true" signature="18833:19178" ph="{&quot;startingTop&quot;: '4%'...}" />
-                <marker date="1508017520197" expanded="true" signature="19288:19641" ph="{&quot;startingTop&quot;: '4%'...}" />
-                <marker date="1508017520197" expanded="true" signature="19730:20083" ph="{&quot;startingTop&quot;: '4%'...}" />
-                <marker date="1508017520197" expanded="true" signature="20237:20590" ph="{&quot;startingTop&quot;: '4%'...}" />
-                <marker date="1508017520197" expanded="true" signature="20619:20964" ph="{&quot;startingTop&quot;: '4%'...}" />
-                <marker date="1508017520197" expanded="true" signature="21101:21461" ph="{&quot;startingTop&quot;: '4%'...}" />
-                <marker date="1508017520197" expanded="true" signature="21531:22350" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="21548:22317" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="21581:22296" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="21583:21649" ph="//..." />
-                <marker date="1508017520197" expanded="true" signature="21706:21898" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="21998:22038" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="22128:22168" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="22244:22290" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="22400:23038" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="22490:23027" ph="{&quot;url&quot;: '/notifications.json'...}" />
-                <marker date="1508017520197" expanded="true" signature="22551:22940" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="22680:22936" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="22961:23025" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="23070:23438" ph="..." />
-                <marker date="1508017520197" expanded="true" signature="23205:23428" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="23247:23333" ph="{...}" />
-                <marker date="1508017520197" expanded="true" signature="23337:23426" ph="{...}" />
-              </folding>
+            <state relative-caret-position="459">
+              <caret line="30" column="82" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexmain.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/indexmain.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="136" column="50" lean-forward="false" selection-start-line="136" selection-start-column="50" selection-end-line="136" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="answer.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/answer.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="91" lean-forward="false" selection-start-line="13" selection-start-column="91" selection-end-line="13" selection-end-column="91" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="question.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/question.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -301,8 +75,18 @@
       <file leaf-file-name="_sideques.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_sideques.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -335,6 +119,10 @@
         <option value="$PROJECT_DIR$/app/controllers/questions_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/index.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/home/indexmain.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/answer.rb" />
       </list>
     </option>
   </component>
@@ -365,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -381,29 +170,19 @@
               <item name="askkaro_prod" type="b2602c69:ProjectViewProjectNode" />
               <item name="askkaro_prod" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="askkaro_prod" type="b2602c69:ProjectViewProjectNode" />
               <item name="askkaro_prod" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="askkaro_prod" type="b2602c69:ProjectViewProjectNode" />
-              <item name="askkaro_prod" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="devise" type="462c0819:PsiDirectoryNode" />
-              <item name="sessions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="RailsProjectView" />
     </panes>
   </component>
@@ -537,29 +316,30 @@
       <option name="presentableId" value="Default" />
       <updated>1507994279773</updated>
       <workItem from="1507994281936" duration="2270000" />
-      <workItem from="1508003458522" duration="10354000" />
+      <workItem from="1508003458522" duration="10483000" />
+      <workItem from="1508090515110" duration="2489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12624000" />
+    <option name="totallyTimeSpent" value="15242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="46" width="1366" height="742" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25341427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2579666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5216638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1490468" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -579,340 +359,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="3" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="46" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="54" lean-forward="false" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/questions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        <state relative-caret-position="17">
+          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/question.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="3" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="46" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_question.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="190" column="109" lean-forward="false" selection-start-line="190" selection-start-column="106" selection-end-line="190" selection-end-column="109" />
-          <folding>
-            <marker date="1508008405051" expanded="true" signature="5341:7748" ph="..." />
-            <marker date="1508008405051" expanded="false" signature="5362:5434" ph="..." />
-            <marker date="1508008405051" expanded="true" signature="5503:5686" ph="if ... end" />
-            <marker date="1508008405051" expanded="false" signature="5600:5635" ph="..." />
-            <marker date="1508008405051" expanded="false" signature="5715:5768" ph="..." />
-            <marker date="1508008405051" expanded="true" signature="5807:5838" ph="{ ... }" />
-            <marker date="1508008405051" expanded="true" signature="5885:7735" ph="..." />
-            <marker date="1508008405051" expanded="true" signature="5921:7720" ph="..." />
-            <marker date="1508008405051" expanded="true" signature="6040:6548" ph="if ... end" />
-            <marker date="1508008405051" expanded="true" signature="6581:7703" ph="..." />
-            <marker date="1508008405051" expanded="true" signature="6600:7140" ph="if ... end" />
-            <marker date="1508008405051" expanded="true" signature="7160:7395" ph="if ... end" />
-            <marker date="1508008405051" expanded="true" signature="7414:7683" ph="if ... end" />
-            <marker date="1508008405051" expanded="true" signature="7828:7879" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="80" column="54" lean-forward="false" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/users_list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1846">
-          <caret line="267" column="13" lean-forward="false" selection-start-line="267" selection-start-column="13" selection-end-line="267" selection-end-column="13" />
-          <folding>
-            <marker date="1508011059610" expanded="true" signature="9013:9042" ph="..." />
-            <marker date="1508011059610" expanded="true" signature="9013:9182" ph="..." />
-            <marker date="1508011059610" expanded="true" signature="9013:9201" ph="do ... end" />
-            <marker date="1508011059610" expanded="true" signature="9013:9218" ph="..." />
-            <marker date="1508011059610" expanded="true" signature="9013:9229" ph="..." />
-            <marker date="1508011059610" expanded="true" signature="9013:9239" ph="..." />
-            <marker date="1508011059610" expanded="true" signature="9084:9168" ph="..." />
-            <marker date="1508011059610" expanded="true" signature="9247:9378" ph="if ... end" />
-            <marker date="1508011059610" expanded="true" signature="9317:9368" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/subtrends/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/socializations/followTrend.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/questions/_answer.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1887">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/questions/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/questions/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
-          <folding>
-            <marker date="1508017520197" expanded="true" signature="2951:4065" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="3029:3371" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="3057:3177" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="3207:3362" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="3434:4058" ph="..." />
-            <marker date="1508017520197" expanded="false" signature="3452:3524" ph="..." />
-            <marker date="1508017520197" expanded="false" signature="3568:3621" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="3674:4049" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="3684:3837" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="3849:4035" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="4095:4673" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4182:4660" ph="do ... end" />
-            <marker date="1508017520197" expanded="true" signature="4204:4354" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="4383:4435" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4447:4526" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4554:4650" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4695:5017" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4715:5009" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4743:4998" ph="do ... end" />
-            <marker date="1508017520197" expanded="true" signature="4794:4986" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="5065:5215" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="433" column="0" lean-forward="false" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
-          <folding>
-            <marker date="1508017520197" expanded="true" signature="4872:4892" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4872:5157" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4872:5169" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4872:5206" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="4872:5217" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4872:5226" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4872:5234" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4872:9724" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4872:9731" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4907:4962" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="4977:5030" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="5045:5143" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="5282:9713" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="5640:9057" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="5745:7814" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="5768:7805" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="5781:5863" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="5877:6250" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="6292:6588" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="6306:6572" ph="if ... end" />
-            <marker date="1508017520197" expanded="false" signature="6510:6525" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="6652:7792" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="6665:6839" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="7317:7778" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="7821:8205" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="8738:9044" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9088:9198" ph="..." />
-            <marker date="1508017520197" expanded="false" signature="9140:9176" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9278:9686" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9287:9676" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="9330:9643" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9416:9632" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9429:9481" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9494:9551" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9564:9620" ph="..." />
-            <marker date="1508017520197" expanded="false" signature="9777:9796" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9797:15588" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9831:10079" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9863:9921" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="9933:10068" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10115:10358" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10147:10208" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10218:10349" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10362:12923" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="10416:12916" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10460:12909" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10480:12902" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10516:11416" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10549:10739" ph="..." />
-            <marker date="1508017520197" expanded="false" signature="10636:10700" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10812:11196" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="10904:11178" ph="do ... end" />
-            <marker date="1508017520197" expanded="true" signature="10940:11158" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="10995:11140" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="11237:11403" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="11453:12895" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="11486:11675" ph="..." />
-            <marker date="1508017520197" expanded="false" signature="11573:11637" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="11749:12693" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="11777:12661" ph="do ... end" />
-            <marker date="1508017520197" expanded="true" signature="11801:12642" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="11859:12626" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="11975:12611" ph="..." />
-            <marker date="1508017520197" expanded="false" signature="12009:12070" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="12150:12595" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="12241:12575" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="12731:12886" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="12928:15220" ph="if ... end" />
-            <marker date="1508017520197" expanded="true" signature="12989:15212" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13020:15205" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13060:15198" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13092:15097" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13106:13177" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13225:14914" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13237:13592" ph="if ... end" />
-            <marker date="1508017520197" expanded="false" signature="13311:13358" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13359:13579" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13605:13931" ph="if ... end" />
-            <marker date="1508017520197" expanded="false" signature="13680:13693" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13694:13916" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13717:13799" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="13825:13910" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="14006:14899" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="14090:14158" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="14173:14884" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="14960:15084" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="14996:15070" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15125:15187" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15240:15304" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15271:15297" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15344:15579" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15374:15435" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15443:15570" ph="..." />
-            <marker date="1508017520197" expanded="false" signature="15640:15689" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15690:17153" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15718:16952" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15740:16939" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15771:15950" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="15985:16371" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16040:16358" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16405:16494" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16430:16488" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16528:16639" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16562:16626" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16673:16783" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16707:16770" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16817:16928" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="16851:16915" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="17004:17143" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="17030:17136" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="17357:21475" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="17422:21078" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="17457:17873" ph="{&quot;alignment&quot;: 'right'...}" />
-            <marker date="1508017520197" expanded="true" signature="18049:18394" ph="{&quot;startingTop&quot;: '4%'...}" />
-            <marker date="1508017520197" expanded="true" signature="18466:18811" ph="{&quot;startingTop&quot;: '4%'...}" />
-            <marker date="1508017520197" expanded="true" signature="18833:19178" ph="{&quot;startingTop&quot;: '4%'...}" />
-            <marker date="1508017520197" expanded="true" signature="19288:19641" ph="{&quot;startingTop&quot;: '4%'...}" />
-            <marker date="1508017520197" expanded="true" signature="19730:20083" ph="{&quot;startingTop&quot;: '4%'...}" />
-            <marker date="1508017520197" expanded="true" signature="20237:20590" ph="{&quot;startingTop&quot;: '4%'...}" />
-            <marker date="1508017520197" expanded="true" signature="20619:20964" ph="{&quot;startingTop&quot;: '4%'...}" />
-            <marker date="1508017520197" expanded="true" signature="21101:21461" ph="{&quot;startingTop&quot;: '4%'...}" />
-            <marker date="1508017520197" expanded="true" signature="21531:22350" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="21548:22317" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="21581:22296" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="21583:21649" ph="//..." />
-            <marker date="1508017520197" expanded="true" signature="21706:21898" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="21998:22038" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="22128:22168" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="22244:22290" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="22400:23038" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="22490:23027" ph="{&quot;url&quot;: '/notifications.json'...}" />
-            <marker date="1508017520197" expanded="true" signature="22551:22940" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="22680:22936" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="22961:23025" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="23070:23438" ph="..." />
-            <marker date="1508017520197" expanded="true" signature="23205:23428" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="23247:23333" ph="{...}" />
-            <marker date="1508017520197" expanded="true" signature="23337:23426" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_sideques.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -933,54 +399,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/question.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
+        <state relative-caret-position="1666">
+          <caret line="98" column="134" lean-forward="false" selection-start-line="98" selection-start-column="134" selection-end-line="98" selection-end-column="134" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/questions/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="98" column="134" lean-forward="false" selection-start-line="98" selection-start-column="134" selection-end-line="98" selection-end-column="134" />
-          <folding>
-            <marker date="1508017520201" expanded="true" signature="1042:2346" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="1074:2337" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="1137:2326" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="1184:2150" ph="do ... end" />
-            <marker date="1508017520201" expanded="true" signature="1228:1365" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="1399:1671" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="1697:1805" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="1840:2134" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="1856:1949" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="2037:2118" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="2165:2311" ph="if ... end" />
-            <marker date="1508017520201" expanded="true" signature="2240:2293" ph="do ... end" />
-            <marker date="1508017520201" expanded="true" signature="2437:3993" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="2482:2928" ph="..." />
-            <marker date="1508017520201" expanded="false" signature="2531:2779" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="2780:2919" ph="..." />
-            <marker date="1508017520201" expanded="false" signature="2837:2873" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="2950:3811" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="2961:3629" ph="unless ... end" />
-            <marker date="1508017520201" expanded="false" signature="3018:3069" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="3070:3115" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="3131:3614" ph="if ... end" />
-            <marker date="1508017520201" expanded="true" signature="3652:3798" ph="do ... end" />
-            <marker date="1508017520201" expanded="true" signature="3846:3983" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="3874:3922" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="4119:4485" ph="..." />
-            <marker date="1508017520201" expanded="true" signature="4151:4472" ph="{...}" />
-            <marker date="1508017520201" expanded="true" signature="4278:4309" ph="{...}" />
-          </folding>
+        <state relative-caret-position="3417">
+          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7361">
+          <caret line="433" column="0" lean-forward="false" selection-start-line="433" selection-start-column="0" selection-end-line="433" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_sideques.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="3" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="46" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="54" lean-forward="false" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/questions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
+        <state relative-caret-position="986">
+          <caret line="58" column="8" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="3" lean-forward="false" selection-start-line="38" selection-start-column="2" selection-end-line="46" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/answers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/_question.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3230">
+          <caret line="190" column="109" lean-forward="false" selection-start-line="190" selection-start-column="106" selection-end-line="190" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="80" column="54" lean-forward="false" selection-start-line="80" selection-start-column="54" selection-end-line="80" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/comments/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/users_list.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1846">
+          <caret line="267" column="13" lean-forward="false" selection-start-line="267" selection-start-column="13" selection-end-line="267" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/subtrends/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/socializations/followTrend.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/_answer.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1887">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/questions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
           <caret line="61" column="19" lean-forward="false" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
           <folding />
         </state>
@@ -998,6 +572,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/workers/answer_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="98" column="134" lean-forward="false" selection-start-line="98" selection-start-column="134" selection-end-line="98" selection-end-column="134" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/questions/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_sideques.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="82" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/indexmain.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="136" column="50" lean-forward="false" selection-start-line="136" selection-start-column="50" selection-end-line="136" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/answer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="91" lean-forward="false" selection-start-line="13" selection-start-column="91" selection-end-line="13" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/question.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>

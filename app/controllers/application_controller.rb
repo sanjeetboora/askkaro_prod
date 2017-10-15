@@ -5,26 +5,27 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :addnotes
 
-def addnotes
-	@note = Note.new
-  @question=Question.new
+  def addnotes
+    @note = Note.new
+    @question=Question.new
 
-end
-def sideques
+  end
+
+  def sideques
     @questagfeed = []
-if params[:question_id]
-           @question=Question.find(params[:id])
-      
-        @question.tag_list.each do |tag| 
-          @questagfeed += Question.tagged_with(tag) 
-        end
-        else
-          @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
-          @tftags.each do |tag| 
-           @questagfeed += Question.tagged_with(tag) 
-          end
+    if params[:question_id]
+      @question=Question.find(params[:id])
 
-        end
+      @question.tag_list.each do |tag|
+        @questagfeed += Question.tagged_with(tag)
+      end
+    else
+      @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
+      @tftags.each do |tag|
+        @questagfeed += Question.tagged_with(tag)
+      end
+
+    end
 
   end
 
