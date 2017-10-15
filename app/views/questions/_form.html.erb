@@ -1,3 +1,12 @@
+<style type="text/css">
+ form#edit_question_8.edit_question div.card.z-depth-4.center div.action i.waves-effect.waves-light.btn.green.darken-3.right{
+line-height: 2em;
+height: 2em;
+width: 72px;
+padding: 0;
+padding-top: 6px;
+  }
+</style>
 <%= form_for(@question) do |f| %>
   <% if @question.errors.any? %>
     <div id="error_explanation">
@@ -10,8 +19,8 @@
       </ul>
     </div>
   <% end %>
-<div class="card z-depth-4 center">
-  <div class="green darken-3 z-depth-4"style="padding-bottom:20px;">
+<div class="card z-depth-4 center" style="height:451px;">
+  <div class="green darken-3 z-depth-4" style="padding-bottom:20px;">
     <br>
     <span class="card-title white-text">Edit question</span>
     <br>
@@ -30,8 +39,8 @@
       </div>
     </div>
     <br>
-    <div class="action" style="padding:40px;">
-      <%= f.submit "Save" , class:"waves-effect waves-light btn green darken-3"%>
+    <div class="action" style="padding:10px; height: 20px; width: 100%;">
+      <%= f.submit "Save" , class:"waves-effect waves-light btn green darken-3 right"%>
     </div>
   </form>
 </div>

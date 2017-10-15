@@ -20,7 +20,7 @@ class Question < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('title ILIKE ?', "%#{search}%")
+      where('content ILIKE ?', "%#{search}%")
     else
       all
     end

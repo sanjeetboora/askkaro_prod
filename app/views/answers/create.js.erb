@@ -1,2 +1,2 @@
-$('#answers').prepend("<%= escape_javascript (render 'questions/answer', answer: @answer) %>");
+$('#answers').append("<%= escape_javascript (render 'questions/answer', answer: @answer) %>");
 $('#answer_content').val("");
