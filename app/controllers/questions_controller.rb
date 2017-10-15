@@ -62,7 +62,7 @@ class QuestionsController < ApplicationController
         format.js{  }
         format.json { render :show, status: :created, location: @question }
       else
-        format.html { render 'home/index' }
+        format.html { render 'home/index',notice: 'Question was successfully destroyed.' }
         format.json { render json: @question.errors, status: :unprocessable_entity }
       end
     end
