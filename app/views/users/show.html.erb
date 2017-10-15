@@ -206,7 +206,7 @@
       <br>
       <div id="ques-swipe-1" class="col s12 ">
 
-        <%@user.questions.each do |q|%>
+        <%@user.questions.reverse.each do |q|%>
         <!-- <div class="row s12"> -->
         <div class="col s12 m12 l6 ">
           <div class="card z-depth-4 hoverable" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
@@ -233,7 +233,7 @@
       </div>
     </div>
     <div id="ans-swipe-2" class="col s12">
-      <%@user.answers.each do |a|%>
+      <%@user.answers.reverse.each do |a|%>
       <!-- <div class="row s12"> -->
       <div class="col s12 m12 l6">
         <div class="card z-depth-4 hoverable" style="background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);">
