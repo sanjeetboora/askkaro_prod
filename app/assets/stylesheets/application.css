@@ -238,6 +238,8 @@ margin-left: 12px;
   padding-left: 15px;
   margin-left: -35px;
   margin-right: 35px;
+  border: 1px solid #d1d1d1;
+border-radius: 6px;
 }
 
 .card.small.tag:hover {

@@ -108,7 +108,7 @@ height: 160px;
       <i class="large material-icons">menu</i>
     </a>
     <ul>
-      <li><a href="#modaladdnote" class="btn-floating green"><i class="material-icons">mode_edit</i></a></li>
+     <!--  <li><a href="#modaladdnote" class="btn-floating green"><i class="material-icons">mode_edit</i></a></li> -->
 
       <li><%= link_to ('<i class="material-icons btn-floating blue tooltipped" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, note, method: :delete, data: {confirm: "Are you sure?"}%></li>
      <li><%= link_to ('<i class=" material-icons btn-floating yellow darken-1 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Edit">create</i>').html_safe, edit_note_path(note)%></li>

@@ -3,136 +3,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Home</title>
-<style media="screen">
-.apple_pagination {
-background: #f1f1f1;
-border: 1px solid #e5e5e5;
-text-align: center;
-padding: 1em;
-cursor: default; }
-.apple_pagination a, .apple_pagination span {
-  padding: 0.2em 0.3em; }
-.apple_pagination .disabled {
-  color: #aaaaaa; }
-.apple_pagination .current {
-  font-style: normal;
-  font-weight: bold;
-  background-color: #bebebe;
-  display: inline-block;
-  width: 1.4em;
-  height: 1.4em;
-  line-height: 1.5;
-  -moz-border-radius: 1em;
-  -webkit-border-radius: 1em;
-  border-radius: 1em;
-  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
-.apple_pagination a {
-  text-decoration: none;
-  color: black; }
-  .apple_pagination a:hover, .apple_pagination a:focus {
-    text-decoration: underline; }
-</style>
+  <style media="screen">
+    .apple_pagination {
+      background: #f1f1f1;
+      border: 1px solid #e5e5e5;
+      text-align: center;
+      padding: 1em;
+      cursor: default; }
+    .apple_pagination a, .apple_pagination span {
+      padding: 0.2em 0.3em; }
+    .apple_pagination .disabled {
+      color: #aaaaaa; }
+    .apple_pagination .current {
+      font-style: normal;
+      font-weight: bold;
+      background-color: #bebebe;
+      display: inline-block;
+      width: 1.4em;
+      height: 1.4em;
+      line-height: 1.5;
+      -moz-border-radius: 1em;
+      -webkit-border-radius: 1em;
+      border-radius: 1em;
+      text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+    .apple_pagination a {
+      text-decoration: none;
+      color: black; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }
+  </style>
 </head>
 <body>
 
 <!--   <a class="waves-effect waves-light cyan btn modal-trigger" href="#modal2">Ask Question !</a> -->
-  <div id="modal2" class="modal modal-fixed-footer">
-    <div class="modal-content">
-      <h4>ASK QUESTION</h4>
-      <div class="createQuestion">
-        <%= form_for @question, remote: true do |task|%>
-        <div class="input-field">
-          <%= task.text_field :title, class:'validate', id:'title' %>
-          <%= task.label :title,"(Between 6 to 240 characters)", for:'title' %><br>
-        </div>
-        <div class="input-field">
-          <%= task.text_field :content, class:'validate materialize-textarea',id:'content'%><br>
-          <%= task.label :Question, for:'content' %><br>
-          <!-- <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea> -->
+<div id="modal2" class="modal modal-fixed-footer">
+  <div class="modal-content">
+       <span><h4 style="display: inline-block;">ASK QUESTION</h4>
+    <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;"><i class="material-icons">close</i></button>
+    </span>
+    <div class="createQuestion">
+      <%= form_for @question, remote: true do |task|%>
+          <div class="input-field">
+            <%= task.text_field :title, class:'validate', id:'title' %>
+            <%= task.label :title, for:'title' %><br>
+          </div>
+          <div class="input-field">
+            <%= task.text_field :content, class:'validate materialize-textarea',id:'content'%><br>
+            <%= task.label :Question, for:'content' %><br>
+            <!-- <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea> -->
 
-        </div>
-<div class="input-field">
-  <%= task.label :tag_list, "Tags (separated by commas)" %><br />
-  <%= task.text_field :tag_list %>
-</div>
-        <div class="modal-footer">
-          <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
-          --> <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
-              <%= task.submit id: 'create_question_submit' %>
-            </div>
-
-        </div>
-        <% end %>
-        <% if @question.errors.any? %>
-        <% @question.errors.full_messages.each do |message| %>
-        <%= message %>
-        <% end %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="col s12"> -->
-  <!-- <div class="container"> -->
-  <div id="questions">
-    <a class="modal-trigger" href="#modal2">
-      <div class=card class="z-depth-1" style="width: 93%;
-          height: 72px;
-          margin-bottom: 0;
-          margin-top: 10px;
-          margin-left: 25px;
-          padding-left: 24px;
-          padding-top: 0.5px;
-          background: #ffffff;
-          border: 2px solid #949599;">
-        <a class="modal-trigger" href="#modal2" style="color: #949599; margin-bottom: 10px;"><h5>Ask your Question ?</h5></a>
-      </div>
-    </a>
-    <div class="row">
-      <% unless @trend.nil? %>
-          <div class="chip" style="margin-top: 25px;margin-left: 50px;font-size: 30px;">
-           <%=@trend.name%>
+          </div>
+          <div class="input-field">
+            <%= task.label :tag_list, "Tags (separated by commas)" %><br />
+            <%= task.text_field :tag_list %>
+          </div>
+          <div class="modal-footer">
+            <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
+            --> <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
+            <%= task.submit id: 'create_question_submit' %>
           </div>
 
-          <% if @trend.follow_string(current_user.id,@trend.id)== true%>
-              <%= link_to(('<span class="">Unfollow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow1_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
-          <%else%>
-              <%= link_to(('<span class="">follow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow1_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
-          <%end%>
-
-      <%end%>
-      <% @feed.each do |question| %>
-       <!-- <div class="col s12 m12 l12"> -->
-      <%= render 'question' , question: question %>
-   <!-- </div> -->
+          </div>
+      <% end %>
+      <% if @question.errors.any? %>
+          <% @question.errors.full_messages.each do |message| %>
+              <%= message %>
+          <% end %>
       <% end %>
     </div>
-    <div class="apple_pagination">
+  </div>
+</div>
+<!-- <div class="col s12"> -->
+<!-- <div class="container"> -->
+<div id="questions">
+  <a class="modal-trigger" href="#modal2">
+    <div class=card class="z-depth-1" style="width: 93%;
+        height: 72px;
+        margin-bottom: 0;
+        margin-top: 10px;
+        margin-left: 25px;
+        padding-left: 24px;
+        padding-top: 0.5px;
+        background: #ffffff;
+        border: 2px solid #949599;">
+      <a class="modal-trigger" href="#modal2" style="color: #949599; margin-bottom: 10px;"><h5>Ask Your Question ?</h5></a>
+    </div>
+  </a>
+  <div class="row">
+    <% unless @trend.nil? %>
+        <div class="chip" style="margin-top: 25px;margin-left: 50px;font-size: 30px;">
+          <%=@trend.name%>
+        </div>
+
+        <% if @trend.follow_string(current_user.id,@trend.id)== true%>
+            <%= link_to(('<span class="">Unfollow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow1_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
+        <%else%>
+            <%= link_to(('<span class="">follow</span>').html_safe, trend_follow_path(@trend), remote:true,method: :post,id: "follow1_#{@trend.id}",:class =>"waves-effect waves-light btn") %>
+        <%end%>
+
+    <%end%>
+    <% @feed.each do |question| %>
+        <!-- <div class="col s12 m12 l12"> -->
+        <%= render 'question' , question: question %>
+        <!-- </div> -->
+    <% end %>
+  </div>
+  <div class="apple_pagination">
     <div class="page_info">
       <%= page_entries_info @feed %>
     </div>
     <%= will_paginate @feed, :container => false %>
   </div>
 
-  </div>
+</div>
 
 
-  <!-- </div> -->
-  <!-- <div class="container"> -->
+<!-- </div> -->
+<!-- <div class="container"> -->
 
-  <!-- </div> -->
-  <!-- </div> -->
-  <script type="text/javascript">
-  $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('#modal2').modal({
-      dismissible: true
+<!-- </div> -->
+<!-- </div> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('#modal2').modal({
+            dismissible: true
+        });
+        $('#modal2').modal('open');
+        $('.trigger-modal').modal();
+        $('#modal2').modal('close');
+        $('input#title, textarea#content').characterCounter();
     });
-    $('#modal2').modal('open');
-    $('.trigger-modal').modal();
-    $('#modal2').modal('close');
-    $('input#title, textarea#content').characterCounter();
-  });
-  </script>
+</script>
 <script type="text/javascript" charset="utf-8">
     $("#create_question_submit").click(function(){
         if($('#title').val().length<6) {
@@ -158,8 +160,6 @@ cursor: default; }
             });
         }
     });
-
-
 </script>
 
 </body>

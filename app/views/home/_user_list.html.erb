@@ -1,3 +1,4 @@
+<% if user != current_user %>
 <figure class="snip1515 hoverable">
   <div class="profile-image"><%=avatar_for(user,size: 70)%></div>
   <figcaption>
@@ -5,15 +6,14 @@
     <h4>Public Relations</h4>
     <p>The only skills I have the patience to learn are those that have no real application in life. </p>
     <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
-    
-
       <% if user.follow_string(current_user.id,user.id)== true%>
-             <%= link_to('Unfollow', user_follow_path(user), remote:true,method: :post,class: "follow1_#{user.id}") %>
-             <%else%>
-             <%= link_to('follow', user_follow_path(user), remote:true,method: :post,class: "follow1_#{user.id}") %>
-             <%end%>
+      <%= link_to('Unfollow', user_follow_path(user), remote:true,method: :post,class: "follow1_#{user.id}") %>
+      <%else%>
+      <%= link_to('follow', user_follow_path(user), remote:true,method: :post,class: "follow1_#{user.id}") %>
+      <%end%>
       <a href="#"> <i class="ion-social-twitter"></i></a>
       <a href="#"> <i class="ion-social-vimeo"></i></a>
     </div>
   </figcaption>
 </figure>
+<% end %>
