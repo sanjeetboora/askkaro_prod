@@ -341,7 +341,7 @@
         </div>
         <!--  <h5>Trends to Follow</h5> -->
         <div id="user_cloud">
-         <% User.limit(4).each do |user|%> 
+         <% User.limit(5).each do |user|%> 
          <%if user != current_user%>
          <div class="userfollow">
          <figure><a href="#"><%=avatar_for(user,size: 40)%></a></figure>
