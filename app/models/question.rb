@@ -15,7 +15,7 @@ class Question < ActiveRecord::Base
   acts_as_taggable_on :tags
   # acts_as_taggable
   def answerfeed question_id
-    Answer.where(question_id: question_id).order(created_at: :desc)
+    Answer.where(question_id: question_id)
   end
 
   def self.search(search)

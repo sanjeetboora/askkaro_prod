@@ -108,22 +108,22 @@ border-radius: 6px;
       border-radius: 2px;
     }
 
-    div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a i.material-icons{
+     div.card.ques div.supporting_text.text.small div.row div.card-action a i.material-icons{
       color:#949599;
       border-radius: 50%; 
     }
-    div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a i.material-icons:hover{
+  div.card.ques div.supporting_text.text.small div.row div.card-action a i.material-icons:hover{
       color:#0091ea;
     }
-    div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a{
+l div.card.ques div.supporting_text.text.small div.row div.card-action a{
       color:#949599;
       border-radius: 50%; 
     }
-    div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a:hover{
+ div.card.ques div.supporting_text.text.small div.row div.card-action a:hover{
       color:#0091ea;
     }
-div.question div.userDetail div.card.ques.hoverable div.supporting_text.text.small div.row div.card-action a i.btn , 
- div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a.btn{
+ div.card.ques.hoverable div.supporting_text.text.small div.row div.card-action a i.btn , 
+ div.card.ques div.supporting_text.text.small div.row div.card-action a.btn{
   color: #fff;
   background-color: #949599;
   border: none;
@@ -135,8 +135,8 @@ padding: 0 1rem;
 text-transform: uppercase;
 vertical-align: middle;
 }
-div.question div.userDetail div.card.ques.hoverable div.supporting_text.text.small div.row div.card-action a i.btn:hover,
-     div#questions div.row div.question div.userDetail div.card.ques div.supporting_text.text.small div.row div.card-action a.btn:hover{
+ div.card.ques.hoverable div.supporting_text.text.small div.row div.card-action a i.btn:hover,
+     div.card.ques div.supporting_text.text.small div.row div.card-action a.btn:hover{
       color: #fff;
       background-color:#00b8d4 ;
       z-index: 8000;
@@ -184,12 +184,9 @@ div.question div.userDetail div.card.ques.hoverable div.supporting_text.text.sma
       <div class="supporting_text text small">
         <h3 style=" font-family: 'Cantarell, sans-serif';font-size: 22px;font-weight: bold;" class="truncate" ><%= link_to question.title ,question%></h3>
 
- <% if question.answers.first != nil %>
-        <% ans = question.answers.first %>
-        <p style="font-family: 'Josefin Slab', serif;" ><%= raw ans.content.truncate(500) %></p>
+        <p style="font-family: 'Josefin Slab', serif;" ><%= question.content.truncate(500) %></p>
 
-<% end %>
-      
+
         <p style=" font-family: 'Capriola, sans-serif';font-size: 14px;">Tags:  <%= raw question.tag_list.map { |t| link_to t , tag_path(t) }.join(', ') %></p>
 
 
