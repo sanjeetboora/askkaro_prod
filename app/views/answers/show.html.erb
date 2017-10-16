@@ -200,6 +200,23 @@ background: linear-gradient(to left, #D39D38, #4DA0B0); /* W3C, IE 10+/ Edge, Fi
 .modal .modal-footer .btn-flat{
       background-color: #81d4fa;
     }
+      html body div#mithu.container div.row div.col.s12.m12.l7 div#cardques.card.hoverable div#quescontent.card-content.grey-text div.row a.waves-effect.waves-light.btn.follow.right{
+color: #fff;
+  background-color: #949599;
+  border: none;
+border-radius: 20px;
+display: inline-block;
+height: 30px;
+line-height: 30px;
+padding: 0 1rem;
+text-transform: uppercase;
+vertical-align: middle;
+  }
+   html body div#mithu.container div.row div.col.s12.m12.l7 div#cardques.card.hoverable div#quescontent.card-content.grey-text div.row a.waves-effect.waves-light.btn.follow.right:hover{
+ color: #fff;
+      background-color:#00b8d4 ;
+      z-index: 8000;
+  }
   </style>
 
 </head>
@@ -233,7 +250,11 @@ background: linear-gradient(to left, #D39D38, #4DA0B0); /* W3C, IE 10+/ Edge, Fi
           <%= link_to ('<i class="material-icons right">delete</i>').html_safe, @answer.question, method: :delete, data: {confirm: "Are you sure?"}%>
 
       <% end %>
-
+<% if @answer.question.follow_string(current_user.id,@answer.question.id)== true%>
+                <%= link_to(('<span class="">Unfollow</span>').html_safe, question_follow_path(@answer.question), remote:true,method: :post,id: "follow_#{@answer.question.id}",:class =>"waves-effect waves-light btn follow right") %>
+            <%else%>
+                <%= link_to(('<span class="">follow</span>').html_safe, question_follow_path(@answer.question), remote:true,method: :post,id: "follow_#{@answer.question.id}",:class =>"waves-effect waves-light btn follow right") %>
+            <%end%>
     </div>
   </div>
 </div>
