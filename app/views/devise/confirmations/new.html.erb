@@ -1,16 +1,131 @@
-<h2>Resend confirmation instructions</h2>
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+body {
+  background: #456;
+  font-family: 'Open Sans', sans-serif;
+}
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-  </div>
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+  
+}
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-<%= render "devise/shared/links" %>
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+
+.login-header {
+  background: #28d;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.new_user {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .new_user is defined with p tags */
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+</style>
+
+
+<div class="login">
+  <div class="login-triangle"></div>
+  <h2 class="login-header">Resend confirmation instructions</h2>
+  <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+			<%= devise_error_messages! %>
+  
+
+
+    <p><div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<%= f.email_field :email, autofocus: true,class:"input validate", id:"pass", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+				</div></p>
+  
+    <p><input type="submit" class="button" value="Resend confirmation instructions"></p>
+
+  <% end %>
+			<%= render "devise/shared/links" %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
