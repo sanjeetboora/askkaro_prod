@@ -4,7 +4,7 @@
     padding: 2px;
   }
   .row2{
-    padding-top: 10px;
+    padding-top: 0px;
   }
   .row1{
     padding-bottom: 3px;
@@ -16,14 +16,14 @@
    }
   .card-panel1{
     background: linear-gradient(60deg, #ab47bc, #7b1fa2);
-    height: 120px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 5px;
+    height: 37px;
+padding-top: 0;
+padding-bottom: 0;
+padding-left: 0;
+padding-right: 0;
+margin-left: 15px;
+margin-right: 15px;
+border-radius: 5px;
   }
   #tabsign a.active{
     /*background: #ff4b1f;  /* fallback for old browsers */
@@ -41,6 +41,9 @@
   .btt{
     background: linear-gradient(60deg, #ab47bc, #7b1fa2);
   }
+ div#modal7.modal.open div.modal-content div.row2 div#test-swipe-2.active form#new_user.new_user div.row1 div.input-field.col.s12 input{
+margin: 0;
+  }
 </style>
 <div class="row2">
   <ul id="tabsign" class="tabs tabs-fixed-width">
@@ -50,11 +53,11 @@
   <br>
   <div id="test-swipe-1">
     <div class="card-panel1 z-depth-4">
-      <h5 class="white-text center-align">SIGN IN</h5>
+     <!--  <h5 class="white-text center-align">SIGN IN</h5> -->
       <div class="center-align">
         <%- if devise_mapping.omniauthable? %>
         <%- resource_class.omniauth_providers.each do |provider| %>
-        <a class="waves-effect waves-light btn transparent"><i class="fa fa-twitter"></i></a>
+     <!--    <a class="waves-effect waves-light btn transparent"><i class="fa fa-twitter"></i></a> -->
         <%= link_to ('<i class="fa fa-facebook-square"></i>').html_safe, omniauth_authorize_path(resource_name, :facebook),class:"waves-effect waves-light btn transparent"%><br />
         <% end -%>
         <% end -%>
@@ -102,11 +105,11 @@
     </div>
     <div id="test-swipe-2">
       <div class="card-panel1 purple darken-3 z-depth-4">
-        <h5 class="white-text center-align">SIGN UP</h5>
+       <!--  <h5 class="white-text center-align">SIGN UP</h5> -->
         <div class="center-align">
           <%- if devise_mapping.omniauthable? %>
           <%- resource_class.omniauth_providers.each do |provider| %>
-          <a class="waves-effect waves-light btn transparent"><i class="fa fa-twitter"></i></a>
+      <!--     <a class="waves-effect waves-light btn transparent"><i class="fa fa-twitter"></i></a> -->
           <%= link_to ('<i class="fa fa-facebook-square"></i>').html_safe, omniauth_authorize_path(resource_name, :facebook),class:"waves-effect waves-light btn transparent"%><br />
           <% end -%>
           <% end -%>
