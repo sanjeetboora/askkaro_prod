@@ -30,7 +30,7 @@
 <body>
   <% if notice %>
   <script type="text/javascript">
-    noty({text: '<%= notice %>', type: 'alert', timeout: 350, progressBar: true});
+    noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
   </script>
   <% end %>
   <% if alert %>
@@ -315,7 +315,8 @@
       <div class='card small tag'>
         <div class="card-image">
           <div class="image-inside"></div>
-          <span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Trends to Follow</span>
+          <a href="#modaltag"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Trends to Follow</span></a>
+          
         </div>
         <!--  <h5>Trends to Follow</h5> -->
         <div id="tag_cloud">
@@ -337,7 +338,8 @@
       <div class='card small userf'>
         <div class="card-image">
           <div class="image-inside"></div>
-          <span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Users to Follow</span>
+          <a href="/users_list"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Users to Follow</span></a>
+          
         </div>
         <!--  <h5>Trends to Follow</h5> -->
         <div id="user_cloud">
