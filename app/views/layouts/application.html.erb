@@ -127,7 +127,7 @@
               </li>
           <% end %>
           <li>
-            <a href="">Read</a>
+            <a href="#">Read</a>
             <ul class="nav-dropdown">
               <li>
                 <a href="/">Trending</a>
@@ -152,7 +152,7 @@
 
           <% if user_signed_in? %>
               <li>
-                <a ><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification</a>
+                <a ><i class="material-icons right" id="notificationcount" style="padding-top: 7px;">notifications</i>Notification</a>
                 <ul id="dropdownnoty" class="nav-dropdown">
 
                 </ul>
@@ -726,6 +726,8 @@
                 a.innerHTML=data[i]['actor']+" "+data[i]['action']+" "+data[i]['notifiable']['type'];
                 a.href=data[i]['url'];
             }
+            console.log($('#notificationcount')[0].innerHTML);
+            $('#notificationcount').innerHTML=data.length;
         },
         error: function(){
             console.log("some error");
