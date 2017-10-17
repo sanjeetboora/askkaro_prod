@@ -1,19 +1,32 @@
 <% if user != current_user %>
-<figure class="snip1515 hoverable">
-  <div class="profile-image"><%=avatar_for(user,size: 70)%></div>
-  <figcaption>
-    <h3><%= link_to user.name,user_path(user.id) %></h3>
-    <h4>Public Relations</h4>
-    <p>The only skills I have the patience to learn are those that have no real application in life. </p>
-    <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
-      <% if user.follow_string(current_user.id,user.id)== true%>
+ <div class="col l6 m6 s12">
+  <div id="usercard2" class="card userfour usercol">
+      <div class="header"></div>
+      <div class="wrapper">
+        <div class="image-wrapper"><%=avatar_for(user,size: 100)%></div>
+        <h3 class="name"><%= link_to user.name,user_path(user.id) %></h3>
+        <div class="social usercf">
+          <div class="userfour usercol">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </div>
+          <div class="userfour usercol">
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </div>
+          <div class="userfour usercol">
+            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="info usercf">
+          <div class="userfour usercol"><span class="number"><%= user.followees(User).count %></span>Following</div>
+          <div class="userfour usercol"><span class="number"><%= user.questions.count %></span>Questions</div>
+          <div class="userfour usercol"><span class="number"><%= user.followers(User).count %></span>Followers</div>
+        </div>
+        <div class="center">   <% if user.follow_string(current_user.id,user.id)== true%>
       <%= link_to('Unfollow', user_follow_path(user), remote:true,method: :post,class: "follow1_#{user.id}") %>
       <%else%>
       <%= link_to('follow', user_follow_path(user), remote:true,method: :post,class: "follow1_#{user.id}") %>
-      <%end%>
-      <a href="#"> <i class="ion-social-twitter"></i></a>
-      <a href="#"> <i class="ion-social-vimeo"></i></a>
+      <%end%></div>
+      </div>
     </div>
-  </figcaption>
-</figure>
+ </div>
 <% end %>

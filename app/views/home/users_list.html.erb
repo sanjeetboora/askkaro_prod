@@ -1,107 +1,162 @@
 <style type="text/css">
-  
-  @import url(https://fonts.googleapis.com/css?family=Open+sans);
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
-.snip1515 {
-  font-family: 'Open Sans', Arial, sans-serif;
-  position: relative;
-  float: left;
-  margin: 10px 1%;
-  min-width: 230px;
-  max-width: 315px;
-  width: 100%;
-  color: #000000;
+.usertitle{
   text-align: center;
-  line-height: 1.4em;
+  color: #2c3e50;
+}
+
+/* CONTAINERS */ 
+
+.usercontainer {max-width: 940px; width: 100%; margin: 0 auto; } 
+.usertwelve { width: 100%; } 
+.usereleven { width: 91.53%; } 
+.userten { width: 83.06%; } 
+.usernine { width: 74.6%; } 
+.usereight { width: 66.13%; } 
+.userseven { width: 57.66%; } 
+.usersix { width: 49.2%; } 
+.userfive { width: 40.73%; } 
+.userfour { width: 32.26%;} 
+.userthree { width: 23.8%; } 
+.usertwo { width: 15.33%; } 
+.userone{ width: 6.866%;}
+
+/* COLUMNS */ 
+
+.usercol { 
+  display: block; 
+  float:left;
+  margin: 1% 0 1% 1.6%; 
+} 
+
+.usercol:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */ 
+
+.usercf:before, .usercf:after { 
+  content: " "; 
+  display: table; 
+} 
+
+.usercf:after {
+  clear: both; 
+} 
+
+.usercf { 
+  *zoom: 1; 
+}
+
+/* PROFILES */
+
+.card{
+  max-width: 100%;
+  height: 400px;
+  background-color: #fff;
+  font-family: 'Arimo', sans-serif;
   font-size: 14px;
-  box-shadow: none !important;
 }
 
-.snip1515:hover{
-z-index: 8000;
-    box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
 
+/* CARD 2 */
+
+#usercard2{
+  overflow: hidden;
+  color: #2c3e50;
+  width: 100%;
 }
 
-.snip1515 * {
+#usercard2 a{
+  color: #2c3e50;
+}
+
+#usercard2 .wrapper{
+  padding: 10px;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.snip1515 .profile-image {
-  display: inline-block;
-  width: 80%;
-  z-index: 1;
+#usercard2 .header{
+  width: 100%;
+  height: 100px;
   position: relative;
-  padding: 10px;
- /* border: 2px solid #e8b563;*/
+  background-color: #3498db;
 }
 
-.snip1515 .profile-image img {
-  max-width: 100%;
-  vertical-align: top;
+#usercard2 .header:after{
+  content: '';
+  background: inherit;
+  bottom: 0;
+  display: block;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: skewY(-8deg);
+  -webkit-transform: skewY(-8deg);
+  transform-origin: 100%;
 }
 
-.snip1515 figcaption {
-  width: 100%;
-  background-color: #F2F2F2;
-  color: #555;
-  padding: 125px 25px 25px;
-  margin-top: -100px;
-  display: inline-block;
+#usercard2 .image-wrapper{
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-image: url("https://static.pexels.com/photos/7097/people-coffee-tea-meeting.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 5;
+  top: 63px;
+  left: 50%;
+  margin-left: -50px;
 }
 
-.snip1515 h3,
-.snip1515 h4,
-.snip1515 p {
-  margin: 0 0 5px;
-}
-
-.snip1515 h3 {
-  font-weight: 600;
-  font-size: 1.3em;
-  font-family: 'Playfair Display', Arial, sans-serif;
-}
-
-.snip1515 h4 {
-  color: #8c8c8c;
-  font-weight: 400;
-  letter-spacing: 2px;
-   font-size: 1.0em;
-}
-
-.snip1515 p {
-  font-size: 0.9em;
-  letter-spacing: 1px;
-  opacity: 0.9;
-}
-
-.snip1515 .icons {
+#usercard2 .name{
+  margin-top: 70px;
   text-align: center;
-  width: 100%;
+  font-size: 1.50rem;
 }
 
-.snip1515 i {
-  padding: 10px 2px;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: normal;
-  color: #e8b563;
-  opacity: 0.75;
+#usercard2 .social .userfour{
+  text-align: center;
 }
 
-.snip1515 i:hover {
-  opacity: 1;
-  -webkit-transition: all 0.35s ease;
-  transition: all 0.35s ease;
+#usercard2 .info{
+  margin: 30px 0;
+  text-align: center;
+}
+#usercard1 .info .userfour , #usercard2 .info .userfour{
+  text-align: center;
+  border-right: 1px solid #2c3e50;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+#usercard1 .info .userfour:last-of-type, #usercard2 .info .userfour:last-of-type{
+  border-right: none;
+}
+
+#usercard1 .info .userfour .number , #usercard2 .info .userfour .number{
+  display: block;
+  font-size: 20px;
+  padding: 3px 0;
+  font-weight: 700;
+}
 
 </style>
 <div id="users">
+<div class="usercontainer">
+
+ <div class="row usercf">
+
 <% @users.each do |u| %>
-      <%= render 'user_list', user: u %>
+
+    
+    <%= render 'user_list', user: u %>
 
 <%end%>
- </div>
+
+</div>
+  </div>
+  
+</div>
