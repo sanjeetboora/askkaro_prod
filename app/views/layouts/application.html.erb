@@ -341,21 +341,22 @@
         <div id="tag_cloud">
           <% tag_cloud Question.tag_counts.order('count DESC').limit(10), %w[sml med lar] do |tag, css_class| %>
           <% if tag.name.length <= 11 %>
-         
-              <div class="chip">
+          
+          <div class="chip">
             <%= link_to tag.name, tag_path(tag.name), class: css_class %>
 
             <% @trend=Trend.where(name: tag.name).first %>
-           
-        <% if @trend.follow_string(current_user.id,@trend.id)== true%>
+            <% if @trend != nil %>
+            
+            <% if @trend.follow_string(current_user.id,@trend.id)== true%>
             <%= link_to(('<i class="material-icons tagicon">check</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
-        <%else%>
+            <%else%>
             <%= link_to(('<i class="material-icons tagicon">add</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
-        <%end%>
-
+            <%end%>
+            <%end%>
           </div>
-       
-        
+          
+          
           <% end %>
           <% end %>
 
