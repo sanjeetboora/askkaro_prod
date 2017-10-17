@@ -152,14 +152,14 @@
 
             <% if user_signed_in? %>
             <li>
-              <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count"></span></a>
+            <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px; margin-left: 0px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count"></span></a>
               <ul id="dropdownnoty" class="nav-dropdown">
 
               </ul>
             </li>
             <% end %>
             <% if user_signed_in? %>
-            <li><a href="#"><%= avatar_for(current_user, size: 40) %></a>
+            <li><a href="#"><%= avatar_for(current_user, size: 60) %></a>
               <ul class="nav-dropdown">
                 <li>
                   <a href="/users/<%= current_user.id %>">My Profile</a>
@@ -341,13 +341,13 @@
         <div id="tag_cloud">
           <% tag_cloud Question.tag_counts.order('count DESC').limit(10), %w[sml med lar] do |tag, css_class| %>
           <% if tag.name.length <= 11 %>
-          
+
           <div class="chip">
             <%= link_to tag.name, tag_path(tag.name), class: css_class %>
 
             <% @trend=Trend.where(name: tag.name).first %>
             <% if @trend != nil %>
-            
+
             <% if @trend.follow_string(current_user.id,@trend.id)== true%>
             <%= link_to(('<i class="material-icons tagicon">check</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
             <%else%>
@@ -355,8 +355,8 @@
             <%end%>
             <%end%>
           </div>
-          
-          
+
+
           <% end %>
           <% end %>
 
