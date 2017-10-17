@@ -152,7 +152,7 @@
 
           <% if user_signed_in? %>
               <li>
-                <a ><i class="material-icons right" id="notificationcount" style="padding-top: 7px;">notifications</i>Notification<span class="new badge ">4</span></a>
+                <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count"></span></a>
                 <ul id="dropdownnoty" class="nav-dropdown">
 
                 </ul>
@@ -726,8 +726,8 @@
                 a.innerHTML=data[i]['actor']+" "+data[i]['action']+" "+data[i]['notifiable']['type'];
                 a.href=data[i]['url'];
             }
-            console.log($('#notificationcount')[0].innerHTML);
-            $('#notificationcount').innerHTML=data.length;
+//            console.log($('#notificationcount')[0].innerHTML);
+            $("[data-behaviour='unread-count']")[0].innerHTML=data.length;
         },
         error: function(){
             console.log("some error");
@@ -736,6 +736,18 @@
 
     });
 
+</script>
+<script type="text/javascript" charset="utf-8">
+    $("[data-behaviour='notifications-link']").click(function(){
+      $.ajax({
+          url: '/notifications/mark_as_read',
+          method: 'POST',
+          dataType: 'JSON',
+          success: function(data){
+              $("[data-behaviour='unread-count']")[0].innerHTML='0';
+          }
+      })
+    });
 </script>
 </body>
 

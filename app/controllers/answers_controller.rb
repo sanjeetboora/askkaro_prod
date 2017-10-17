@@ -43,7 +43,7 @@ class AnswersController < ApplicationController
 # byebug
          Resque.enqueue(AnswerMailer,@answer.id,current_user.id)
         # (@question.user).each do |user|
-          #Notification.create(recipient: @question.user,actor: current_user,action: "Posted",notifiable: @answer)
+          Notification.create(recipient: @question.user,actor: current_user,action: "Posted",notifiable: @answer)
         # end
         (@question.answers).each do |ans|
           if ans.user==current_user
