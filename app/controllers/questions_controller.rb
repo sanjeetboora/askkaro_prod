@@ -57,7 +57,12 @@ class QuestionsController < ApplicationController
     respond_to do |format|
       if @question.save
          Resque.enqueue(QuestionMailer,@question.id,current_user.id)
-
+         # ans=Answer.new
+         # ans.content="a"
+         # ans.question_id=@question.id
+         # ans.user_id=current_user.id
+         # ans.save!
+         # ans.destroy
         format.html { redirect_to '/', notice: 'Question was successfully created.' }
         format.js{  }
         format.json { render :show, status: :created, location: @question }
