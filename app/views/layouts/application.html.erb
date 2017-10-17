@@ -103,9 +103,10 @@
       <nav id="mininav">
         <ul class="nav-list">
           <li>
-            <a href="#!">Home</a>
+
           </li>
           <li>
+            <% if user_signed_in? %>
             <div class="search-wrapper">
 
               <form action="/home/index" method="get">
@@ -120,12 +121,13 @@
 
 
             </div>
+                <%end%>
           </li>
           <% if user_signed_in? %>
               <li>
                 <a href="/users_list">All Users</a>
               </li>
-          <% end %>
+
           <li>
             <a href="#">Read</a>
             <ul class="nav-dropdown">
@@ -140,7 +142,7 @@
               </li>
             </ul>
           </li>
-
+          <% end %>
           <% if user_signed_in? %>
               <li>
               </li>
@@ -152,7 +154,7 @@
 
           <% if user_signed_in? %>
               <li>
-                <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count"></span></a>
+                <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count">0</span></a>
                 <ul id="dropdownnoty" class="nav-dropdown">
 
                 </ul>
@@ -727,6 +729,7 @@
                 a.href=data[i]['url'];
             }
 //            console.log($('#notificationcount')[0].innerHTML);
+
             $("[data-behaviour='unread-count']")[0].innerHTML=data.length;
         },
         error: function(){
