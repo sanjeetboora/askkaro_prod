@@ -50,7 +50,7 @@ class AnswersController < ApplicationController
           if user==current_user
             next
           end
-          Notification.create(recipient: user,actor: current_user,action: "Posted",notifiable: @answer)
+          Notification.create(recipient: user,actor: current_user,action: "Posted An Answer",notifiable: @answer.question)
         end
         format.html {redirect_to 'home/questions/', notice: 'Answer was successfully created.'}
         format.js {}

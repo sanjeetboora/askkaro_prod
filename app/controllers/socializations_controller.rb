@@ -17,6 +17,7 @@ class SocializationsController < ApplicationController
       @is_followed=false
     else
       current_user.toggle_follow!(@socializable)
+      Notification.create(recipient: @question.user,actor: current_user,action: "Followed Your Question",notifiable: @question)
       @is_followed=true
     end
     respond_to do |format|
@@ -63,6 +64,7 @@ class SocializationsController < ApplicationController
       @is_liked=false
     else
       current_user.toggle_like!(@socializable)
+      Notification.create(recipient: @question.user,actor: current_user,action: "Liked Your Question",notifiable: @question)
       @is_liked=true
     end
 
