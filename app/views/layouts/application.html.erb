@@ -152,7 +152,7 @@
 
           <% if user_signed_in? %>
               <li>
-                <a ><i class="material-icons right" id="notificationcount" style="padding-top: 7px;">notifications</i>Notification</a>
+                <a ><i class="material-icons right" id="notificationcount" style="padding-top: 7px;">notifications</i>Notification<span class="new badge ">4</span></a>
                 <ul id="dropdownnoty" class="nav-dropdown">
 
                 </ul>
@@ -717,7 +717,7 @@
             console.log(data.length);
             console.log(data[0]['actor']);
             var c=$('#dropdownnoty');
-            for(var i=0;i<data.length;i++){
+            for(var i=data.length-1;i>=0;i--){
                 var liElement = document.createElement('li');
                 var a=document.createElement('a');
                 liElement.append(a);

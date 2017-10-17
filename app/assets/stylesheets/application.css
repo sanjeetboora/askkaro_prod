@@ -100,8 +100,17 @@ nav ul li a:visited:hover {
 }
 nav ul li a:not(:only-child):after,
 nav ul li a:visited:not(:only-child):after {
-  padding-left: 4px;
-  content: ' ▾';
+/*  padding-left: 4px;
+  content: ' ▾';*/
+
+}
+div.nav-container.hide-on-med-and-down nav#mininav ul.nav-list li a span.new.badge{
+min-width: 1rem;
+background-color: #039BE5;
+border-radius: 15px;
+}
+div.nav-container.hide-on-med-and-down nav#mininav ul.nav-list li a span.badge.new::after{
+ content: ""; 
 }
 
 nav ul li ul li {
