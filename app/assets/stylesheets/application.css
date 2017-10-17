@@ -206,6 +206,7 @@ padding: 5px 0px;
       margin: 4px;
       margin-left: 62px;
     }
+
     
 #user_cloud .chip{
   font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
@@ -266,7 +267,16 @@ border-radius: 6px;
 
 
 }
-
+ /*div#tag_cloud div.chip a.chip_a{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#00b8d4;
+ }
+div#tag_cloud div.chip a.chip_a:hover{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#ffffff;
+}*/
 #tag_cloud .chip{
   font-family: 'Capriola, sans-serif';font-size: 12px;
   /*font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;*/
@@ -289,21 +299,19 @@ border-radius: 6px;
  z-index: 8000;
  /*  background-color: #e0f7fa ;*/
 
+
 }
-#tag_cloud .chip a{
+ #tag_cloud .chip a{
   font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
   font-weight: 400;
-  color:#00b8d4;
-}
-#tag_cloud .chip a:hover{
-  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-  font-weight: 400;
-  color:#ffffff;
+   color:#00b8d4;
 }
 
-/*#tag_cloud .chip a:hover{
-  color:white;
-  }*/
+  #tag_cloud .chip:hover a{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#fff;
+}
   #tag_cloud .chip a.sml{
     font-size: 0.8em;
 
