@@ -31,48 +31,63 @@
       color: black; }
     .apple_pagination a:hover, .apple_pagination a:focus {
       text-decoration: underline; }
+
+        div#modal2.modal.modal-fixed-footer.open div.createQuestion div.modal-footer div.actions.modal-action.modal-close.waves-effect.waves-green.cyan.btn-flat{
+padding: 0;
+border-radius: 25px;
+    }
+div#modal2.modal.modal-fixed-footer.open div.createQuestion div.modal-footer div.actions.modal-action.modal-close.waves-effect.waves-green.cyan.btn-flat input#create_question_submit{
+padding-top: 10px;
+}
   </style>
 </head>
 <body>
 
 <!--   <a class="waves-effect waves-light cyan btn modal-trigger" href="#modal2">Ask Question !</a> -->
+
 <div id="modal2" class="modal modal-fixed-footer">
-  <div class="modal-content">
-       <span><h4 style="display: inline-block;">ASK QUESTION</h4>
-    <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;"><i class="material-icons">close</i></button>
+  <div class="createQuestion">
+    <div class="modal-content">
+    <span><h4 style="display: inline-block;">ASK QUESTION</h4>
+    <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;padding: 0;"><i class="material-icons">close</i></button>
     </span>
-    <div class="createQuestion">
+      
+      
       <%= form_for @question, remote: true do |task|%>
-          <div class="input-field">
-            <%= task.text_field :title, class:'validate', id:'title' %>
-            <%= task.label :title,"Title (Between 6 to 240 characters)", for:'title' %><br>
-          </div>
-          <div class="input-field">
-            <%= task.text_field :content, class:'validate materialize-textarea',id:'content'%><br>
-            <%= task.label :Question, for:'content' %><br>
-            <!-- <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea> -->
+      <div class="input-field">
+        <%= task.text_field :title, class:'validate', id:'title' %>
+        <%= task.label :title,"Title (Between 6 to 240 characters)", for:'title' %><br>
+      </div>
+      <div class="input-field">
+        <%= task.text_area :content, class:'validate materialize-textarea',id:'content'%><br>
+        <%= task.label :Question, for:'content' %><br>
+        <!-- <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea> -->
 
-          </div>
-          <div class="input-field">
-            <%= task.label :tag_list, "Tags (separated by commas)" %><br />
-            <%= task.text_field :tag_list %>
-          </div>
-          <div class="modal-footer">
-            <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
-            --> <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
-            <%= task.submit id: 'create_question_submit' %>
-          </div>
+      </div>
 
-          </div>
-      <% end %>
-      <% if @question.errors.any? %>
-          <% @question.errors.full_messages.each do |message| %>
-              <%= message %>
-          <% end %>
-      <% end %>
+      <div class="input-field">
+        <%= task.label :tag_list, "Tags (separated by commas)" %>
+        <%= task.text_field :tag_list %>
+      </div>
+
     </div>
+    <div class="modal-footer">
+          <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
+        --> <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
+        <%= task.submit id: 'create_question_submit' %>
+      </div>
+
+    </div>
+    <% end %>
+    <% if @question.errors.any? %>
+    <% @question.errors.full_messages.each do |message| %>
+    <%= message %>
+    <% end %>
+    <% end %>
+
   </div>
 </div>
+
 <!-- <div class="col s12"> -->
 <!-- <div class="container"> -->
 <div id="questions">
