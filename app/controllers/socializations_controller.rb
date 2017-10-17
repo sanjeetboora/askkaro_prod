@@ -27,13 +27,15 @@ class SocializationsController < ApplicationController
     def followUser
     @user = User.find(params[:user_id])
     follow=Follow.where(followable_type: "User",follower_id: current_user.id,followable_id: @user.id).first
-
+    # byebug
     if follow
       current_user.toggle_follow!(@socializable)
       @is_followed=false
     else
+
       current_user.toggle_follow!(@socializable)
-      #Notification.create(recipient: @user,actor: current_user,action: "Followed",notifiable: @answer)
+
+      Notification.create(recipient: @user,actor: current_user,action: "Followed You",notifiable: @user)
       @is_followed=true
     end
     respond_to do |format|
@@ -81,7 +83,9 @@ class SocializationsController < ApplicationController
       current_user.toggle_like!(@socializable)
       @is_liked=false
     else
+      # byebug
       current_user.toggle_like!(@socializable)
+      Notification.create(recipient: @answer.user,actor: current_user,action: "Liked Your Answer",notifiable: @answer.question)
       @is_liked=true
     end
     respond_to do |format|
