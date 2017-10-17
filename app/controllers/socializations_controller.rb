@@ -32,6 +32,7 @@ class SocializationsController < ApplicationController
       @is_followed=false
     else
       current_user.toggle_follow!(@socializable)
+      #Notification.create(recipient: @user,actor: current_user,action: "Followed",notifiable: @answer)
       @is_followed=true
     end
     respond_to do |format|
