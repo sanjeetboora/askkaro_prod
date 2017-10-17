@@ -28,200 +28,200 @@
   </style>
 </head>
 <body>
-<% if notice %>
-    <script type="text/javascript">
-        noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
-    </script>
-<% end %>
-<% if alert %>
-    <script type="text/javascript">
-        noty({text: '<%= alert %>', type: 'error', timeout: 2500, progressBar: true});
-    </script>
-<% end %>
-<style type="text/css">
-  .search-wrapper {
-    position: absolute;
-    top: 0;
-    right: calc(5% - 20px);
-    padding: 4px 20px;
-  }
+  <% if notice %>
+  <script type="text/javascript">
+    noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
+  </script>
+  <% end %>
+  <% if alert %>
+  <script type="text/javascript">
+    noty({text: '<%= alert %>', type: 'error', timeout: 2500, progressBar: true});
+  </script>
+  <% end %>
+  <style type="text/css">
+    .search-wrapper {
+      position: absolute;
+      top: 0;
+      right: calc(5% - 20px);
+      padding: 4px 20px;
+    }
 
-  .search-wrapper .search-input {
-    font-family: 'Lato', sans-serif;
-    border: none;
-    background-color: #eeeeee;
-    color: #3e3e3e;
-    height: 18px;
-    width: 280px;
-    border-radius: 30px;
-    padding: 10px 18px 10px 18px;
-    font-size: 14px;
-    transition: width .3s ease;
-    margin-bottom: 0px;
-    margin-top: 4%;
-  }
+    .search-wrapper .search-input {
+      font-family: 'Lato', sans-serif;
+      border: none;
+      background-color: #eeeeee;
+      color: #3e3e3e;
+      height: 18px;
+      width: 280px;
+      border-radius: 30px;
+      padding: 10px 18px 10px 18px;
+      font-size: 14px;
+      transition: width .3s ease;
+      margin-bottom: 0px;
+      margin-top: 4%;
+    }
 
-  .search-wrapper .search-input:focus {
-    outline: none;
-    background-color: #fff;
-  }
+    .search-wrapper .search-input:focus {
+      outline: none;
+      background-color: #fff;
+    }
 
-  .search-wrapper .search-input::-webkit-input-placeholder {
-    letter-spacing: 1.5px;
-  }
+    .search-wrapper .search-input::-webkit-input-placeholder {
+      letter-spacing: 1.5px;
+    }
 
-  .search-wrapper .search-input::-moz-placeholder {
-    letter-spacing: 1.5px;
-  }
+    .search-wrapper .search-input::-moz-placeholder {
+      letter-spacing: 1.5px;
+    }
 
-  .search-wrapper .search-input:-ms-input-placeholder {
-    letter-spacing: 1.5px;
-  }
+    .search-wrapper .search-input:-ms-input-placeholder {
+      letter-spacing: 1.5px;
+    }
 
-  .search-wrapper .search-icon {
-    position: absolute;
-    top: 28px;
-    right: calc(5% + 18px);
-    cursor: pointer;
-  }
-</style>
-
-
-<div class="navbar">
-
-  <section class="navigation">
-    <div class="nav-container hide-on-med-and-down">
-
-      <div class="brand">
-        <a href="/">
-          <div class="image-logo1"></div>
-        </a>
-        <a href="/">
-          <div class="image-name1"></div>
-        </a>
-      </div>
-      <nav id="mininav">
-        <ul class="nav-list">
-          <li>
-            <a href="#!">Home</a>
-          </li>
-          <li>
-            <div class="search-wrapper">
-
-              <form action="/home/index" method="get">
-                <!-- <input class="search-input" placeholder="SEARCH" type="text" /> -->
-                <%= text_field_tag :search, params[:search], :class => 'search-input', :placeholder => 'Search' %>
+    .search-wrapper .search-icon {
+      position: absolute;
+      top: 28px;
+      right: calc(5% + 18px);
+      cursor: pointer;
+    }
+  </style>
 
 
-                <svg width="13px" height="13px" class="search-icon" viewBox="0 0 13 13">
-                  <path fill="#999999" d="M12,13a1,1,0,0,1-.7-.3L8.62,10A5.5,5.5,0,1,1,10,8.62l2.68,2.68A1,1,0,0,1,12,13ZM5.5,2A3.5,3.5,0,1,0,9,5.5,3.5,3.5,0,0,0,5.5,2Z"/>
-                </svg>
-              </form>
+  <div class="navbar">
+
+    <section class="navigation">
+      <div class="nav-container hide-on-med-and-down">
+
+        <div class="brand">
+          <a href="/">
+            <div class="image-logo1"></div>
+          </a>
+          <a href="/">
+            <div class="image-name1"></div>
+          </a>
+        </div>
+        <nav id="mininav">
+          <ul class="nav-list">
+            <li>
+              <a href="#!">Home</a>
+            </li>
+            <li>
+              <div class="search-wrapper">
+
+                <form action="/home/index" method="get">
+                  <!-- <input class="search-input" placeholder="SEARCH" type="text" /> -->
+                  <%= text_field_tag :search, params[:search], :class => 'search-input', :placeholder => 'Search' %>
 
 
-            </div>
-          </li>
-          <% if user_signed_in? %>
-              <li>
-                <a href="/users_list">All Users</a>
-              </li>
-          <% end %>
-          <li>
-            <a href="#">Read</a>
-            <ul class="nav-dropdown">
-              <li>
-                <a href="/">Trending</a>
-              </li>
-              <li>
-                <a href="/home/index">Latest</a>
-              </li>
-              <li>
-                <a href="/home/index">All</a>
-              </li>
-            </ul>
-          </li>
+                  <svg width="13px" height="13px" class="search-icon" viewBox="0 0 13 13">
+                    <path fill="#999999" d="M12,13a1,1,0,0,1-.7-.3L8.62,10A5.5,5.5,0,1,1,10,8.62l2.68,2.68A1,1,0,0,1,12,13ZM5.5,2A3.5,3.5,0,1,0,9,5.5,3.5,3.5,0,0,0,5.5,2Z"/>
+                  </svg>
+                </form>
 
-          <% if user_signed_in? %>
-              <li>
-              </li>
-          <% else %>
-              <li>
-                <a class="waves-effect modal-trigger" href="#modal7">Log In</a>
-              </li>
-          <% end %>
 
-          <% if user_signed_in? %>
-              <li>
-                <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count"></span></a>
-                <ul id="dropdownnoty" class="nav-dropdown">
+              </div>
+            </li>
+            <% if user_signed_in? %>
+            <li>
+              <a href="/users_list">All Users</a>
+            </li>
+            <% end %>
+            <li>
+              <a href="#">Read</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="/">Trending</a>
+                </li>
+                <li>
+                  <a href="/home/index">Latest</a>
+                </li>
+                <li>
+                  <a href="/home/index">All</a>
+                </li>
+              </ul>
+            </li>
 
-                </ul>
-              </li>
-          <% end %>
-          <% if user_signed_in? %>
-              <li><a href="#"><%= avatar_for(current_user, size: 40) %></a>
-                <ul class="nav-dropdown">
-                  <li>
-                    <a href="/users/<%= current_user.id %>">My Profile</a>
-                  </li>
-                  <li>
-                    <a href="/notes">All Notes</a>
-                  </li>
+            <% if user_signed_in? %>
+            <li>
+            </li>
+            <% else %>
+            <li>
+              <a class="waves-effect modal-trigger" href="#modal7">Log In</a>
+            </li>
+            <% end %>
+
+            <% if user_signed_in? %>
+            <li>
+              <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count"></span></a>
+              <ul id="dropdownnoty" class="nav-dropdown">
+
+              </ul>
+            </li>
+            <% end %>
+            <% if user_signed_in? %>
+            <li><a href="#"><%= avatar_for(current_user, size: 40) %></a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="/users/<%= current_user.id %>">My Profile</a>
+                </li>
+                <li>
+                  <a href="/notes">All Notes</a>
+                </li>
                   <!--  <li>
             <a href="/home/index">All Questions</a>
           </li>
            <li>
             <a href="/users/<%= current_user.id %>">All Users</a>
           </li> -->
-                  <li>
-                    <a href="#!">Chat Room</a>
-                  </li>
-                  <li>
-                    <a href="#!">Rewards</a>
-                  </li>
-                  <li>
-                    <%= link_to "Log Out", destroy_user_session_path, method: :delete %></a>
-                  </li>
-                </ul>
-              </li>
-          <% else %>
-          <% end %>
+          <li>
+            <a href="#!">Chat Room</a>
+          </li>
+          <li>
+            <a href="#!">Rewards</a>
+          </li>
+          <li>
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete %></a>
+          </li>
         </ul>
-      </nav>
+      </li>
+      <% else %>
+      <% end %>
+    </ul>
+  </nav>
 
-    </div>
+</div>
 
-    <div class="nav-container hide-on-large-only">
+<div class="nav-container hide-on-large-only">
 
-      <!--  <div class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></div> -->
-      <!-- <div style="width: 10px;"> -->
-      <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
-      <!-- </div> -->
+  <!--  <div class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></div> -->
+  <!-- <div style="width: 10px;"> -->
+  <a href="#" data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+  <!-- </div> -->
 
-      <ul class="side-nav white" id="mobile-demo">
-        <!-- <ul id="slide-out" class="side-nav"> -->
-        <li class="sidenav-header light-blue accent-4 center">
-          <div class="user-view">
+  <ul class="side-nav white" id="mobile-demo">
+    <!-- <ul id="slide-out" class="side-nav"> -->
+    <li class="sidenav-header light-blue accent-4 center">
+      <div class="user-view">
             <!--  <div class="background">
                <img src="images/office.jpg">
              </div> -->
-            <% if user_signed_in? %>
-                <a class="left" href="#!user"><%= avatar_for(current_user, size: 40) %></a>
-                <a href="#!name"><span class="white-text name"><%= link_to current_user.name, user_path(current_user.id) %></span></a>
-                <a href="#!email"><span class="white-text email"><%= link_to current_user.email, user_path(current_user.id) %></span></a>
-            <% end %>
-            <ul class="hide-on-med-and-up">
+             <% if user_signed_in? %>
+             <a class="left" href="#!user"><%= avatar_for(current_user, size: 40) %></a>
+             <a href="#!name"><span class="white-text name"><%= link_to current_user.name, user_path(current_user.id) %></span></a>
+             <a href="#!email"><span class="white-text email"><%= link_to current_user.email, user_path(current_user.id) %></span></a>
+             <% end %>
+             <ul class="hide-on-med-and-up">
               <% if user_signed_in? %>
-                  <li>
-                    <a class="dropdown-button white-text" data-activates="dropdown2"><i class="material-icons white-text ">person</i>Profile<i class="material-icons right white-text" style="margin-right:0;">arrow_drop_down</i></a>
-                  </li>
+              <li>
+                <a class="dropdown-button white-text" data-activates="dropdown2"><i class="material-icons white-text ">person</i>Profile<i class="material-icons right white-text" style="margin-right:0;">arrow_drop_down</i></a>
+              </li>
               <% end %>
             </ul>
             <ul id="dropdown2" class="dropdown-content white-text">
               <% if user_signed_in? %>
-                  <li>
-                    <a class="waves-effect waves-blue" href="/users/<%= current_user.id %>"><i class="material-icons">person</i>Profile</a>
-                  </li>
+              <li>
+                <a class="waves-effect waves-blue" href="/users/<%= current_user.id %>"><i class="material-icons">person</i>Profile</a>
+              </li>
               <% end %>
               <li class="divider"></li>
               <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">settings</i>Settings</a></li>
@@ -231,42 +231,42 @@
               <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">lock</i>Lock</a></li>
               <li class="divider"></li>
               <% if user_signed_in? %>
-                  <li>
-                    <a class="waves-effect waves-blue" href="#"><i class="material-icons">exit_to_app</i><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-                    </a></li>
-                  <li class="divider"></li>
-              <% else %>
-                  <li><a class="waves-effect waves-light btn modal-trigger" href="#modal7">sign in</a></li>
-                  <li><a class="waves-effect waves-light btn modal-trigger" href="#modal7">sign up</a></li>
+              <li>
+                <a class="waves-effect waves-blue" href="#"><i class="material-icons">exit_to_app</i><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+                </a></li>
+                <li class="divider"></li>
+                <% else %>
+                <li><a class="waves-effect waves-light btn modal-trigger" href="#modal7">sign in</a></li>
+                <li><a class="waves-effect waves-light btn modal-trigger" href="#modal7">sign up</a></li>
 
-              <% end %>
-            </ul>
+                <% end %>
+              </ul>
 
-          </div>
-        </li>
-        <% if user_signed_in? %>
-            <li>
-              <a class="waves-effect waves-blue" href="#"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></a>
-            </li>
-            <li class="divider"></li>
-        <% else %>
-            <li><a class="waves-effect waves-light btn modal-trigger" href="#modal7">sign in</a></li>
-            <li><a class="waves-effect waves-light btn modal-trigger" href="#modal7">sign up</a></li>
+            </div>
+          </li>
+          <% if user_signed_in? %>
+          <li>
+            <a class="waves-effect waves-blue" href="#"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></a>
+          </li>
+          <li class="divider"></li>
+          <% else %>
+          <li><a class="waves-effect waves-light btn modal-trigger" href="#modal7">sign in</a></li>
+          <li><a class="waves-effect waves-light btn modal-trigger" href="#modal7">sign up</a></li>
 
-        <% end %>
-        <li class="waves-effect"><a href="/notes"><i class="material-icons">note</i>All Notes</a></li>
-        <li>
-          <div class="divider"></div>
-        </li>
-        <li class="waves-effect"><a href="/home/index"><i class="material-icons">help</i>All Questions</a></li>
-        <li>
-          <div class="divider"></div>
-        </li>
-        <li class="waves-effect"><a href="#!"><i class="material-icons">question_answer</i>Chat Room</a></li>
-        <li>
-          <div class="divider"></div>
-        </li>
-        <li class="waves-effect"><a href="#!"><i class="material-icons">star</i>Rewards</a></li>
+          <% end %>
+          <li class="waves-effect"><a href="/notes"><i class="material-icons">note</i>All Notes</a></li>
+          <li>
+            <div class="divider"></div>
+          </li>
+          <li class="waves-effect"><a href="/home/index"><i class="material-icons">help</i>All Questions</a></li>
+          <li>
+            <div class="divider"></div>
+          </li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">question_answer</i>Chat Room</a></li>
+          <li>
+            <div class="divider"></div>
+          </li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">star</i>Rewards</a></li>
         <!--   <li><div class="divider"></div></li>
           <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
           <li><a href="#!">Second Link</a></li>
@@ -274,154 +274,165 @@
           <li></li>
           <li><a class="waves-effect" href="#!">Third Link With Waves</a></li> -->
 
-      </ul>
-      <div class="brand center">
-        <a href="/">
-          <div class="image-logo1" style="margin-left: 47px;margin-top: -21px;"></div>
-        </a>
+        </ul>
+        <div class="brand center">
+          <a href="/">
+            <div class="image-logo1" style="margin-left: 47px;margin-top: -21px;"></div>
+          </a>
+        </div>
+
+        <!--  <nav id="small-device-nav"class> -->
+        <ul class="nav-list right">
+          <% if user_signed_in? %>
+          <li class="right"><a href="#"><%= avatar_for(current_user, size: 40) %></a>
+            <ul class="nav-dropdown">
+              <li>
+                <a href="#!">Web Design</a>
+              </li>
+              <li>
+                <a href="#!">Web Development</a>
+              </li>
+              <li>
+                <a href="#!">Graphic Design</a>
+              </li>
+            </ul>
+
+          </li>
+          <% else %>
+          <% end %>
+
+        </ul>
+        <!--   </nav> -->
       </div>
+    </section>
+  </div>
 
-      <!--  <nav id="small-device-nav"class> -->
-      <ul class="nav-list right">
-        <% if user_signed_in? %>
-            <li class="right"><a href="#"><%= avatar_for(current_user, size: 40) %></a>
-              <ul class="nav-dropdown">
-                <li>
-                  <a href="#!">Web Design</a>
-                </li>
-                <li>
-                  <a href="#!">Web Development</a>
-                </li>
-                <li>
-                  <a href="#!">Graphic Design</a>
-                </li>
-              </ul>
 
-            </li>
-        <% else %>
-        <% end %>
-
-      </ul>
-      <!--   </nav> -->
-    </div>
-  </section>
+  <div class="container" id="mithu" style="min-height: 100vh;">
+    <div id="modal7" class="modal">
+      <div class="modal-content">
+        <%= render :partial => 'layouts/modal' %>
+      </div>
+    <!-- <div class="modal-footer">
+    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+  </div> -->
 </div>
-
-
-<div class="container" id="mithu" style="min-height: 100vh;">
-  <div id="modal7" class="modal">
-    <div class="modal-content">
-      <%= render :partial => 'layouts/modal' %>
-    </div>
+<div id="modaltag" class="modal">
+  <div class="modal-content">
+    <%= render :partial => 'layouts/modaltag' %>
+  </div>
     <!-- <div class="modal-footer">
     <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
   </div> -->
-  </div>
-  <div id="modaltag" class="modal">
-    <div class="modal-content">
-      <%= render :partial => 'layouts/modaltag' %>
-    </div>
-    <!-- <div class="modal-footer">
-    <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
-  </div> -->
-  </div>
-  <% if user_signed_in? %>
-      <div class="hide-on-med-and-down">
-        <div class="col s12 m12 l4 left taguser">
+</div>
+<% if user_signed_in? %>
+<div class="hide-on-med-and-down">
+  <div class="col s12 m12 l4 left taguser">
 
-          <div class="">
+    <div class="">
 
-            <div class='card small tag'>
-              <div class="card-image">
-                <div class="image-inside"></div>
-                <a href="#modaltag"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Trends to Follow</span></a>
+      <div class='card small tag'>
+        <div class="card-image">
+          <div class="image-inside"></div>
+          <a href="#modaltag"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Trends to Follow</span></a>
 
-              </div>
-              <!--  <h5>Trends to Follow</h5> -->
-              <div id="tag_cloud">
-                <% tag_cloud Question.tag_counts.order('count DESC').limit(10), %w[sml med lar] do |tag, css_class| %>
-                    <% if tag.name.length <= 11 %>
-                        <div class="chip">
-                          <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-                          <i class="material-icons tagicon">add</i>
-                        </div>
-                    <% end %>
-                <% end %>
+        </div>
+        <!--  <h5>Trends to Follow</h5> -->
+        <div id="tag_cloud">
+          <% tag_cloud Question.tag_counts.order('count DESC').limit(10), %w[sml med lar] do |tag, css_class| %>
+          <% if tag.name.length <= 11 %>
+         
+              <div class="chip">
+            <%= link_to tag.name, tag_path(tag.name), class: css_class %>
 
-              </div>
-              <div class="card-action center">
-                <a class="waves-effect waves-light cyan btn modal-trigger" href="#modaltag">SEE ALL</a>
-                <!-- <a href="./tags_list">SEE ALL</a> -->
-              </div>
-            </div>
-            <div class='card small userf'>
-              <div class="card-image">
-                <div class="image-inside"></div>
-                <a href="/users_list"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Users to Follow</span></a>
+            <% @trend=Trend.where(name: tag.name).first %>
+           
+        <% if @trend.follow_string(current_user.id,@trend.id)== true%>
+            <%= link_to(('<i class="material-icons tagicon">check</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
+        <%else%>
+            <%= link_to(('<i class="material-icons tagicon">add</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
+        <%end%>
 
-              </div>
-              <!--  <h5>Trends to Follow</h5> -->
-              <div id="user_cloud">
-                <% User.limit(5).each do |user| %>
-                    <% if user != current_user %>
-                        <div class="userfollow">
-                          <figure><a href="#"><%= avatar_for(user, size: 40) %></a></figure>
-
-                          <div class="usertext">
-                            <h5 class="" style="font-size: 1.2em; top: 2px;font-family: 'Fresca', sans-serif;"><%= link_to user.name, user_path(user.id) %></h5>
-                            <div class="chip">
-                              <!--          <i class="material-icons tagicon">add</i> -->
-                              <% if user.follow_string(current_user.id, user.id)== true %>
-                                  <%= link_to('Unfollow', user_follow_path(user), remote: true, method: :post, class: "follow1_#{user.id}") %>
-                              <% else %>
-                                  <%= link_to('follow', user_follow_path(user), remote: true, method: :post, class: "follow1_#{user.id}") %>
-                              <% end %>
-
-                            </div>
-                          </div>
-
-                        </div>
-
-                    <% end %>
-
-                <% end %>
-                <!--  -->
-              </div>
-              <div class="card-action center">
-                <a class="waves-effect waves-light cyan btn modal-trigger" href="/users_list">SEE ALL</a>
-                <!-- <a href="./tags_list">SEE ALL</a> -->
-              </div>
-            </div>
           </div>
+       
+        
+          <% end %>
+          <% end %>
+
+        </div>
+        <div class="card-action center">
+          <a class="waves-effect waves-light cyan btn modal-trigger" href="#modaltag">SEE ALL</a>
+          <!-- <a href="./tags_list">SEE ALL</a> -->
         </div>
       </div>
-  <% end %>
-  <% if user_signed_in? %>
+      <div class='card small userf'>
+        <div class="card-image">
+          <div class="image-inside"></div>
+          <a href="/users_list"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Users to Follow</span></a>
 
-      <div class="hide-on-med-and-down fixed">
-        <div class="col s12 m12 l4">
-          <div class='car1 small note right'>
+        </div>
+        <!--  <h5>Trends to Follow</h5> -->
+        <div id="user_cloud">
+          <% User.limit(5).each do |user| %>
+          <% if user != current_user %>
+          <div class="userfollow">
+            <figure><a href="#"><%= avatar_for(user, size: 40) %></a></figure>
+
+            <div class="usertext">
+              <h5 class="" style="font-size: 1.2em; top: 2px;font-family: 'Fresca', sans-serif;"><%= link_to user.name, user_path(user.id) %></h5>
+              <div class="chip">
+                <!--          <i class="material-icons tagicon">add</i> -->
+                <% if user.follow_string(current_user.id, user.id)== true %>
+                <%= link_to('Unfollow', user_follow_path(user), remote: true, method: :post, class: "follow1_#{user.id}") %>
+                <% else %>
+                <%= link_to('follow', user_follow_path(user), remote: true, method: :post, class: "follow1_#{user.id}") %>
+                <% end %>
+
+              </div>
+            </div>
+
+          </div>
+
+          <% end %>
+
+          <% end %>
+          <!--  -->
+        </div>
+        <div class="card-action center">
+          <a class="waves-effect waves-light cyan btn modal-trigger" href="/users_list">SEE ALL</a>
+          <!-- <a href="./tags_list">SEE ALL</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+<% if user_signed_in? %>
+
+<div class="hide-on-med-and-down fixed">
+  <div class="col s12 m12 l4">
+    <div class='car1 small note right'>
 
 
-            <div class="wrapper">
+      <div class="wrapper">
               <!--  <aside class="note-wrap note-yellow">
               <p></p>
             </aside> -->
 
 
-              <aside class="note-wrap note-yellow">
-                <% if Note.where(:user_id => current_user.id).length>0 %>
-                    <div style=" height: 50%; border-bottom: 1px solid #bcb1b1;">
-                      <p id="note1"><%= Note.where(:user_id => current_user.id).last.title.truncate(20) %></p>
-                      <p id="note1cont"><%= Note.where(:user_id => current_user.id).last.content.truncate(110) %></p>
-                    </div>
-                <% end %>
-                <% if Note.where(:user_id => current_user.id).length>=2 %>
-                    <div style=" height: 50%;">
-                      <p id="note1"><%= Note.where(:user_id => current_user.id)[-2].title.truncate(20) %>
-                      </p>
-                      <p id="note1cont"><%= Note.where(:user_id => current_user.id)[-2].content.truncate(110) %>
-                      </p></div>
+            <aside class="note-wrap note-yellow">
+              <% if Note.where(:user_id => current_user.id).length>0 %>
+              <div style=" height: 50%; border-bottom: 1px solid #bcb1b1;">
+                <p id="note1"><%= Note.where(:user_id => current_user.id).last.title.truncate(20) %></p>
+                <p id="note1cont"><%= Note.where(:user_id => current_user.id).last.content.truncate(110) %></p>
+              </div>
+              <% end %>
+              <% if Note.where(:user_id => current_user.id).length>=2 %>
+              <div style=" height: 50%;">
+                <p id="note1"><%= Note.where(:user_id => current_user.id)[-2].title.truncate(20) %>
+                </p>
+                <p id="note1cont"><%= Note.where(:user_id => current_user.id)[-2].content.truncate(110) %>
+                </p></div>
                 <% end %>
 
 
@@ -469,23 +480,23 @@
         </div>
       </div>
 
-  <% end %>
+      <% end %>
 
-  <div class="row">
-    <div class="col s12 m12 l7">
-      <%= yield %>
-    </div>
-  </div>
+      <div class="row">
+        <div class="col s12 m12 l7">
+          <%= yield %>
+        </div>
+      </div>
 
 
-  <div id="modaladdnote" class="modal">
-    <div class="modal-content">
-      <%= render :partial => 'layouts/modaladdnote' %>
-    </div>
+      <div id="modaladdnote" class="modal">
+        <div class="modal-content">
+          <%= render :partial => 'layouts/modaladdnote' %>
+        </div>
     <!-- <div class="modal-footer">
     <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
   </div> -->
-  </div>
+</div>
 
 
 </div>
@@ -526,76 +537,65 @@
       </div>
     </div>
   </div>
+</div>
+<div class="footer-copyright grey darken-4">
+  <div class="container">
+    © 2014 Copyright Text
+    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
   </div>
-  <div class="footer-copyright grey darken-4">
-    <div class="container">
-      © 2014 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-    </div>
-  </div>
+</div>
 </footer>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
 
 <script>
-    $(".button-collapse").sideNav();
-    $(document).ready(function () {
-        $('.dropdown-button').dropdown({
-                inDuration: 300,
-                outDuration: 225,
+  $(".button-collapse").sideNav();
+  $(document).ready(function () {
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
                 constrainWidth: false, // Does not change width of dropdown to that of the activator
                 hover: true, // Activate on hover
                 gutter: 0, // Spacing from edge
                 belowOrigin: true, // Displays dropdown below the button
                 alignment: 'right', // Displays dropdown with edge aligned to the left of button
                 stopPropagation: false // Stops event propagation
-            }
-        );
+              }
+              );
 // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
 
-        $('#modal1').on('click', function () {
-        });
-        $('#modal1').modal({
+$('#modal1').on('click', function () {
+});
+$('#modal1').modal({
             dismissible: true, // Modal can be dismissed by clicking outside of the modal
             opacity: 0.2, // Opacity of modal background
             inDuration: 300, // Transition in duration
             outDuration: 200, // Transition out duration
             startingTop: '4%', // Starting top style attribute
             endingTop: '10%', // Ending top style attribute
-        });
-        $('#modal2').on('click', function () {
-        });
-        $('#modal2').modal({
+          });
+$('#modal2').on('click', function () {
+});
+$('#modal2').modal({
             dismissible: true, // Modal can be dismissed by clicking outside of the modal
             opacity: 0.2, // Opacity of modal background
             inDuration: 300, // Transition in duration
             outDuration: 200, // Transition out duration
             startingTop: '4%', // Starting top style attribute
             endingTop: '10%', // Ending top style attribute
-        });
-        $('#modal7').modal({
+          });
+$('#modal7').modal({
             dismissible: true, // Modal can be dismissed by clicking outside of the modal
             opacity: 0.2, // Opacity of modal background
             inDuration: 300, // Transition in duration
             outDuration: 200, // Transition out duration
             startingTop: '4%', // Starting top style attribute
             endingTop: '10%', // Ending top style attribute
-        });
-        $('#modal7').modal('open');
-        $('.trigger-modal').modal();
-        $('#modal7').modal('close');
-        $('#modaltag').modal({
-            dismissible: true, // Modal can be dismissed by clicking outside of the modal
-            opacity: 0.2, // Opacity of modal background
-            inDuration: 300, // Transition in duration
-            outDuration: 200, // Transition out duration
-            startingTop: '4%', // Starting top style attribute
-            endingTop: '10%', // Ending top style attribute
-
-        });
-        $('#modaltag').modal('open');
-        $('#modaltag').modal('close');
-        $('#modaladdnote').modal({
+          });
+$('#modal7').modal('open');
+$('.trigger-modal').modal();
+$('#modal7').modal('close');
+$('#modaltag').modal({
             dismissible: true, // Modal can be dismissed by clicking outside of the modal
             opacity: 0.2, // Opacity of modal background
             inDuration: 300, // Transition in duration
@@ -603,12 +603,10 @@
             startingTop: '4%', // Starting top style attribute
             endingTop: '10%', // Ending top style attribute
 
-        });
-        $('#modaladdnote').modal('open');
-        $('#modaladdnote').modal('close');
-        $('#modaleachnote').on('click', function () {
-        });
-        $('#modaleachnote').modal({
+          });
+$('#modaltag').modal('open');
+$('#modaltag').modal('close');
+$('#modaladdnote').modal({
             dismissible: true, // Modal can be dismissed by clicking outside of the modal
             opacity: 0.2, // Opacity of modal background
             inDuration: 300, // Transition in duration
@@ -616,20 +614,12 @@
             startingTop: '4%', // Starting top style attribute
             endingTop: '10%', // Ending top style attribute
 
-        });
-        $('#modalshownote').modal({
-            dismissible: true, // Modal can be dismissed by clicking outside of the modal
-            opacity: 0.2, // Opacity of modal background
-            inDuration: 300, // Transition in duration
-            outDuration: 200, // Transition out duration
-            startingTop: '4%', // Starting top style attribute
-            endingTop: '10%', // Ending top style attribute
-        });
-        $('#modalshownote').modal('open');
-        $('#modalshownote').modal('close');
-        $('.tooltipped').tooltip({delay: 50});
-    });
-    $('.modal').modal({
+          });
+$('#modaladdnote').modal('open');
+$('#modaladdnote').modal('close');
+$('#modaleachnote').on('click', function () {
+});
+$('#modaleachnote').modal({
             dismissible: true, // Modal can be dismissed by clicking outside of the modal
             opacity: 0.2, // Opacity of modal background
             inDuration: 300, // Transition in duration
@@ -637,117 +627,138 @@
             startingTop: '4%', // Starting top style attribute
             endingTop: '10%', // Ending top style attribute
 
-        }
-    );
-</script>
+          });
+$('#modalshownote').modal({
+            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: 0.2, // Opacity of modal background
+            inDuration: 300, // Transition in duration
+            outDuration: 200, // Transition out duration
+            startingTop: '4%', // Starting top style attribute
+            endingTop: '10%', // Ending top style attribute
+          });
+$('#modalshownote').modal('open');
+$('#modalshownote').modal('close');
+$('.tooltipped').tooltip({delay: 50});
+});
+$('.modal').modal({
+            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: 0.2, // Opacity of modal background
+            inDuration: 300, // Transition in duration
+            outDuration: 200, // Transition out duration
+            startingTop: '4%', // Starting top style attribute
+            endingTop: '10%', // Ending top style attribute
 
-<!-- for dropdown  -->
-<script type="text/javascript">
+          }
+          );
+        </script>
+
+        <!-- for dropdown  -->
+        <script type="text/javascript">
     (function ($) { // Begin jQuery
         $(function () { // DOM ready
             // If a link has a dropdown, add sub menu toggle.
             $('nav ul li a:not(:only-child)').click(function (e) {
-                $(this).siblings('.nav-dropdown').toggle();
+              $(this).siblings('.nav-dropdown').toggle();
                 // Close one dropdown when selecting another
                 $('.nav-dropdown').not($(this).siblings()).hide();
                 e.stopPropagation();
-            });
+              });
             // Clicking away from dropdown will remove the dropdown class
             $('html').click(function () {
-                $('.nav-dropdown').hide();
+              $('.nav-dropdown').hide();
             });
             // Toggle open and close nav styles on click
             $('#nav-toggle').click(function () {
-                $('nav ul').slideToggle();
+              $('nav ul').slideToggle();
             });
             // Hamburger to X toggle
             $('#nav-toggle').on('click', function () {
-                this.classList.toggle('active');
+              this.classList.toggle('active');
             });
         }); // end DOM ready
     })(jQuery); // end jQuery
-</script>
+  </script>
 
 
-<script type="text/javascript" charset="utf-8">
+  <script type="text/javascript" charset="utf-8">
     $(".dropdown-button").dropdown({hover: true, data-constrainwidth = "false"});
     $.ajax({
-        url: '/notifications.json',
-        success: function (data) {
-            var result = data;
-            var notificationList = document.getElementById('dropdownnoty');
-            for (var i = 0; i < data.length; i++) {
-                var liElement = document.createElement('li');
-                notificationList.append(liElement);
-                liElement.append(data[i].actor + data[i].action + data[i].notifiable.type);
+      url: '/notifications.json',
+      success: function (data) {
+        var result = data;
+        var notificationList = document.getElementById('dropdownnoty');
+        for (var i = 0; i < data.length; i++) {
+          var liElement = document.createElement('li');
+          notificationList.append(liElement);
+          liElement.append(data[i].actor + data[i].action + data[i].notifiable.type);
                 //                    liElement.append(data[i].notifiable.type);
+              }
+            },
+            error: function () {
+              console.log("some error");
+              console.log(arguments);
             }
-        },
-        error: function () {
-            console.log("some error");
-            console.log(arguments);
-        }
-    });
-</script>
-<script type="text/javascript">
+          });
+        </script>
+        <script type="text/javascript">
     //in case you want to think about touch devices...I guess thats cool.
     var toggle = true;
     $('.mobile-dropdown').on('click', function () {
-        alert('oh yeahh');
-        if (toggle === true) {
-            $(this).addClass('active-drop');
-            toggle = false;
-            alert('turned on');
-        } else {
-            $(this).removeClass('active-drop');
-            toggle = true;
-            alert('turned off');
-        }
+      alert('oh yeahh');
+      if (toggle === true) {
+        $(this).addClass('active-drop');
+        toggle = false;
+        alert('turned on');
+      } else {
+        $(this).removeClass('active-drop');
+        toggle = true;
+        alert('turned off');
+      }
     })
-</script>
+  </script>
 
-<script type="text/javascript" charset="utf-8">
+  <script type="text/javascript" charset="utf-8">
 
     $.ajax({
-        url: '/notifications.json',
-        method: 'GET',
-        dataType: 'JSON',
-        success: function(data){
-            console.log(data);
-            console.log(data.length);
-            console.log(data[0]['actor']);
-            var c=$('#dropdownnoty');
-            for(var i=data.length-1;i>=0;i--){
-                var liElement = document.createElement('li');
-                var a=document.createElement('a');
-                liElement.append(a);
+      url: '/notifications.json',
+      method: 'GET',
+      dataType: 'JSON',
+      success: function(data){
+        console.log(data);
+        console.log(data.length);
+        console.log(data[0]['actor']);
+        var c=$('#dropdownnoty');
+        for(var i=data.length-1;i>=0;i--){
+          var liElement = document.createElement('li');
+          var a=document.createElement('a');
+          liElement.append(a);
 
-                c.append(liElement);
-                a.innerHTML=data[i]['actor']+" "+data[i]['action'];
-                a.href=data[i]['url'];
-            }
-//            console.log($('#notificationcount')[0].innerHTML);
-            $("[data-behaviour='unread-count']")[0].innerHTML=data.length;
-        },
-        error: function(){
-            console.log("some error");
-            console.log(arguments);
+          c.append(liElement);
+          a.innerHTML=data[i]['actor']+" "+data[i]['action'];
+          a.href=data[i]['url'];
         }
+//            console.log($('#notificationcount')[0].innerHTML);
+$("[data-behaviour='unread-count']")[0].innerHTML=data.length;
+},
+error: function(){
+  console.log("some error");
+  console.log(arguments);
+}
 
-    });
+});
 
 </script>
 <script type="text/javascript" charset="utf-8">
-    $("[data-behaviour='notifications-link']").click(function(){
-      $.ajax({
-          url: '/notifications/mark_as_read',
-          method: 'POST',
-          dataType: 'JSON',
-          success: function(data){
-              $("[data-behaviour='unread-count']")[0].innerHTML='0';
-          }
-      })
-    });
+  $("[data-behaviour='notifications-link']").click(function(){
+    $.ajax({
+      url: '/notifications/mark_as_read',
+      method: 'POST',
+      dataType: 'JSON',
+      success: function(data){
+        $("[data-behaviour='unread-count']")[0].innerHTML='0';
+      }
+    })
+  });
 </script>
 </body>
 

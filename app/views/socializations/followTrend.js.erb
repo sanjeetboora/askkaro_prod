@@ -1,12 +1,12 @@
 
 <% if @is_followed %>
-$('#follow1_<%= @trending.id%>').html("UnFollow");
+$('.follow1_<%= @trending.id%>').html('<i class="material-icons tagicon">check</i>');
 
 noty({text: 'Trend was Followed', type: 'success', timeout: 3500, progressBar: true});
 
 <% else %>
 
-$('#follow1_<%= @trending.id%>').html("Follow");
+$('.follow1_<%= @trending.id%>').html('<i class="material-icons tagicon">add</i>');
 
 noty({text: 'Trend was UnFollowed', type: 'success', timeout: 3500, progressBar: true});
 
