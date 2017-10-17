@@ -202,7 +202,7 @@ vertical-align: middle;
             <%end%>
             <div class="right">
               <% if question.like_string(current_user.id,question.id)== true%>
-                  <%= link_to ('<i class="material-icons right">favorite_border</i>').html_safe, question_like_path(question), remote:true,method: :post ,id: "like_#{question.id}" %>
+                  <%= link_to ('<i class="material-icons right tooltipped" data-position="bottom" data-delay="50" data-tooltip="Like">favorite</i>').html_safe, question_like_path(question), remote:true,method: :post ,id: "like_#{question.id}" %>
               <%else%>
                   <%= link_to ('<i class="material-icons right tooltipped" data-position="bottom" data-delay="50" data-tooltip="Like">favorite_border</i>').html_safe, question_like_path(question), remote:true,method: :post ,id: "like_#{question.id}" %>
               <%end%>

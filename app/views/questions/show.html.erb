@@ -210,7 +210,7 @@ vertical-align: middle;
 <div id="answers">
   <div class="row">
 
-
+    <%if @answerfeed.length>0%>
     <% @answerfeed.each do |answer| %>
         <div class="col s12 m12 l12">
           <%@comment = Comment.new(answer_id: params[answer.id])%>
@@ -219,6 +219,7 @@ vertical-align: middle;
 
         </div>
     <% end %>
+    <%end%>
   </div>
 
 </div>
