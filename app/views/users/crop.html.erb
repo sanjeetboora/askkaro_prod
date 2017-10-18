@@ -10,7 +10,7 @@
         <br>
         <%= form_for(@user) do |f| %>
           <% %w[x y w h].each do |attribute| %>
-            <%= f.text_field "crop_#{attribute}", as: :hidden %>
+            <%= f.hidden_field "crop_#{attribute}", as: :hidden %>
           <% end %>
 
           <div class="form-actions">
