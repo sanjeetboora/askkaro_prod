@@ -128,7 +128,7 @@
             <% end %>
             <li>
               <a href="#">Read</a>
-              <ul class="nav-dropdown">
+              <ul class="nav-dropdown" style="z-index: 10;">
                 <li>
                   <a href="/">Trending</a>
                 </li>
@@ -164,6 +164,7 @@
                 <li>
                   <a href="/users/<%= current_user.id %>">My Profile</a>
                 </li>
+                <li><%= link_to "Settings", edit_user_registration_path %></li>
                 <li>
                   <a href="/notes">All Notes</a>
                 </li>
@@ -222,6 +223,7 @@
               <li>
                 <a class="waves-effect waves-blue" href="/users/<%= current_user.id %>"><i class="material-icons">person</i>Profile</a>
               </li>
+              <li><%= link_to "Settings", edit_user_registration_path %></li>
               <% end %>
               <li class="divider"></li>
               <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">settings</i>Settings</a></li>
