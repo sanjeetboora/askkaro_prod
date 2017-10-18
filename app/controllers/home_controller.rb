@@ -2,6 +2,26 @@ class HomeController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @questagfeed = []
+    if params[:question_id]
+      @question=Question.find(params[:id])
+      @question.tag_list.each do |tag|
+        @questagfeed += Question.tagged_with(tag)
+      end
+
+    elsif params[:tag]
+
+      @trendtagusers = []
+      @tre=Trend.where(name: params[:tag]).first
+
+      @trendtagusers += @tre.followers(User)
+
+    else
+      @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
+      @tftags.each do |tag|
+        @questagfeed += Question.tagged_with(tag)
+      end
+    end
     respond_to do |format|
       format.html {
         @question = Question.new

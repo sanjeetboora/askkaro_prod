@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require jquery.noty.packaged.min.js
+//= require jcrop
 //= require_tree .

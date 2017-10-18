@@ -10,28 +10,28 @@ class ApplicationController < ActionController::Base
     @question=Question.new
   end
 
-  def sideques
-    @questagfeed = []
-    if params[:question_id]
-      @question=Question.find(params[:id])
-      @question.tag_list.each do |tag|
-        @questagfeed += Question.tagged_with(tag)
-      end
+  # def sideques
+  #   @questagfeed = []
+  #   if params[:question_id]
+  #     @question=Question.find(params[:id])
+  #     @question.tag_list.each do |tag|
+  #       @questagfeed += Question.tagged_with(tag)
+  #     end
 
-    elsif params[:tag]
+  #   elsif params[:tag]
 
-      @trendtagusers = []
-      @tre=Trend.where(name: params[:tag]).first
+  #     @trendtagusers = []
+  #     @tre=Trend.where(name: params[:tag]).first
 
-      @trendtagusers += @tre.followers(User)
+  #     @trendtagusers += @tre.followers(User)
 
-    else
-      @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
-      @tftags.each do |tag|
-        @questagfeed += Question.tagged_with(tag)
-      end
-    end
-  end
+  #   else
+  #     @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
+  #     @tftags.each do |tag|
+  #       @questagfeed += Question.tagged_with(tag)
+  #     end
+  #   end
+  # end
 
   protected
   def configure_permitted_parameters
