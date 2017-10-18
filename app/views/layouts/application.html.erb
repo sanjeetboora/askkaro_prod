@@ -126,7 +126,7 @@ height: 20px;
 
                 <form action="/home/index" method="get">
                   <!-- <input class="search-input" placeholder="SEARCH" type="text" /> -->
-                  <%= text_field_tag :search, params[:search], :class => 'search-input', :placeholder => 'Search' %>
+                  <%= text_field_tag :search, params[:search], :class => 'search-input', :placeholder => 'Search', required: true %>
                   <span>
                  <%= button_tag( :class => "search-iconbtn") do %>
                     Submit for Approval  <svg width="13px" height="13px" class="search-icon" viewBox="0 0 13 13">
@@ -357,7 +357,12 @@ height: 20px;
       <div class='card small tag'>
         <div class="card-image">
           <div class="image-inside"></div>
-          <a href="#modaltag"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Trends to Follow</span></a>
+          <a href="#modaltag"><span class="card-title" style="font-size: 28px;
+font-weight: 800;
+font-family: Fresca,sans-serif;
+padding: 0;
+margin-left: 20px;
+margin-bottom: 20px;">Trends to Follow</span></a>
 
         </div>
         <!--  <h5>Trends to Follow</h5> -->
@@ -392,7 +397,12 @@ height: 20px;
       <div class='card small userf'>
         <div class="card-image">
           <div class="image-inside"></div>
-          <a href="/users_list"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Users to Follow</span></a>
+          <a href="/users_list"><span class="card-title" style="font-size: 28px;
+font-weight: 800;
+font-family: Fresca,sans-serif;
+padding: 0;
+margin-left: 20px;
+margin-bottom: 20px;">Users to Follow</span></a>
 
         </div>
         <!--  <h5>Trends to Follow</h5> -->
