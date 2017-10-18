@@ -35,6 +35,9 @@ border-radius: 5px;
     border-radius: 10px;
     color: white;
   }
+  #tabsign.tabs .indicator{
+    display: none;
+  }
   #tabsign a{
     color: #ab47bc;
   }
@@ -43,6 +46,7 @@ border-radius: 5px;
   }
  div#modal7.modal.open div.modal-content div.row2 div#test-swipe-2.active form#new_user.new_user div.row1 div.input-field.col.s12 input{
 margin: 0;
+margin-left: 45px;
   }
 </style>
 <div class="row2">
@@ -127,11 +131,12 @@ margin: 0;
             <label for="user_name">Username</label>
           </div>
           <div class="input-field col s12">
-            <i class="material-icons prefix">email</i>
-            <!-- <input id="email" type="email" class="validate"> -->
-            <%= f.email_field :email, autofocus: false,class:"validate"%>
-            <label for="user_email">Email</label>
-          </div>
+          <i class="material-icons prefix">email</i>
+          <!-- <input id="email" type="email" class="validate"> -->
+          <%= f.email_field :email, autofocus: false, class:"validate"%>
+          <label for="user_email", class="">Email</label>
+        </div>
+
           <div class="input-field col s12">
             <i class="material-icons prefix">lock_outline</i>
             <!-- <input id="password" type="password" class="validate"> -->
