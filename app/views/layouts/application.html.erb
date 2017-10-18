@@ -412,8 +412,11 @@
 <% end %>
 <% if user_signed_in? %>
 
+
 <div class="hide-on-med-and-down fixed">
   <div class="col s12 m12 l4">
+  <% if !current_page?(:controller => 'notes', :action => 'index') %>
+
     <div class='car1 small note right'>
 
 
@@ -480,6 +483,7 @@
 
 
           </div>
+            <% end %>
         </div>
       </div>
 
@@ -763,6 +767,16 @@ error: function(){
     })
   });
 </script>
+<script type="text/javascript">
+  jQuery( document ).ready(function( $ ) {
+
+ //Use this inside your document ready jQuery
+ $(window).on('popstate', function() {
+    location.reload(true);
+ });
+
+});
+  </script>
 </body>
 
 

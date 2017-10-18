@@ -6,7 +6,7 @@ class NotesController < ApplicationController
   def index
     # @notes = Note.all
     # @user=User.find(params[:user_id])
-    @notes=Note.where(:user_id => current_user.id)
+    @notes=Note.where(:user_id => current_user.id).order(updated_at: :desc)
   end
 
   # GET /notes/1
