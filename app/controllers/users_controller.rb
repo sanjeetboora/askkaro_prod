@@ -20,7 +20,11 @@ class UsersController < ApplicationController
   end
   def update
     if @user.update(user_params)
-      redirect_to @user
+      if params[:user][:avatar].present?
+        render :crop
+      else
+         redirect_to @user
+       end
     else
       flash.now[:alert]="Something went wrong Please try again"
       render :edit
@@ -41,6 +45,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-     params.require(:user).permit(:name,:bio,:avatar)
+     params.require(:user).permit(:name,:bio,:avatar, :crop_x, :crop_y, :crop_w, :crop_h)
   end
 end

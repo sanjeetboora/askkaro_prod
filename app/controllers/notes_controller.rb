@@ -6,7 +6,7 @@ class NotesController < ApplicationController
   def index
     # @notes = Note.all
     # @user=User.find(params[:user_id])
-    @notes=Note.where(:user_id => current_user.id)
+    @notes=Note.where(:user_id => current_user.id).order(updated_at: :desc)
   end
 
   # GET /notes/1
@@ -31,7 +31,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
-        format.html { redirect_to '/', notice: 'Note was successfully created.' }
+        format.html { redirect_to request.referrer, notice: 'Note was successfully created.' }
         format.js{}
         format.json { render :show, status: :created, location: @note }
       else

@@ -19,6 +19,12 @@ class User < ActiveRecord::Base
   acts_as_followable
   acts_as_liker
   acts_as_follower
+   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
+  after_update :crop_avatar
+
+  def crop_avatar
+    avatar.recreate_versions! if crop_x.present?
+  end
   def feed
     Question.includes(:user).order(created_at: :desc)
   end

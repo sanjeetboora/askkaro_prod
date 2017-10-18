@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
-<div class="modal-footer">
+<span>
       <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;"><i class="material-icons">close</i></button>
-    </div>
+    </span>
 <div id="tag_cloud">
     
         <% tag_cloud Question.tag_counts, %w[sml med lar] do |tag, css_class| %>

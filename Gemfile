@@ -38,8 +38,11 @@ gem 'unicorn'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem 'carrierwave', '~> 1.0'
-gem 'mini_magick','3.8.0'
+
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'rails-assets-jcrop', source: 'https://rails-assets.org'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'omniauth-facebook'

@@ -79,10 +79,26 @@
     }
 
     .search-wrapper .search-icon {
-      position: absolute;
-      top: 28px;
-      right: calc(5% + 18px);
-      cursor: pointer;
+position: absolute;
+top: 0px;
+right: calc(5% + 18px);
+cursor: pointer;
+right: 0px;
+background: transparent;
+border: none;
+width: 16px;
+height: 20px;
+    }
+     .search-wrapper .search-iconbtn {
+position: absolute;
+top: 27px;
+right: calc(5% + 18px);
+cursor: pointer;
+right: 34px;
+background: transparent;
+border: none;
+width: 16px;
+height: 20px;
     }
   </style>
 
@@ -110,63 +126,69 @@
 
                 <form action="/home/index" method="get">
                   <!-- <input class="search-input" placeholder="SEARCH" type="text" /> -->
-                  <%= text_field_tag :search, params[:search], :class => 'search-input', :placeholder => 'Search' %>
-
-
-                  <svg width="13px" height="13px" class="search-icon" viewBox="0 0 13 13">
+                  <%= text_field_tag :search, params[:search], :class => 'search-input', :placeholder => 'Search', required: true %>
+                  <span>
+                 <%= button_tag( :class => "search-iconbtn") do %>
+                    Submit for Approval  <svg width="13px" height="13px" class="search-icon" viewBox="0 0 13 13">
                     <path fill="#999999" d="M12,13a1,1,0,0,1-.7-.3L8.62,10A5.5,5.5,0,1,1,10,8.62l2.68,2.68A1,1,0,0,1,12,13ZM5.5,2A3.5,3.5,0,1,0,9,5.5,3.5,3.5,0,0,0,5.5,2Z"/>
                   </svg>
-                </form>
+                  <% end %>
+                </span>
 
 
-              </div>
-            </li>
-            <% if user_signed_in? %>
-            <li>
-              <a href="/users_list">All Users</a>
-            </li>
-            <% end %>
-            <li>
-              <a href="#">Read</a>
-              <ul class="nav-dropdown">
-                <li>
-                  <a href="/">Trending</a>
-                </li>
-                <li>
-                  <a href="/home/index">Latest</a>
-                </li>
-                <li>
-                  <a href="/home/index">All</a>
-                </li>
-              </ul>
-            </li>
 
-            <% if user_signed_in? %>
-            <li>
-            </li>
-            <% else %>
-            <li>
-              <a class="waves-effect modal-trigger" href="#modal7">Log In</a>
-            </li>
-            <% end %>
+              </form>
 
-            <% if user_signed_in? %>
-            <li>
+
+            </div>
+          </li>
+          <% if user_signed_in? %>
+          <li>
+            <a href="/users_list">All Users</a>
+          </li>
+          <% end %>
+          <li>
+            <a href="#">Read</a>
+            <ul class="nav-dropdown" style="z-index: 10;">
+              <li>
+                <a href="/">Trending</a>
+              </li>
+              <li>
+                <a href="/home/index">Latest</a>
+              </li>
+              <li>
+                <a href="/home/index">All</a>
+              </li>
+            </ul>
+          </li>
+
+          <% if user_signed_in? %>
+          <li>
+          </li>
+          <% else %>
+          <li>
+            <a class="waves-effect modal-trigger" href="#modal7">Log In</a>
+          </li>
+          <% end %>
+
+          <% if user_signed_in? %>
+          <li>
             <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px; margin-left: 0px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count">0</span></a>
-              <ul id="dropdownnoty" class="nav-dropdown">
+            <ul id="dropdownnoty" class="nav-dropdown">
 
-              </ul>
-            </li>
-            <% end %>
-            <% if user_signed_in? %>
-            <li><a href="#"><%= avatar_for(current_user, size: 60) %></a>
-              <ul class="nav-dropdown">
-                <li>
-                  <a href="/users/<%= current_user.id %>">My Profile</a>
-                </li>
-                <li>
-                  <a href="/notes">All Notes</a>
-                </li>
+            </ul>
+          </li>
+          <% end %>
+          <% if user_signed_in? %>
+          <li><a href="#"><%= avatar_for(current_user, size: 60) %></a>
+            <ul class="nav-dropdown">
+              <li>
+                <a href="/users/<%= current_user.id %>">My Profile</a>
+              </li>
+              <li><%= link_to "Settings", edit_user_registration_path %></li>
+              <li>
+                <a href="/notes">All Notes</a>
+              </li>
                   <!--  <li>
             <a href="/home/index">All Questions</a>
           </li>
@@ -222,6 +244,7 @@
               <li>
                 <a class="waves-effect waves-blue" href="/users/<%= current_user.id %>"><i class="material-icons">person</i>Profile</a>
               </li>
+              <li><%= link_to "Settings", edit_user_registration_path %></li>
               <% end %>
               <li class="divider"></li>
               <li><a class="waves-effect waves-blue" href="#"><i class="material-icons">settings</i>Settings</a></li>
@@ -334,7 +357,12 @@
       <div class='card small tag'>
         <div class="card-image">
           <div class="image-inside"></div>
-          <a href="#modaltag"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Trends to Follow</span></a>
+          <a href="#modaltag"><span class="card-title" style="font-size: 28px;
+font-weight: 800;
+font-family: Fresca,sans-serif;
+padding: 0;
+margin-left: 20px;
+margin-bottom: 20px;">Trends to Follow</span></a>
 
         </div>
         <!--  <h5>Trends to Follow</h5> -->
@@ -369,7 +397,12 @@
       <div class='card small userf'>
         <div class="card-image">
           <div class="image-inside"></div>
-          <a href="/users_list"><span class="card-title" style="font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;">Users to Follow</span></a>
+          <a href="/users_list"><span class="card-title" style="font-size: 28px;
+font-weight: 800;
+font-family: Fresca,sans-serif;
+padding: 0;
+margin-left: 20px;
+margin-bottom: 20px;">Users to Follow</span></a>
 
         </div>
         <!--  <h5>Trends to Follow</h5> -->
@@ -410,8 +443,11 @@
 <% end %>
 <% if user_signed_in? %>
 
+
 <div class="hide-on-med-and-down fixed">
   <div class="col s12 m12 l4">
+    <% if !current_page?(:controller => 'notes', :action => 'index') %>
+
     <div class='car1 small note right'>
 
 
@@ -478,6 +514,7 @@
 
 
           </div>
+          <% end %>
         </div>
       </div>
 
@@ -760,6 +797,16 @@ error: function(){
       }
     })
   });
+</script>
+<script type="text/javascript">
+  jQuery( document ).ready(function( $ ) {
+
+ //Use this inside your document ready jQuery
+ $(window).on('popstate', function() {
+  location.reload(true);
+});
+
+});
 </script>
 </body>
 
