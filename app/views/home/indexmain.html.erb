@@ -127,16 +127,25 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('.modal').modal();
-    $('#modal2').on('click', function() {
-    });
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-    $('#modal2').modal({
-      dismissible: true
-    });
-    $('#modal2').modal('open');
-    $('.trigger-modal').modal();
-    $('#modal2').modal('close');
-    $('input#title, textarea#content').characterCounter();
+     
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('#modal2').on('click', function () {
+});
+
+        $('#modal2').modal({
+           dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: 0, // Opacity of modal background
+            inDuration: 300, // Transition in duration
+            outDuration: 200, // Transition out duration
+            startingTop: '4%', // Starting top style attribute
+            endingTop: '10%', // Ending top style attribute
+        });
+
+        $('#modal2').modal('open');
+        $('.trigger-modal').modal();
+        $('#modal2').modal('close');
+        $('input#title, textarea#content').characterCounter();
+    
   });
 </script>
 <script type="text/javascript" charset="utf-8">

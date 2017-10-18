@@ -19,8 +19,11 @@ class ApplicationController < ActionController::Base
       end
 
     elsif params[:tag]
-      @trend=Trend.where(name: params[:tag]).first
+
       @trendtagusers = []
+      @tre=Trend.where(name: params[:tag]).first
+
+      @trendtagusers += @tre.followers(User)
 
     else
       @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)

@@ -27,14 +27,14 @@
 
 
 
-<% if @trend!= nil %>
+<% if @tre!= nil && @trendtagusers!= nil%>
+<% if @trendtagusers.length >=0 %>
 <div class="card quesrelate"> 
 	<div class="card-title center" style="color:#696a6e;font-size: 28px;font-weight: 800;font-family: Fresca,sans-serif;"> 
 		Trend Followers
 	</div>
 	<div class="card-content">
-	<% @trendusers = @trend.followers(User) %>
-		<% @trendusers.each do |trenduser| %>
+		<% @trendtagusers.each do |trenduser| %>
 		
 		<%= link_to trenduser.name, trenduser %>
 		<hr>
@@ -42,5 +42,5 @@
 	</div>
 </div>
 <% end %>
-
+<% end %>
 
