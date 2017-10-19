@@ -148,7 +148,7 @@ height: 20px;
           </li>
           <% end %>
           <li>
-            <a href="#">Read</a>
+            <a >Read</a>
             <ul class="nav-dropdown" style="z-index: 10;">
               <li>
                 <a href="/">Trending</a>
@@ -180,7 +180,7 @@ height: 20px;
           </li>
           <% end %>
           <% if user_signed_in? %>
-          <li><a href="#"><%= avatar_for(current_user, size: 60) %></a>
+          <li><a ><%= avatar_for(current_user, size: 60) %></a>
             <ul class="nav-dropdown">
               <li>
                 <a href="/users/<%= current_user.id %>">My Profile</a>
