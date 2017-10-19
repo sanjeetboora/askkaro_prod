@@ -226,7 +226,15 @@ vertical-align: middle;
 <script type="text/javascript" charset="utf-8">
     $("#create_answer_submit").click(function(){
         setTimeout(function(){ CKEDITOR.instances['ckeditid'].setData('');}, 50);
-
+        noty({
+        text: 'You successfully posted a new Answer!',
+        type: 'success',
+        timeout: 3500,
+        progressBar: true
+      });
+        $('html,body').animate({
+        scrollTop: $(".card-content").offset().top},
+        'slow');
     });
 </script>
 
