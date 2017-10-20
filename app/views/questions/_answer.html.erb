@@ -154,7 +154,8 @@ border-radius: 6px;
 
           <% end %>
 
-          <a class="waves-effect waves-light grey btn tooltipped modal-trigger" data-position="bottom" data-delay="50" data-tooltip="Comment" href="#modal1">Comment</a>
+          <a class="waves-effect waves-light grey btn tooltipped modal-trigger" data-position="bottom" data-delay="50" data-tooltip="Comment" href="#modal1_<%= answer.id%>">Comment</a>
+
           <% if answer.like_string(current_user.id,answer.id)== true%>
               <%= link_to ('<i class="material-icons right" >favorite</i>').html_safe, answer_like_path(answer), remote:true,method: :post ,id: "like_#{answer.id}" %>
           <%else%>
@@ -171,9 +172,9 @@ border-radius: 6px;
 
 </div>
 <!-- Modal Structure -->
-<div id="modal1" class="modal modal-fixed-footer">
+<div id="modal1_<%= answer.id%>" class="modal modal-fixed-footer">
   <div class="modal-content">
-    <div id="comments">
+    <div id="comments_<%= answer.id%>">
       <% @commentfeed.each do |comment| %>
           <%= render 'comment' , comment: comment %>
       <% end %>
