@@ -176,8 +176,10 @@ height: 595px;
 #user_cloud {
   padding: 2px;
   padding-left: -13px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  max-height: 310px;
+overflow-x: hidden;
+overflow-y: auto;
+
 
 }
 

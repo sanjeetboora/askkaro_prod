@@ -112,11 +112,27 @@ border-radius: 6px;
     html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div.row div.col.s12.m12.l12 div.answer div.userDetail div.card div.card-content.grey-text.text-darken-3 div.row a i.material-icons.right:hover{
       color:#0091ea;
     }
-    html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div#modal1.modal.modal-fixed-footer.open div.modal-footer{
+    /*html body div#mithu.container div.row div.col.s12.m12.l7 div#answers div#modal1.modal.modal-fixed-footer.open div.modal-footer{
       height: 122px;
+    }*/
+    .modal .modal-content1{
+position: absolute;
+height: calc(100% - 119px);
+max-height: 100%;
+width: 100%;
+overflow-y: auto;
+padding: 20px;
+    }
+   .modal .modal-footer{
+border-radius: 0 0 2px 2px;
+background-color: #fafafa;
+padding: 4px 6px;
+height: 116px;
+width: 100%;
     }
 .modal .modal-footer .btn-flat{
       background-color: #81d4fa;
+      padding: 10px 2px;
     }
   </style>
 
@@ -173,7 +189,7 @@ border-radius: 6px;
 </div>
 <!-- Modal Structure -->
 <div id="modal1_<%= answer.id%>" class="modal modal-fixed-footer">
-  <div class="modal-content">
+  <div class="modal-content1">
     <div id="comments_<%= answer.id%>">
       <% @commentfeed.each do |comment| %>
           <%= render 'comment' , comment: comment %>
