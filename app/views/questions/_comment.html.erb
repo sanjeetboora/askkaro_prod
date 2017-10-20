@@ -1,7 +1,7 @@
 <style type="text/css">
   *{font-family:calibri;}
 
-.avatar{
+.message .avatar{
   border-radius:100px;
   width:80px;
   height:80px;
@@ -19,7 +19,7 @@
   float:left;
   font-family:calibri;
   color:#333;
-  width:450px;
+ width: 85%;
   margin:0;
   margin-left:20px;
   margin-top:5px;
@@ -87,11 +87,11 @@
      <%= comment.content %>
      <br>
      
-  <%if can? :update,comment%>
+ <!--  <%if can? :update,comment%>
     <%= link_to 'Edit', comment %>
-    <% end %>
+    <% end %> -->
     <%if can? :destroy,comment%>
-    <%= link_to "Delete", comment, method: :delete, data: {confirm: "Are you sure?"}%>
+    <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, comment, method: :delete, data: {confirm: "Are you sure?"}%>
     <% end %>
 
 </p>
