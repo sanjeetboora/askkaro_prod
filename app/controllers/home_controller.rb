@@ -67,7 +67,7 @@ class HomeController < ApplicationController
   def users_list
    respond_to do |format|
     format.html {
-      @users=User.all
+      @users=User.all.paginate(:per_page => 10, :page => params[:page])
     }
     format.js {}
   end

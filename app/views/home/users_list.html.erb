@@ -159,6 +159,36 @@ font-size: 12px;
  div#usercard2.card.userfour.usercol div.wrapper div.social.usercf div.userfour.usercol a i{
 font-size: 24px;
 }
+  .apple_pagination {
+    background: #f1f1f1;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    padding: 1em;
+    cursor: default;
+    height: 75px;
+    bottom: 0px;
+    display: flow-root; }
+    .apple_pagination a, .apple_pagination span {
+      padding: 0.2em 0.3em; }
+      .apple_pagination .disabled {
+        color: #aaaaaa; }
+        .apple_pagination .current {
+          font-style: normal;
+          font-weight: bold;
+          background-color: #bebebe;
+          display: inline-block;
+          width: 1.4em;
+          height: 1.4em;
+          line-height: 1.5;
+          -moz-border-radius: 1em;
+          -webkit-border-radius: 1em;
+          border-radius: 1em;
+          text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+          .apple_pagination a {
+            text-decoration: none;
+            color: black; }
+            .apple_pagination a:hover, .apple_pagination a:focus {
+              text-decoration: underline; }
 </style>
 <div id="users">
 <div class="usercontainer">
@@ -175,4 +205,10 @@ font-size: 24px;
 </div>
   </div>
   
+</div>
+ <div class="apple_pagination">
+  <div class="page_info">
+    <%= page_entries_info @users %>
+  </div>
+  <%= will_paginate @users, :container => false %>
 </div>

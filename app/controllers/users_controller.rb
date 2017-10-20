@@ -4,8 +4,8 @@ class UsersController < ApplicationController
   before_action :set_user
   def show
     @user=User.find(params[:id])
-    @question=Question.where(:user_id => current_user.id)
-      @answer=Answer.where(:user_id => current_user.id)
+    @question=Question.where(:user_id => current_user.id).paginate(:per_page => 16, :page => params[:page])
+      @answer=Answer.where(:user_id => current_user.id).paginate(:per_page => 16, :page => params[:page])
       @followers=current_user.followers(User)
 # byebug
     # byebug
