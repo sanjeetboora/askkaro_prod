@@ -168,7 +168,7 @@
       border-radius: 6px;
     }
     .user-list-wrapper {
-     
+
       max-width: 100%;
       margin:  0;
     }
@@ -220,7 +220,8 @@
     cursor: default;
     height: 75px;
     bottom: 0px;
-    display: flow-root; }
+    display: flow-root; 
+  width: 100%;}
     .apple_pagination a, .apple_pagination span {
       padding: 0.2em 0.3em; }
       .apple_pagination .disabled {
@@ -329,13 +330,13 @@
                       <%= will_paginate @question, :container => false %>
                     </div>
                   </div>
-                  
+
                 </div>
                 <div id="follow-swipe-2" class="col s12 white">
                  <div class="user-list-wrapper">
                   <ul class="list">
                    <%@user.followees(User).each do |f|%>
-                   
+
                    <li class="list-item">
                     <div>
                       <%= avatar_for(f,size: 40) %>
@@ -356,18 +357,18 @@
 
               </div>
               <div id="follow-swipe-3" class="col s12 white">
-                
+
                 <div class="user-list-wrapper">
                   <ul class="list">
                    <%@user.followers(User).each do |f|%>
-                   
+
                    <li class="list-item">
                     <div>
                       <%= avatar_for(f,size: 40) %>
                     </div>
                     <div class="list-item-content">
                       <h4><%= link_to f.name,user_path(f.id) %></h4>
-                      
+
                       <span class="right">   <% if f.follow_string(current_user.id,f.id)== true%>
                         <%= link_to('Unfollow', user_follow_path(f), remote:true,method: :post,class: "follow1_#{f.id}") %>
                         <%else%>
@@ -375,7 +376,7 @@
                         <%end%></span>
                         <p><%= f.email%></p>
 
-                        
+
                       </div>
                     </li>   
                     <%end%>
