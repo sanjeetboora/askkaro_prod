@@ -23,5 +23,22 @@ module Askkaro
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.app_generators.scaffold_controller = :scaffold_controller
     config.active_record.raise_in_transactional_callbacks = true
-  end
+
+    config.action_dispatch.rescue_responses["QuestionsController::Forbidden"] = :forbidden
+    config.action_dispatch.rescue_responses["AnswersController::Forbidden"] = :forbidden
+    config.action_dispatch.rescue_responses["CommentsController::Forbidden"] = :forbidden
+    config.action_dispatch.rescue_responses["HomeController::Forbidden"] = :forbidden
+    config.action_dispatch.rescue_responses["NotesController::Forbidden"] = :forbidden
+    config.action_dispatch.rescue_responses["RegistrationsController::Forbidden"] = :forbidden
+    config.action_dispatch.rescue_responses["UsersController::Forbidden"] = :forbidden
+    config.action_dispatch.rescue_responses["SessionsController::Forbidden"] = :forbidden    
+
+    config.exceptions_app = self.routes
+
+
+
+
+
+
+end
 end
