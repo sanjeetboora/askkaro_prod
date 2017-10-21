@@ -1,1 +1,0 @@
-(function(){var t;t=function(){var t;if((t=$(".table_tools .batch_actions_selector")).length)return t.next().css({width:"calc(100% - 10px - "+t.outerWidth()+"px)","float":"right"})},$(document).ready(t).on("page:load turbolinks:load",t)}).call(this);
