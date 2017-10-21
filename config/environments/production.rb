@@ -11,9 +11,9 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = true
+  config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
-config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = true
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like
@@ -80,13 +80,13 @@ config.action_mailer.raise_delivery_errors = true
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { host: '13.126.63.81'}
   config.action_mailer.smtp_settings = {
-      address:              'smtp.gmail.com',
-      port:                 587,
-      domain:               'gmail.com',
-      user_name:            'helpermail41@gmail.com',
-      password:             'sanketpglet',
-      authentication:       :plain,
-      enable_starttls_auto: true
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    user_name:            'helpermail41@gmail.com',
+    password:             'sanketpglet',
+    authentication:       :plain,
+    enable_starttls_auto: true
   }
 
 end 
