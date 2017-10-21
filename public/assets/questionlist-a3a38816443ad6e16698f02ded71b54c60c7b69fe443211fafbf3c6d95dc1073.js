@@ -1,0 +1,1 @@
+$("button").click(function(){"favorite_border"===$(this).children("i").text()?$(this).children("i").text("favorite"):"favorite"===$(this).children("i").text()&&$(this).children("i").text("favorite_border")});

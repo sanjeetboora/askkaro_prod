@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 Rails.application.routes.draw do
   match '(errors)/:status', to: 'errors#error_404', constraints: {status: /\d{3}/}, via: :all
 
