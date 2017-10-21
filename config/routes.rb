@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  match '(errors)/:status', to: 'errors#error_404', constraints: {status: /\d{3}/}, via: :all
+match "/404", :to => "errors#error_404'", :via => :all
+match "/500", :to => "errors#error_404'", :via => :all
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :notes
   get 'tags/:tag', to: 'home#index', as: :tag

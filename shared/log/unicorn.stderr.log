@@ -439,3 +439,445 @@ I, [2017-10-16T05:21:30.758252 #6258]  INFO -- : worker=0 spawned pid=6258
 I, [2017-10-16T05:21:30.758409 #6258]  INFO -- : worker=0 ready
 I, [2017-10-16T05:21:30.759115 #6260]  INFO -- : worker=1 spawned pid=6260
 I, [2017-10-16T05:21:30.759234 #6260]  INFO -- : worker=1 ready
+I, [2017-10-16T05:26:40.245854 #6255]  INFO -- : reaped #<Process::Status: pid 6258 exit 0> worker=0
+I, [2017-10-16T05:26:40.245969 #6255]  INFO -- : reaped #<Process::Status: pid 6260 exit 0> worker=1
+I, [2017-10-16T05:26:40.246026 #6255]  INFO -- : master complete
+I, [2017-10-16T05:26:58.490944 #6533]  INFO -- : Refreshing Gem list
+I, [2017-10-16T05:27:01.052081 #6533]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T05:27:01.052241 #6533]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-16T05:27:01.052352 #6533]  INFO -- : worker=0 spawning...
+I, [2017-10-16T05:27:01.053969 #6533]  INFO -- : worker=1 spawning...
+I, [2017-10-16T05:27:01.054641 #6536]  INFO -- : worker=0 spawned pid=6536
+I, [2017-10-16T05:27:01.054791 #6536]  INFO -- : worker=0 ready
+I, [2017-10-16T05:27:01.055971 #6533]  INFO -- : master process ready
+I, [2017-10-16T05:27:01.060118 #6539]  INFO -- : worker=1 spawned pid=6539
+I, [2017-10-16T05:27:01.060274 #6539]  INFO -- : worker=1 ready
+I, [2017-10-16T10:17:13.330625 #6533]  INFO -- : reaped #<Process::Status: pid 6536 exit 0> worker=0
+I, [2017-10-16T10:17:13.330747 #6533]  INFO -- : reaped #<Process::Status: pid 6539 exit 0> worker=1
+I, [2017-10-16T10:17:13.330812 #6533]  INFO -- : master complete
+I, [2017-10-16T10:17:28.418341 #8307]  INFO -- : Refreshing Gem list
+I, [2017-10-16T10:17:30.974598 #8307]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T10:17:30.974772 #8307]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-16T10:17:30.974899 #8307]  INFO -- : worker=0 spawning...
+I, [2017-10-16T10:17:30.976511 #8307]  INFO -- : worker=1 spawning...
+I, [2017-10-16T10:17:30.977497 #8307]  INFO -- : master process ready
+I, [2017-10-16T10:17:30.981614 #8310]  INFO -- : worker=0 spawned pid=8310
+I, [2017-10-16T10:17:30.981751 #8310]  INFO -- : worker=0 ready
+I, [2017-10-16T10:17:30.982390 #8312]  INFO -- : worker=1 spawned pid=8312
+I, [2017-10-16T10:17:30.982517 #8312]  INFO -- : worker=1 ready
+I, [2017-10-16T10:36:23.091094 #8307]  INFO -- : reaped #<Process::Status: pid 8310 exit 0> worker=0
+I, [2017-10-16T10:36:23.091215 #8307]  INFO -- : reaped #<Process::Status: pid 8312 exit 0> worker=1
+I, [2017-10-16T10:36:23.091274 #8307]  INFO -- : master complete
+I, [2017-10-16T10:36:33.349119 #8577]  INFO -- : Refreshing Gem list
+I, [2017-10-16T10:36:35.853371 #8577]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T10:36:35.853540 #8577]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-16T10:36:35.853648 #8577]  INFO -- : worker=0 spawning...
+I, [2017-10-16T10:36:35.855350 #8577]  INFO -- : worker=1 spawning...
+I, [2017-10-16T10:36:35.856081 #8580]  INFO -- : worker=0 spawned pid=8580
+I, [2017-10-16T10:36:35.856224 #8580]  INFO -- : worker=0 ready
+I, [2017-10-16T10:36:35.857342 #8577]  INFO -- : master process ready
+I, [2017-10-16T10:36:35.861376 #8583]  INFO -- : worker=1 spawned pid=8583
+I, [2017-10-16T10:36:35.861588 #8583]  INFO -- : worker=1 ready
+I, [2017-10-16T11:18:56.117001 #8577]  INFO -- : reaped #<Process::Status: pid 8580 exit 0> worker=0
+I, [2017-10-16T11:18:56.117119 #8577]  INFO -- : reaped #<Process::Status: pid 8583 exit 0> worker=1
+I, [2017-10-16T11:18:56.117174 #8577]  INFO -- : master complete
+I, [2017-10-16T11:19:12.724867 #9095]  INFO -- : Refreshing Gem list
+I, [2017-10-16T11:19:15.282805 #9095]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T11:19:15.282981 #9095]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-16T11:19:15.283697 #9095]  INFO -- : worker=0 spawning...
+I, [2017-10-16T11:19:15.285281 #9095]  INFO -- : worker=1 spawning...
+I, [2017-10-16T11:19:15.285910 #9098]  INFO -- : worker=0 spawned pid=9098
+I, [2017-10-16T11:19:15.286055 #9098]  INFO -- : worker=0 ready
+I, [2017-10-16T11:19:15.287126 #9095]  INFO -- : master process ready
+I, [2017-10-16T11:19:15.291176 #9101]  INFO -- : worker=1 spawned pid=9101
+I, [2017-10-16T11:19:15.291298 #9101]  INFO -- : worker=1 ready
+I, [2017-10-16T11:28:07.408072 #9095]  INFO -- : reaped #<Process::Status: pid 9098 exit 0> worker=0
+I, [2017-10-16T11:28:07.408181 #9095]  INFO -- : reaped #<Process::Status: pid 9101 exit 0> worker=1
+I, [2017-10-16T11:28:07.408236 #9095]  INFO -- : master complete
+I, [2017-10-16T11:28:29.719269 #9331]  INFO -- : Refreshing Gem list
+I, [2017-10-16T11:28:32.198468 #9331]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T11:28:32.198637 #9331]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-16T11:28:32.198735 #9331]  INFO -- : worker=0 spawning...
+I, [2017-10-16T11:28:32.200393 #9331]  INFO -- : worker=1 spawning...
+I, [2017-10-16T11:28:32.201328 #9331]  INFO -- : master process ready
+I, [2017-10-16T11:28:32.205387 #9334]  INFO -- : worker=0 spawned pid=9334
+I, [2017-10-16T11:28:32.205522 #9334]  INFO -- : worker=0 ready
+I, [2017-10-16T11:28:32.206175 #9336]  INFO -- : worker=1 spawned pid=9336
+I, [2017-10-16T11:28:32.206286 #9336]  INFO -- : worker=1 ready
+I, [2017-10-16T17:30:17.114681 #9331]  INFO -- : reaped #<Process::Status: pid 9334 exit 0> worker=0
+I, [2017-10-16T17:30:17.114795 #9331]  INFO -- : reaped #<Process::Status: pid 9336 exit 0> worker=1
+I, [2017-10-16T17:30:17.114869 #9331]  INFO -- : master complete
+I, [2017-10-16T17:30:30.365213 #11889]  INFO -- : Refreshing Gem list
+I, [2017-10-16T17:30:32.825148 #11889]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T17:30:32.825315 #11889]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-16T17:30:32.825437 #11889]  INFO -- : worker=0 spawning...
+I, [2017-10-16T17:30:32.827060 #11889]  INFO -- : worker=1 spawning...
+I, [2017-10-16T17:30:32.827789 #11892]  INFO -- : worker=0 spawned pid=11892
+I, [2017-10-16T17:30:32.827952 #11892]  INFO -- : worker=0 ready
+I, [2017-10-16T17:30:32.829059 #11889]  INFO -- : master process ready
+I, [2017-10-16T17:30:32.833889 #11895]  INFO -- : worker=1 spawned pid=11895
+I, [2017-10-16T17:30:32.834061 #11895]  INFO -- : worker=1 ready
+I, [2017-10-16T18:16:04.267093 #11889]  INFO -- : reaped #<Process::Status: pid 11892 exit 0> worker=0
+I, [2017-10-16T18:16:04.267207 #11889]  INFO -- : reaped #<Process::Status: pid 11895 exit 0> worker=1
+I, [2017-10-16T18:16:04.267267 #11889]  INFO -- : master complete
+I, [2017-10-16T18:16:17.961442 #12378]  INFO -- : Refreshing Gem list
+I, [2017-10-16T18:16:20.519795 #12378]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T18:16:20.519986 #12378]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-16T18:16:20.520092 #12378]  INFO -- : worker=0 spawning...
+I, [2017-10-16T18:16:20.521771 #12378]  INFO -- : worker=1 spawning...
+I, [2017-10-16T18:16:20.522600 #12382]  INFO -- : worker=0 spawned pid=12382
+I, [2017-10-16T18:16:20.522730 #12382]  INFO -- : worker=0 ready
+I, [2017-10-16T18:16:20.523985 #12378]  INFO -- : master process ready
+I, [2017-10-16T18:16:20.528302 #12385]  INFO -- : worker=1 spawned pid=12385
+I, [2017-10-16T18:16:20.528431 #12385]  INFO -- : worker=1 ready
+I, [2017-10-16T19:46:14.310355 #12378]  INFO -- : reaped #<Process::Status: pid 12382 exit 0> worker=0
+I, [2017-10-16T19:46:14.310469 #12378]  INFO -- : reaped #<Process::Status: pid 12385 exit 0> worker=1
+I, [2017-10-16T19:46:14.310521 #12378]  INFO -- : master complete
+I, [2017-10-16T19:46:25.141295 #13076]  INFO -- : Refreshing Gem list
+I, [2017-10-16T19:46:27.686464 #13076]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T19:46:27.686639 #13076]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-16T19:46:27.686738 #13076]  INFO -- : worker=0 spawning...
+I, [2017-10-16T19:46:27.688407 #13076]  INFO -- : worker=1 spawning...
+I, [2017-10-16T19:46:27.689383 #13076]  INFO -- : master process ready
+I, [2017-10-16T19:46:27.693629 #13080]  INFO -- : worker=0 spawned pid=13080
+I, [2017-10-16T19:46:27.693765 #13080]  INFO -- : worker=0 ready
+I, [2017-10-16T19:46:27.694409 #13082]  INFO -- : worker=1 spawned pid=13082
+I, [2017-10-16T19:46:27.694532 #13082]  INFO -- : worker=1 ready
+I, [2017-10-16T19:47:15.889899 #13076]  INFO -- : reaped #<Process::Status: pid 13080 exit 0> worker=0
+I, [2017-10-16T19:47:15.890003 #13076]  INFO -- : reaped #<Process::Status: pid 13082 exit 0> worker=1
+I, [2017-10-16T19:47:15.890059 #13076]  INFO -- : master complete
+I, [2017-10-16T19:47:28.306841 #13241]  INFO -- : Refreshing Gem list
+I, [2017-10-16T19:47:30.855622 #13241]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T19:47:30.855788 #13241]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-16T19:47:30.855887 #13241]  INFO -- : worker=0 spawning...
+I, [2017-10-16T19:47:30.857526 #13241]  INFO -- : worker=1 spawning...
+I, [2017-10-16T19:47:30.858215 #13244]  INFO -- : worker=0 spawned pid=13244
+I, [2017-10-16T19:47:30.858350 #13244]  INFO -- : worker=0 ready
+I, [2017-10-16T19:47:30.859404 #13241]  INFO -- : master process ready
+I, [2017-10-16T19:47:30.863388 #13247]  INFO -- : worker=1 spawned pid=13247
+I, [2017-10-16T19:47:30.865303 #13247]  INFO -- : worker=1 ready
+I, [2017-10-16T19:48:13.011361 #13241]  INFO -- : reaped #<Process::Status: pid 13244 exit 0> worker=0
+I, [2017-10-16T19:48:13.011469 #13241]  INFO -- : reaped #<Process::Status: pid 13247 exit 0> worker=1
+I, [2017-10-16T19:48:13.011574 #13241]  INFO -- : master complete
+I, [2017-10-16T19:48:21.800435 #13436]  INFO -- : Refreshing Gem list
+I, [2017-10-16T19:48:24.242842 #13436]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-16T19:48:24.243019 #13436]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-16T19:48:24.243206 #13436]  INFO -- : worker=0 spawning...
+I, [2017-10-16T19:48:24.244804 #13436]  INFO -- : worker=1 spawning...
+I, [2017-10-16T19:48:24.245463 #13439]  INFO -- : worker=0 spawned pid=13439
+I, [2017-10-16T19:48:24.245603 #13439]  INFO -- : worker=0 ready
+I, [2017-10-16T19:48:24.246656 #13436]  INFO -- : master process ready
+I, [2017-10-16T19:48:24.250745 #13442]  INFO -- : worker=1 spawned pid=13442
+I, [2017-10-16T19:48:24.250878 #13442]  INFO -- : worker=1 ready
+I, [2017-10-17T19:24:31.743692 #13436]  INFO -- : reaped #<Process::Status: pid 13439 exit 0> worker=0
+I, [2017-10-17T19:24:31.744867 #13436]  INFO -- : reaped #<Process::Status: pid 13442 exit 0> worker=1
+I, [2017-10-17T19:24:31.744938 #13436]  INFO -- : master complete
+I, [2017-10-17T19:25:08.344306 #21444]  INFO -- : Refreshing Gem list
+I, [2017-10-17T19:25:11.475729 #21444]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-17T19:25:11.476355 #21444]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-17T19:25:11.476466 #21444]  INFO -- : worker=0 spawning...
+I, [2017-10-17T19:25:11.478054 #21444]  INFO -- : worker=1 spawning...
+I, [2017-10-17T19:25:11.478693 #21447]  INFO -- : worker=0 spawned pid=21447
+I, [2017-10-17T19:25:11.478843 #21447]  INFO -- : worker=0 ready
+I, [2017-10-17T19:25:11.479938 #21444]  INFO -- : master process ready
+I, [2017-10-17T19:25:11.484076 #21450]  INFO -- : worker=1 spawned pid=21450
+I, [2017-10-17T19:25:11.484212 #21450]  INFO -- : worker=1 ready
+I, [2017-10-17T19:40:03.435466 #21444]  INFO -- : reaped #<Process::Status: pid 21447 exit 0> worker=0
+I, [2017-10-17T19:40:03.436249 #21444]  INFO -- : reaped #<Process::Status: pid 21450 exit 0> worker=1
+I, [2017-10-17T19:40:03.436322 #21444]  INFO -- : master complete
+I, [2017-10-17T19:40:17.819418 #21718]  INFO -- : Refreshing Gem list
+I, [2017-10-17T19:40:20.311381 #21718]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-17T19:40:20.311590 #21718]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-17T19:40:20.311691 #21718]  INFO -- : worker=0 spawning...
+I, [2017-10-17T19:40:20.313296 #21718]  INFO -- : worker=1 spawning...
+I, [2017-10-17T19:40:20.314011 #21721]  INFO -- : worker=0 spawned pid=21721
+I, [2017-10-17T19:40:20.314138 #21721]  INFO -- : worker=0 ready
+I, [2017-10-17T19:40:20.315196 #21718]  INFO -- : master process ready
+I, [2017-10-17T19:40:20.319766 #21724]  INFO -- : worker=1 spawned pid=21724
+I, [2017-10-17T19:40:20.319895 #21724]  INFO -- : worker=1 ready
+I, [2017-10-17T21:08:44.609187 #21718]  INFO -- : reaped #<Process::Status: pid 21721 exit 0> worker=0
+I, [2017-10-17T21:08:44.609304 #21718]  INFO -- : reaped #<Process::Status: pid 21724 exit 0> worker=1
+I, [2017-10-17T21:08:44.609359 #21718]  INFO -- : master complete
+I, [2017-10-17T21:09:00.341503 #22436]  INFO -- : Refreshing Gem list
+I, [2017-10-17T21:09:02.837495 #22436]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-17T21:09:02.837674 #22436]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-17T21:09:02.837773 #22436]  INFO -- : worker=0 spawning...
+I, [2017-10-17T21:09:02.839372 #22436]  INFO -- : worker=1 spawning...
+I, [2017-10-17T21:09:02.840111 #22439]  INFO -- : worker=0 spawned pid=22439
+I, [2017-10-17T21:09:02.840266 #22439]  INFO -- : worker=0 ready
+I, [2017-10-17T21:09:02.841306 #22436]  INFO -- : master process ready
+I, [2017-10-17T21:09:02.845364 #22442]  INFO -- : worker=1 spawned pid=22442
+I, [2017-10-17T21:09:02.845515 #22442]  INFO -- : worker=1 ready
+I, [2017-10-17T21:15:29.130114 #22436]  INFO -- : reaped #<Process::Status: pid 22439 exit 0> worker=0
+I, [2017-10-17T21:15:29.130214 #22436]  INFO -- : reaped #<Process::Status: pid 22442 exit 0> worker=1
+I, [2017-10-17T21:15:29.130271 #22436]  INFO -- : master complete
+I, [2017-10-17T21:15:38.694067 #22649]  INFO -- : Refreshing Gem list
+I, [2017-10-17T21:15:41.162845 #22649]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-17T21:15:41.163049 #22649]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-17T21:15:41.163149 #22649]  INFO -- : worker=0 spawning...
+I, [2017-10-17T21:15:41.164723 #22649]  INFO -- : worker=1 spawning...
+I, [2017-10-17T21:15:41.165405 #22652]  INFO -- : worker=0 spawned pid=22652
+I, [2017-10-17T21:15:41.165544 #22652]  INFO -- : worker=0 ready
+I, [2017-10-17T21:15:41.166579 #22649]  INFO -- : master process ready
+I, [2017-10-17T21:15:41.171318 #22655]  INFO -- : worker=1 spawned pid=22655
+I, [2017-10-17T21:15:41.171457 #22655]  INFO -- : worker=1 ready
+I, [2017-10-17T21:52:49.033278 #22649]  INFO -- : reaped #<Process::Status: pid 22652 exit 0> worker=0
+I, [2017-10-17T21:52:49.033387 #22649]  INFO -- : reaped #<Process::Status: pid 22655 exit 0> worker=1
+I, [2017-10-17T21:52:49.033443 #22649]  INFO -- : master complete
+I, [2017-10-17T21:53:08.485470 #23106]  INFO -- : Refreshing Gem list
+I, [2017-10-17T21:53:11.015377 #23106]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-17T21:53:11.015597 #23106]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-17T21:53:11.015697 #23106]  INFO -- : worker=0 spawning...
+I, [2017-10-17T21:53:11.017259 #23106]  INFO -- : worker=1 spawning...
+I, [2017-10-17T21:53:11.017876 #23110]  INFO -- : worker=0 spawned pid=23110
+I, [2017-10-17T21:53:11.018317 #23110]  INFO -- : worker=0 ready
+I, [2017-10-17T21:53:11.019409 #23106]  INFO -- : master process ready
+I, [2017-10-17T21:53:11.025405 #23113]  INFO -- : worker=1 spawned pid=23113
+I, [2017-10-17T21:53:11.025536 #23113]  INFO -- : worker=1 ready
+I, [2017-10-17T22:10:40.569637 #23106]  INFO -- : reaped #<Process::Status: pid 23110 exit 0> worker=0
+I, [2017-10-17T22:10:40.569748 #23106]  INFO -- : reaped #<Process::Status: pid 23113 exit 0> worker=1
+I, [2017-10-17T22:10:40.569807 #23106]  INFO -- : master complete
+I, [2017-10-17T22:10:52.523509 #23365]  INFO -- : Refreshing Gem list
+I, [2017-10-17T22:10:55.041871 #23365]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-17T22:10:55.042042 #23365]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-17T22:10:55.042142 #23365]  INFO -- : worker=0 spawning...
+I, [2017-10-17T22:10:55.043842 #23365]  INFO -- : worker=1 spawning...
+I, [2017-10-17T22:10:55.044815 #23365]  INFO -- : master process ready
+I, [2017-10-17T22:10:55.050158 #23368]  INFO -- : worker=0 spawned pid=23368
+I, [2017-10-17T22:10:55.050305 #23368]  INFO -- : worker=0 ready
+I, [2017-10-17T22:10:55.051107 #23370]  INFO -- : worker=1 spawned pid=23370
+I, [2017-10-17T22:10:55.051236 #23370]  INFO -- : worker=1 ready
+I, [2017-10-18T04:30:13.775730 #23365]  INFO -- : reaped #<Process::Status: pid 23368 exit 0> worker=0
+I, [2017-10-18T04:30:13.775828 #23365]  INFO -- : reaped #<Process::Status: pid 23370 exit 0> worker=1
+I, [2017-10-18T04:30:13.775881 #23365]  INFO -- : master complete
+I, [2017-10-18T04:30:36.511071 #25481]  INFO -- : Refreshing Gem list
+I, [2017-10-18T04:30:38.981800 #25481]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-18T04:30:38.983761 #25481]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=10
+I, [2017-10-18T04:30:38.983881 #25481]  INFO -- : worker=0 spawning...
+I, [2017-10-18T04:30:38.986446 #25481]  INFO -- : worker=1 spawning...
+I, [2017-10-18T04:30:38.987420 #25481]  INFO -- : master process ready
+I, [2017-10-18T04:30:38.993397 #25484]  INFO -- : worker=0 spawned pid=25484
+I, [2017-10-18T04:30:38.993567 #25484]  INFO -- : worker=0 ready
+I, [2017-10-18T04:30:38.994349 #25486]  INFO -- : worker=1 spawned pid=25486
+I, [2017-10-18T04:30:38.994472 #25486]  INFO -- : worker=1 ready
+I, [2017-10-18T04:35:15.513269 #25481]  INFO -- : reaped #<Process::Status: pid 25484 exit 0> worker=0
+I, [2017-10-18T04:35:15.513377 #25481]  INFO -- : reaped #<Process::Status: pid 25486 exit 0> worker=1
+I, [2017-10-18T04:35:15.513437 #25481]  INFO -- : master complete
+I, [2017-10-18T04:35:25.429379 #25694]  INFO -- : Refreshing Gem list
+I, [2017-10-18T04:35:27.796428 #25694]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-18T04:35:27.796605 #25694]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-18T04:35:27.796706 #25694]  INFO -- : worker=0 spawning...
+I, [2017-10-18T04:35:27.798408 #25694]  INFO -- : worker=1 spawning...
+I, [2017-10-18T04:35:27.799097 #25697]  INFO -- : worker=0 spawned pid=25697
+I, [2017-10-18T04:35:27.799254 #25697]  INFO -- : worker=0 ready
+I, [2017-10-18T04:35:27.800355 #25694]  INFO -- : master process ready
+I, [2017-10-18T04:35:27.805353 #25700]  INFO -- : worker=1 spawned pid=25700
+I, [2017-10-18T04:35:27.805490 #25700]  INFO -- : worker=1 ready
+I, [2017-10-18T14:17:10.397000 #25694]  INFO -- : reaped #<Process::Status: pid 25697 exit 0> worker=0
+I, [2017-10-18T14:17:10.398231 #25694]  INFO -- : reaped #<Process::Status: pid 25700 exit 0> worker=1
+I, [2017-10-18T14:17:10.398318 #25694]  INFO -- : master complete
+I, [2017-10-18T14:17:41.391506 #28899]  INFO -- : Refreshing Gem list
+I, [2017-10-18T14:17:43.993138 #28899]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-18T14:17:43.993914 #28899]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-18T14:17:43.994028 #28899]  INFO -- : worker=0 spawning...
+I, [2017-10-18T14:17:43.995587 #28899]  INFO -- : worker=1 spawning...
+I, [2017-10-18T14:17:43.996219 #28903]  INFO -- : worker=0 spawned pid=28903
+I, [2017-10-18T14:17:43.996614 #28903]  INFO -- : worker=0 ready
+I, [2017-10-18T14:17:43.997700 #28899]  INFO -- : master process ready
+I, [2017-10-18T14:17:44.004251 #28906]  INFO -- : worker=1 spawned pid=28906
+I, [2017-10-18T14:17:44.004385 #28906]  INFO -- : worker=1 ready
+I, [2017-10-18T14:32:26.066880 #28899]  INFO -- : reaped #<Process::Status: pid 28903 exit 0> worker=0
+I, [2017-10-18T14:32:26.066980 #28899]  INFO -- : reaped #<Process::Status: pid 28906 exit 0> worker=1
+I, [2017-10-18T14:32:26.067034 #28899]  INFO -- : master complete
+I, [2017-10-18T14:32:37.821354 #29128]  INFO -- : Refreshing Gem list
+I, [2017-10-18T14:32:40.195995 #29128]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-18T14:32:40.196162 #29128]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-18T14:32:40.196251 #29128]  INFO -- : worker=0 spawning...
+I, [2017-10-18T14:32:40.197883 #29128]  INFO -- : worker=1 spawning...
+I, [2017-10-18T14:32:40.198586 #29131]  INFO -- : worker=0 spawned pid=29131
+I, [2017-10-18T14:32:40.198744 #29131]  INFO -- : worker=0 ready
+I, [2017-10-18T14:32:40.199872 #29128]  INFO -- : master process ready
+I, [2017-10-18T14:32:40.204560 #29134]  INFO -- : worker=1 spawned pid=29134
+I, [2017-10-18T14:32:40.204702 #29134]  INFO -- : worker=1 ready
+I, [2017-10-18T14:34:20.887055 #29128]  INFO -- : reaped #<Process::Status: pid 29131 exit 0> worker=0
+I, [2017-10-18T14:34:20.887168 #29128]  INFO -- : reaped #<Process::Status: pid 29134 exit 0> worker=1
+I, [2017-10-18T14:34:20.887268 #29128]  INFO -- : master complete
+I, [2017-10-18T14:34:40.389293 #29366]  INFO -- : Refreshing Gem list
+I, [2017-10-18T14:34:42.886906 #29366]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-18T14:34:42.887086 #29366]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-18T14:34:42.887211 #29366]  INFO -- : worker=0 spawning...
+I, [2017-10-18T14:34:42.888841 #29366]  INFO -- : worker=1 spawning...
+I, [2017-10-18T14:34:42.889532 #29370]  INFO -- : worker=0 spawned pid=29370
+I, [2017-10-18T14:34:42.889691 #29370]  INFO -- : worker=0 ready
+I, [2017-10-18T14:34:42.890830 #29366]  INFO -- : master process ready
+I, [2017-10-18T14:34:42.895593 #29373]  INFO -- : worker=1 spawned pid=29373
+I, [2017-10-18T14:34:42.895753 #29373]  INFO -- : worker=1 ready
+I, [2017-10-18T16:28:31.544215 #29366]  INFO -- : reaped #<Process::Status: pid 29370 exit 0> worker=0
+I, [2017-10-18T16:28:31.544330 #29366]  INFO -- : reaped #<Process::Status: pid 29373 exit 0> worker=1
+I, [2017-10-18T16:28:31.544395 #29366]  INFO -- : master complete
+I, [2017-10-18T16:28:45.536841 #30199]  INFO -- : Refreshing Gem list
+I, [2017-10-18T16:28:47.983581 #30199]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-18T16:28:47.983784 #30199]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-18T16:28:47.983911 #30199]  INFO -- : worker=0 spawning...
+I, [2017-10-18T16:28:47.985616 #30199]  INFO -- : worker=1 spawning...
+I, [2017-10-18T16:28:47.986381 #30202]  INFO -- : worker=0 spawned pid=30202
+I, [2017-10-18T16:28:47.986511 #30202]  INFO -- : worker=0 ready
+I, [2017-10-18T16:28:47.987746 #30199]  INFO -- : master process ready
+I, [2017-10-18T16:28:47.992345 #30205]  INFO -- : worker=1 spawned pid=30205
+I, [2017-10-18T16:28:47.992563 #30205]  INFO -- : worker=1 ready
+I, [2017-10-18T23:28:09.900325 #30199]  INFO -- : reaped #<Process::Status: pid 30202 exit 0> worker=0
+I, [2017-10-18T23:28:09.900445 #30199]  INFO -- : reaped #<Process::Status: pid 30205 exit 0> worker=1
+I, [2017-10-18T23:28:09.900509 #30199]  INFO -- : master complete
+I, [2017-10-18T23:30:35.262620 #613]  INFO -- : Refreshing Gem list
+I, [2017-10-18T23:30:37.736358 #613]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-18T23:30:37.736530 #613]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-18T23:30:37.736642 #613]  INFO -- : worker=0 spawning...
+I, [2017-10-18T23:30:37.738256 #613]  INFO -- : worker=1 spawning...
+I, [2017-10-18T23:30:37.738963 #616]  INFO -- : worker=0 spawned pid=616
+I, [2017-10-18T23:30:37.739141 #616]  INFO -- : worker=0 ready
+I, [2017-10-18T23:30:37.740319 #613]  INFO -- : master process ready
+I, [2017-10-18T23:30:37.745194 #619]  INFO -- : worker=1 spawned pid=619
+I, [2017-10-18T23:30:37.745369 #619]  INFO -- : worker=1 ready
+I, [2017-10-18T23:33:28.878273 #613]  INFO -- : reaped #<Process::Status: pid 616 exit 0> worker=0
+I, [2017-10-18T23:33:28.878428 #613]  INFO -- : reaped #<Process::Status: pid 619 exit 0> worker=1
+I, [2017-10-18T23:33:28.878488 #613]  INFO -- : master complete
+I, [2017-10-18T23:33:38.537044 #837]  INFO -- : Refreshing Gem list
+I, [2017-10-18T23:33:40.942942 #837]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-18T23:33:40.943094 #837]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-18T23:33:40.943183 #837]  INFO -- : worker=0 spawning...
+I, [2017-10-18T23:33:40.944864 #837]  INFO -- : worker=1 spawning...
+I, [2017-10-18T23:33:40.945503 #840]  INFO -- : worker=0 spawned pid=840
+I, [2017-10-18T23:33:40.945666 #840]  INFO -- : worker=0 ready
+I, [2017-10-18T23:33:40.946710 #837]  INFO -- : master process ready
+I, [2017-10-18T23:33:40.951463 #843]  INFO -- : worker=1 spawned pid=843
+I, [2017-10-18T23:33:40.951700 #843]  INFO -- : worker=1 ready
+I, [2017-10-19T06:55:17.792269 #837]  INFO -- : reaped #<Process::Status: pid 840 exit 0> worker=0
+I, [2017-10-19T06:55:17.792381 #837]  INFO -- : reaped #<Process::Status: pid 843 exit 0> worker=1
+I, [2017-10-19T06:55:17.792444 #837]  INFO -- : master complete
+I, [2017-10-19T06:55:28.677865 #3788]  INFO -- : Refreshing Gem list
+I, [2017-10-19T06:55:31.058245 #3788]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-19T06:55:31.058407 #3788]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-19T06:55:31.058523 #3788]  INFO -- : worker=0 spawning...
+I, [2017-10-19T06:55:31.060129 #3788]  INFO -- : worker=1 spawning...
+I, [2017-10-19T06:55:31.061054 #3788]  INFO -- : master process ready
+I, [2017-10-19T06:55:31.065499 #3791]  INFO -- : worker=0 spawned pid=3791
+I, [2017-10-19T06:55:31.065683 #3791]  INFO -- : worker=0 ready
+I, [2017-10-19T06:55:31.066350 #3793]  INFO -- : worker=1 spawned pid=3793
+I, [2017-10-19T06:55:31.066501 #3793]  INFO -- : worker=1 ready
+I, [2017-10-19T07:09:25.618136 #3788]  INFO -- : reaped #<Process::Status: pid 3791 exit 0> worker=0
+I, [2017-10-19T07:09:25.618226 #3788]  INFO -- : reaped #<Process::Status: pid 3793 exit 0> worker=1
+I, [2017-10-19T07:09:25.618289 #3788]  INFO -- : master complete
+I, [2017-10-19T07:09:36.412891 #4209]  INFO -- : Refreshing Gem list
+I, [2017-10-19T07:09:38.856127 #4209]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-19T07:09:38.856295 #4209]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-19T07:09:38.856386 #4209]  INFO -- : worker=0 spawning...
+I, [2017-10-19T07:09:38.858007 #4209]  INFO -- : worker=1 spawning...
+I, [2017-10-19T07:09:38.858703 #4213]  INFO -- : worker=0 spawned pid=4213
+I, [2017-10-19T07:09:38.858838 #4213]  INFO -- : worker=0 ready
+I, [2017-10-19T07:09:38.859916 #4209]  INFO -- : master process ready
+I, [2017-10-19T07:09:38.864227 #4216]  INFO -- : worker=1 spawned pid=4216
+I, [2017-10-19T07:09:38.864347 #4216]  INFO -- : worker=1 ready
+I, [2017-10-20T03:18:31.671021 #4209]  INFO -- : reaped #<Process::Status: pid 4213 exit 0> worker=0
+I, [2017-10-20T03:18:31.671727 #4209]  INFO -- : reaped #<Process::Status: pid 4216 exit 0> worker=1
+I, [2017-10-20T03:18:31.671793 #4209]  INFO -- : master complete
+I, [2017-10-20T03:18:43.208778 #10374]  INFO -- : Refreshing Gem list
+I, [2017-10-20T03:18:45.645988 #10374]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-20T03:18:45.646144 #10374]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=10
+I, [2017-10-20T03:18:45.646242 #10374]  INFO -- : worker=0 spawning...
+I, [2017-10-20T03:18:45.647866 #10374]  INFO -- : worker=1 spawning...
+I, [2017-10-20T03:18:45.648852 #10374]  INFO -- : master process ready
+I, [2017-10-20T03:18:45.653357 #10377]  INFO -- : worker=0 spawned pid=10377
+I, [2017-10-20T03:18:45.653517 #10377]  INFO -- : worker=0 ready
+I, [2017-10-20T03:18:45.654180 #10379]  INFO -- : worker=1 spawned pid=10379
+I, [2017-10-20T03:18:45.654318 #10379]  INFO -- : worker=1 ready
+I, [2017-10-20T09:46:39.314193 #10374]  INFO -- : reaped #<Process::Status: pid 10377 exit 0> worker=0
+I, [2017-10-20T09:46:39.314320 #10374]  INFO -- : reaped #<Process::Status: pid 10379 exit 0> worker=1
+I, [2017-10-20T09:46:39.314391 #10374]  INFO -- : master complete
+I, [2017-10-20T09:47:08.781980 #13000]  INFO -- : Refreshing Gem list
+I, [2017-10-20T09:47:11.307589 #13000]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-20T09:47:11.307753 #13000]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-20T09:47:11.307868 #13000]  INFO -- : worker=0 spawning...
+I, [2017-10-20T09:47:11.309527 #13000]  INFO -- : worker=1 spawning...
+I, [2017-10-20T09:47:11.310332 #13004]  INFO -- : worker=0 spawned pid=13004
+I, [2017-10-20T09:47:11.310471 #13004]  INFO -- : worker=0 ready
+I, [2017-10-20T09:47:11.311725 #13000]  INFO -- : master process ready
+I, [2017-10-20T09:47:11.316446 #13007]  INFO -- : worker=1 spawned pid=13007
+I, [2017-10-20T09:47:11.316577 #13007]  INFO -- : worker=1 ready
+I, [2017-10-20T11:07:45.409623 #13000]  INFO -- : reaped #<Process::Status: pid 13004 exit 0> worker=0
+I, [2017-10-20T11:07:45.409710 #13000]  INFO -- : reaped #<Process::Status: pid 13007 exit 0> worker=1
+I, [2017-10-20T11:07:45.409765 #13000]  INFO -- : master complete
+I, [2017-10-20T11:07:59.299459 #13693]  INFO -- : Refreshing Gem list
+I, [2017-10-20T11:08:01.739968 #13693]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-20T11:08:01.740130 #13693]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-20T11:08:01.740272 #13693]  INFO -- : worker=0 spawning...
+I, [2017-10-20T11:08:01.741843 #13693]  INFO -- : worker=1 spawning...
+I, [2017-10-20T11:08:01.742520 #13696]  INFO -- : worker=0 spawned pid=13696
+I, [2017-10-20T11:08:01.742675 #13696]  INFO -- : worker=0 ready
+I, [2017-10-20T11:08:01.743809 #13693]  INFO -- : master process ready
+I, [2017-10-20T11:08:01.748399 #13699]  INFO -- : worker=1 spawned pid=13699
+I, [2017-10-20T11:08:01.748553 #13699]  INFO -- : worker=1 ready
+I, [2017-10-20T11:20:34.556356 #13693]  INFO -- : reaped #<Process::Status: pid 13696 exit 0> worker=0
+I, [2017-10-20T11:20:34.556459 #13693]  INFO -- : reaped #<Process::Status: pid 13699 exit 0> worker=1
+I, [2017-10-20T11:20:34.556514 #13693]  INFO -- : master complete
+I, [2017-10-20T11:20:44.668140 #13942]  INFO -- : Refreshing Gem list
+I, [2017-10-20T11:20:47.077491 #13942]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-20T11:20:47.077659 #13942]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=10
+I, [2017-10-20T11:20:47.077770 #13942]  INFO -- : worker=0 spawning...
+I, [2017-10-20T11:20:47.079462 #13942]  INFO -- : worker=1 spawning...
+I, [2017-10-20T11:20:47.080137 #13945]  INFO -- : worker=0 spawned pid=13945
+I, [2017-10-20T11:20:47.080271 #13945]  INFO -- : worker=0 ready
+I, [2017-10-20T11:20:47.081315 #13942]  INFO -- : master process ready
+I, [2017-10-20T11:20:47.086504 #13948]  INFO -- : worker=1 spawned pid=13948
+I, [2017-10-20T11:20:47.086663 #13948]  INFO -- : worker=1 ready
+I, [2017-10-21T13:01:51.116253 #13942]  INFO -- : reaped #<Process::Status: pid 13948 exit 0> worker=1
+I, [2017-10-21T13:01:51.117432 #13942]  INFO -- : reaped #<Process::Status: pid 13945 exit 0> worker=0
+I, [2017-10-21T13:01:51.117523 #13942]  INFO -- : master complete
+I, [2017-10-21T13:02:05.967846 #22510]  INFO -- : Refreshing Gem list
+I, [2017-10-21T13:02:08.517624 #22510]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-21T13:02:08.517789 #22510]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-21T13:02:08.517898 #22510]  INFO -- : worker=0 spawning...
+I, [2017-10-21T13:02:08.519474 #22510]  INFO -- : worker=1 spawning...
+I, [2017-10-21T13:02:08.520168 #22513]  INFO -- : worker=0 spawned pid=22513
+I, [2017-10-21T13:02:08.520308 #22513]  INFO -- : worker=0 ready
+I, [2017-10-21T13:02:08.521370 #22510]  INFO -- : master process ready
+I, [2017-10-21T13:02:08.526225 #22516]  INFO -- : worker=1 spawned pid=22516
+I, [2017-10-21T13:02:08.526351 #22516]  INFO -- : worker=1 ready
+I, [2017-10-21T13:08:25.263493 #22510]  INFO -- : reaped #<Process::Status: pid 22513 exit 0> worker=0
+I, [2017-10-21T13:08:25.263702 #22510]  INFO -- : reaped #<Process::Status: pid 22516 exit 0> worker=1
+I, [2017-10-21T13:08:25.263799 #22510]  INFO -- : master complete
+I, [2017-10-21T13:08:35.293289 #22699]  INFO -- : Refreshing Gem list
+I, [2017-10-21T13:08:37.859163 #22699]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-21T13:08:37.859329 #22699]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=11
+I, [2017-10-21T13:08:37.859422 #22699]  INFO -- : worker=0 spawning...
+I, [2017-10-21T13:08:37.861068 #22699]  INFO -- : worker=1 spawning...
+I, [2017-10-21T13:08:37.861744 #22702]  INFO -- : worker=0 spawned pid=22702
+I, [2017-10-21T13:08:37.861885 #22702]  INFO -- : worker=0 ready
+I, [2017-10-21T13:08:37.862963 #22699]  INFO -- : master process ready
+I, [2017-10-21T13:08:37.867879 #22705]  INFO -- : worker=1 spawned pid=22705
+I, [2017-10-21T13:08:37.868115 #22705]  INFO -- : worker=1 ready
+I, [2017-10-21T13:11:27.840693 #22699]  INFO -- : reaped #<Process::Status: pid 22702 exit 0> worker=0
+I, [2017-10-21T13:11:27.840790 #22699]  INFO -- : reaped #<Process::Status: pid 22705 exit 0> worker=1
+I, [2017-10-21T13:11:27.840843 #22699]  INFO -- : master complete
+I, [2017-10-21T13:11:39.144900 #22872]  INFO -- : Refreshing Gem list
+I, [2017-10-21T13:11:41.607273 #22872]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-21T13:11:41.607434 #22872]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-21T13:11:41.607587 #22872]  INFO -- : worker=0 spawning...
+I, [2017-10-21T13:11:41.609191 #22872]  INFO -- : worker=1 spawning...
+I, [2017-10-21T13:11:41.609878 #22875]  INFO -- : worker=0 spawned pid=22875
+I, [2017-10-21T13:11:41.610231 #22875]  INFO -- : worker=0 ready
+I, [2017-10-21T13:11:41.611337 #22872]  INFO -- : master process ready
+I, [2017-10-21T13:11:41.616086 #22878]  INFO -- : worker=1 spawned pid=22878
+I, [2017-10-21T13:11:41.616240 #22878]  INFO -- : worker=1 ready
+I, [2017-10-21T13:15:19.737228 #22872]  INFO -- : reaped #<Process::Status: pid 22875 exit 0> worker=0
+I, [2017-10-21T13:15:19.737325 #22872]  INFO -- : reaped #<Process::Status: pid 22878 exit 0> worker=1
+I, [2017-10-21T13:15:19.737382 #22872]  INFO -- : master complete
+I, [2017-10-21T13:15:36.635253 #23100]  INFO -- : Refreshing Gem list
+I, [2017-10-21T13:15:39.123146 #23100]  INFO -- : unlinking existing socket=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock
+I, [2017-10-21T13:15:39.123319 #23100]  INFO -- : listening on addr=/home/ubuntu/askkaro_prod/shared/sockets/unicorn.sock fd=8
+I, [2017-10-21T13:15:39.123435 #23100]  INFO -- : worker=0 spawning...
+I, [2017-10-21T13:15:39.125348 #23100]  INFO -- : worker=1 spawning...
+I, [2017-10-21T13:15:39.126109 #23103]  INFO -- : worker=0 spawned pid=23103
+I, [2017-10-21T13:15:39.126266 #23103]  INFO -- : worker=0 ready
+I, [2017-10-21T13:15:39.127372 #23100]  INFO -- : master process ready
+I, [2017-10-21T13:15:39.132269 #23106]  INFO -- : worker=1 spawned pid=23106
+I, [2017-10-21T13:15:39.132429 #23106]  INFO -- : worker=1 ready
