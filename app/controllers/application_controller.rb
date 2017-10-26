@@ -4,10 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :addnotes
-
+  before_filter :app
   rescue_from "Exception", with: :forbidden
 
-
+  def app
+    @var=Notification.where(recipient: current_user).last(5)
+  end
   def addnotes
     @note = Note.new
     @question=Question.new

@@ -3,6 +3,7 @@ class NotificationsController < ApplicationController
   skip_before_action :verify_authenticity_token
   def index
     @notifications=Notification.where(recipient: current_user).unread
+    
   end
   def likeindex
     @notifications=Notification.where(recipient: current_user).unread
