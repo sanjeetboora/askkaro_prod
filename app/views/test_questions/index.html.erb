@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Test Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Options</th>
+      <th>Correct option</th>
+      <th>Marks</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @test_questions.each do |test_question| %>
+      <tr>
+        <td><%= test_question.title %></td>
+        <td><%= test_question.description %></td>
+        <td><%= test_question.options %></td>
+        <td><%= test_question.correct_option %></td>
+        <td><%= test_question.marks %></td>
+        <td><%= test_question.user %></td>
+        <td><%= link_to 'Show', test_question %></td>
+        <td><%= link_to 'Edit', edit_test_question_path(test_question) %></td>
+        <td><%= link_to 'Destroy', test_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Test question', new_test_question_path %>
