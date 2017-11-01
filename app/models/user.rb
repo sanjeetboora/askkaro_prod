@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   has_many :notes, dependent: :destroy
     has_many :follows
+  has_many :quizzes
   has_many :notifications, foreign_key: :recipient_id
   enum role: {guest: 0, member: 1, moderator: 2, admin: 3}
   validates :phno, length: {is: 10,
