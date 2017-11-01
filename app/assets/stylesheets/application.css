@@ -108,7 +108,13 @@ nav ul li a:visited:not(:only-child):after {
 div.nav-container.hide-on-med-and-down nav#mininav ul.nav-list li a span.new.badge{
 min-width: 1rem;
 background-color: #039BE5;
-border-radius: 15px;
+border-radius: 10px;
+z-index: 80000;
+margin-right: -10px;
+margin-top: -24px;
+padding: 0px;
+line-height: 15px;
+height: 15px;
 }
 div.nav-container.hide-on-med-and-down nav#mininav ul.nav-list li a span.badge.new::after{
  content: ""; 
