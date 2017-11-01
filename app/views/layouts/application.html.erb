@@ -15,91 +15,91 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <style type="text/css">
-    .container {
-      width: 90%;
-    }
+  .container {
+    width: 90%;
+  }
 
-    @media screen and (min-width: 993px) {
+  @media screen and (min-width: 993px) {
 
-      html body div#mithu.container div.row div.col.l7 {
-        min-height: 1330px;
-      }
+    html body div#mithu.container div.row div.col.l7 {
+      min-height: 1330px;
     }
+  }
   </style>
 </head>
 <body>
   <% if notice %>
   <script type="text/javascript">
-    noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
+  noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
   </script>
   <% end %>
   <% if alert %>
   <script type="text/javascript">
-    noty({text: '<%= alert %>', type: 'error', timeout: 2500, progressBar: true});
+  noty({text: '<%= alert %>', type: 'error', timeout: 2500, progressBar: true});
   </script>
   <% end %>
   <style type="text/css">
-    .search-wrapper {
-      position: absolute;
-      top: 0;
-      right: calc(5% - 20px);
-      padding: 4px 20px;
-    }
+  .search-wrapper {
+    position: absolute;
+    top: 0;
+    right: calc(5% - 20px);
+    padding: 4px 20px;
+  }
 
-    .search-wrapper .search-input {
-      font-family: 'Lato', sans-serif;
-      border: none;
-      background-color: #eeeeee;
-      color: #3e3e3e;
-      height: 18px;
-      width: 280px;
-      border-radius: 30px;
-      padding: 10px 18px 10px 18px;
-      font-size: 14px;
-      transition: width .3s ease;
-      margin-bottom: 0px;
-      margin-top: 4%;
-    }
+  .search-wrapper .search-input {
+    font-family: 'Lato', sans-serif;
+    border: none;
+    background-color: #eeeeee;
+    color: #3e3e3e;
+    height: 18px;
+    width: 280px;
+    border-radius: 30px;
+    padding: 10px 18px 10px 18px;
+    font-size: 14px;
+    transition: width .3s ease;
+    margin-bottom: 0px;
+    margin-top: 4%;
+  }
 
-    .search-wrapper .search-input:focus {
-      outline: none;
-      background-color: #fff;
-    }
+  .search-wrapper .search-input:focus {
+    outline: none;
+    background-color: #fff;
+  }
 
-    .search-wrapper .search-input::-webkit-input-placeholder {
-      letter-spacing: 1.5px;
-    }
+  .search-wrapper .search-input::-webkit-input-placeholder {
+    letter-spacing: 1.5px;
+  }
 
-    .search-wrapper .search-input::-moz-placeholder {
-      letter-spacing: 1.5px;
-    }
+  .search-wrapper .search-input::-moz-placeholder {
+    letter-spacing: 1.5px;
+  }
 
-    .search-wrapper .search-input:-ms-input-placeholder {
-      letter-spacing: 1.5px;
-    }
+  .search-wrapper .search-input:-ms-input-placeholder {
+    letter-spacing: 1.5px;
+  }
 
-    .search-wrapper .search-icon {
-position: absolute;
-top: 0px;
-right: calc(5% + 18px);
-cursor: pointer;
-right: 0px;
-background: transparent;
-border: none;
-width: 16px;
-height: 20px;
-    }
-     .search-wrapper .search-iconbtn {
-position: absolute;
-top: 27px;
-right: calc(5% + 18px);
-cursor: pointer;
-right: 34px;
-background: transparent;
-border: none;
-width: 16px;
-height: 20px;
-    }
+  .search-wrapper .search-icon {
+    position: absolute;
+    top: 0px;
+    right: calc(5% + 18px);
+    cursor: pointer;
+    right: 0px;
+    background: transparent;
+    border: none;
+    width: 16px;
+    height: 20px;
+  }
+  .search-wrapper .search-iconbtn {
+    position: absolute;
+    top: 27px;
+    right: calc(5% + 18px);
+    cursor: pointer;
+    right: 34px;
+    background: transparent;
+    border: none;
+    width: 16px;
+    height: 20px;
+  }
   </style>
 
 
@@ -128,8 +128,8 @@ height: 20px;
                   <!-- <input class="search-input" placeholder="SEARCH" type="text" /> -->
                   <%= text_field_tag :search, params[:search], :class => 'search-input', :placeholder => 'Search', required: true %>
                   <span>
-                 <%= button_tag( :class => "search-iconbtn") do %>
-                 <svg width="13px" height="13px" class="search-icon" viewBox="0 0 13 13">
+                   <%= button_tag( :class => "search-iconbtn") do %>
+                   <svg width="13px" height="13px" class="search-icon" viewBox="0 0 13 13">
                     <path fill="#999999" d="M12,13a1,1,0,0,1-.7-.3L8.62,10A5.5,5.5,0,1,1,10,8.62l2.68,2.68A1,1,0,0,1,12,13ZM5.5,2A3.5,3.5,0,1,0,9,5.5,3.5,3.5,0,0,0,5.5,2Z"/>
                   </svg>
                   <% end %>
@@ -175,7 +175,10 @@ height: 20px;
           <li>
             <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px; margin-left: 0px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count">0</span></a>
             <ul id="dropdownnoty" class="nav-dropdown">
-
+              <% @var.reverse.each do |var|%>
+                <%if !var.read_at.nil?%>
+                <li><a><%=var.actor.name%> <%=var.action%></a></li><%end%>
+              <%end%>
             </ul>
           </li>
           <% end %>
@@ -358,100 +361,100 @@ height: 20px;
         <div class="card-image">
           <div class="image-inside"></div>
           <a href="#modaltag"><span class="card-title" style="font-size: 28px;
-font-weight: 800;
-font-family: Fresca,sans-serif;
-padding: 0;
-margin-left: 20px;
-margin-bottom: 20px;">Trends to Follow</span></a>
+            font-weight: 800;
+            font-family: Fresca,sans-serif;
+            padding: 0;
+            margin-left: 20px;
+            margin-bottom: 20px;">Trends to Follow</span></a>
 
-        </div>
-        <!--  <h5>Trends to Follow</h5> -->
-        <div id="tag_cloud">
-          <% tag_cloud Question.tag_counts.order('count DESC').limit(10), %w[sml med lar] do |tag, css_class| %>
-          <% if tag.name.length <= 11 %>
-
-          <div class="chip">
-            <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-
-            <% @trend=Trend.where(name: tag.name).first %>
-            <% if @trend != nil %>
-
-            <% if @trend.follow_string(current_user.id,@trend.id)== true%>
-            <%= link_to(('<i class="material-icons tagicon">check</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
-            <%else%>
-            <%= link_to(('<i class="material-icons tagicon">add</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
-            <%end%>
-            <%end%>
           </div>
+          <!--  <h5>Trends to Follow</h5> -->
+          <div id="tag_cloud">
+            <% tag_cloud Question.tag_counts.order('count DESC').limit(10), %w[sml med lar] do |tag, css_class| %>
+            <% if tag.name.length <= 11 %>
 
+            <div class="chip">
+              <%= link_to tag.name, tag_path(tag.name), class: css_class %>
 
-          <% end %>
-          <% end %>
+              <% @trend=Trend.where(name: tag.name).first %>
+              <% if @trend != nil %>
 
-        </div>
-        <div class="card-action center">
-          <a class="waves-effect waves-light cyan btn modal-trigger" href="#modaltag">SEE ALL</a>
-          <!-- <a href="./tags_list">SEE ALL</a> -->
-        </div>
-      </div>
-      <div class='card small userf'>
-        <div class="card-image">
-          <div class="image-inside"></div>
-          <a href="/users_list"><span class="card-title" style="font-size: 28px;
-font-weight: 800;
-font-family: Fresca,sans-serif;
-padding: 0;
-margin-left: 20px;
-margin-bottom: 20px;">Users to Follow</span></a>
-
-        </div>
-        <!--  <h5>Trends to Follow</h5> -->
-        <div id="user_cloud">
-          <% User.limit(10).each do |user| %>
-          <% if user != current_user %>
-          <div class="userfollow">
-            <figure><a href="#"><%= avatar_for(user, size: 40) %></a></figure>
-
-            <div class="usertext">
-              <h5 class="" style="font-size: 1.2em; top: 2px;font-family: 'Fresca', sans-serif;"><%= link_to user.name, user_path(user.id) %></h5>
-              <div class="chip">
-                <!--          <i class="material-icons tagicon">add</i> -->
-                <% if user.follow_string(current_user.id, user.id)== true %>
-                <%= link_to('Unfollow', user_follow_path(user), remote: true, method: :post, class: "follow1_#{user.id}") %>
-                <% else %>
-                <%= link_to('follow', user_follow_path(user), remote: true, method: :post, class: "follow1_#{user.id}") %>
-                <% end %>
-
-              </div>
+              <% if @trend.follow_string(current_user.id,@trend.id)== true%>
+              <%= link_to(('<i class="material-icons tagicon">check</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
+              <%else%>
+              <%= link_to(('<i class="material-icons tagicon">add</i>').html_safe, trend_follow_path(@trend), remote:true,method: :post,class: "follow1_#{@trend.id}") %>
+              <%end%>
+              <%end%>
             </div>
 
+
+            <% end %>
+            <% end %>
+
           </div>
-
-          <% end %>
-
-          <% end %>
-          <!--  -->
+          <div class="card-action center">
+            <a class="waves-effect waves-light cyan btn modal-trigger" href="#modaltag">SEE ALL</a>
+            <!-- <a href="./tags_list">SEE ALL</a> -->
+          </div>
         </div>
-        <div class="card-action center">
-          <a class="waves-effect waves-light cyan btn modal-trigger" href="/users_list">SEE ALL</a>
-          <!-- <a href="./tags_list">SEE ALL</a> -->
+        <div class='card small userf'>
+          <div class="card-image">
+            <div class="image-inside"></div>
+            <a href="/users_list"><span class="card-title" style="font-size: 28px;
+              font-weight: 800;
+              font-family: Fresca,sans-serif;
+              padding: 0;
+              margin-left: 20px;
+              margin-bottom: 20px;">Users to Follow</span></a>
+
+            </div>
+            <!--  <h5>Trends to Follow</h5> -->
+            <div id="user_cloud">
+              <% User.limit(10).each do |user| %>
+              <% if user != current_user %>
+              <div class="userfollow">
+                <figure><a href="#"><%= avatar_for(user, size: 40) %></a></figure>
+
+                <div class="usertext">
+                  <h5 class="" style="font-size: 1.2em; top: 2px;font-family: 'Fresca', sans-serif;"><%= link_to user.name, user_path(user.id) %></h5>
+                  <div class="chip">
+                    <!--          <i class="material-icons tagicon">add</i> -->
+                    <% if user.follow_string(current_user.id, user.id)== true %>
+                    <%= link_to('Unfollow', user_follow_path(user), remote: true, method: :post, class: "follow1_#{user.id}") %>
+                    <% else %>
+                    <%= link_to('follow', user_follow_path(user), remote: true, method: :post, class: "follow1_#{user.id}") %>
+                    <% end %>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <% end %>
+
+              <% end %>
+              <!--  -->
+            </div>
+            <div class="card-action center">
+              <a class="waves-effect waves-light cyan btn modal-trigger" href="/users_list">SEE ALL</a>
+              <!-- <a href="./tags_list">SEE ALL</a> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<% end %>
-<% if user_signed_in? %>
+    <% end %>
+    <% if user_signed_in? %>
 
 
-<div class="hide-on-med-and-down fixed">
-  <div class="col s12 m12 l4">
-    <% if !current_page?(:controller => 'notes', :action => 'index') %>
+    <div class="hide-on-med-and-down fixed">
+      <div class="col s12 m12 l4">
+        <% if !current_page?(:controller => 'notes', :action => 'index') %>
 
-    <div class='car1 small note right'>
+        <div class='car1 small note right'>
 
 
-      <div class="wrapper">
+          <div class="wrapper">
               <!--  <aside class="note-wrap note-yellow">
               <p></p>
             </aside> -->
@@ -587,11 +590,11 @@ margin-bottom: 20px;">Users to Follow</span></a>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
 
 <script>
-  $(".button-collapse").sideNav();
-  $(document).ready(function () {
-    $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
+$(".button-collapse").sideNav();
+$(document).ready(function () {
+  $('.dropdown-button').dropdown({
+    inDuration: 300,
+    outDuration: 225,
                 constrainWidth: false, // Does not change width of dropdown to that of the activator
                 hover: true, // Activate on hover
                 gutter: 0, // Spacing from edge
@@ -688,10 +691,10 @@ $('.modal').modal({
 
           }
           );
-        </script>
+</script>
 
-        <!-- for dropdown  -->
-        <script type="text/javascript">
+<!-- for dropdown  -->
+<script type="text/javascript">
     (function ($) { // Begin jQuery
         $(function () { // DOM ready
             // If a link has a dropdown, add sub menu toggle.
@@ -715,30 +718,11 @@ $('.modal').modal({
             });
         }); // end DOM ready
     })(jQuery); // end jQuery
-  </script>
+    </script>
 
 
-  <script type="text/javascript" charset="utf-8">
-    $(".dropdown-button").dropdown({hover: true});
-    $.ajax({
-      url: '/notifications.json',
-      success: function (data) {
-        var result = data;
-        var notificationList = document.getElementById('dropdownnoty');
-        for (var i = 0; i < data.length; i++) {
-          var liElement = document.createElement('li');
-          notificationList.append(liElement);
-          liElement.append(data[i].actor + data[i].action + data[i].notifiable.type);
-                //                    liElement.append(data[i].notifiable.type);
-              }
-            },
-            error: function () {
-              console.log("some error");
-              console.log(arguments);
-            }
-          });
-        </script>
-        <script type="text/javascript">
+
+    <script type="text/javascript">
     //in case you want to think about touch devices...I guess thats cool.
     var toggle = true;
     $('.mobile-dropdown').on('click', function () {
@@ -753,27 +737,29 @@ $('.modal').modal({
         alert('turned off');
       }
     })
-  </script>
+    </script>
 
-  <script type="text/javascript" charset="utf-8">
+    <script type="text/javascript" charset="utf-8">
 
     $.ajax({
       url: '/notifications.json',
       method: 'GET',
       dataType: 'JSON',
       success: function(data){
-        console.log(data);
-        console.log(data.length);
-        console.log(data[0]['actor']);
+        // console.log(data);
+        // console.log(data.length);
+        // console.log(data[0]['actor']);
         var c=$('#dropdownnoty');
+        console.log('<%=@var%>');
         for(var i=data.length-1;i>=0;i--){
           var liElement = document.createElement('li');
           var a=document.createElement('a');
           liElement.append(a);
 
-          c.append(liElement);
+          c.prepend(liElement);
           a.innerHTML=data[i]['actor']+" "+data[i]['action'];
           a.href=data[i]['url'];
+          liElement=null;
         }
 //            console.log($('#notificationcount')[0].innerHTML);
 $("[data-behaviour='unread-count']")[0].innerHTML=data.length;
@@ -785,21 +771,21 @@ error: function(){
 
 });
 
-</script>
-<script type="text/javascript" charset="utf-8">
-  $("[data-behaviour='notifications-link']").click(function(){
-    $.ajax({
-      url: '/notifications/mark_as_read',
-      method: 'POST',
-      dataType: 'JSON',
-      success: function(data){
-        $("[data-behaviour='unread-count']")[0].innerHTML='0';
-      }
-    })
-  });
-</script>
-<script type="text/javascript">
-  jQuery( document ).ready(function( $ ) {
+    </script>
+    <script type="text/javascript" charset="utf-8">
+    $("[data-behaviour='notifications-link']").click(function(){
+      $.ajax({
+        url: '/notifications/mark_as_read',
+        method: 'POST',
+        dataType: 'JSON',
+        success: function(data){
+          $("[data-behaviour='unread-count']")[0].innerHTML='0';
+        }
+      })
+    });
+    </script>
+    <script type="text/javascript">
+    jQuery( document ).ready(function( $ ) {
 
  //Use this inside your document ready jQuery
  $(window).on('popstate', function() {
@@ -807,8 +793,8 @@ error: function(){
 });
 
 });
-</script>
-</body>
+    </script>
+  </body>
 
 
-</html>
+  </html>
