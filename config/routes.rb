@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :quizzes
   resources :test_questions
   resources :tests
   match '(errors)/:status', to: 'errors#error_404', constraints: {status: /\d{3}/}, via: :all
