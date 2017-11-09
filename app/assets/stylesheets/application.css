@@ -27,6 +27,9 @@
   background: #FAFAFB;
   box-shadow: 0 1px 20px 0 rgba(46,61,73,.2);
   z-index: 8000;
+  position: fixed;
+  width: 100%;
+
 }
 
 .brand {
@@ -253,22 +256,22 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
 
 
       #user_cloud .chip{
-        font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-        display: inline-block;
-        height: 26px;
-        font-size: 13px;
-        font-weight: 500;
-        color: rgba(0,0,0,0.6);
-        line-height: 25px;
-        padding: 0 15px;
-        border-radius: 16px;
-        background-color: #ffffff;
-        margin-bottom: 5px;
-        margin-right: 5px;
-        margin-left: 12px;
-        border: 1px solid #039BE5;
-      }
-      #user_cloud .chip:hover{
+       font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+       display: inline-block;
+       height: 21px;
+       font-size: 13px;
+       font-weight: 500;
+       color: rgba(0,0,0,0.6);
+       line-height: 20px;
+       padding: 0 8px;
+       border-radius: 16px;
+       background-color: #ffffff;
+       margin-bottom: 0px;
+       margin-right: 5px;
+       margin-left: 12px;
+       border: 1px solid #039BE5;
+     }
+     #user_cloud .chip:hover{
        background-color: #039BE5;
        color: #ffffff;
        z-index: 8000;
@@ -276,15 +279,22 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
 
      }
 
-     #user_cloud .chip a:hover{
+     #user_cloud .chip a{
+      font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+      font-weight: 400;
+      color:#00b8d4;
+    }
+
+    #user_cloud .chip a:hover{
       font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
 
       color:#ffffff;
     }
-
-
-
-
+    #user_cloud .chip:hover a{
+      font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+      font-weight: 400;
+      color:#fff;
+    }
     .card.small.tag {
       height: 300px;
       width: 297px;
@@ -307,72 +317,60 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
       padding-left: 5px;
       overflow-x: hidden;
       overflow-y: hidden;
-
-
-
     }
- /*div#tag_cloud div.chip a.chip_a{
-  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-  font-weight: 400;
-  color:#00b8d4;
- }
-div#tag_cloud div.chip a.chip_a:hover{
-  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-  font-weight: 400;
-  color:#ffffff;
-  }*/
-  #tag_cloud .chip{
-    font-family: 'Capriola, sans-serif';font-size: 12px;
-    font-weight: 700;
-    font-size: inherit;
-    line-height: 22px;
-    border: 1px solid #00b8d4;
-    background-color: white;
-    height: 32px;
-    color: #00b8d4;
-    margin-bottom: 2px;
-    margin-right: 3px;
-    padding-left: 5px;
-    padding-right: 3px;
-    padding-bottom: 0;
-    padding-top: 4px;
+
+    #tag_cloud .chip{
+      font-family: 'Capriola, sans-serif';font-size: 12px;
+      font-weight: 700;
+      font-size: inherit;
+      line-height: 22px;
+      border: 1px solid #00b8d4;
+      background-color: white;
+      height: 32px;
+      color: #00b8d4;
+      margin-bottom: 2px;
+      margin-right: 3px;
+      padding-left: 5px;
+      padding-right: 3px;
+      padding-bottom: 0;
+      padding-top: 4px;
+    }
+    #tag_cloud .chip:hover{
+     background-color: #00b8d4;
+     color: #ffffff;
+     z-index: 8000;
+     /*  background-color: #e0f7fa ;*/
+
+
+   }
+   #tag_cloud .chip a{
+    font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+    font-weight: 400;
+    color:#00b8d4;
   }
-  #tag_cloud .chip:hover{
-   background-color: #00b8d4;
-   color: #ffffff;
-   z-index: 8000;
-   /*  background-color: #e0f7fa ;*/
 
+  #tag_cloud .chip:hover a{
+    font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+    font-weight: 400;
+    color:#fff;
+  }
+  #tag_cloud .chip a.sml{
+    font-size: 14px;
+    font-weight: 700;
+
+  }
+  #tag_cloud .chip a.med{
+
+   font-size: 14px;
+   font-weight: 700;
 
  }
- #tag_cloud .chip a{
-  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-  font-weight: 400;
-  color:#00b8d4;
-}
+ #tag_cloud .chip a.lar{
 
-#tag_cloud .chip:hover a{
-  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-  font-weight: 400;
-  color:#fff;
-}
-#tag_cloud .chip a.sml{
-  font-size: 14px;
-  font-weight: 700;
-
-}
-#tag_cloud .chip a.med{
-
- font-size: 14px;
- font-weight: 700;
-
-}
-#tag_cloud .chip a.lar{
-
- font-size: 14px;
- font-weight: 700;
-}
-#tag_cloud .chip a .material-icons{
+   font-size: 14px;
+   font-weight: 700;
+ }
+ #tag_cloud .chip a .material-icons{
   font-size: 16px;
 }
 .car1.small.note {

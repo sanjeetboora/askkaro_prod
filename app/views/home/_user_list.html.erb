@@ -5,6 +5,7 @@
       <div class="wrapper">
         <div class="image-wrapper"><%=avatar_for(user,size: 100)%></div>
         <h3 class="name"><%= link_to user.name,user_path(user.id) %></h3>
+        <p style="margin: 8px 0px;text-align: center; padding: 0 15px;"><%= user.bio %></p>
     <div class="social usercf">
           <div class="userfour usercol">
             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
