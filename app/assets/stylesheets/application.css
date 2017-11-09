@@ -210,6 +210,7 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
   padding-left: 15px;
   margin-left: -35px;
   margin-right: 35px;
+  border-radius: 8px;
 }
 
 .card.small.userf:hover {
@@ -220,7 +221,7 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
 #user_cloud {
   padding: 2px;
   padding-left: -13px;
-  max-height: 310px;
+  max-height: 216px;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -303,7 +304,7 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
       margin-left: -35px;
       margin-right: 35px;
       border: 1px solid #d1d1d1;
-      border-radius: 6px;
+      border-radius: 8px;
     }
 
     .card.small.tag:hover {
@@ -494,10 +495,12 @@ div.card.small.userf div.card-action.center a.waves-effect.waves-light.cyan.btn.
 
 div.col.s12.m12.l4.left.taguser div div.card.small.tag div.card-action.center{
   padding: 6px 24px;
+  border-radius: 8px;
 }
 
 div.col.s12.m12.l4.left.taguser div div.card.small.userf div.card-action.center{
   padding: 6px 24px;
+  border-radius: 8px;
 }
   /*.card.small.note:hover {
   box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
