@@ -15,91 +15,91 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <style type="text/css">
-  .container {
-    width: 90%;
-  }
-
-  @media screen and (min-width: 993px) {
-
-    html body div#mithu.container div.row div.col.l7 {
-      min-height: 1330px;
+    .container {
+      width: 90%;
     }
-  }
+
+    @media screen and (min-width: 993px) {
+
+      html body div#mithu.container div.row div.col.l7 {
+        min-height: 1330px;
+      }
+    }
   </style>
 </head>
 <body>
   <% if notice %>
   <script type="text/javascript">
-  noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
+    noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
   </script>
   <% end %>
   <% if alert %>
   <script type="text/javascript">
-  noty({text: '<%= alert %>', type: 'error', timeout: 2500, progressBar: true});
+    noty({text: '<%= alert %>', type: 'error', timeout: 2500, progressBar: true});
   </script>
   <% end %>
   <style type="text/css">
-  .search-wrapper {
-    position: absolute;
-    top: 0;
-    right: calc(5% - 20px);
-    padding: 4px 20px;
-  }
+    .search-wrapper {
+      position: absolute;
+      top: 0;
+      right: calc(5% - 20px);
+      padding: 4px 20px;
+    }
 
-  .search-wrapper .search-input {
-    font-family: 'Lato', sans-serif;
-    border: none;
-    background-color: #eeeeee;
-    color: #3e3e3e;
-    height: 18px;
-    width: 280px;
-    border-radius: 30px;
-    padding: 10px 18px 10px 18px;
-    font-size: 14px;
-    transition: width .3s ease;
-    margin-bottom: 0px;
-    margin-top: 4%;
-  }
+    .search-wrapper .search-input {
+      font-family: 'Lato', sans-serif;
+      border: none;
+      background-color: #eeeeee;
+      color: #3e3e3e;
+      height: 18px;
+      width: 280px;
+      border-radius: 30px;
+      padding: 10px 18px 10px 18px;
+      font-size: 14px;
+      transition: width .3s ease;
+      margin-bottom: 0px;
+      margin-top: 4%;
+    }
 
-  .search-wrapper .search-input:focus {
-    outline: none;
-    background-color: #fff;
-  }
+    .search-wrapper .search-input:focus {
+      outline: none;
+      background-color: #fff;
+    }
 
-  .search-wrapper .search-input::-webkit-input-placeholder {
-    letter-spacing: 1.5px;
-  }
+    .search-wrapper .search-input::-webkit-input-placeholder {
+      letter-spacing: 1.5px;
+    }
 
-  .search-wrapper .search-input::-moz-placeholder {
-    letter-spacing: 1.5px;
-  }
+    .search-wrapper .search-input::-moz-placeholder {
+      letter-spacing: 1.5px;
+    }
 
-  .search-wrapper .search-input:-ms-input-placeholder {
-    letter-spacing: 1.5px;
-  }
+    .search-wrapper .search-input:-ms-input-placeholder {
+      letter-spacing: 1.5px;
+    }
 
-  .search-wrapper .search-icon {
-    position: absolute;
-    top: 0px;
-    right: calc(5% + 18px);
-    cursor: pointer;
-    right: 0px;
-    background: transparent;
-    border: none;
-    width: 16px;
-    height: 20px;
-  }
-  .search-wrapper .search-iconbtn {
-    position: absolute;
-    top: 27px;
-    right: calc(5% + 18px);
-    cursor: pointer;
-    right: 34px;
-    background: transparent;
-    border: none;
-    width: 16px;
-    height: 20px;
-  }
+    .search-wrapper .search-icon {
+      position: absolute;
+      top: 0px;
+      right: calc(5% + 18px);
+      cursor: pointer;
+      right: 0px;
+      background: transparent;
+      border: none;
+      width: 16px;
+      height: 20px;
+    }
+    .search-wrapper .search-iconbtn {
+      position: absolute;
+      top: 27px;
+      right: calc(5% + 18px);
+      cursor: pointer;
+      right: 34px;
+      background: transparent;
+      border: none;
+      width: 16px;
+      height: 20px;
+    }
   </style>
 
 
@@ -118,9 +118,8 @@
         </div>
         <nav id="mininav">
           <ul class="nav-list">
-            <li>
-              <a href="#!">Home</a>
-            </li>
+          <!--   -->
+            <% if user_signed_in? %>
             <li>
               <div class="search-wrapper">
 
@@ -134,22 +133,22 @@
                   </svg>
                   <% end %>
                 </span>
-
-
-
               </form>
-
-
             </div>
           </li>
+          <%end%>
+           <li>
+              <a href="/">Home</a>
+            </li>
           <% if user_signed_in? %>
           <li>
             <a href="/users_list">All Users</a>
           </li>
-          <% end %>
+          
           <li>
             <a >Read</a>
             <ul class="nav-dropdown" style="z-index: 10;">
+              <div class="arrow"></div>
               <li>
                 <a href="/">Trending</a>
               </li>
@@ -161,7 +160,7 @@
               </li>
             </ul>
           </li>
-
+          <% end %>
           <% if user_signed_in? %>
           <li>
           </li>
@@ -176,8 +175,8 @@
             <a data-behaviour="notifications-link" ><i class="material-icons right" style="padding-top: 7px; margin-left: 0px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count">0</span></a>
             <ul id="dropdownnoty" class="nav-dropdown">
               <% @var.reverse.each do |var|%>
-                <%if !var.read_at.nil?%>
-                <li><a><%=var.actor.name%> <%=var.action%></a></li><%end%>
+              <%if !var.read_at.nil?%>
+              <li><a><%=var.actor.name%> <%=var.action%></a></li><%end%>
               <%end%>
             </ul>
           </li>
@@ -185,13 +184,14 @@
           <% if user_signed_in? %>
           <li><a ><%= avatar_for(current_user, size: 60) %></a>
             <ul class="nav-dropdown">
-              <li>
-                <a href="/users/<%= current_user.id %>">My Profile</a>
-              </li>
-              <li><%= link_to "Settings", edit_user_registration_path %></li>
-              <li>
-                <a href="/notes">All Notes</a>
-              </li>
+             <div class="arrow"></div>
+             <li>
+              <a href="/users/<%= current_user.id %>">My Profile</a>
+            </li>
+            <li><%= link_to "Settings", edit_user_registration_path %></li>
+            <li>
+              <a href="/notes">All Notes</a>
+            </li>
                   <!--  <li>
             <a href="/home/index">All Questions</a>
           </li>
@@ -358,8 +358,7 @@
     <div class="">
 
       <div class='card small tag'>
-        <div class="card-image">
-          <div class="image-inside"></div>
+        <div class="">
           <a href="#modaltag"><span class="card-title" style="font-size: 28px;
             font-weight: 800;
             font-family: Fresca,sans-serif;
@@ -398,8 +397,8 @@
           </div>
         </div>
         <div class='card small userf'>
-          <div class="card-image">
-            <div class="image-inside"></div>
+          <div class="">
+           
             <a href="/users_list"><span class="card-title" style="font-size: 28px;
               font-weight: 800;
               font-family: Fresca,sans-serif;
@@ -581,20 +580,20 @@
 </div>
 <div class="footer-copyright grey darken-4">
   <div class="container">
-    © 2014 Copyright Text
-    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-  </div>
+   <!--  © 2014 Copyright Text -->
+   <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+ </div>
 </div>
 </footer>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
 
 <script>
-$(".button-collapse").sideNav();
-$(document).ready(function () {
-  $('.dropdown-button').dropdown({
-    inDuration: 300,
-    outDuration: 225,
+  $(".button-collapse").sideNav();
+  $(document).ready(function () {
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
                 constrainWidth: false, // Does not change width of dropdown to that of the activator
                 hover: true, // Activate on hover
                 gutter: 0, // Spacing from edge
@@ -691,10 +690,10 @@ $('.modal').modal({
 
           }
           );
-</script>
+        </script>
 
-<!-- for dropdown  -->
-<script type="text/javascript">
+        <!-- for dropdown  -->
+        <script type="text/javascript">
     (function ($) { // Begin jQuery
         $(function () { // DOM ready
             // If a link has a dropdown, add sub menu toggle.
@@ -718,11 +717,11 @@ $('.modal').modal({
             });
         }); // end DOM ready
     })(jQuery); // end jQuery
-    </script>
+  </script>
 
 
 
-    <script type="text/javascript">
+  <script type="text/javascript">
     //in case you want to think about touch devices...I guess thats cool.
     var toggle = true;
     $('.mobile-dropdown').on('click', function () {
@@ -737,9 +736,9 @@ $('.modal').modal({
         alert('turned off');
       }
     })
-    </script>
+  </script>
 
-    <script type="text/javascript" charset="utf-8">
+  <script type="text/javascript" charset="utf-8">
 
     $.ajax({
       url: '/notifications.json',
@@ -750,8 +749,19 @@ $('.modal').modal({
         // console.log(data.length);
         // console.log(data[0]['actor']);
         var c=$('#dropdownnoty');
+        var divElement = document.createElement('div'); //for arrow upon dropdown ul
+        divElement.className += "arrow";  //for arrow upon dropdown ul
+
         console.log('<%=@var%>');
-        for(var i=data.length-1;i>=0;i--){
+        if(data.length==0){
+         var liElement = document.createElement('li');
+         var a=document.createElement('a');
+         liElement.append(a);
+         c.prepend(liElement);
+         a.innerHTML="No new notifications";
+       }
+       else{
+         for(var i=data.length-1;i>=0;i--){
           var liElement = document.createElement('li');
           var a=document.createElement('a');
           liElement.append(a);
@@ -761,6 +771,8 @@ $('.modal').modal({
           a.href=data[i]['url'];
           liElement=null;
         }
+      }
+      c.prepend(divElement);  //for arrow upon dropdown ul
 //            console.log($('#notificationcount')[0].innerHTML);
 $("[data-behaviour='unread-count']")[0].innerHTML=data.length;
 },
@@ -771,21 +783,21 @@ error: function(){
 
 });
 
-    </script>
-    <script type="text/javascript" charset="utf-8">
-    $("[data-behaviour='notifications-link']").click(function(){
-      $.ajax({
-        url: '/notifications/mark_as_read',
-        method: 'POST',
-        dataType: 'JSON',
-        success: function(data){
-          $("[data-behaviour='unread-count']")[0].innerHTML='0';
-        }
-      })
-    });
-    </script>
-    <script type="text/javascript">
-    jQuery( document ).ready(function( $ ) {
+</script>
+<script type="text/javascript" charset="utf-8">
+  $("[data-behaviour='notifications-link']").click(function(){
+    $.ajax({
+      url: '/notifications/mark_as_read',
+      method: 'POST',
+      dataType: 'JSON',
+      success: function(data){
+        $("[data-behaviour='unread-count']")[0].innerHTML='0';
+      }
+    })
+  });
+</script>
+<script type="text/javascript">
+  jQuery( document ).ready(function( $ ) {
 
  //Use this inside your document ready jQuery
  $(window).on('popstate', function() {
@@ -793,8 +805,8 @@ error: function(){
 });
 
 });
-    </script>
-  </body>
+</script>
+</body>
 
 
-  </html>
+</html>
