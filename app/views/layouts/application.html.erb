@@ -690,6 +690,22 @@ $('.modal').modal({
 
           }
           );
+
+
+
+// grab the dark overlay
+var overlay = $('.modal-overlay');
+// remove it
+overlay.detach();
+// attach it to the thing you want darkened
+$('.container').after(overlay);
+
+// close the modal
+$(modal).closeModal();
+// grab the dark overlay
+var overlay = $('.modal-overlay');
+// remove it
+overlay.detach();
         </script>
 
         <!-- for dropdown  -->
