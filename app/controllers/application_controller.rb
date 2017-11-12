@@ -12,15 +12,22 @@ class ApplicationController < ActionController::Base
   end
   def addnotes
     @note = Note.new
-    @question=Question.new
+    @ques=Question.new
   end
 
-  protected
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-  end
-  def forbidden(exception)
-    render template: 'errors/not_found_error', layout: 'layouts/application', status: 404
-  end
+protected
+def configure_permitted_parameters
+  devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+end
+def forbidden(exception)
+  render template: 'errors/not_found_error', layout: 'layouts/application', status: 404
+end
 
 end
+
+
+
+
+
+
+

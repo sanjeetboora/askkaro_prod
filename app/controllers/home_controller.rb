@@ -67,10 +67,19 @@ class HomeController < ApplicationController
   def users_list
    respond_to do |format|
     format.html {
-      @users=User.all.paginate(:per_page => 10, :page => params[:page])
-    }
-    format.js {}
-  end
+
+     if params[:search]
+      @users=User.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+      
+    else
+     @users=User.all.paginate(:per_page => 10, :page => params[:page])
+   end
+
+
+   
+ }
+ format.js {}
+end
 end
 
 def tags_list
