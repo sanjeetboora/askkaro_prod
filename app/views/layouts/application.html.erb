@@ -118,7 +118,7 @@
         </div>
         <nav id="mininav">
           <ul class="nav-list">
-          <!--   -->
+            <!--   -->
             <% if user_signed_in? %>
             <li>
               <div class="search-wrapper">
@@ -137,9 +137,9 @@
             </div>
           </li>
           <%end%>
-           <li>
-              <a href="/">Home</a>
-            </li>
+          <li>
+            <a href="/">Home</a>
+          </li>
           <% if user_signed_in? %>
           <li>
             <a href="/users_list">All Users</a>
@@ -335,12 +335,12 @@
 
 
   <div class="container" id="mithu" style="min-height: ;
-position: relative;
-padding-top: 85px;">
-    <div id="modal7" class="modal">
-      <div class="modal-content">
-        <%= render :partial => 'layouts/modal' %>
-      </div>
+  position: relative;
+  padding-top: 85px;">
+  <div id="modal7" class="modal">
+    <div class="modal-content">
+      <%= render :partial => 'layouts/modal' %>
+    </div>
     <!-- <div class="modal-footer">
     <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
   </div> -->
@@ -365,7 +365,7 @@ padding-top: 85px;">
             font-weight: 800;
             font-family: Fresca,sans-serif;
             padding: 0;
-           border-bottom: 1px solid #d1d6da;">Trends to Follow</span></a>
+            border-bottom: 1px solid #d1d6da;">Trends to Follow</span></a>
 
           </div>
           <!--  <h5>Trends to Follow</h5> -->
@@ -399,12 +399,12 @@ padding-top: 85px;">
         </div>
         <div class='card small userf'>
           <div class="">
-           
+
             <a href="/users_list"><span class="card-title" style="font-size: 28px;
               font-weight: 800;
               font-family: Fresca,sans-serif;
               padding: 0;
-             border-bottom: 1px solid #d1d6da;">Users to Follow</span></a>
+              border-bottom: 1px solid #d1d6da;">Users to Follow</span></a>
 
             </div>
             <!--  <h5>Trends to Follow</h5> -->
@@ -544,39 +544,44 @@ padding-top: 85px;">
 <footer class="page-footer grey darken-3" style="bottom: 0px; overflow: hidden; left: 0; right: 0;">
   <div class="container">
     <div class="row">
-      <div class="col l3 s12">
-        <h5 class="white-text">Footer Content</h5>
+      <div class="col l12 m12 s12" style="text-align: center;">
+        <!-- <h5 class="white-text">Footer Content</h5>
         <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-      </div>
-      <div class="col l3 m12 s12">
-        <h5 class="white-text">Links</h5>
-        <ul>
+      </div> -->
+      <div class="col l4 m6 s12" style="text-align: center;">
+        <h5 class="white-text">About Us</h5>
+      <!--   <ul>
           <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
           <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
           <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
           <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-        </ul>
-      </div>
-      <div class="col s12 m6 l1"><span class="white-text">
-        <i class="fa fa-google medium"></i>
+        </ul> -->
+      </div> <div class="col s12 m6 l4" style="text-align: center;">
+      <div class="col s3 m3 l3 left"><span class="white-text">
+        <i class="fa fa-google small"></i>
       </span></div>
-      <div class="col s12 m6 l1">
+      <div class="col s3 m3 l3 right">
         <span class="white-text">
-          <i class="fa fa-linkedin medium"></i>
+          <i class="fa fa-linkedin small"></i>
         </span>
       </div>
-      <div class="col s12 m6 l1">
+      <div class="col s3 m3 l3 left">
         <span class="white-text">
-          <i class="fa fa-twitter medium"></i>
+          <i class="fa fa-twitter small"></i>
         </span>
       </div>
-      <div class="col s12 m6 l1">
+      <div class="col s3 m3 l3 right">
         <span class="white-text">
-          <i class="fa fa-facebook medium"></i>
+          <i class="fa fa-facebook small"></i>
         </span>
       </div>
     </div>
+
+    <div class="col s12 m12 l4" style="text-align: center;">
+      <h5 class="white-text">Contact Us</h5>    
+    </div>
   </div>
+</div>
 </div>
 <div class="footer-copyright grey darken-4">
   <div class="container">
@@ -706,10 +711,10 @@ $(modal).closeModal();
 var overlay = $('.modal-overlay');
 // remove it
 overlay.detach();
-        </script>
+</script>
 
-        <!-- for dropdown  -->
-        <script type="text/javascript">
+<!-- for dropdown  -->
+<script type="text/javascript">
     (function ($) { // Begin jQuery
         $(function () { // DOM ready
             // If a link has a dropdown, add sub menu toggle.
