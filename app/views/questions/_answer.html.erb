@@ -22,7 +22,7 @@
       transform: translateZ(3);
       /*box-shadow: 0 0 1px rgba(0, 0, 0, 0);*/
       border: 1px solid #d1d1d1;
-border-radius: 6px;
+      border-radius: 6px;
     }
 
     div.card:hover {
@@ -116,21 +116,21 @@ border-radius: 6px;
       height: 122px;
     }*/
     .modal .modal-content1{
-position: absolute;
-height: calc(100% - 119px);
-max-height: 100%;
-width: 100%;
-overflow-y: auto;
-padding: 20px;
+      position: absolute;
+      height: calc(100% - 119px);
+      max-height: 100%;
+      width: 100%;
+      overflow-y: auto;
+      padding: 20px;
     }
-   .modal .modal-footer{
-border-radius: 0 0 2px 2px;
-background-color: #fafafa;
-padding: 4px 6px;
-height: 116px;
-width: 100%;
+    .modal .modal-footer{
+      border-radius: 0 0 2px 2px;
+      background-color: #fafafa;
+      padding: 4px 6px;
+      height: 116px;
+      width: 100%;
     }
-.modal .modal-footer .btn-flat{
+    .modal .modal-footer .btn-flat{
       background-color: #81d4fa;
       padding: 10px 2px;
     }
@@ -158,32 +158,31 @@ width: 100%;
         <p style="font-family: Lato"><%= raw answer.content %></p>
         <br>
         <div class="row" style="padding-bottom: 0px;">
-          <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Comment">forum</i>').html_safe, answer ,params[id: answer.id]%></button>
+        <a class="modal-trigger" href="#modal1_<%= answer.id%>"><i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Comment">forum</i></a>
 
-          <%if can? :update,answer%>
-              <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Edit Answer">create</i>').html_safe, edit_answer_path(answer)%>
+         <%if can? :update,answer%>
+         <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Edit Answer">create</i>').html_safe, edit_answer_path(answer)%>
 
-          <% end %>
-          <%if can? :destroy,answer%>
+         <% end %>
+         <%if can? :destroy,answer%>
 
-              <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, answer, method: :delete, data: {confirm: "Are you sure?"}%>
+         <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, answer, method: :delete, data: {confirm: "Are you sure?"}%>
 
-          <% end %>
-
-          <a class="waves-effect waves-light grey btn tooltipped modal-trigger" data-position="bottom" data-delay="50" data-tooltip="Comment" href="#modal1_<%= answer.id%>">Comment</a>
-
-          <% if answer.like_string(current_user.id,answer.id)== true%>
-              <%= link_to ('<i class="material-icons right" >favorite</i>').html_safe, answer_like_path(answer), remote:true,method: :post ,id: "like_#{answer.id}" %>
-          <%else%>
-              <%= link_to ('<i class="material-icons right" >favorite_border</i>').html_safe, answer_like_path(answer), remote:true,method: :post ,id: "like_#{answer.id}" %>
-          <%end%>
+         <% end %>
 
 
-        </div>
+         <% if answer.like_string(current_user.id,answer.id)== true%>
+         <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Unlike" >favorite</i>').html_safe, answer_like_path(answer), remote:true,method: :post ,id: "like_#{answer.id}" %>
+         <%else%>
+         <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Like">favorite_border</i>').html_safe, answer_like_path(answer), remote:true,method: :post ,id: "like_#{answer.id}" %>
+         <%end%>
 
-      </div>
-    </div>
-  </div>
+
+       </div>
+
+     </div>
+   </div>
+ </div>
 
 
 </div>
@@ -192,7 +191,7 @@ width: 100%;
   <div class="modal-content1">
     <div id="comments_<%= answer.id%>">
       <% @commentfeed.each do |comment| %>
-          <%= render 'comment' , comment: comment %>
+      <%= render 'comment' , comment: comment %>
       <% end %>
 
     </div>
@@ -201,16 +200,16 @@ width: 100%;
   <div class="modal-footer">
     <div class="createComment">
       <%= form_for @comment, :url => comments_path(answer_id:answer.id), remote: true do |task|%>
-          <%= task.label :comment %><br>
-          <%= task.text_area :content %><br>
-          <div class="actions">
-            <%= task.submit id: 'create_comment_submit', class:"modal-action modal-close waves-effect waves-green btn-flat"%>
-          </div>
+      <%= task.label :comment %><br>
+      <%= task.text_area :content %><br>
+      <div class="actions">
+        <%= task.submit id: 'create_comment_submit', class:"modal-action modal-close waves-effect waves-green btn-flat"%>
+      </div>
       <% end %>
       <% if @comment.errors.any? %>
-          <% @comment.errors.full_messages.each do |message| %>
-              <%= message %>
-          <% end %>
+      <% @comment.errors.full_messages.each do |message| %>
+      <%= message %>
+      <% end %>
       <% end %>
     </div>
 
@@ -226,10 +225,10 @@ $(document).ready(function(){
 });
 </script> -->
 <script type="text/javascript">
-       $(document).ready(function(){
+ $(document).ready(function(){
         // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
         $('#modal1').on('click', function () {
-});
+        });
 
         $('#modal1').modal({
            dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -238,11 +237,11 @@ $(document).ready(function(){
             outDuration: 200, // Transition out duration
             startingTop: '4%', // Starting top style attribute
             endingTop: '10%', // Ending top style attribute
-        });
+          });
 
         $('#modal1').modal('open');
         $('.trigger-modal').modal();
         $('#modal1').modal('close');
         ('.tooltipped').tooltip({delay: 50});
       });
-</script>
+    </script>
