@@ -140,7 +140,7 @@ div.card.ques div.supporting_text.text.small div.row div.card-action a.btn:hover
   color: #fff;
   background-color:#00b8d4 ;
   z-index: 8000;
-  
+
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
@@ -182,11 +182,12 @@ div.card.ques div.supporting_text.text.small div.row div.card-action a.btn:hover
 
       </div>
       <div class="supporting_text text small">
-        <h3 style=" font-family: 'Cantarell, sans-serif';font-size: 22px;font-weight: bold;" class="truncate" ><%= link_to question.title ,question%></h3>
+        <h3 style=" font-family: 'Cantarell, sans-serif';font-size: 22px;font-weight: bold;" class="truncate" ><%= link_to question.content.truncate(200) ,question%></h3>
+        <% if question.answers.first != nil %>
+        <% ans = question.answers.first %>
+        <p style="font-family: 'Josefin Slab', serif;" ><%= raw ans.content.truncate(400) %></p>
 
-        <p style="font-family: 'Josefin Slab', serif;" ><%= question.content.truncate(500) %></p>
-
-
+        <% end %>
         <p style=" font-family: 'Capriola, sans-serif';font-size: 14px;">Tags:  <%= raw question.tag_list.map { |t| link_to t , tag_path(t) }.join(', ') %></p>
 
 
