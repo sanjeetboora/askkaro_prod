@@ -139,7 +139,6 @@ ul.nav-dropdown li:last-child a, ul.nav-dropdown li:last-child a:hover {
   -webkit-border-radius: 0 0 5px 5px;
   border-radius: 0 0 8px 8px;
 }
-
 .nav-dropdown {
   position: absolute;
   display: none;
@@ -171,6 +170,7 @@ ul#dropdownnoty .arrow{
 .nav-dropdown a{
   min-height: 50px;
   height: 52px;
+  border-bottom: 1px solid #dddfe2;
 }
 
 nav#small-device-nav {
@@ -180,20 +180,12 @@ nav#small-device-nav {
   box-shadow: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+nav#mininav ul.nav-list li ul#dropdownnoty.nav-dropdown li a.unread{
+ background-color: #edf2fa; 
+}
+nav#mininav ul.nav-list li ul#dropdownnoty.nav-dropdown li a.unread:hover{
+ background-color: #bad3fc; 
+}
 
 html body div#mithu.container div.col.s12.m12.l4.left.taguser{
   height: 300px;

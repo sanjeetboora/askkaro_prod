@@ -197,7 +197,7 @@
             <ul id="dropdownnoty" class="nav-dropdown">
               <% @var.reverse.each do |var|%>
               <%if !var.read_at.nil?%>
-              <li><a><%=var.actor.name%> <%=var.action%></a></li><%end%>
+              <li><a class="unread"><%=var.actor.name%> <%=var.action%></a></li><%end%>
               <%end%>
             </ul>
           </li>
