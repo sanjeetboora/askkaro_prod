@@ -25,7 +25,18 @@
         min-height: 1330px;
       }
     }
-     div#modal9.modal.modal-fixed-footer.open div.createQuestion div.modal-content span h4{
+
+    
+    div#modal9 input{
+      color: #333;
+      transition: none;
+    }
+
+  div#modal9.modal.modal-fixed-footer.open div.createQuestion form#new_question.new_question div.modal-content{
+    height: 100%;
+    }
+    
+    div#modal9.modal.modal-fixed-footer.open div.createQuestion div.modal-content span h4{
       margin-bottom: 0;
     }
     div#modal9.modal.modal-fixed-footer.open div.createQuestion div.modal-footer div.actions.modal-action.modal-close.waves-effect.waves-green.cyan.btn-flat{
@@ -225,12 +236,12 @@
         <a href="#modal9" class="modal-trigger right btn btn-floating btn-large waves-effect waves-light indigo darken-2 pulse z-depth-4 tooltipped"  data-target="modal9" data-position="bottom" data-delay="50" data-tooltip="Ask Question"  style="margin: 0;"><i class="material-icons">help</i></a>
       </li>
     </ul>
-    <div id="modal9" class="modal modal-fixed-footer">
+    <div id="modal9" class="modal modal-fixed-footer" style="height: 100%;">
       <div class="createQuestion">
        <%= form_for @ques, remote: true do |task|%>
        <div class="modal-content">
-        <span><h4 style="display: inline-block;">ASK QUESTION</h4>
-          <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;padding: 0;"><i class="material-icons">close</i></button>
+        <span><h4 style="display: inline-block;color: black;">ASK QUESTION</h4>
+          <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;padding: 0; "><i class="material-icons">close</i></button>
         </span>
         <div class="input-field">
           <%= task.text_field :title, class:'validate', id:'title' %>
@@ -239,7 +250,7 @@
         <div class="input-field">
           <%= task.text_area :content, class:'validate materialize-textarea',id:'content'%><br>
           <%= task.label :Question, for:'content' %><br>
-          <!-- <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea> -->
+
         </div>
         <div class="input-field">
           <%= task.label :tag_list, "Tags (separated by commas)" %>
@@ -247,8 +258,7 @@
         </div>
       </div>
       <div class="modal-footer">
-          <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
-        --> <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
+       <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
         <%= task.submit id: 'create_question_submit' %>
       </div>
     </div>
@@ -387,7 +397,7 @@
   <div class="container" id="mithu" style="min-height: ;
   position: relative;
   padding-top: 85px;">
-  <div id="modal7" class="modal">
+  <div id="modal7" class="modal" style="height: 100%;">
     <div class="modal-content">
       <%= render :partial => 'layouts/modal' %>
     </div>
@@ -510,15 +520,16 @@
 
 
             <aside class="note-wrap note-yellow">
+
               <% if Note.where(:user_id => current_user.id).length>0 %>
-              <div style=" height: 50%; border-bottom: 1px solid #bcb1b1; overflow-x: hidden;">
-                <p id="note1"><%= Note.where(:user_id => current_user.id).last.title.truncate(20) %></p>
+              <div style=" height: 50%; border-bottom: 1px solid #bcb1b1; overflow: hidden;">
+                <p id="note1"><a href="#modalshownote" style="color: #777471;"><%= Note.where(:user_id => current_user.id).last.title.truncate(20) %></a></p>
                 <p id="note1cont"><%= Note.where(:user_id => current_user.id).last.content.truncate(110) %></p>
               </div>
               <% end %>
               <% if Note.where(:user_id => current_user.id).length>=2 %>
-              <div style=" height: 50%;overflow-x: hidden;">
-                <p id="note1"><%= Note.where(:user_id => current_user.id)[-2].title.truncate(20) %>
+              <div style=" height: 50%;overflow: hidden;">
+                <p id="note1"><a href="#modalshownote" style="color: #777471;"><%= Note.where(:user_id => current_user.id)[-2].title.truncate(20) %></a>
                 </p>
                 <p id="note1cont"><%= Note.where(:user_id => current_user.id)[-2].content.truncate(110) %>
                 </p></div>
@@ -548,11 +559,13 @@
                 </div>
               </aside>
 
-              <div id="modalshownote" class="modal">
+              <div id="modalshownote" class="modal modal-fixed-footer">
                 <div class="modal-content">
                   <%= render :partial => 'layouts/modalshownote' %>
                 </div>
-
+                <div class="modal-footer">
+                  <a class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+                </div>
               </div>
 
 
@@ -878,6 +891,7 @@ error: function(){
     })
   });
 </script>
+
 <script type="text/javascript">
   jQuery( document ).ready(function( $ ) {
 
@@ -887,6 +901,86 @@ error: function(){
 });
 
 });
+
+
+
+
+
+  var formmodified=0;
+  $('form *').change(function(){
+   formmodified=1;
+ });
+
+  $("input[name='commit']").click(function() {
+    formmodified = 0;
+  });
+  window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage ="";
+    if (formmodified == 1) {
+      confirmationMessage = 'It looks like you have been editing something. '
+      + 'If you leave before saving, your changes will be lost.';
+    }
+    
+
+    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+  });
+
+
+
+
+
+
+
+
+// $(document).ready(function() {
+//     formmodified=0;
+//     $('form *').change(function(){
+//       formmodified=1;
+//     });
+//     // window.onbeforeunload = confirmExit;
+//     // function confirmExit() {
+//     //   if (formmodified == 1) {
+//     //     return "New information not saved. Do you wish to leave the page?";
+//     //   }
+//     // }
+//     $("input[name='commit']").click(function() {
+//       formmodified = 0;
+//     });
+
+
+
+// // window.onload = function() {
+//     window.addEventListener("beforeunload", function (e) {
+//         if (formmodified == 0) {
+//             return undefined;
+//         }
+
+//         var confirmationMessage = 'It looks like you have been editing something. '
+//                                 + 'If you leave before saving, your changes will be lost.';
+
+//         (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+//         return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+//     });
+//  };
+
+
+
+  // $(document).ready(function() {
+  //   formmodified=0;
+  //   $('form *').change(function(){
+  //     formmodified=1;
+  //   });
+  //   window.onbeforeunload = confirmExit;
+  //   function confirmExit() {
+  //     if (formmodified == 1) {
+  //       return "New information not saved. Do you wish to leave the page?";
+  //     }
+  //   }
+  //   $("input[name='commit']").click(function() {
+  //     formmodified = 0;
+  //   });
+  // });
 </script>
 </body>
 
