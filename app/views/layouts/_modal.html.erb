@@ -17,7 +17,7 @@
     transition: none;
   }
   #modal7 .card-panel1{
-    background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+    background: rgba(40, 57, 101, .9);
     height: 37px;
     padding-top: 0;
     padding-bottom: 0;
@@ -31,7 +31,7 @@
     /*background: #ff4b1f;  /* fallback for old browsers */
     /* background: -webkit-linear-gradient(to right, #ff9068, #ff4b1f);  /* Chrome 10-25, Safari 5.1-6 */
     /* background: linear-gradient(to right, #ff9068, #ff4b1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+    background: rgba(40, 57, 101, .9);
     margin-left: -2px;
     margin-right: -2px;
     border-radius: 10px;
@@ -41,10 +41,10 @@
     display: none;
   }
   #modal7 #tabsign a{
-    color: #ab47bc;
+    color:rgba(40, 57, 101, .9);
   }
   #modal7 .btt{
-    background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+    background: rgba(40, 57, 101, .9);
   }
   div#modal7.modal.open div.modal-content div.row2 div#test-swipe-2.active form#new_user.new_user div.row1 div.input-field.col.s12 input{
     margin: 0;
@@ -106,7 +106,7 @@
         <% end -%>
       </div>
       <br>
-      <button class="btn waves-effect waves-light purple darken-3 right btt white-text" type="submit" name="action">
+      <button class="btn waves-effect waves-light right btt white-text" type="submit" name="action">
         <i class="material-icons right">send</i>SUBMIT</button>
         <br>
       </div>
@@ -114,7 +114,7 @@
     <%end%>
   </div>
   <div id="test-swipe-2">
-    <div class="card-panel1 purple darken-3 z-depth-4">
+    <div class="card-panel1 z-depth-4">
      <!--  <h5 class="white-text center-align">SIGN UP</h5> -->
      <div class="center-align">
       <%- if devise_mapping.omniauthable? %>
@@ -160,7 +160,7 @@
         <label for="user_password">Confirm Password</label>
       </div>
       <br>
-      <button class="btn waves-effect waves-light purple darken-3 right btt white-text" type="submit" name="action">
+      <button class="btn waves-effect waves-light right btt white-text" type="submit" name="action">
         <i class="material-icons right">send</i>SUBMIT</button>
         <br>
       </div>
