@@ -83,7 +83,7 @@
       /*            margin-right: 11px;*/
     }
 
-    .card1 .rowone .second .col span {
+    .card1 .rowone .second .col span>a{
       color: #878080;
       font-size: 14px;
     }
@@ -127,7 +127,7 @@
         display: inline-block;
         float: none;
       }
-      .card1 .rowone .first span {
+      .card1 .rowone .first span a {
         position: relative;
         right: 0;
       }
@@ -138,7 +138,7 @@
     @media only screen and (max-width: 450px) {
 
 
-      .card1 .rowone .second .col.s4 span {
+      .card1 .rowone .second .col.s4 span a{
         font-size: 10px;
       }
       .card1 .rowone .second .col.s4 h1 {
@@ -270,13 +270,15 @@
                       <div class="row rowtwo">
                         <div class="col l4 s4 one">
                           <h1><%= @user.followees(User).count %></h1>
-                          <span>Following</span>
-                        </div>
+                          <span><a href="#follow-swipe-2">Following</a></span></div>
+                          
+                       
                         <div class="col l4 s4 two">
                           <h1><%= @user.followers(User).count %></h1>
-                          <span>Followers</span></div>
+                          <span><a href="#follow-swipe-3">Followers</a></span></div>
                           <div class="col l3 s4 three"><h1><%= @user.questions.count %></h1>
-                            <span>Questions</span>
+                         
+                             <span><a href="#ques-swipe-1">Questions</a></span></div>
                           </div>
                         </div>
                       </div>
