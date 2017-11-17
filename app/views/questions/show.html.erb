@@ -156,20 +156,26 @@ vertical-align: middle;
 
 
     <div class="row">
+          <% if current_user !=nil %>
       <%if can? :update,@question%>
 
           <%= link_to ('<i class="material-icons right">create</i>').html_safe, edit_question_path(@question)%>
       <% end %>
+          <% end %>
+              <% if current_user !=nil %>
       <%if can? :destroy,@question%>
 
           <%= link_to ('<i class="material-icons right">delete</i>').html_safe, @question, method: :delete, data: {confirm: "Are you sure?"}%>
 
       <% end %>
+          <% end %>
+              <% if current_user !=nil %>
         <% if @question.follow_string(current_user.id,@question.id)== true%>
                 <%= link_to(('<span class="">Unfollow</span>').html_safe, question_follow_path(@question), remote:true,method: :post,id: "follow_#{@question.id}",:class =>"waves-effect waves-light btn follow right") %>
             <%else%>
                 <%= link_to(('<span class="">follow</span>').html_safe, question_follow_path(@question), remote:true,method: :post,id: "follow_#{@question.id}",:class =>"waves-effect waves-light btn follow right") %>
             <%end%>
+                <%end%>
 
     </div>
   </div>
@@ -194,7 +200,7 @@ vertical-align: middle;
       </div>
       <div class="actions">
         <%= task.submit id: 'create_answer_submit', class: 'btn right'%>
-        
+
 
       </div>
   <% end %>
@@ -236,4 +242,3 @@ vertical-align: middle;
         'slow');
     });
 </script>
-

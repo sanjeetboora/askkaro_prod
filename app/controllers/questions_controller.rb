@@ -1,6 +1,6 @@
 
 class QuestionsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only:[:edit, :create, :update, :destroy]
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
 
@@ -16,15 +16,15 @@ class QuestionsController < ApplicationController
       format.html{
         @question=Question.find(params[:id])
         @questagfeed = []
-        @question.tag_list.each do |tag| 
-          @questagfeed += Question.tagged_with(tag) 
+        @question.tag_list.each do |tag|
+          @questagfeed += Question.tagged_with(tag)
         end
-    
+
         @answer = Answer.new(question_id: params[@question.id])
         @answerfeed=@question.answerfeed @question.id
         # @comment = Comment.new(answer_id: params[@answer.id])
         # @commentfeed=@answer.commentfeed @answer.id
-        
+
 
       }
       format.js{  }
