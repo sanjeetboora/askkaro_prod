@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:index]
 
   def index
     @questagfeed = []
@@ -48,13 +48,10 @@ class HomeController < ApplicationController
         if params[:tag]
           @feed = Question.tagged_with(params[:tag]).paginate(:per_page => 4, :page => params[:page])
         else
-          @feed=current_user.feed
-          @latestfeed=current_user.latestfeed
-
-
+          @feed=Question.last(10).reverse
+          @latestfeed=Question.last(10).reverse
           @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
           @trendingfeed=[]
-
           @tftags.each do |tag|
             @trendingfeed += Question.tagged_with(tag)
           end
@@ -65,24 +62,22 @@ class HomeController < ApplicationController
   end
 
   def users_list
-   respond_to do |format|
-    format.html {
+    respond_to do |format|
+      format.html {
 
-     if params[:search]
-      @users=User.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
-      
-    else
-     @users=User.all.order(:name).paginate(:per_page => 10, :page => params[:page])
-   end
+        if params[:search]
+          @users=User.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
 
+        else
+          @users=User.all.order(:name).paginate(:per_page => 10, :page => params[:page])
+        end
 
-   
- }
- format.js {}
-end
-end
+      }
+      format.js {}
+    end
+  end
 
-def tags_list
+  def tags_list
 
-end
+  end
 end
