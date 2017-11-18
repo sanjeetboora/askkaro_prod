@@ -26,7 +26,7 @@
       }
     }
 
-    
+
     div#modal9 input{
       color: #333;
       transition: none;
@@ -35,7 +35,7 @@
   div#modal9.modal.modal-fixed-footer.open div.createQuestion form#new_question.new_question div.modal-content{
     height: 100%;
     }
-    
+
     div#modal9.modal.modal-fixed-footer.open div.createQuestion div.modal-content span h4{
       margin-bottom: 0;
     }
@@ -165,7 +165,7 @@
           <li>
             <a href="/users_list">All Users</a>
           </li>
-          
+
           <li>
             <a >Read</a>
             <ul class="nav-dropdown" style="z-index: 10;">
@@ -187,7 +187,7 @@
           </li>
           <% else %>
           <li>
-            <a class="waves-effect modal-trigger" href="#modal7">Log In</a>
+            <a id ="log_in_modal" class="waves-effect modal-trigger" href="#modal7">Log In</a>
           </li>
           <% end %>
 
@@ -568,7 +568,7 @@
 
       <div id="modaladdnote" class="modal modal-fixed-footer">
        <%= render :partial => 'layouts/modaladdnote' %>
-       
+
 </div>
 
 
@@ -611,7 +611,7 @@
     </div>
 
     <div class="col s12 m12 l4" style="text-align: center;">
-      <h5 class="white-text">Contact Us</h5>    
+      <h5 class="white-text">Contact Us</h5>
     </div>
   </div>
 </div>
@@ -890,7 +890,7 @@ error: function(){
       confirmationMessage = 'It looks like you have been editing something. '
       + 'If you leave before saving, your changes will be lost.';
     }
-    
+
 
     (e || window.event).returnValue = confirmationMessage; //Gecko + IE
     return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
