@@ -15,7 +15,7 @@ class HomeController < ApplicationController
       @tre=Trend.where(name: params[:tag]).first
 
       @trendtagusers += @tre.followers(User)
-
+      
     else
       @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
       @tftags.each do |tag|

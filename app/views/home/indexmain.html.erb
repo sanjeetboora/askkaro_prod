@@ -59,7 +59,6 @@
       <h5 style="color: #949599; margin-bottom: 10px;">Ask Your Question</h5>
     </div>
   </a>
-
   <div id="modal2" class="modal modal-fixed-footer">
     <div class="createQuestion">
       <%= form_for @question, remote: true do |task|%>
@@ -67,9 +66,6 @@
         <span><h4 style="display: inline-block;">ASK QUESTION</h4>
           <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;padding: 0;"><i class="material-icons">close</i></button>
         </span>
-
-
-
         <div class="input-field">
           <%= task.text_field :title, class:'validate', id:'title' %>
           <%= task.label :title,"Title (Between 6 to 240 characters)", for:'title' %><br>
@@ -78,9 +74,7 @@
           <%= task.text_area :content, class:'validate materialize-textarea',id:'content'%><br>
           <%= task.label :Question, for:'content' %><br>
           <!-- <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea> -->
-
         </div>
-
         <div class="input-field">
           <%= task.label :tag_list, "Tags (separated by commas)" %>
           <%= task.text_field :tag_list %>
