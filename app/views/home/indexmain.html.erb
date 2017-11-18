@@ -164,6 +164,7 @@ $(document).ready(function(){
 });
 </script>
 <script type="text/javascript" charset="utf-8">
+  <% if current_user!=nil %>
 $("#create_question_submit").click(function(){
 
   if($('#title').val().length<6) {
@@ -190,7 +191,18 @@ $("#create_question_submit").click(function(){
   }
 
 });
+<% else%>
+  $("#create_question_submit").click(function(){
 
+      noty({
+          text: 'You must login or signup before raising a question!!',
+          type: 'error',
+          timeout: 3500,
+          progressBar: true
+      });
+
+  });
+  <% end %>
 </script>
 
 </body>
