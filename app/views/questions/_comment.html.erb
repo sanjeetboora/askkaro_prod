@@ -69,7 +69,7 @@
 
 }
 @media screen and (max-width: 620px) {
-  
+
   body{margin-right:60px;}
   .message .avatar,.inverse .avatar,.message .triangle,.inverse .triangle{display:none;}
 
@@ -82,16 +82,18 @@
 <div class="message">
   <div class="triangle"></div>
   <div class="avatar"><%=avatar_for(comment.user,size: 40)%></div>
-   
+
   <p><strong><%= link_to comment.user.name,user_path(comment.user.id) %>,<em><%= time_ago_in_words(comment.created_at) unless comment.created_at.blank? %> ago</em></strong>
      <%= comment.content %>
      <br>
-     
+
  <!--  <%if can? :update,comment%>
     <%= link_to 'Edit', comment %>
     <% end %> -->
+      <% if current_user !=nil %>
     <%if can? :destroy,comment%>
     <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, comment, method: :delete, data: {confirm: "Are you sure?"}%>
+    <% end %>
     <% end %>
 
 </p>

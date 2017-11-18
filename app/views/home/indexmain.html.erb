@@ -165,7 +165,6 @@ $(document).ready(function(){
 <script type="text/javascript" charset="utf-8">
   <% if current_user!=nil %>
 $("#create_question_submit").click(function(){
-
   if($('#title').val().length<6) {
     noty({
       text: 'The length of title of your question must be greater than 6!',
@@ -188,11 +187,9 @@ $("#create_question_submit").click(function(){
       progressBar: true
     });
   }
-
 });
 <% else%>
   $("#create_question_submit").click(function(){
-
       noty({
           text: 'You must login or signup before raising a question!!',
           type: 'error',

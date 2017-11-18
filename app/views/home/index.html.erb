@@ -54,9 +54,9 @@
                     <span><h4 style="display: inline-block;">ASK QUESTION</h4>
                       <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;padding: 0;"><i class="material-icons">close</i></button>
                     </span>
-                    
-                    
-                   
+
+
+
                     <div class="input-field">
                       <%= task.text_field :title, class:'validate', id:'title' %>
                       <%= task.label :title,"Title (Between 6 to 240 characters)", for:'title' %><br>
@@ -157,30 +157,43 @@
       });
     </script>
     <script type="text/javascript" charset="utf-8">
+      <% if current_user!=nil %>
+    $("#create_question_submit").click(function(){
+      if($('#title').val().length<6) {
+        noty({
+          text: 'The length of title of your question must be greater than 6!',
+          type: 'error',
+          timeout: 3500,
+          progressBar: true
+        });
+      } else if($('#title').val().length>240){
+        noty({
+          text: 'The length of title of your question must be less than 240!',
+          type: 'error',
+          timeout: 3500,
+          progressBar: true
+        });
+      } else {
+        noty({
+          text: 'You successfully posted a new Question!',
+          type: 'success',
+          timeout: 3500,
+          progressBar: true
+        });
+      }
+    });
+    <% else%>
       $("#create_question_submit").click(function(){
-        if($('#title').val().length<6) {
           noty({
-            text: 'The length of title of your question must be greater than 6!',
-            type: 'error',
-            timeout: 3500,
-            progressBar: true
+              text: 'You must login or signup before raising a question!!',
+              type: 'error',
+              timeout: 3500,
+              progressBar: true
           });
-        } else if($('#title').val().length>240){
-          noty({
-            text: 'The length of title of your question must be less than 240!',
-            type: 'error',
-            timeout: 3500,
-            progressBar: true
-          });
-        } else {
-          noty({
-            text: 'You successfully posted a new Question!',
-            type: 'success',
-            timeout: 3500,
-            progressBar: true
-          });
-        }
+          $('#log_in_modal').click();
+
       });
+      <% end %>
     </script>
 
   </body>

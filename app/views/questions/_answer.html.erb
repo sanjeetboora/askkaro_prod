@@ -158,20 +158,22 @@
         <p style="font-family: Lato"><%= raw answer.content %></p>
         <br>
         <div class="row" style="padding-bottom: 0px;">
+  <% if current_user !=nil %>
         <a class="modal-trigger" href="#modal1_<%= answer.id%>"><i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Comment">forum</i></a>
-        <% if current_user !=nil %>
+
          <%if can? :update,answer%>
          <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Edit Answer">create</i>').html_safe, edit_answer_path(answer)%>
- <% end %>
+
          <% end %>
-             <% if current_user !=nil %>
+          <% end %>
+           <% if current_user !=nil %>
          <%if can? :destroy,answer%>
 
          <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, answer, method: :delete, data: {confirm: "Are you sure?"}%>
- <% end %>
-         <% end %>
 
-       <% if current_user !=nil %>
+         <% end %>
+ <% end %>
+  <% if current_user !=nil %>
          <% if answer.like_string(current_user.id,answer.id)== true%>
          <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Unlike" >favorite</i>').html_safe, answer_like_path(answer), remote:true,method: :post ,id: "like_#{answer.id}" %>
          <%else%>
@@ -188,15 +190,14 @@
 
 </div>
 <!-- Modal Structure -->
+  <% if current_user !=nil %>
 <div id="modal1_<%= answer.id%>" class="modal modal-fixed-footer">
   <div class="modal-content1">
     <div id="comments_<%= answer.id%>">
       <% @commentfeed.each do |comment| %>
       <%= render 'comment' , comment: comment %>
       <% end %>
-
     </div>
-
   </div>
   <div class="modal-footer">
     <div class="createComment">
@@ -213,9 +214,9 @@
       <% end %>
       <% end %>
     </div>
-
   </div>
 </div>
+ <% end %>
 <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> -->
 <!-- <script type="text/javascript">
