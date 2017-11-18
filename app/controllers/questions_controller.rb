@@ -30,12 +30,6 @@ class QuestionsController < ApplicationController
       format.js{  }
     end
 
-
-
-
-
-
-
   end
   # GET /questions/1/edit
   def edit

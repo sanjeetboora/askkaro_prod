@@ -104,21 +104,17 @@
 </div>
 </div>
 
-
-
-
 <div id="questions">
   <div class="row">
 
     <% @latestfeed.each do |question| %>
-    <!-- <div class="col s12 m12 l12"> -->
+     <div class="col s12 m12 l12">
     <%= render 'question' , question: question %>
-    <!-- </div> -->
+     </div>
     <% end %>
   </div>
 
 </div>
-
 
 <!-- </div> -->
 <!-- <div class="container"> -->
@@ -130,9 +126,9 @@
     <div class="row">
 
       <% @trendingfeed.each do |question| %>
-      <!-- <div class="col s12 m12 l12"> -->
+       <div class="col s12 m12 l12">
       <%= render 'question' , question: question %>
-      <!-- </div> -->
+       </div>
       <% end %>
     </div>
 
@@ -169,7 +165,7 @@ $(document).ready(function(){
 </script>
 <script type="text/javascript" charset="utf-8">
 $("#create_question_submit").click(function(){
-    noty({text: 'random', type: 'alert', timeout: 950, progressBar: true});
+
   if($('#title').val().length<6) {
     noty({
       text: 'The length of title of your question must be greater than 6!',

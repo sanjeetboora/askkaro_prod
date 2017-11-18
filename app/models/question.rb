@@ -5,7 +5,7 @@ class Question < ActiveRecord::Base
   has_many :follows
   has_many :users,through: :answers
   validates :title ,presence: true,length:{in: 6..240}
-validates_uniqueness_of :question_title, :message=>"Question alredy exists", on: 'create'
+# validates_uniqueness_of :question_title, :message=>"Question alredy exists", on: 'create'
   acts_as_followable
   acts_as_likeable
 
