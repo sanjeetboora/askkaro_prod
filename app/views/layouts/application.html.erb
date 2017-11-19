@@ -861,97 +861,96 @@ error: function(){
     })
   });
 </script>
-
-<script type="text/javascript">
-  jQuery( document ).ready(function( $ ) {
-
- //Use this inside your document ready jQuery
- $(window).on('popstate', function() {
-  location.reload(true);
-});
-
-});
-
-
-
-
-
-  var formmodified=0;
-  $('form *').change(function(){
-   formmodified=1;
- });
-
-  $("input[name='commit']").click(function() {
-    formmodified = 0;
-  });
-  window.addEventListener("beforeunload", function (e) {
-    var confirmationMessage ="";
-    if (formmodified == 1) {
-      confirmationMessage = 'It looks like you have been editing something. '
-      + 'If you leave before saving, your changes will be lost.';
-    }
-
-
-    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
-  });
-
-
-
-
-
-
-
-
-// $(document).ready(function() {
-//     formmodified=0;
-//     $('form *').change(function(){
-//       formmodified=1;
-//     });
-//     // window.onbeforeunload = confirmExit;
-//     // function confirmExit() {
-//     //   if (formmodified == 1) {
-//     //     return "New information not saved. Do you wish to leave the page?";
-//     //   }
-//     // }
-//     $("input[name='commit']").click(function() {
-//       formmodified = 0;
-//     });
-
-
-
-// // window.onload = function() {
-//     window.addEventListener("beforeunload", function (e) {
-//         if (formmodified == 0) {
-//             return undefined;
-//         }
-
-//         var confirmationMessage = 'It looks like you have been editing something. '
-//                                 + 'If you leave before saving, your changes will be lost.';
-
-//         (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-//         return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
-//     });
-//  };
-
-
-
-  // $(document).ready(function() {
-  //   formmodified=0;
-  //   $('form *').change(function(){
-  //     formmodified=1;
-  //   });
-  //   window.onbeforeunload = confirmExit;
-  //   function confirmExit() {
-  //     if (formmodified == 1) {
-  //       return "New information not saved. Do you wish to leave the page?";
-  //     }
-  //   }
-  //   $("input[name='commit']").click(function() {
-  //     formmodified = 0;
-  //   });
-  // });
-</script>
+<!--<script type="text/javascript">-->
+//  jQuery( document ).ready(function( $ ) {
+//
+// //Use this inside your document ready jQuery
+// $(window).on('popstate', function() {
+//  location.reload(true);
+//});
+//
+//});
+//
+//
+//
+//
+//
+//  var formmodified=0;
+//  $('form *').change(function(){
+//   formmodified=1;
+// });
+//
+//  $("input[name='commit']").click(function() {
+//    formmodified = 0;
+//  });
+//  window.addEventListener("beforeunload", function (e) {
+//    var confirmationMessage ="";
+//    if (formmodified == 1) {
+//      confirmationMessage = 'It looks like you have been editing something. '
+//      + 'If you leave before saving, your changes will be lost.';
+//    }
+//
+//
+//    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+//    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+//  });
+//
+//
+//
+//
+//
+//
+//
+//
+//// $(document).ready(function() {
+////     formmodified=0;
+////     $('form *').change(function(){
+////       formmodified=1;
+////     });
+////     // window.onbeforeunload = confirmExit;
+////     // function confirmExit() {
+////     //   if (formmodified == 1) {
+////     //     return "New information not saved. Do you wish to leave the page?";
+////     //   }
+////     // }
+////     $("input[name='commit']").click(function() {
+////       formmodified = 0;
+////     });
+//
+//
+//
+//// // window.onload = function() {
+////     window.addEventListener("beforeunload", function (e) {
+////         if (formmodified == 0) {
+////             return undefined;
+////         }
+//
+////         var confirmationMessage = 'It looks like you have been editing something. '
+////                                 + 'If you leave before saving, your changes will be lost.';
+//
+////         (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+////         return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+////     });
+////  };
+//
+//
+//
+//  // $(document).ready(function() {
+//  //   formmodified=0;
+//  //   $('form *').change(function(){
+//  //     formmodified=1;
+//  //   });
+//  //   window.onbeforeunload = confirmExit;
+//  //   function confirmExit() {
+//  //     if (formmodified == 1) {
+//  //       return "New information not saved. Do you wish to leave the page?";
+//  //     }
+//  //   }
+//  //   $("input[name='commit']").click(function() {
+//  //     formmodified = 0;
+//  //   });
+//  // });
+<!--</script>-->
 </body>
 
 
