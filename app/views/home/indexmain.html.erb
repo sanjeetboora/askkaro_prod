@@ -70,8 +70,8 @@
 
 
             <div class="input-field">
-              <%= task.text_field :title, class:'validate', id:'title' %>
-              <%= task.label :title,"Title (Between 6 to 240 characters)", for:'title' %><br>
+              <%= task.hidden_field :title, class:'validate', id:'title' %>
+
             </div>
             <div class="input-field">
               <%= task.text_area :content, class:'validate materialize-textarea',id:'content'%><br>
@@ -165,28 +165,12 @@
 <script type="text/javascript" charset="utf-8">
     <% if current_user!=nil %>
     $("#create_question_submit").click(function(){
-        if($('#title').val().length<6) {
-            noty({
-                text: 'The length of title of your question must be greater than 6!',
-                type: 'error',
-                timeout: 3500,
-                progressBar: true
-            });
-        } else if($('#title').val().length>240){
-            noty({
-                text: 'The length of title of your question must be less than 240!',
-                type: 'error',
-                timeout: 3500,
-                progressBar: true
-            });
-        } else {
-            noty({
-                text: 'You successfully posted a new Question!',
-                type: 'success',
-                timeout: 3500,
-                progressBar: true
-            });
-        }
+        noty({
+            text: 'You Successfully posted a new question',
+            type: 'alert',
+
+            progressBar: true
+        });
     });
 
     <% else%>
@@ -194,7 +178,7 @@
         noty({
             text: 'You must login or signup before raising a question!!',
             type: 'error',
-            timeout: 3500,
+
             progressBar: true
         });
         $('#log_in_modal').click();
