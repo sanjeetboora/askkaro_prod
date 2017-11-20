@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Statement:</strong>
+  <%= @quizproblem.statement %>
+</p>
+
+<p>
+  <strong>Marks:</strong>
+  <%= @quizproblem.marks %>
+</p>
+
+<p>
+  <strong>Option:</strong>
+  <%= @quizproblem.option %>
+</p>
+
+<p>
+  <strong>Correctoption:</strong>
+  <%= @quizproblem.correctoption %>
+</p>
+
+<p>
+  <strong>Quiz:</strong>
+  <%= @quizproblem.quiz %>
+</p>
+
+<%= link_to 'Edit', edit_quizproblem_path(@quizproblem) %> |
+<%= link_to 'Back', quizproblems_path %>

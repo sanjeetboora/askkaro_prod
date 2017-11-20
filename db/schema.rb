@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171101202410) do
+ActiveRecord::Schema.define(version: 20171120132724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -155,6 +155,18 @@ ActiveRecord::Schema.define(version: 20171101202410) do
 
   add_index "questions", ["user_id"], name: "index_questions_on_user_id", using: :btree
 
+  create_table "quizproblems", force: :cascade do |t|
+    t.string   "statement"
+    t.integer  "marks"
+    t.string   "option"
+    t.string   "correctoption"
+    t.integer  "quiz_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "quizproblems", ["quiz_id"], name: "index_quizproblems_on_quiz_id", using: :btree
+
   create_table "quizzes", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
@@ -246,6 +258,7 @@ ActiveRecord::Schema.define(version: 20171101202410) do
   add_foreign_key "comments", "users"
   add_foreign_key "notes", "users"
   add_foreign_key "questions", "users"
+  add_foreign_key "quizproblems", "quizzes"
   add_foreign_key "quizzes", "users"
   add_foreign_key "subtrends", "maintrends"
 end

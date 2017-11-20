@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  statement: 
+  marks: 1
+  option: MyString
+  correctoption: MyString
+  quiz_id: 
+
+two:
+  statement: 
+  marks: 1
+  option: MyString
+  correctoption: MyString
+  quiz_id: 

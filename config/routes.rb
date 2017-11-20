@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :quizproblems
   resources :quizzes
   resources :test_questions
   resources :tests
