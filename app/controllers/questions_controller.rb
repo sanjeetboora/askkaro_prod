@@ -19,17 +19,13 @@ class QuestionsController < ApplicationController
         @question.tag_list.each do |tag|
           @questagfeed += Question.tagged_with(tag)
         end
-
         @answer = Answer.new(question_id: params[@question.id])
         @answerfeed=@question.answerfeed @question.id
         # @comment = Comment.new(answer_id: params[@answer.id])
         # @commentfeed=@answer.commentfeed @answer.id
-
-
       }
       format.js{  }
     end
-
   end
   # GET /questions/1/edit
   def edit
@@ -49,18 +45,19 @@ class QuestionsController < ApplicationController
       end
     end
     respond_to do |format|
+      byebug
       if @question.save
-         Resque.enqueue(QuestionMailer,@question.id,current_user.id)
+       Resque.enqueue(QuestionMailer,@question.id,current_user.id)
          # ans=Answer.new
          # ans.content="a"
          # ans.question_id=@question.id
          # ans.user_id=current_user.id
          # ans.save!
          # ans.destroy
-        format.html { redirect_to '/', notice: 'Question was successfully created.' }
-        format.js{  }
-        format.json { render :show, status: :created, location: @question }
-      else
+         format.html { redirect_to '/', notice: 'Question was successfully created.' }
+         format.js{  }
+         format.json { render :show, status: :created, location: @question }
+       else
         format.html { render 'home/index',notice: 'Question was successfully destroyed.' }
         format.json { render json: @question.errors, status: :unprocessable_entity }
       end
