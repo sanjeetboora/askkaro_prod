@@ -48,6 +48,7 @@ class QuestionsController < ApplicationController
         var.save!
       end
     end
+
     respond_to do |format|
       if @question.save
          Resque.enqueue(QuestionMailer,@question.id,current_user.id)
