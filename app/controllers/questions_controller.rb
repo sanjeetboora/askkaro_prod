@@ -44,6 +44,7 @@ class QuestionsController < ApplicationController
         var.save!
       end
     end
+
     respond_to do |format|
       byebug
       if @question.save
