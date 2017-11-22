@@ -22,7 +22,5 @@ class UserMailer < ApplicationMailer
     @question = @answer.question
     @user=@question.user
     mail(to: @user.email,subject: "New answer for #{@question.title}")
-
-
   end
 end

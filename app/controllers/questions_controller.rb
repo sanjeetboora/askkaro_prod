@@ -24,8 +24,6 @@ class QuestionsController < ApplicationController
         @answerfeed=@question.answerfeed @question.id
         # @comment = Comment.new(answer_id: params[@answer.id])
         # @commentfeed=@answer.commentfeed @answer.id
-
-
       }
       format.js{  }
     end
@@ -51,6 +49,7 @@ class QuestionsController < ApplicationController
 
     respond_to do |format|
       if @question.save
+
          Resque.enqueue(QuestionMailer,@question.id,current_user.id)
          # ans=Answer.new
          # ans.content="a"

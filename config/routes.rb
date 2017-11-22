@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       post :mark_as_read
     end
   end
+
   get '/likenotification',to: 'notification#likeindex'
   get 'home/index'
   get '/sear',to: 'questions#index'

@@ -213,7 +213,7 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
-    redis (4.0.1)
+    redis (3.3.5)
     redis-namespace (1.6.0)
       redis (>= 3.0.4)
     responders (2.4.0)
@@ -298,6 +298,7 @@ DEPENDENCIES
   pg (~> 0.20.0)
   rails (= 4.2.8)
   rails-assets-jcrop!
+  redis (~> 3.3.3)
   resque
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

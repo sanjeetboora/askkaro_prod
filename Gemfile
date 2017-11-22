@@ -31,7 +31,8 @@ gem 'cancancan', '~> 2.0'
 gem 'acts-as-taggable-on'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem "resque"
+gem 'redis', '~> 3.3.3'
+gem 'resque', require: 'resque/server'
 gem 'unicorn'
 
 # Use Unicorn as the app server
