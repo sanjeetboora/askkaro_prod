@@ -1,0 +1,1535 @@
+/*! Jcrop.css v2.0.4 - build: 20151117
+ *  Copyright 2008-2015 Tapmodo Interactive LLC
+ *  Free software under MIT License
+ **/
+/*
+  The outer-most container in a typical Jcrop instance
+  If you are having difficulty with formatting related to styles
+  on a parent element, place any fixes here or in a like selector
+
+  You can also style this element if you want to add a border, etc
+  A better method for styling can be seen below with .jcrop-light
+  (Add a class to the holder and style elements for that extended class)
+*/
+/* line 15, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-active {
+  direction: ltr;
+  text-align: left;
+  box-sizing: border-box;
+  /* IE10 touch compatibility */
+  -ms-touch-action: none;
+}
+
+/* line 22, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dragging {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 28, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-selection {
+  z-index: 2;
+}
+
+/* line 31, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-selection.jcrop-current {
+  z-index: 4;
+}
+
+/* Selection Borders */
+/* line 35, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-border {
+  background: #ffffff url(/assets/jcrop/css/Jcrop-752309673bbd9d9b2ba0bd58d0a7071a2c59c30e2824d85bcd2a3bc0a07ef1f1.gif);
+  line-height: 1px !important;
+  font-size: 0 !important;
+  overflow: hidden;
+  position: absolute;
+  filter: alpha(opacity=50) !important;
+  opacity: 0.5 !important;
+}
+
+/* line 44, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-border.ord-w,
+.jcrop-border.ord-e,
+.jcrop-border.ord-n {
+  top: 0px;
+}
+
+/* line 49, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-border.ord-n,
+.jcrop-border.ord-s {
+  width: 100%;
+  height: 1px !important;
+}
+
+/* line 54, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-border.ord-w,
+.jcrop-border.ord-e {
+  height: 100%;
+  width: 1px !important;
+}
+
+/* line 59, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-border.ord-e {
+  right: -1px;
+}
+
+/* line 62, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-border.ord-n {
+  top: -1px;
+}
+
+/* line 65, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-border.ord-w {
+  left: -1px;
+}
+
+/* line 68, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-border.ord-s {
+  bottom: -1px;
+}
+
+/* line 71, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-selection {
+  position: absolute;
+}
+
+/* line 74, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-box {
+  z-index: 2;
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+/* line 83, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-box:hover {
+  background: none;
+}
+
+/* line 86, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-box:active {
+  background: none;
+}
+
+/* line 89, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-box:focus {
+  outline: 1px rgba(128, 128, 128, 0.65) dotted;
+}
+
+/* line 92, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-active,
+.jcrop-box {
+  position: relative;
+}
+
+/* line 96, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-box {
+  width: 100%;
+  height: 100%;
+  cursor: move;
+}
+
+/* Selection Handles */
+/* line 102, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle {
+  z-index: 4;
+  background-color: rgba(49, 28, 28, 0.58);
+  border: 1px #eeeeee solid;
+  width: 9px;
+  height: 9px;
+  font-size: 0;
+  position: absolute;
+  filter: alpha(opacity=80) !important;
+  opacity: 0.8 !important;
+}
+
+/* line 113, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle.ord-n {
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -5px;
+  top: 0;
+  cursor: n-resize;
+}
+
+/* line 120, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle.ord-s {
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  cursor: s-resize;
+}
+
+/* line 127, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle.ord-e {
+  margin-right: -5px;
+  margin-top: -5px;
+  right: 0;
+  top: 50%;
+  cursor: e-resize;
+}
+
+/* line 134, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle.ord-w {
+  left: 0;
+  margin-left: -5px;
+  margin-top: -5px;
+  top: 50%;
+  cursor: w-resize;
+}
+
+/* line 141, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle.ord-nw {
+  left: 0;
+  margin-left: -5px;
+  margin-top: -5px;
+  top: 0;
+  cursor: nw-resize;
+}
+
+/* line 148, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle.ord-ne {
+  margin-right: -5px;
+  margin-top: -5px;
+  right: 0;
+  top: 0;
+  cursor: ne-resize;
+}
+
+/* line 155, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle.ord-se {
+  bottom: 0;
+  margin-bottom: -5px;
+  margin-right: -5px;
+  right: 0;
+  cursor: se-resize;
+}
+
+/* line 162, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-handle.ord-sw {
+  bottom: 0;
+  left: 0;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  cursor: sw-resize;
+}
+
+/* Larger Selection Handles for Touch */
+/* line 170, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle {
+  z-index: 4;
+  background-color: rgba(49, 28, 28, 0.58);
+  border: 1px #eeeeee solid;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  position: absolute;
+  filter: alpha(opacity=80) !important;
+  opacity: 0.8 !important;
+}
+
+/* line 181, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle.ord-n {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 0;
+  cursor: n-resize;
+}
+
+/* line 188, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle.ord-s {
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  cursor: s-resize;
+}
+
+/* line 195, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle.ord-e {
+  margin-right: -10px;
+  margin-top: -10px;
+  right: 0;
+  top: 50%;
+  cursor: e-resize;
+}
+
+/* line 202, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle.ord-w {
+  left: 0;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 50%;
+  cursor: w-resize;
+}
+
+/* line 209, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle.ord-nw {
+  left: 0;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 0;
+  cursor: nw-resize;
+}
+
+/* line 216, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle.ord-ne {
+  margin-right: -10px;
+  margin-top: -10px;
+  right: 0;
+  top: 0;
+  cursor: ne-resize;
+}
+
+/* line 223, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle.ord-se {
+  bottom: 0;
+  margin-bottom: -10px;
+  margin-right: -10px;
+  right: 0;
+  cursor: se-resize;
+}
+
+/* line 230, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-touch .jcrop-handle.ord-sw {
+  bottom: 0;
+  left: 0;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  cursor: sw-resize;
+}
+
+/* Selection Dragbars */
+/* line 238, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dragbar {
+  font-size: 0;
+  position: absolute;
+}
+
+/* line 242, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dragbar.ord-n,
+.jcrop-dragbar.ord-s {
+  height: 9px !important;
+  width: 100%;
+}
+
+/* line 247, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dragbar.ord-e,
+.jcrop-dragbar.ord-w {
+  top: 0px;
+  height: 100%;
+  width: 9px !important;
+}
+
+/* line 253, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dragbar.ord-n {
+  margin-top: -5px;
+  cursor: n-resize;
+  top: 0px;
+}
+
+/* line 258, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dragbar.ord-s {
+  bottom: 0;
+  margin-bottom: -5px;
+  cursor: s-resize;
+}
+
+/* line 263, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dragbar.ord-e {
+  margin-right: -5px;
+  right: 0;
+  cursor: e-resize;
+}
+
+/* line 268, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dragbar.ord-w {
+  margin-left: -5px;
+  cursor: w-resize;
+}
+
+/* Shading panels */
+/* line 273, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-shades {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+/* line 278, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-shades div {
+  cursor: crosshair;
+}
+
+/* Various special states */
+/* line 282, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-noresize .jcrop-dragbar,
+.jcrop-noresize .jcrop-handle {
+  display: none;
+}
+
+/* line 286, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-selection.jcrop-nodrag .jcrop-box,
+.jcrop-nodrag .jcrop-shades div {
+  cursor: default;
+}
+
+/* The "jcrop-light" class/extension */
+/* line 291, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-light .jcrop-border {
+  background: #ffffff;
+  filter: alpha(opacity=70) !important;
+  opacity: 0.7 !important;
+}
+
+/* line 296, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-light .jcrop-handle {
+  background-color: #000000;
+  border-color: #ffffff;
+}
+
+/* The "jcrop-dark" class/extension */
+/* line 301, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dark .jcrop-border {
+  background: #000000;
+  filter: alpha(opacity=70) !important;
+  opacity: 0.7 !important;
+}
+
+/* line 306, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-dark .jcrop-handle {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+/* Simple macro to turn off the antlines */
+/* line 311, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.solid-line .jcrop-border {
+  background: #ffffff;
+}
+
+/* line 314, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-thumb {
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Fix for twitter bootstrap et al. */
+/* line 320, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-active img,
+.jcrop-thumb img,
+.jcrop-thumb canvas {
+  min-width: none;
+  min-height: none;
+  max-width: none;
+  max-height: none;
+}
+
+/* Improved multiple selection styles - in progress */
+/* line 329, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-hl-active .jcrop-border {
+  filter: alpha(opacity=20) !important;
+  opacity: 0.2 !important;
+}
+
+/* line 333, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-hl-active .jcrop-handle {
+  filter: alpha(opacity=10) !important;
+  opacity: 0.1 !important;
+}
+
+/* line 337, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-hl-active .jcrop-selection:hover {
+  /*
+    .jcrop-handle {
+      filter:Alpha(opacity=35)!important;
+      opacity:.35!important;
+    }
+    */
+}
+
+/* line 346, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-hl-active .jcrop-selection:hover .jcrop-border {
+  background-color: #ccc;
+  filter: alpha(opacity=50) !important;
+  opacity: 0.5 !important;
+}
+
+/* line 351, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-hl-active .jcrop-selection.jcrop-current .jcrop-border {
+  background: #808080 url(/assets/jcrop/css/Jcrop-752309673bbd9d9b2ba0bd58d0a7071a2c59c30e2824d85bcd2a3bc0a07ef1f1.gif);
+  opacity: 0.35 !important;
+  filter: alpha(opacity=35) !important;
+}
+
+/* line 356, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-hl-active .jcrop-selection.jcrop-current .jcrop-handle {
+  filter: alpha(opacity=30) !important;
+  opacity: 0.3 !important;
+}
+
+/* line 360, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-hl-active .jcrop-selection.jcrop-focus .jcrop-border {
+  background: url(/assets/jcrop/css/Jcrop-752309673bbd9d9b2ba0bd58d0a7071a2c59c30e2824d85bcd2a3bc0a07ef1f1.gif);
+  opacity: 0.65 !important;
+  filter: alpha(opacity=65) !important;
+}
+
+/* line 365, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+.jcrop-hl-active .jcrop-selection.jcrop-focus .jcrop-handle {
+  filter: alpha(opacity=60) !important;
+  opacity: 0.6 !important;
+}
+
+/* Prevent background on button element */
+/* line 370, /Users/sanketsingh/.rvm/gems/ruby-2.4.0/gems/rails-assets-jcrop-2.0.4/app/assets/stylesheets/jcrop/Jcrop.scss */
+button.jcrop-box {
+  background: none;
+}
+/*
+ * easy-autocomplete
+ * jQuery plugin for autocompletion
+ * 
+ * @author Łukasz Pawełczak (http://github.com/pawelczak)
+ * @version 1.3.5
+ * Copyright  License: 
+ */
+
+
+.easy-autocomplete{position:relative}.easy-autocomplete input{border-color:#ccc;border-radius:4px;border-style:solid;border-width:1px;box-shadow:0 1px 2px rgba(0,0,0,0.1) inset;color:#555;float:none;padding:6px 12px}.easy-autocomplete input:hover,.easy-autocomplete input:focus{box-shadow:none}.easy-autocomplete a{display:block}.easy-autocomplete.eac-blue-light input:hover,.easy-autocomplete.eac-blue-light input:focus{border-color:#66afe9;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(102,175,233,0.6)}.easy-autocomplete.eac-blue-light ul{border-color:#66afe9;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(102,175,233,0.6)}.easy-autocomplete.eac-blue-light ul li,.easy-autocomplete.eac-blue-light ul .eac-category{border-color:#66afe9}.easy-autocomplete.eac-blue-light ul li.selected,.easy-autocomplete.eac-blue-light ul .eac-category.selected{background-color:#ecf5fc}.easy-autocomplete.eac-green-light input:hover,.easy-autocomplete.eac-green-light input:focus{border-color:#41DB00;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(146,237,107,0.6)}.easy-autocomplete.eac-green-light ul{border-color:#41DB00;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(146,237,107,0.6)}.easy-autocomplete.eac-green-light ul li,.easy-autocomplete.eac-green-light ul .eac-category{border-color:#41DB00}.easy-autocomplete.eac-green-light ul li.selected,.easy-autocomplete.eac-green-light ul .eac-category.selected{background-color:#9eff75}.easy-autocomplete.eac-red-light input:hover,.easy-autocomplete.eac-red-light input:focus{border-color:#ff5b5b;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(255,90,90,0.6)}.easy-autocomplete.eac-red-light ul{border-color:#ff5b5b;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(255,90,90,0.6)}.easy-autocomplete.eac-red-light ul li,.easy-autocomplete.eac-red-light ul .eac-category{border-color:#ff5b5b}.easy-autocomplete.eac-red-light ul li.selected,.easy-autocomplete.eac-red-light ul .eac-category.selected{background-color:#ff8e8e}.easy-autocomplete.eac-yellow-light input:hover,.easy-autocomplete.eac-yellow-light input:focus{border-color:#ffdb00;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(255,231,84,0.6)}.easy-autocomplete.eac-yellow-light ul{border-color:#ffdb00;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(255,231,84,0.6)}.easy-autocomplete.eac-yellow-light ul li,.easy-autocomplete.eac-yellow-light ul .eac-category{border-color:#ffdb00}.easy-autocomplete.eac-yellow-light ul li.selected,.easy-autocomplete.eac-yellow-light ul .eac-category.selected{background-color:#ffe233}.easy-autocomplete.eac-dark-light input:hover,.easy-autocomplete.eac-dark-light input:focus{border-color:#333;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(55,55,55,0.6)}.easy-autocomplete.eac-dark-light ul{border-color:#333;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(55,55,55,0.6)}.easy-autocomplete.eac-dark-light ul li,.easy-autocomplete.eac-dark-light ul .eac-category{border-color:#333}.easy-autocomplete.eac-dark-light ul li.selected,.easy-autocomplete.eac-dark-light ul .eac-category.selected{background-color:#4d4d4d;color:#fff}.easy-autocomplete.eac-dark{color:#fff}.easy-autocomplete.eac-dark input{background-color:#404040;border-radius:4px;box-shadow:0;color:#f6f6f6}.easy-autocomplete.eac-dark input:hover,.easy-autocomplete.eac-dark input:focus{border-color:#333;box-shadow:0}.easy-autocomplete.eac-dark ul{border-color:#333}.easy-autocomplete.eac-dark ul li,.easy-autocomplete.eac-dark ul .eac-category{background-color:#404040;border-color:#333}.easy-autocomplete.eac-dark ul li.selected,.easy-autocomplete.eac-dark ul .eac-category.selected{background-color:#737373;color:#f6f6f6}.easy-autocomplete.eac-dark-glass{color:#fff}.easy-autocomplete.eac-dark-glass input{background-color:rgba(0,0,0,0.8);border-radius:4px;box-shadow:0;color:#f6f6f6}.easy-autocomplete.eac-dark-glass input:hover,.easy-autocomplete.eac-dark-glass input:focus{border-color:rgba(0,0,0,0.8);box-shadow:0}.easy-autocomplete.eac-dark-glass ul{border-color:rgba(0,0,0,0.8)}.easy-autocomplete.eac-dark-glass ul li,.easy-autocomplete.eac-dark-glass ul .eac-category{background-color:rgba(0,0,0,0.8);border-color:rgba(0,0,0,0.8)}.easy-autocomplete.eac-dark-glass ul li.selected,.easy-autocomplete.eac-dark-glass ul .eac-category.selected{background-color:rgba(64,64,64,0.8);color:#f6f6f6}.easy-autocomplete.eac-dark-glass ul li:last-child,.easy-autocomplete.eac-dark-glass ul .eac-category:last-child{border-radius:0 0 4px 4px}.easy-autocomplete.eac-blue{color:#fff}.easy-autocomplete.eac-blue input{background-color:#6d9ed1;border-radius:4px;box-shadow:0;color:#f6f6f6}.easy-autocomplete.eac-blue input::-webkit-input-placeholder{color:#f6f6f6}.easy-autocomplete.eac-blue input:-moz-placeholder{color:#f6f6f6}.easy-autocomplete.eac-blue input::-moz-placeholder{color:#f6f6f6}.easy-autocomplete.eac-blue input:-ms-input-placeholder{color:#f6f6f6}.easy-autocomplete.eac-blue input:hover,.easy-autocomplete.eac-blue input:focus{border-color:#5A91CB;box-shadow:0}.easy-autocomplete.eac-blue ul{border-color:#5A91CB}.easy-autocomplete.eac-blue ul li,.easy-autocomplete.eac-blue ul .eac-category{background-color:#6d9ed1;border-color:#5A91CB}.easy-autocomplete.eac-blue ul li.selected,.easy-autocomplete.eac-blue ul .eac-category.selected{background-color:#94b8dd;color:#f6f6f6}.easy-autocomplete.eac-yellow{color:#333}.easy-autocomplete.eac-yellow input{background-color:#ffdb7e;border-color:#333;border-radius:4px;box-shadow:0;color:#333}.easy-autocomplete.eac-yellow input:hover,.easy-autocomplete.eac-yellow input:focus{border-color:#333;box-shadow:0}.easy-autocomplete.eac-yellow ul{border-color:#333}.easy-autocomplete.eac-yellow ul li,.easy-autocomplete.eac-yellow ul .eac-category{background-color:#ffdb7e;border-color:#333}.easy-autocomplete.eac-yellow ul li.selected,.easy-autocomplete.eac-yellow ul .eac-category.selected{background-color:#ffe9b1;color:#333}.easy-autocomplete.eac-purple{color:#333}.easy-autocomplete.eac-purple input{background-color:#d6d1e7;border-color:#b8afd5;box-shadow:0;color:#333}.easy-autocomplete.eac-purple input:hover,.easy-autocomplete.eac-purple input:focus{border-color:#333;box-shadow:0}.easy-autocomplete.eac-purple ul{border-color:#333}.easy-autocomplete.eac-purple ul li,.easy-autocomplete.eac-purple ul .eac-category{background-color:#d6d1e7;border-color:#333}.easy-autocomplete.eac-purple ul li.selected,.easy-autocomplete.eac-purple ul .eac-category.selected{background-color:#ebe8f3;color:#333}.easy-autocomplete.eac-bootstrap input{border-color:#ccc;border-radius:4px;border-style:solid;border-width:1px;color:#555;padding:6px 12px}.easy-autocomplete-container{left:0;position:absolute;width:100%;z-index:2}.easy-autocomplete-container ul{background:none repeat scroll 0 0 #ffffff;border-top:1px dotted #ccc;display:none;margin-top:0;padding-bottom:0;padding-left:0;position:relative;top:-1px}.easy-autocomplete-container ul li,.easy-autocomplete-container ul .eac-category{background:inherit;border-color:#ccc;border-image:none;border-style:solid;border-width:0 1px;display:block;font-size:14px;font-weight:normal;padding:4px 12px}.easy-autocomplete-container ul li:last-child{border-radius:0 0 2px 2px;border-width:0 1px 1px}.easy-autocomplete-container ul li.selected{background:none repeat scroll 0 0 #ebebeb;cursor:pointer}.easy-autocomplete-container ul li.selected div{font-weight:normal}.easy-autocomplete-container ul li div{display:block;font-weight:normal;word-break:break-all}.easy-autocomplete-container ul li b{font-weight:bold}.easy-autocomplete-container ul .eac-category{font-color:#aaa;font-style:italic}.eac-description .eac-item span{color:#aaa;font-style:italic;font-size:0.9em}.eac-icon-left .eac-item img{margin-right:4px;max-height:30px}.eac-icon-right .eac-item{margin-top:8px;min-height:24px;position:relative}.eac-icon-right .eac-item img{margin-left:4px;max-height:30px;position:absolute;right:-4px;top:-8px}
+/*# sourceMappingURL=easy-autocomplete.min.css.map */
+/*
+ * easy-autocomplete
+ * jQuery plugin for autocompletion
+ * 
+ * @author Łukasz Pawełczak (http://github.com/pawelczak)
+ * @version 1.3.5
+ * Copyright  License: 
+ */
+
+
+.easy-autocomplete.eac-square{font-family:"Roboto", "Helvetica Neue",Helvetica,Arial,sans-serif}.easy-autocomplete.eac-square input{border:1px solid #7f8c8d;border-radius:0;color:#7f8c8d;font-family:inherit;font-size:18px;font-style:italic;font-weight:300;margin:0;min-width:350px;padding:12px 43px 12px 15px}.easy-autocomplete.eac-square ul{border-color:#7f8c8d;border-top:0;box-shadow:none;top:0}.easy-autocomplete.eac-square ul li,.easy-autocomplete.eac-square ul .eac-category{border-color:#7f8c8d;font-family:inherit;font-size:16px;font-weight:300;padding:6px 12px;transition:all 0.4s ease 0s}.easy-autocomplete.eac-square ul li *,.easy-autocomplete.eac-square ul .eac-category *{font-weight:300}.easy-autocomplete.eac-square ul li.selected,.easy-autocomplete.eac-square ul .eac-category.selected{background-color:#f1f1f1;font-weight:300}.easy-autocomplete.eac-square ul li b,.easy-autocomplete.eac-square ul .eac-category b{font-weight:600}.easy-autocomplete.eac-round{font-family:"Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif}.easy-autocomplete.eac-round input{border:2px solid #888;border-radius:10px;color:#888;font-family:inherit;font-size:16px;font-weight:400;margin:0;min-width:300px;padding:10px}.easy-autocomplete.eac-round input:hover,.easy-autocomplete.eac-round input:focus{border-color:#3079ed}.easy-autocomplete.eac-round ul{background:none;border-color:#888;border-width:0;box-shadow:none;min-width:300px;top:20px}.easy-autocomplete.eac-round ul li,.easy-autocomplete.eac-round ul .eac-category{background:#fff;border-color:#3079ed;border-width:0 2px;font-size:14px;padding:8px 12px;transition:all 0.4s ease 0s}.easy-autocomplete.eac-round ul li.selected,.easy-autocomplete.eac-round ul .eac-category.selected{background-color:#d4e3fb}.easy-autocomplete.eac-round ul li:first-child,.easy-autocomplete.eac-round ul .eac-category:first-child{border-radius:10px 10px 0 0;border-width:2px 2px 0}.easy-autocomplete.eac-round ul li:last-child,.easy-autocomplete.eac-round ul .eac-category:last-child{border-radius:0 0 10px 10px;border-width:0 2px 2px}.easy-autocomplete.eac-round ul li b,.easy-autocomplete.eac-round ul .eac-category b{font-weight:700}.easy-autocomplete.eac-funky{font-family:"Inconsolata", "Helvetica Neue",Helvetica,Arial,sans-serif}.easy-autocomplete.eac-funky input{background:#07ED89;border:0;border-radius:0;color:#ED076B;font-family:inherit;font-size:18px;min-width:240px;padding:12px}.easy-autocomplete.eac-funky ul{background:transparent;border:0}.easy-autocomplete.eac-funky ul li,.easy-autocomplete.eac-funky ul .eac-category{background:transparent;border:0;color:#ED076B;font-size:18px;padding:4px 12px;transition:all 0.4s ease 0s}.easy-autocomplete.eac-funky ul li.selected,.easy-autocomplete.eac-funky ul .eac-category.selected{color:#8907ED}.easy-autocomplete.eac-solid input{box-shadow:0 1px 2px rgba(0,0,0,0.15) inset;border-color:#ddd;color:#666;font-size:13px;min-height:0;padding:6px 12px}.easy-autocomplete.eac-solid ul li,.easy-autocomplete.eac-solid ul .eac-category{transition:all 0.4s ease 0s}.easy-autocomplete.eac-solid ul li.selected,.easy-autocomplete.eac-solid ul .eac-category.selected{background-color:#f2f2f2}.easy-autocomplete.eac-plate{font-family:"Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif}.easy-autocomplete.eac-plate input{font-size:13px;padding:6px 12px}.easy-autocomplete.eac-plate ul{background:#b5b5b5;border-radius:6px;border-width:0;top:10px}.easy-autocomplete.eac-plate ul li,.easy-autocomplete.eac-plate ul .eac-category{background:#b5b5b5;color:#FAFAFA;font-size:12px;transition:all 0.4s ease 0s}.easy-autocomplete.eac-plate ul li b,.easy-autocomplete.eac-plate ul .eac-category b{color:#ffd464}.easy-autocomplete.eac-plate ul li.selected,.easy-autocomplete.eac-plate ul .eac-category.selected{background:#656565}.easy-autocomplete.eac-plate ul li:first-child,.easy-autocomplete.eac-plate ul .eac-category:first-child{border-radius:6px 6px 0 0}.easy-autocomplete.eac-plate ul li:last-child,.easy-autocomplete.eac-plate ul .eac-category:last-child{border-radius:0 0 6px 6px}.easy-autocomplete.eac-plate-dark{font-family:"Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif}.easy-autocomplete.eac-plate-dark input{font-size:13px;padding:6px 12px}.easy-autocomplete.eac-plate-dark ul{background:#212121;border-radius:6px;border-width:0;top:10px}.easy-autocomplete.eac-plate-dark ul li,.easy-autocomplete.eac-plate-dark ul .eac-category{background:#212121;color:#FAFAFA;font-size:12px;transition:all 0.4s ease 0s}.easy-autocomplete.eac-plate-dark ul li b,.easy-autocomplete.eac-plate-dark ul .eac-category b{color:#ffd464}.easy-autocomplete.eac-plate-dark ul li.selected,.easy-autocomplete.eac-plate-dark ul .eac-category.selected{background:#656565}.easy-autocomplete.eac-plate-dark ul li:first-child,.easy-autocomplete.eac-plate-dark ul .eac-category:first-child{border-radius:6px 6px 0 0}.easy-autocomplete.eac-plate-dark ul li:last-child,.easy-autocomplete.eac-plate-dark ul .eac-category:last-child{border-radius:0 0 6px 6px}
+/*# sourceMappingURL=easy-autocomplete.themes.min.css.map */
+/*! Jcrop.css v2.0.4 - build: 20151117
+ *  Copyright 2008-2015 Tapmodo Interactive LLC
+ *  Free software under MIT License
+ **/
+
+/*
+  The outer-most container in a typical Jcrop instance
+  If you are having difficulty with formatting related to styles
+  on a parent element, place any fixes here or in a like selector
+
+  You can also style this element if you want to add a border, etc
+  A better method for styling can be seen below with .jcrop-light
+  (Add a class to the holder and style elements for that extended class)
+*/
+
+.jcrop-active {
+  direction: ltr;
+  text-align: left;
+  /* IE10 touch compatibility */
+
+  -ms-touch-action: none;
+}
+.jcrop-dragging {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.jcrop-selection {
+  z-index: 2;
+}
+.jcrop-selection.jcrop-current {
+  z-index: 4;
+}
+/* Selection Borders */
+.jcrop-border {
+  background: #ffffff url("Jcrop.gif");
+  line-height: 1px !important;
+  font-size: 0 !important;
+  overflow: hidden;
+  position: absolute;
+  filter: alpha(opacity=50) !important;
+  opacity: 0.5 !important;
+}
+.jcrop-border.ord-w,
+.jcrop-border.ord-e,
+.jcrop-border.ord-n {
+  top: 0px;
+}
+.jcrop-border.ord-n,
+.jcrop-border.ord-s {
+  width: 100%;
+  height: 1px !important;
+}
+.jcrop-border.ord-w,
+.jcrop-border.ord-e {
+  height: 100%;
+  width: 1px !important;
+}
+.jcrop-border.ord-e {
+  right: -1px;
+}
+.jcrop-border.ord-n {
+  top: -1px;
+}
+.jcrop-border.ord-w {
+  left: -1px;
+}
+.jcrop-border.ord-s {
+  bottom: -1px;
+}
+.jcrop-selection {
+  position: absolute;
+}
+.jcrop-box {
+  z-index: 2;
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+.jcrop-box:hover {
+  background: none;
+}
+.jcrop-box:active {
+  background: none;
+}
+.jcrop-box:focus {
+  outline: 1px rgba(128, 128, 128, 0.65) dotted;
+}
+.jcrop-active,
+.jcrop-box {
+  position: relative;
+}
+.jcrop-box {
+  width: 100%;
+  height: 100%;
+  cursor: move;
+}
+/* Selection Handles */
+.jcrop-handle {
+  z-index: 4;
+  box-sizing: border-box;
+  background-color: rgba(49, 28, 28, 0.58);
+  border: 1px #eeeeee solid;
+  width: 9px;
+  height: 9px;
+  font-size: 0;
+  position: absolute;
+  filter: alpha(opacity=80) !important;
+  opacity: 0.8 !important;
+}
+.jcrop-handle.ord-n {
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -5px;
+  top: 0;
+  cursor: n-resize;
+}
+.jcrop-handle.ord-s {
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  cursor: s-resize;
+}
+.jcrop-handle.ord-e {
+  margin-right: -5px;
+  margin-top: -5px;
+  right: 0;
+  top: 50%;
+  cursor: e-resize;
+}
+.jcrop-handle.ord-w {
+  left: 0;
+  margin-left: -5px;
+  margin-top: -5px;
+  top: 50%;
+  cursor: w-resize;
+}
+.jcrop-handle.ord-nw {
+  left: 0;
+  margin-left: -5px;
+  margin-top: -5px;
+  top: 0;
+  cursor: nw-resize;
+}
+.jcrop-handle.ord-ne {
+  margin-right: -5px;
+  margin-top: -5px;
+  right: 0;
+  top: 0;
+  cursor: ne-resize;
+}
+.jcrop-handle.ord-se {
+  bottom: 0;
+  margin-bottom: -5px;
+  margin-right: -5px;
+  right: 0;
+  cursor: se-resize;
+}
+.jcrop-handle.ord-sw {
+  bottom: 0;
+  left: 0;
+  margin-bottom: -5px;
+  margin-left: -5px;
+  cursor: sw-resize;
+}
+/* Larger Selection Handles for Touch */
+.jcrop-touch .jcrop-handle {
+  z-index: 4;
+  box-sizing: border-box;
+  background-color: rgba(49, 28, 28, 0.58);
+  border: 1px #eeeeee solid;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  position: absolute;
+  filter: alpha(opacity=80) !important;
+  opacity: 0.8 !important;
+}
+.jcrop-touch .jcrop-handle.ord-n {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 0;
+  cursor: n-resize;
+}
+.jcrop-touch .jcrop-handle.ord-s {
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  cursor: s-resize;
+}
+.jcrop-touch .jcrop-handle.ord-e {
+  margin-right: -10px;
+  margin-top: -10px;
+  right: 0;
+  top: 50%;
+  cursor: e-resize;
+}
+.jcrop-touch .jcrop-handle.ord-w {
+  left: 0;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 50%;
+  cursor: w-resize;
+}
+.jcrop-touch .jcrop-handle.ord-nw {
+  left: 0;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 0;
+  cursor: nw-resize;
+}
+.jcrop-touch .jcrop-handle.ord-ne {
+  margin-right: -10px;
+  margin-top: -10px;
+  right: 0;
+  top: 0;
+  cursor: ne-resize;
+}
+.jcrop-touch .jcrop-handle.ord-se {
+  bottom: 0;
+  margin-bottom: -10px;
+  margin-right: -10px;
+  right: 0;
+  cursor: se-resize;
+}
+.jcrop-touch .jcrop-handle.ord-sw {
+  bottom: 0;
+  left: 0;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  cursor: sw-resize;
+}
+/* Selection Dragbars */
+.jcrop-dragbar {
+  font-size: 0;
+  position: absolute;
+}
+.jcrop-dragbar.ord-n,
+.jcrop-dragbar.ord-s {
+  height: 9px !important;
+  width: 100%;
+}
+.jcrop-dragbar.ord-e,
+.jcrop-dragbar.ord-w {
+  top: 0px;
+  height: 100%;
+  width: 9px !important;
+}
+.jcrop-dragbar.ord-n {
+  margin-top: -5px;
+  cursor: n-resize;
+  top: 0px;
+}
+.jcrop-dragbar.ord-s {
+  bottom: 0;
+  margin-bottom: -5px;
+  cursor: s-resize;
+}
+.jcrop-dragbar.ord-e {
+  margin-right: -5px;
+  right: 0;
+  cursor: e-resize;
+}
+.jcrop-dragbar.ord-w {
+  margin-left: -5px;
+  cursor: w-resize;
+}
+/* Shading panels */
+.jcrop-shades {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.jcrop-shades div {
+  cursor: crosshair;
+}
+/* Various special states */
+.jcrop-noresize .jcrop-dragbar,
+.jcrop-noresize .jcrop-handle {
+  display: none;
+}
+.jcrop-selection.jcrop-nodrag .jcrop-box,
+.jcrop-nodrag .jcrop-shades div {
+  cursor: default;
+}
+/* The "jcrop-light" class/extension */
+.jcrop-light .jcrop-border {
+  background: #ffffff;
+  filter: alpha(opacity=70) !important;
+  opacity: .70!important;
+}
+.jcrop-light .jcrop-handle {
+  background-color: #000000;
+  border-color: #ffffff;
+}
+/* The "jcrop-dark" class/extension */
+.jcrop-dark .jcrop-border {
+  background: #000000;
+  filter: alpha(opacity=70) !important;
+  opacity: 0.7 !important;
+}
+.jcrop-dark .jcrop-handle {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+/* Simple macro to turn off the antlines */
+.solid-line .jcrop-border {
+  background: #ffffff;
+}
+.jcrop-thumb {
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+}
+/* Fix for twitter bootstrap et al. */
+.jcrop-active img,
+.jcrop-thumb img,
+.jcrop-thumb canvas {
+  min-width: none;
+  min-height: none;
+  max-width: none;
+  max-height: none;
+}
+/* Improved multiple selection styles - in progress */
+.jcrop-hl-active .jcrop-border {
+  filter: alpha(opacity=20) !important;
+  opacity: .20!important;
+}
+.jcrop-hl-active .jcrop-handle {
+  filter: alpha(opacity=10) !important;
+  opacity: .10!important;
+}
+.jcrop-hl-active .jcrop-selection:hover {
+  /*
+    .jcrop-handle {
+      filter:Alpha(opacity=35)!important;
+      opacity:.35!important;
+    }
+    */
+
+}
+.jcrop-hl-active .jcrop-selection:hover .jcrop-border {
+  background-color: #ccc;
+  filter: alpha(opacity=50) !important;
+  opacity: .50!important;
+}
+.jcrop-hl-active .jcrop-selection.jcrop-current .jcrop-border {
+  background: #808080 url('Jcrop.gif');
+  opacity: .35!important;
+  filter: alpha(opacity=35) !important;
+}
+.jcrop-hl-active .jcrop-selection.jcrop-current .jcrop-handle {
+  filter: alpha(opacity=30) !important;
+  opacity: .30!important;
+}
+.jcrop-hl-active .jcrop-selection.jcrop-focus .jcrop-border {
+  background: url('Jcrop.gif');
+  opacity: .65!important;
+  filter: alpha(opacity=65) !important;
+}
+.jcrop-hl-active .jcrop-selection.jcrop-focus .jcrop-handle {
+  filter: alpha(opacity=60) !important;
+  opacity: .60!important;
+}
+/* Prevent background on button element */
+button.jcrop-box {
+  background: none;
+}
+/* line 1, /Users/sanketsingh/Documents/WebDev/Rails/askkaro_prod/app/assets/stylesheets/modules/_avatar.scss */
+.avatar-image {
+  border-radius: 50%;
+}
+/* line 1, /Users/sanketsingh/Documents/WebDev/Rails/askkaro_prod/app/assets/stylesheets/modules/_avatar.scss */
+.avatar-image {
+  border-radius: 50%;
+}
+
+
+aside.card.ques {
+  font-family: 'Roboto', sans-serif;
+display: block;
+width: auto;
+height:auto;
+margin: 40px auto 40px;
+background-color: #ffffff;
+border-radius: 2px;
+}
+aside.card.ques header {
+padding: 16px;
+}
+aside.card.ques header figure {
+width: 40px;
+height: 40px;
+background-color: #dddddd;
+background-image: url(http://www.msudenver.edu/media/sampleassets/profile-placeholder.png);
+background-size: cover;
+margin: 0 16px 0 0;
+padding: 0;
+border-radius: 50%;
+float: left;
+}
+aside.card.ques header div.text h1 {
+font-size: 24px;
+font-weight: normal;
+line-height: 1;
+padding: 0;
+margin: 8px;
+}
+aside.card.ques header div.text h2 {
+color: #757575;
+font-size: 14px;
+font-weight: normal;
+line-height: 1;
+padding: 0;
+margin: 12px 0 0;
+}
+aside.card.ques header div.text.small h1 {
+margin-top: 0px;
+font-size: 14px;
+}
+aside.card.ques div.supporting_text {
+padding: 16px;
+}
+aside.card.ques div.supporting_text p {
+font-size: 14px;
+line-height: 2;
+margin: 0;
+padding: 0 0 8px;
+}
+aside.card.ques figure.rich_media#image_1 {
+background-image: url(http://www.wallpapereast.com/static/cache/2d/00/2d003f11fbcbe8095e854cf87530e5ae.jpg);
+}
+aside.card.ques div.row{
+padding: 8px;
+height: auto;
+}
+/*aside.card.ques div.card-action {
+padding: 8px;
+height: 36px;
+}*/
+aside.card.ques div.card-action div.right {
+float: right;
+}
+aside.card.ques div.card-action button {
+color: #757575;
+height: 36px;
+margin: 0;
+padding: 0 8px;
+background-color: #ffffff;
+border: none;
+font-size: 14px;
+text-transform: uppercase;
+border-radius: 2px;
+}
+aside.card.ques div.card-action button.icon {
+width: 36px;
+}
+aside.card.ques div.card-action button + button {
+margin-left: 8px;
+}
+aside.card.ques div.card-action button:hover {
+background-color: #eeeeee;
+cursor: pointer;
+}
+aside.card.ques div.card-action button i {
+color: #757575;
+font-size: 21px;
+line-height: 36px;
+}
+
+[elevation='1'] {
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+[elevation='2'] {
+box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+[elevation='3'] {
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+[elevation='4'] {
+box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+[elevation='5'] {
+box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+
+
+ */
+
+
+
+ @charset "UTF-8";
+ body{
+  background-color: #E6ECF0;
+}
+
+
+.navigation {
+  height: 70px;
+  background: #FAFAFB;
+  box-shadow: 0 1px 20px 0 rgba(46,61,73,.2);
+  z-index: 8000;
+  position: fixed;
+  width: 100%;
+
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #6D6E72;
+  text-decoration: none;
+}
+
+.brand a .image-logo1{
+  background: url("re3logo1.jpg") no-repeat 9px 0px;
+  display: inline-block;
+  height: 70px;
+  margin-left: 0;
+  margin-top: 6px;
+  width: 70px;
+  
+}
+.brand a .image-name1{
+  background: url("askname21.jpg") no-repeat 9px 0px;
+  display: inline-block;
+  height: 55px;
+  margin-left: 0px;
+  margin-top: 6px;
+  width: 170px;
+  
+}
+.nav-container {
+  max-width: 90%;
+  margin: 0 auto;
+
+}
+
+nav#mininav {
+  float: right;
+  width: 48%;
+  background: #FAFAFB; 
+  box-shadow: none;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #FAFAFB;
+  color: #6D6E72;
+  text-decoration: none;
+  height: 70px;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #d1d1d1;
+  color: #ffffff;
+  border-bottom: 2px solid #F48024;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  transition-property: box-shadow, color;
+  /*box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, 0.35);*/
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+/*  padding-left: 4px;
+content: ' ▾';*/
+
+}
+
+div.nav-container.hide-on-med-and-down nav#mininav ul.nav-list li a span.new.badge{
+  min-width: 1rem;
+  background-color: #039BE5;
+  border-radius: 10px;
+  z-index: 80000;
+  margin-right: -10px;
+  margin-top: -24px;
+  padding: 0px;
+  line-height: 15px;
+  height: 15px;
+}
+div.nav-container.hide-on-med-and-down nav#mininav ul.nav-list li a span.badge.new::after{
+ content: ""; 
+}
+
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+ul.nav-dropdown li:last-child a, ul.nav-dropdown li:last-child a:hover {
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 8px 8px;
+}
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 8px 8px;
+}
+.nav-dropdown .arrow{
+  width: 0;
+  height: 0;
+  margin-left: 15px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 9px solid #F8F8F8;
+}
+ul#dropdownnoty li:last-child a, ul#dropdownnoty li:last-child a:hover {
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 8px 8px;
+}
+ul#dropdownnoty .arrow{
+  width: 0;
+  height: 0;
+  margin-left: 15px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 9px solid #F8F8F8;
+}
+
+.nav-dropdown a{
+  min-height: 50px;
+  height: 52px;
+  border-bottom: 1px solid #dddfe2;
+}
+
+nav#small-device-nav {
+  float: right;
+  width: 48%;
+  background: #FAFAFB; 
+  box-shadow: none;
+}
+
+nav#mininav ul.nav-list li ul#dropdownnoty.nav-dropdown li a.unread{
+ background-color: #edf2fa; 
+}
+nav#mininav ul.nav-list li ul#dropdownnoty.nav-dropdown li a.unread:hover{
+ background-color: #bad3fc; 
+}
+
+html body div#mithu.container div.col.s12.m12.l4.left.taguser{
+  height: 300px;
+  width: 22%;
+  margin-top: 0px;
+  padding-left: 15px;
+  margin-left: -35px;
+  margin-right: 35px;
+}
+.card.small.userf {
+
+  height: 300px;
+  width: 250px;
+  margin-top: 43px;
+  padding-left: 15px;
+  margin-left: -10px;
+  margin-right: 11px;
+  
+  border-radius: 8px;
+
+}
+
+.card.small.userf:hover {
+
+  box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+
+}
+#user_cloud {
+  padding: 2px;
+  padding-left: -13px;
+  max-height: 216px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+
+}
+
+#user_cloud  div.userfollow{
+  padding: 5px 0px;
+  border-bottom: 1px solid #e6ecf0;
+
+}
+
+#user_cloud div.userfollow figure {
+  width: 40px;
+  height: 40px;
+  margin: 0 16px 0 0;
+  padding: 0;
+  border-radius: 50%;
+  float: left;
+}
+   /* #user_cloud div.userfollow  div.usertext{
+      margin-top: 2px;
+      margin-bottom: 2px;
+      }*/
+      #user_cloud div.userfollow  div.usertext h5{
+        font-size: 24px;
+        font-weight: normal;
+        line-height: 1;
+        padding: 0;
+        margin: 4px;
+        margin-left: 62px;
+      }
+
+
+      #user_cloud .chip{
+       font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+       display: inline-block;
+       height: 21px;
+       font-size: 13px;
+       font-weight: 500;
+       color: rgba(0,0,0,0.6);
+       line-height: 20px;
+       padding: 0 8px;
+       border-radius: 16px;
+       background-color: #ffffff;
+       margin-bottom: 0px;
+       margin-right: 5px;
+       margin-left: 12px;
+       border: 1px solid #039BE5;
+     }
+     #user_cloud .chip:hover{
+       background-color: #039BE5;
+       color: #ffffff;
+       z-index: 8000;
+       /*  background-color: #e0f7fa ;*/
+
+     }
+
+     #user_cloud .chip a{
+      font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+      font-weight: 400;
+      color:#00b8d4;
+    }
+
+    #user_cloud .chip a:hover{
+      font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+
+      color:#ffffff;
+    }
+    #user_cloud .chip:hover a{
+      font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+      font-weight: 400;
+      color:#fff;
+    }
+    .card.small.tag {
+      height: 300px;
+      width: 250px;
+      margin-top: 43px;
+      padding-left: 15px;
+      margin-left: -10px;
+      margin-right: 11px;
+      border: 1px solid #d1d1d1;
+      border-radius: 8px;
+    }
+
+    .card.small.tag:hover {
+
+      box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+
+    }
+
+    #tag_cloud {
+      padding: 2px;
+      padding-left: 5px;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+    #tag_cloud .chip{
+      font-family: 'Capriola, sans-serif';font-size: 12px;
+      font-weight: 700;
+      font-size: inherit;
+      line-height: 22px;
+      border: 1px solid #00b8d4;
+      background-color: white;
+      height: 32px;
+      color: #00b8d4;
+      margin-bottom: 2px;
+      margin-right: 3px;
+      padding-left: 5px;
+      padding-right: 3px;
+      padding-bottom: 0;
+      padding-top: 4px;
+    }
+    #tag_cloud .chip:hover{
+     background-color: #00b8d4;
+     color: #ffffff;
+     z-index: 8000;
+     /*  background-color: #e0f7fa ;*/
+
+
+   }
+   #tag_cloud .chip a{
+    font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+    font-weight: 400;
+    color:#00b8d4;
+  }
+
+  #tag_cloud .chip:hover a{
+    font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+    font-weight: 400;
+    color:#fff;
+  }
+  #tag_cloud .chip a.sml{
+    font-size: 14px;
+    font-weight: 700;
+
+  }
+  #tag_cloud .chip a.med{
+
+   font-size: 14px;
+   font-weight: 700;
+
+ }
+ #tag_cloud .chip a.lar{
+
+   font-size: 14px;
+   font-weight: 700;
+ }
+ #tag_cloud .chip a .material-icons{
+  font-size: 16px;
+}
+.car1.small.note {
+
+  height: 300px;
+  width: 18%;
+  margin-top: 43px;
+}
+
+
+
+
+.car1.small.note .wrapper {
+  font-family:sans;
+  margin: auto 0 auto;
+}
+
+/* Note styles */
+.car1.small.note .note-wrap {
+  font-size: 24px;
+  font-family: Englebert, Arial;
+  color: #777471;
+  line-height: 28px;
+  text-align: center;
+  width: 235px;
+  min-height: 235px;
+  padding: 11px;
+  margin: 0 22px 44px 22px;
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  background: #F7E999;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  height: 425px;
+}
+.car1.small.note .note-wrap:before {
+  display: block;
+  content: "";
+  background: rgba(227, 200, 114, 0.4);
+  width: 130px;
+  height: 28px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 6px/18px 0;
+  position: absolute;
+  top: -13px;
+  left: 50px;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+.car1.small.note .note-yellow {
+  background: #F7E999;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  border-radius: 12px;
+}
+
+.car1.small.note .note-blue {
+  background: #b9dcf4;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+aside.note-wrap.note-yellow div p#note1{
+  text-transform: uppercase;
+  margin: 0px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: 'Lato, sans-serif';
+}
+aside.note-wrap.note-yellow div p#note1cont{
+
+  margin: 0px;
+  margin-top: 4px;    
+}
+
+
+.card-image{
+ background: url("trending.jpg") no-repeat -39px -59px;
+ height: 250px;
+ margin-left: -15px;
+}
+
+
+.image-inside{
+ background: url("trendinginside.png") no-repeat 9px 0px;
+ height: 142px;
+ margin-left: 56px;
+ margin-top: 30px;
+ width: 150px;
+
+}
+
+
+.modal{
+  z-index: 8000;
+}
+
+div.card.small.tag div.card-action.center a.waves-effect.waves-light.cyan.btn.modal-trigger{
+
+  border-radius: 4%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 0.5rem;
+}
+
+div.card.small.userf div.card-action.center a.waves-effect.waves-light.cyan.btn.modal-trigger{
+  border-radius: 4%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 0.5rem;
+}
+
+div.col.s12.m12.l4.left.taguser div div.card.small.tag div.card-action.center{
+  padding: 6px 24px;
+  border-radius: 8px;
+}
+
+div.col.s12.m12.l4.left.taguser div div.card.small.userf div.card-action.center{
+  padding: 6px 24px;
+  border-radius: 8px;
+}
+  /*.card.small.note:hover {
+  box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+  }*/
+
+/*.input-field input[type="search"]{
+  background-color: white;
+}
+nav .input-field label i {
+  color: rgba(53, 38, 38, 0.7);
+  transition: color .3s;
+}
+nav ul#nav-mobile.right li{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+*/

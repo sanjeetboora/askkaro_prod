@@ -145,7 +145,6 @@
           <% if user_signed_in? %>
               <li>
                 <div class="search-wrapper">
-
                   <form action="/home/index" method="get">
                     <!-- <input class="search-input" placeholder="SEARCH" type="text" /> -->
                     <%= text_field_tag :search, params[:search], :class => 'search-input', :placeholder => 'Search', required: true %>
