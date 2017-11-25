@@ -11,25 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120132724) do
+ActiveRecord::Schema.define(version: 20171012200626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "active_admin_comments", force: :cascade do |t|
-    t.string   "namespace"
-    t.text     "body"
-    t.integer  "resource_id"
-    t.string   "resource_type"
-    t.integer  "author_id"
-    t.string   "author_type"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
-  add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -107,12 +92,6 @@ ActiveRecord::Schema.define(version: 20171120132724) do
   add_index "likes", ["likeable_id", "likeable_type"], name: "fk_likeables", using: :btree
   add_index "likes", ["liker_id", "liker_type"], name: "fk_likes", using: :btree
 
-  create_table "maintrends", force: :cascade do |t|
-    t.string   "trendtitle", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "mentions", force: :cascade do |t|
     t.string   "mentioner_type"
     t.integer  "mentioner_id"
@@ -154,40 +133,6 @@ ActiveRecord::Schema.define(version: 20171120132724) do
   end
 
   add_index "questions", ["user_id"], name: "index_questions_on_user_id", using: :btree
-
-  create_table "quizproblems", force: :cascade do |t|
-    t.string   "statement"
-    t.integer  "marks"
-    t.string   "option"
-    t.string   "correctoption"
-    t.integer  "quiz_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "quizproblems", ["quiz_id"], name: "index_quizproblems_on_quiz_id", using: :btree
-
-  create_table "quizzes", force: :cascade do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "duration"
-    t.string   "secret_key"
-    t.string   "total_marks", default: "0"
-    t.integer  "user_id"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-  end
-
-  add_index "quizzes", ["user_id"], name: "index_quizzes_on_user_id", using: :btree
-
-  create_table "subtrends", force: :cascade do |t|
-    t.string   "subtitle",     null: false
-    t.integer  "maintrend_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  add_index "subtrends", ["maintrend_id"], name: "index_subtrends_on_maintrend_id", using: :btree
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
@@ -258,7 +203,4 @@ ActiveRecord::Schema.define(version: 20171120132724) do
   add_foreign_key "comments", "users"
   add_foreign_key "notes", "users"
   add_foreign_key "questions", "users"
-  add_foreign_key "quizproblems", "quizzes"
-  add_foreign_key "quizzes", "users"
-  add_foreign_key "subtrends", "maintrends"
 end
