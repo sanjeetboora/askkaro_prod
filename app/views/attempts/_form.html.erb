@@ -1,18 +1,18 @@
-<h2 >
+<h2 class="survey-title">
   <%= @survey.name %>
   <p><small><%= @attempt.survey.description %></small></p>
 </h2>
 <%= form_for(@attempt, url: attempt_scope(@attempt)) do |f| %>
   <%= hidden_field_tag :survey_id, @survey.id %>
-  <ol >
+    <ol class="questions">
     <%= f.fields_for :answers, get_answer_fields(@attempt) do |answer_fields| %>
       <li>
         <% question = answer_fields.object.question %>
-        <p ><%= question.text %></p>
-        <ul >
+        <p class="question"><%= question.text %></p>
+        <ul class="question">
 
           <%= collection_radio_buttons('survey_attempt[answers_attributes]', question.id, question.options, :id, :text,item_wrapper_tag: false) do |b| %>
-            <li>
+            <li class="radio">
               <%= b.label { b.radio_button + b.text } %>
             </li>
           <% end %>
@@ -20,5 +20,5 @@
       </li>
     <% end -%>
   </ol>
-  <%= f.submit "Submit" %>
+  <%= f.submit "Submit", class: 'btn btn-default' %>
 <% end -%>
