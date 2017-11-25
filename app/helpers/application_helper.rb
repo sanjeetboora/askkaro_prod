@@ -53,11 +53,7 @@ module ApplicationHelper
   end
 
 
-  def current_user
 
-    @user ||= User.find_by(id: session[:user_id])
-
-  end
 
 
   def user_form

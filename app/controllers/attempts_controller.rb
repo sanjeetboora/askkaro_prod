@@ -6,11 +6,11 @@ class AttemptsController < ApplicationController
   before_filter :load_survey, only: [:new, :create]
 
 
-  def index
+  # def index
 
-    @surveys = Survey::Survey.active
+  #   @surveys = Survey::Survey.active
 
-  end
+  # end
 
 
   def show
@@ -95,11 +95,11 @@ class AttemptsController < ApplicationController
   end
 
 
-  def current_user
+  # def current_user
 
-    view_context.current_user
+  #   view_context.current_user
 
-  end
+  # end
 
 end
 
