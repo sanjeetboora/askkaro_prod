@@ -1,60 +1,40 @@
-class AttemptsController < ApplicationController
+class SurveysController < ApplicationController
+
   layout 'layout_one'
- helper 'surveys'
+  before_filter :load_survey, only: [:show, :edit, :update, :destroy]
+
+  
+
+def index
+  
+    type = view_context.get_survey_type(params[:type])
 
 
-  before_filter :load_survey, only: [:new, :create]
+    query = if type then Survey::Survey.where(survey_type: type) else Survey::Survey end
 
-
-  # def index
-
-  #   @surveys = Survey::Survey.active
-
-  # end
-
-
-  def show
-
-    @attempt = Survey::Attempt.find_by(id: params[:id])
-
-    render :access_error if current_user.id != @attempt.participant_id
+    @surveys = query.order(created_at: :desc).page(params[:page]).per(15)
 
   end
 
 
   def new
 
-    @participant = current_user
-
-
-    unless @survey.nil?
-
-      @attempt = @survey.attempts.new
-
-      @attempt.answers.build
-
-    end
+    @survey = Survey::Survey.new
 
   end
 
 
   def create
 
-    @attempt = @survey.attempts.new(params_whitelist)
+    @survey = Survey::Survey.new(params_whitelist)
 
-    @attempt.participant = current_user
+    if @survey.valid? && @survey.save
 
-    if @attempt.valid? && @attempt.save
-
-      correct_options_text = @survey.correct_options.present? ? 'Bellow are the correct answers marked in green' : ''
-
-      redirect_to attempt_path(@attempt.id), notice: "Thank you for answering #{@survey.name}! #{correct_options_text}"
+      default_redirect
 
     else
 
-      build_flash(@attempt)   
-
-      @participant = current_user
+      build_flash(@survey)
 
       render :new
 
@@ -63,11 +43,38 @@ class AttemptsController < ApplicationController
   end
 
 
-  def delete_user_attempts
+  def edit
 
-    Survey::Attempt.where(participant_id: params[:user_id], survey_id: params[:survey_id]).destroy_all
+  end
 
-    redirect_to new_attempt_path(survey_id: params[:survey_id])
+
+  def show
+
+  end
+
+
+  def update
+
+    if @survey.update_attributes(params_whitelist)
+
+      default_redirect
+
+    else
+
+      build_flash(@survey)
+
+      render :edit
+
+    end
+
+  end
+
+
+  def destroy
+
+    @survey.destroy
+
+    default_redirect
 
   end
 
@@ -75,30 +82,25 @@ class AttemptsController < ApplicationController
   private
 
 
+  def default_redirect
+
+    redirect_to surveys_path, notice: I18n.t("surveys_controller.#{action_name}")
+
+  end
+
+
   def load_survey
 
-    @survey = Survey::Survey.find_by(id: params[:survey_id])
+    @survey = Survey::Survey.find(params[:id])
 
   end
 
 
   def params_whitelist
 
-    if params[:survey_attempt]
-
-      params[:survey_attempt][:answers_attributes] = params[:survey_attempt][:answers_attributes].map { |attrs| { question_id: attrs.first, option_id: attrs.last } }
-
-      params.require(:survey_attempt).permit(Survey::Attempt::AccessibleAttributes)
-
-    end
+    params.require(:survey_survey).permit(Survey::Survey::AccessibleAttributes << :survey_type)
 
   end
 
-
-  # def current_user
-
-  #   view_context.current_user
-
-  # end
 
 end
