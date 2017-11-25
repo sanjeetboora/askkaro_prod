@@ -96,7 +96,7 @@ module SurveysHelper
 
   def get_color_of_option answer, option
 
-    if is_quiz?(answer.question.survey.survey_type)
+    if is_quiz?
 
       if option.correct
 
@@ -135,9 +135,9 @@ module SurveysHelper
   end
 
 
-  def is_quiz? something
+  def is_quiz?
 
-    something == 0 || something == 'quiz'
+    'quiz'
 
   end
 
@@ -158,7 +158,7 @@ module SurveysHelper
 
   def get_weight option
 
-    return unless is_score?(option.question.survey.survey_type)
+    return unless is_score?('quiz')
 
     option.weight > 0 ? "(+#{option.weight})" : "(#{option.weight})"
 
