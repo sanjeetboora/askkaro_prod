@@ -11,7 +11,7 @@
         <p class="question"><%= question.text %></p>
         <ul class="options">
           <%= collection_radio_buttons('survey_attempt[answers_attributes]', question.id, question.options, :id, :text) do |b| %>
-            <li class="radio">
+            <li class="">
               <%= b.label { b.radio_button + b.text } %>
             </li>
           <% end %>

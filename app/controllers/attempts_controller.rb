@@ -1,5 +1,5 @@
 class AttemptsController < ApplicationController
-
+ layout 'layout_one'
  helper 'surveys'
 
 
