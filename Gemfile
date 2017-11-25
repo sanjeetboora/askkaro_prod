@@ -18,7 +18,7 @@ gem 'will_paginate'
 gem 'jquery-rails'
 gem 'ckeditor'
 gem 'paperclip'
-
+gem "survey", "~> 0.1"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -31,7 +31,8 @@ gem 'cancancan', '~> 2.0'
 gem 'acts-as-taggable-on'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem "resque"
+gem 'redis', '~> 3.3.3'
+gem 'resque', require: 'resque/server'
 gem 'unicorn'
 
 # Use Unicorn as the app server

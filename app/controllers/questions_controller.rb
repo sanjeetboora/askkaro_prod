@@ -46,9 +46,9 @@ class QuestionsController < ApplicationController
     end
 
     respond_to do |format|
-      byebug
+
       if @question.save
-       Resque.enqueue(QuestionMailer,@question.id,current_user.id)
+         Resque.enqueue(QuestionMailer,@question.id,current_user.id)
          # ans=Answer.new
          # ans.content="a"
          # ans.question_id=@question.id

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources 'surveys'
+  resources 'attempts'
+  
   resources :quizproblems
   resources :quizzes
   resources :test_questions
@@ -21,6 +25,7 @@ Rails.application.routes.draw do
       post :mark_as_read
     end
   end
+
   get '/likenotification',to: 'notification#likeindex'
   get 'home/index'
   get '/sear',to: 'questions#index'
