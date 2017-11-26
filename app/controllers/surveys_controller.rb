@@ -91,7 +91,7 @@ class SurveysController < ApplicationController
 
   def quiz_verfication
     byebug
-   if @survey.password==password 
+   if (@survey.password.eql? params["password"]) 
     redirect_to new_attempt_path(survey_id: @survey.id)
   else
      redirect_to '/'
