@@ -1,16 +1,20 @@
+
 class SurveysController < ApplicationController
 
   layout 'layout_one'
   before_filter :load_survey, only: [:show, :edit, :update, :destroy]
 
-  
 
-def index
-  
+  def index
+
     type = view_context.get_survey_type(params[:type])
 
 
-    query = if type then Survey::Survey.where(survey_type: type) else Survey::Survey end
+    query = if type then
+      Survey::Survey.where(survey_type: type)
+    else
+      Survey::Survey
+    end
 
     @surveys = query.order(created_at: :desc).page(params[:page]).per(15)
 
@@ -25,9 +29,10 @@ def index
 
 
   def create
-
     @survey = Survey::Survey.new(params_whitelist)
     @survey.user_id=current_user.id
+    @survey.password=SecureRandom.urlsafe_base64(10)
+
     if @survey.valid? && @survey.save
 
       default_redirect
@@ -49,7 +54,8 @@ def index
 
 
   def show
-
+    @survey.destroy
+    redirect_to '/surveys'
   end
 
 
@@ -71,9 +77,7 @@ def index
 
 
   def destroy
-
     @survey.destroy
-
     default_redirect
 
   end
@@ -82,9 +86,15 @@ def index
   private
 
 
+
   def default_redirect
 
     redirect_to surveys_path, notice: I18n.t("surveys_controller.#{action_name}")
+
+  end
+  def default_redirect1
+
+    redirect_to '/'
 
   end
 
