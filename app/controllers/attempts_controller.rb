@@ -4,7 +4,7 @@ class AttemptsController < ApplicationController
 
 
   before_filter :load_survey, only: [:new, :create]
-
+  before_action :authenticate_user!
 
   # def index
 
