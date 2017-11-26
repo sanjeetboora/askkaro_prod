@@ -98,8 +98,9 @@ class SurveysController < ApplicationController
 
     @survey=Survey::Survey.find(params[:survey_id])
 
-   if (@survey.password.eql? params["password"]) 
-    redirect_to new_attempt_path(survey_id: @survey.id)
+   if (@survey.password.eql? params["password"])
+
+    redirect_to new_attempt_path(survey_id: @survey.id,enrollment: params[:enrollment])
    else
      flash[:alert] = "Your given password is incorrect please enter a valid one"
      redirect_to '/surveys'

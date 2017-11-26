@@ -29,7 +29,9 @@ class AttemptsController < ApplicationController
 
     unless @survey.nil?
 
+
       @attempt = @survey.attempts.new
+      @attempt.enrollment =params["enrollment"]
 
       @attempt.answers.build
 
@@ -41,8 +43,9 @@ class AttemptsController < ApplicationController
   def create
 
     @attempt = @survey.attempts.new(params_whitelist)
-
+    @attempt.enrollment =params["enrollment"]
     @attempt.participant = current_user
+
 
     if @attempt.valid? && @attempt.save
 
