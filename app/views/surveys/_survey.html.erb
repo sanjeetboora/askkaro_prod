@@ -2,7 +2,7 @@
 
   </td>
 
-  <td> <%= link_to survey.name, new_attempt_path(survey_id: survey.id), class: 'survey-name' %> </td>
+  <td> <%= link_to survey.name, passwordverification_path(survey_id: survey.id), class: 'survey-name' %> </td>
 
   <td> <span class="survey-description"> <%= "#{survey.description}" %> </span> </td>
 
