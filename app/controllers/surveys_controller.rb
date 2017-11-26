@@ -78,7 +78,15 @@ class SurveysController < ApplicationController
     default_redirect
 
   end
-
+def quiz_confirm_password
+  respond_to do |format|
+      format.html{
+        @survey=Survey::Survey.find(params[:id])
+       
+      }
+      format.js{  }
+    end
+end
 
   private
 
