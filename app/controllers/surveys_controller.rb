@@ -10,10 +10,10 @@ class SurveysController < ApplicationController
 
 
     query = if type then
-      Survey::Survey.where(survey_type: type)
-    else
-      Survey::Survey
-    end
+              Survey::Survey.where(survey_type: type)
+            else
+              Survey::Survey
+            end
 
     @surveys = query.order(created_at: :desc).page(params[:page]).per(15)
 
@@ -28,7 +28,6 @@ class SurveysController < ApplicationController
 
 
   def create
-  
     @survey = Survey::Survey.new(params_whitelist)
     @survey.user_id=current_user.id
     @survey.password=SecureRandom.urlsafe_base64(10)
@@ -38,9 +37,7 @@ class SurveysController < ApplicationController
       default_redirect
 
     else
-
-      flash[:notice] = "Post successfully created"
-
+      flash[:notice] = "You must add a valid quiz with questions and description"
       render :new
 
     end
