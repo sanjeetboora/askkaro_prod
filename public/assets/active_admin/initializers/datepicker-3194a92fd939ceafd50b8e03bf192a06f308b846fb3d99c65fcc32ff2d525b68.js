@@ -1,0 +1,1 @@
+(function(){var t;t=function(){return $(document).on("focus","input.datepicker:not(.hasDatepicker)",function(){var t,e,a;if(e=$(this),"date"!==e[0].type)return t={dateFormat:"yy-mm-dd"},a=e.data("datepicker-options"),e.datepicker($.extend(t,a))})},$(document).ready(t).on("page:load turbolinks:load",t)}).call(this);
