@@ -58,3 +58,45 @@
     window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
     window.onhashchange=function(){window.location.hash="no-back-button";}
 </script>
+
+    <script type="text/javascript" charset="utf-8">
+
+
+    // "librairie" de gestion de la visibilité
+    //  var visible = vis(); // donne l'état courant
+    //  vis(function(){});   // définit un handler pour les changements de visibilité
+    var vis = (function(){
+        var stateKey, eventKey, keys = {
+            hidden: "visibilitychange",
+            webkitHidden: "webkitvisibilitychange",
+            mozHidden: "mozvisibilitychange",
+            msHidden: "msvisibilitychange"
+        };
+        for (stateKey in keys) {
+            if (stateKey in document) {
+                eventKey = keys[stateKey];
+                break;
+            }
+        }
+        return function(c) {
+            if (c) {
+                document.addEventListener(eventKey, c);
+                //document.addEventListener("blur", c);
+                //document.addEventListener("focus", c);
+            }
+            return !document[stateKey];
+        }
+    })();
+
+    vis(function(){
+        document.title = vis() ? 'Visible' : 'Not visible';
+        alert("You are trying to exit the text window your test will be submitted and you will exit!")
+        document.getElementById('submit_atempt').click();
+//        console.log(new Date, 'visible ?', vis());
+    });
+//
+//    // to set the initial state
+//    alert("You are trying to exit the text window your test will be submitted and you will exit!")
+
+
+</script>
