@@ -27,7 +27,7 @@ def index
   def create
 
     @survey = Survey::Survey.new(params_whitelist)
-
+    @survey.user_id=current_user.id
     if @survey.valid? && @survey.save
 
       default_redirect
