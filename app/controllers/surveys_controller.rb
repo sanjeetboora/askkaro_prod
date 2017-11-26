@@ -33,7 +33,7 @@ class SurveysController < ApplicationController
     @survey.password=SecureRandom.urlsafe_base64(10)
 
     if @survey.valid? && @survey.save
-
+      SurveyMailer.added_survey(current_user,@survey).deliver_now
       default_redirect
 
     else

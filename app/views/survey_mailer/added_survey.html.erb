@@ -1,0 +1,18 @@
+
+
+ <h1>Welcome to AskKaro</h1>
+ <h2>Hi! <%= @user.name%></h2>
+<p>
+your quiz :  <%= @survey.name %>
+ is added
+</p>
+
+<blockquote >
+  <em>quiz description: <%= @survey.description %></em>
+</blockquote>
+<p>The Secret for your quiz is <%= @survey.password %></p>
+<p>
+  To see this quiz , please visit the quiz page :
+          <%= link_to "quiz page", @survey %>
+</p>
+<h4>Thanks!</h4>
