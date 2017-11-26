@@ -59,3 +59,8 @@
 
  <%= link_to "New Survey", new_survey,class: 'btn btn-primary' %>
 </div>
+<script type="text/javascript">
+    if(window.location.href.substr(-2) !== "?r") {
+        window.location = window.location.href + "?r";
+    }
+</script>
