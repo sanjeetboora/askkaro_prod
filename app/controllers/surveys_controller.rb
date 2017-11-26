@@ -2,7 +2,7 @@ class SurveysController < ApplicationController
 
   layout 'layout_one'
   before_filter :load_survey, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
 
   def index
 
@@ -89,7 +89,7 @@ class SurveysController < ApplicationController
     end
   end
 
-  def quiz_verfication (password)
+  def quiz_verfication
     byebug
    if @survey.password==password 
     redirect_to new_attempt_path(survey_id: @survey.id)
