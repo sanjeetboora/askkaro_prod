@@ -1,6 +1,20 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!, only: [:index]
 
+  def users_list
+
+    respond_to do |format|
+      format.html {
+        if params[:search]
+          @users=User.where(name: params[:search]).paginate(:per_page => 20, :page => params[:page])
+        else
+          @users=User.all.order(:name).paginate(:per_page => 10, :page => params[:page])
+        end
+      }
+      format.js {}
+    end
+  end
+
   def index
     @questagfeed = []
     if params[:question_id]
@@ -31,7 +45,13 @@ class HomeController < ApplicationController
           # byebug
           @feed = Question.tagged_with(params[:tag]).paginate(:per_page => 20, :page => params[:page])
         elsif params[:search]
-          @feed=Question.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+          v=User.search(params[:search]).paginate(:per_page=>20, :page=> params[:page])
+          if v== nil
+            @feed=Question.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+          else
+            @users=User.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+            @feed=Question.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
+          end
         else
           @feed=current_user.feed.paginate(:per_page => 7, :page => params[:page])
         end
@@ -61,21 +81,7 @@ class HomeController < ApplicationController
     end
   end
 
-  def users_list
-    respond_to do |format|
-      format.html {
 
-        if params[:search]
-          @users=User.search(params[:search]).paginate(:per_page => 20, :page => params[:page])
-
-        else
-          @users=User.all.order(:name).paginate(:per_page => 10, :page => params[:page])
-        end
-
-      }
-      format.js {}
-    end
-  end
 
   def tags_list
 

@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-  resources :quizproblems
-  resources :quizzes
-  resources :test_questions
-  resources :tests
-  match '(errors)/:status', to: 'errors#error_404', constraints: {status: /\d{3}/}, via: :all
 
+  resources 'surveys'
+  resources 'attempts'
+  
+  
+  match '(errors)/:status', to: 'errors#error_404', constraints: {status: /\d{3}/}, via: :all
+  get '/passwordverification',to: 'surveys#quiz_confirm_password'
+  post 'verifyPass',to: 'surveys#quiz_verfication'
   mount Ckeditor::Engine => '/ckeditor'
   resources :notes
   get 'tags/:tag', to: 'home#index', as: :tag
   resources :questions
-  resources :subtrends
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :comments

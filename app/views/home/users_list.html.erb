@@ -1,165 +1,212 @@
 <style type="text/css">
-.usertitle{
-  text-align: center;
-  color: #2c3e50;
-}
+  .usertitle {
+    text-align: center;
+    color: #2c3e50;
+  }
 
-/* CONTAINERS */ 
+  /* CONTAINERS */
 
-.usercontainer {max-width: 940px; width: 100%; margin: 0 auto; padding-top: 30px;} 
-.usertwelve { width: 100%; } 
-.usereleven { width: 91.53%; } 
-.userten { width: 83.06%; } 
-.usernine { width: 74.6%; } 
-.usereight { width: 66.13%; } 
-.userseven { width: 57.66%; } 
-.usersix { width: 49.2%; } 
-.userfive { width: 40.73%; } 
-.userfour { width: 32.26%;} 
-.userthree { width: 23.8%; } 
-.usertwo { width: 15.33%; } 
-.userone{ width: 6.866%;}
+  .usercontainer {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
 
-/* COLUMNS */ 
+  .usertwelve {
+    width: 100%;
+  }
 
-.usercol { 
-  display: block; 
-  float:left;
-  margin: 1% 0 1% 1.6%; 
-} 
+  .usereleven {
+    width: 91.53%;
+  }
 
-.usercol:first-of-type { margin-left: 0; }
+  .userten {
+    width: 83.06%;
+  }
 
-/* CLEARFIX */ 
+  .usernine {
+    width: 74.6%;
+  }
 
-.usercf:before, .usercf:after { 
-  content: " "; 
-  display: table; 
-} 
+  .usereight {
+    width: 66.13%;
+  }
 
-.usercf:after {
-  clear: both; 
-} 
+  .userseven {
+    width: 57.66%;
+  }
 
-.usercf { 
-  *zoom: 1; 
-}
+  .usersix {
+    width: 49.2%;
+  }
 
-/* PROFILES */
+  .userfive {
+    width: 40.73%;
+  }
 
-.card{
-  max-width: 100%;
-height: 415px;
-background-color: #fff;
-font-family: 'Arimo', sans-serif;
-font-size: 14px;
-}
+  .userfour {
+    width: 32.26%;
+  }
 
+  .userthree {
+    width: 23.8%;
+  }
 
-/* CARD 2 */
+  .usertwo {
+    width: 15.33%;
+  }
 
-#usercard2{
-  overflow: hidden;
-  color: #2c3e50;
-  width: 100%;
-}
+  .userone {
+    width: 6.866%;
+  }
 
-#usercard2 .wrapper{
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  /* COLUMNS */
 
-#usercard2 .header{
-  width: 100%;
-  height: 100px;
-  position: relative;
-  background: #2BC0E4;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  .usercol {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+  }
 
-}
+  .usercol:first-of-type {
+    margin-left: 0;
+  }
 
-#usercard2 .header:after{
-  content: '';
-  background: inherit;
-  bottom: 0;
-  display: block;
-  height: inherit;
-  position: absolute;
-  left: 0;
-  right: 0;
-  transform: skewY(-8deg);
-  -webkit-transform: skewY(-8deg);
-  transform-origin: 100%;
-}
+  /* CLEARFIX */
 
-#usercard2 .image-wrapper{
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  background-image: url("https://static.pexels.com/photos/7097/people-coffee-tea-meeting.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: 5;
-  top: 63px;
-  left: 50%;
-  margin-left: -50px;
-}
+  .usercf:before, .usercf:after {
+    content: " ";
+    display: table;
+  }
 
-#usercard2 .name{
-  margin-top: 70px;
-text-align: center;
-font-size: 1.50rem;
-margin-bottom: 0px;
-}
+  .usercf:after {
+    clear: both;
+  }
 
-#usercard2 .social .userfour{
-  text-align: center;
-}
+  .usercf {
+    *zoom: 1;
+  }
 
-#usercard2 .info{
-  margin: 12px 0;
-  text-align: center;
-  margin-bottom: 20px;
-}
- #usercard2 .info .userfour{
-  text-align: center;
-  border-right: 1px solid #2c3e50;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  /* PROFILES */
 
-#usercard2 .info .userfour:last-of-type{
-  border-right: none;
-}
+  .card {
+    max-width: 100%;
+    height: 415px;
+    background-color: #fff;
+    font-family: 'Arimo', sans-serif;
+    font-size: 14px;
+  }
 
- #usercard2 .info .userfour .number{
-  display: block;
-  font-size: 20px;
-  padding: 3px 0;
-  font-weight: 700;
-}
- div#usercard2.card.userfour.usercol div.wrapper div.center span.btn{
-background-color: #3498db;
-color: #fff;
-padding-left: 10px;
-padding-right: 10px;
-height: 30px;
-padding-top: 2px;
-padding-bottom: 2px;
-line-height: 30px;
-}
-div#usercard2.card.userfour.usercol div.wrapper div.center span.btn a{
-color: #fff;
-font-size: 12px;
-}
- div#usercard2.card.userfour.usercol div.wrapper div.social.usercf div.userfour.usercol a i{
-font-size: 24px;
-}
+  /* CARD 2 */
+
+  #usercard2 {
+    overflow: hidden;
+    color: #2c3e50;
+    width: 100%;
+  }
+
+  #usercard2 .wrapper {
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #usercard2 .header {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background: #2BC0E4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAECC6, #2BC0E4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  #usercard2 .header:after {
+    content: '';
+    background: inherit;
+    bottom: 0;
+    display: block;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: skewY(-8deg);
+    -webkit-transform: skewY(-8deg);
+    transform-origin: 100%;
+  }
+
+  #usercard2 .image-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-image: url("https://static.pexels.com/photos/7097/people-coffee-tea-meeting.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 5;
+    top: 63px;
+    left: 50%;
+    margin-left: -50px;
+  }
+
+  #usercard2 .name {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 1.50rem;
+    margin-bottom: 0px;
+  }
+
+  #usercard2 .social .userfour {
+    text-align: center;
+  }
+
+  #usercard2 .info {
+    margin: 12px 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #usercard2 .info .userfour {
+    text-align: center;
+    border-right: 1px solid #2c3e50;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  #usercard2 .info .userfour:last-of-type {
+    border-right: none;
+  }
+
+  #usercard2 .info .userfour .number {
+    display: block;
+    font-size: 20px;
+    padding: 3px 0;
+    font-weight: 700;
+  }
+
+  div#usercard2.card.userfour.usercol div.wrapper div.center span.btn {
+    background-color: #3498db;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    line-height: 30px;
+  }
+
+  div#usercard2.card.userfour.usercol div.wrapper div.center span.btn a {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  div#usercard2.card.userfour.usercol div.wrapper div.social.usercf div.userfour.usercol a i {
+    font-size: 24px;
+  }
+
   .apple_pagination {
     background: #f1f1f1;
     border: 1px solid #e5e5e5;
@@ -168,47 +215,59 @@ font-size: 24px;
     cursor: default;
     height: 75px;
     bottom: 0px;
-    display: flow-root; 
-  width: 100%;}
-    .apple_pagination a, .apple_pagination span {
-      padding: 0.2em 0.3em; }
-      .apple_pagination .disabled {
-        color: #aaaaaa; }
-        .apple_pagination .current {
-          font-style: normal;
-          font-weight: bold;
-          background-color: #bebebe;
-          display: inline-block;
-          width: 1.4em;
-          height: 1.4em;
-          line-height: 1.5;
-          -moz-border-radius: 1em;
-          -webkit-border-radius: 1em;
-          border-radius: 1em;
-          text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
-          .apple_pagination a {
-            text-decoration: none;
-            color: black; }
-            .apple_pagination a:hover, .apple_pagination a:focus {
-              text-decoration: underline; }
+    display: flow-root;
+    width: 100%;
+  }
+
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em;
+  }
+
+  .apple_pagination .disabled {
+    color: #aaaaaa;
+  }
+
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+  }
+
+  .apple_pagination a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .apple_pagination a:hover, .apple_pagination a:focus {
+    text-decoration: underline;
+  }
 </style>
 <div id="users">
-<div class="usercontainer">
-<div style="background-color: white;padding: 7px;border-radius: 9px;margin-bottom: 9px;z-index: 8000;border: 1px solid #d1d1d1;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);"><h5 style="text-align: center;color: #039BE5;font-size: 1.9rem;font-weight: 600;font-family: Verdana, Tahoma, Arial, sans-serif">All Users</h5></div>
- <div class="row usercf">
+  <div class="usercontainer">
+    <div style="background-color: white;padding: 7px;border-radius: 9px;margin-bottom: 9px;z-index: 8000;border: 1px solid #d1d1d1;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);">
+      <h5 style="text-align: center;color: #039BE5;font-size: 1.9rem;font-weight: 600;font-family: Verdana, Tahoma, Arial, sans-serif">All
+        Users</h5></div>
+    <div class="row usercf">
 
-<% @users.each do |u| %>
+      <% @users.each do |u| %>
 
-    
-    <%= render 'user_list', user: u %>
+          <%= render 'user_list', user: u %>
 
-<%end%>
+      <% end %>
 
-</div>
+    </div>
   </div>
-  
+
 </div>
- <div class="apple_pagination">
+<div class="apple_pagination">
   <div class="page_info">
     <%= page_entries_info @users %>
   </div>
