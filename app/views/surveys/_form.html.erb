@@ -29,24 +29,24 @@
         </span>
           </div>
 
-      </div>
-      <div class='row'>
-        <div class='form-group col-sm-12'>
-          <%= f.label :description %>
-          <%= f.text_area :description, size: '100x5', class: 'form-control', style: 'max-width: 100%;' %>
         </div>
-      </div>
+        <div class='row'>
+          <div class='form-group col-sm-12'>
+            <%= f.label :description %>
+            <%= f.text_area :description, size: '100x5', class: 'form-control', style: 'max-width: 100%;' %>
+          </div>
+        </div>
 
-      <div class='appendable'>
+        <div class='appendable'>
 
-        <%= f.fields_for :questions do |builder| %>
-            <%= render 'question_fields', f: builder %>
-        <% end %>
+          <%= f.fields_for :questions do |builder| %>
+              <%= render 'question_fields', f: builder %>
+          <% end %>
+        </div>
+        <br/>
+        <%= link_to_add_field 'Add a new Question', f, :questions %>
       </div>
-      <br/>
-      <%= link_to_add_field 'Add a new Question', f, :questions %>
-    </div>
-    <%= f.submit 'Submit', class: 'pull-right btn btn-primary' %>
+      <%= f.submit 'Submit', class: 'pull-right btn btn-primary' %>
 <% end -%>
 </div>
 
@@ -58,8 +58,6 @@
 
 <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"/>
 <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.css" rel="stylesheet"/>
-
-
 
 <script type='text/javascript'>
     // remove attachment field

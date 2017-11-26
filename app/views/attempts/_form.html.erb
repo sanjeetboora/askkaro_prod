@@ -1,56 +1,60 @@
 <h2 class="survey-title">
-  c
   <p><small><%= @attempt.survey.description %></small></p>
 </h2>
 <p id="demo"></p>
 
 <script>
 
-  var now = new Date().getTime();
-
-  var hours = parseInt("<%= @survey.period.to_s[11,13][0,2].to_i %>");
-  var minutes = parseInt("<%= @survey.period.strftime("%M")%>");
-  console.log(hours);
-  var b=(hours*3600000)+(minutes*60000);
-
-  var countDownDate = new Date().getTime()+b;
-  var x = setInterval(function() {
-
     var now = new Date().getTime();
 
-    var distance = countDownDate - now;
+    var hours = parseInt("<%= @survey.period.to_s[11,13][0,2].to_i %>");
+    var minutes = parseInt("<%= @survey.period.strftime("%M")%>");
+    console.log(hours);
+    var b=(hours*3600000)+(minutes*60000);
 
-    var ho = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var mi = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var countDownDate = new Date().getTime()+b;
+    var x = setInterval(function() {
 
-    document.getElementById("demo").innerHTML = ho + "h "
-    + mi + "m "+seconds+"s";
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
-      document.getElementById('submit_atempt').click();
-      
-    }
-  }, 1000);
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var ho = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var mi = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("demo").innerHTML = ho + "h "
+            + mi + "m "+seconds+"s";
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+            document.getElementById('submit_atempt').click();
+
+        }
+    }, 1000);
 </script>
 <%= form_for(@attempt, url: attempt_scope(@attempt)) do |f| %>
-<%= hidden_field_tag :survey_id, @survey.id %>
-<ol class="questions">
-  <%= f.fields_for :answers, get_answer_fields(@attempt) do |answer_fields| %>
-  <li>
-    <% question = answer_fields.object.question %>
-    <p class="question"><%= question.text %></p>
-    <ul class="question">
+    <%= hidden_field_tag :survey_id, @survey.id %>
+    <ol class="questions">
+      <%= f.fields_for :answers, get_answer_fields(@attempt) do |answer_fields| %>
+          <li>
+            <% question = answer_fields.object.question %>
+            <p class="question"><%= question.text %></p>
+            <ul class="question">
 
-      <%= collection_radio_buttons('survey_attempt[answers_attributes]', question.id, question.options, :id, :text,item_wrapper_tag: false) do |b| %>
-      <li class="radio">
-        <%= b.label { b.radio_button + b.text } %>
-      </li>
-      <% end %>
-    </ul>
-  </li>
-  <% end -%>
-</ol>
-<%= f.submit "Submit", class: 'btn btn-default', id: 'submit_atempt' %>
+              <%= collection_radio_buttons('survey_attempt[answers_attributes]', question.id, question.options, :id, :text,item_wrapper_tag: false) do |b| %>
+                  <li class="radio">
+                    <%= b.label { b.radio_button + b.text } %>
+                  </li>
+              <% end %>
+            </ul>
+          </li>
+      <% end -%>
+    </ol>
+    <%= f.submit "Submit", class: 'btn btn-default', id: 'submit_atempt' %>
 <% end -%>
+<script>
+    window.location.hash="no-back-button";
+    window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
+    window.onhashchange=function(){window.location.hash="no-back-button";}
+</script>
