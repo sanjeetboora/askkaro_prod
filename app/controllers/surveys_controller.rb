@@ -90,11 +90,14 @@ class SurveysController < ApplicationController
   end
 
   def quiz_verfication
-    byebug
+
+    @survey=Survey::Survey.find(params[:survey_id])
+
    if (@survey.password.eql? params["password"]) 
     redirect_to new_attempt_path(survey_id: @survey.id)
-  else
-     redirect_to '/'
+   else
+     flash[:alert] = "Your given password is incorrect please enter a valid one"
+     redirect_to '/surveys'
   end
 end
 
