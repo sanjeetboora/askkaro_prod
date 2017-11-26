@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   
  
   match '(errors)/:status', to: 'errors#error_404', constraints: {status: /\d{3}/}, via: :all
-get '/passwordverification',to: 'surveys#quiz_confirm_password'
+ get '/passwordverification',to: 'surveys#quiz_confirm_password'
+  post 'verifyPass',to: 'surveys#quiz_verfication'
   mount Ckeditor::Engine => '/ckeditor'
   resources :notes
   get 'tags/:tag', to: 'home#index', as: :tag

@@ -33,7 +33,7 @@ class SurveysController < ApplicationController
     @survey.password=SecureRandom.urlsafe_base64(10)
 
     if @survey.valid? && @survey.save
-      SurveyMailer.added_survey(current_user,@survey).deliver_now
+      SurveyMailer.added_survey(current_user, @survey).deliver_now
       default_redirect
 
     else
@@ -78,18 +78,22 @@ class SurveysController < ApplicationController
     default_redirect
 
   end
-def quiz_confirm_password
-  respond_to do |format|
-      format.html{
-        @survey=Survey::Survey.find(params[:id])
-       
+
+  def quiz_confirm_password
+    respond_to do |format|
+      format.html {
+        @survey=Survey::Survey.find(params[:survey_id])
+
       }
-      format.js{  }
+      format.js {}
     end
-end
+  end
+
+  def quiz_verfication
+    byebug
+  end
 
   private
-
 
 
   def default_redirect
@@ -97,6 +101,7 @@ end
     redirect_to surveys_path, notice: I18n.t("surveys_controller.#{action_name}")
 
   end
+
   def default_redirect1
 
     redirect_to '/'
