@@ -37,7 +37,7 @@ class SurveysController < ApplicationController
       default_redirect
 
     else
-      flash[:notice] = "You must add a valid quiz with questions and description"
+      flash[:alert] = "You must add a valid quiz with questions and description"
       render :new
 
     end
