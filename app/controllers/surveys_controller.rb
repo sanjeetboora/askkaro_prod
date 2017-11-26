@@ -3,7 +3,7 @@ class SurveysController < ApplicationController
   layout 'layout_one'
   before_filter :load_survey, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
-
+  before_action :authenticate_user!
   def index
 
     type = view_context.get_survey_type(params[:type])
