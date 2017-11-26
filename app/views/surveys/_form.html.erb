@@ -1,6 +1,3 @@
-<% if flash[:alert] %>
-    <div class="alert alert-danger"><%= flash[:alert] %></div>
-<% end %>
 <%= form_for(@survey, url: survey_scope(@survey), html: { class: 'survey-form clearfix' }, validate: true) do |f| %>
 
     <div class='field'>
