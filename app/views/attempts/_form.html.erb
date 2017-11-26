@@ -7,7 +7,8 @@
 <script>
 
     var now = new Date().getTime();
-    var hours = parseInt("<%= @survey.period.strftime("%I")%>");
+
+    var hours = parseInt("<%= @survey.period.to_s[11,13][0,2].to_i %>");
     var minutes = parseInt("<%= @survey.period.strftime("%M")%>");
     console.log(hours);
     var b=(hours*3600000)+(minutes*60000);
