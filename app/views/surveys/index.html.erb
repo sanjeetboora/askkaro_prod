@@ -1,66 +1,54 @@
 <div class="container">
 
   <div class="questionnaires_<%= action_name %>">
+   <a href="/" class="btn btn-primary">Return to AskKaro</a>
+   <h1>QUIZZES</h1>
+   <hr>
+ 
+   <% if @surveys.empty? %>
 
-    <h1>
+   <p> There are no surveys </p>
 
-      Surveys
+   <% else %>
 
-    </h1>
 
-    <hr>
+  <table class='table table-nonfluid survey-table'>
 
-    <% if @surveys.empty? %>
+    <thead>
 
-    <p> There are no surveys </p>
+      <tr>
+        <th>Name</th>
 
-    <% else %>
+        <th>Description</th>
 
-    <p>
+        <th>Questions</th>
 
-      Filter by type:
+        <th>Participants</th>
 
-      <%= render 'survey_label_all' %>
+        <th></th>
 
-    </p>
+      </tr>
 
-    <table class='table table-nonfluid survey-table'>
+    </thead>
 
-      <thead>
+    <tbody>
 
-        <tr>
-          <th>Name</th>
+      <%= render partial: 'survey', collection: @surveys %>
 
-          <th>Description</th>
+    </tbody>
 
-          <th>Questions</th>
+  </table>
 
-          <th>Participants</th>
+  <%= paginate @surveys %>
 
-          <th></th>
+  <% end %>
 
-        </tr>
+</div>
 
-      </thead>
-
-      <tbody>
-
-        <%= render partial: 'survey', collection: @surveys %>
-
-      </tbody>
-
-    </table>
-
-    <%= paginate @surveys %>
-
-    <% end %>
-
-  </div>
-
- <%= link_to "New Survey", new_survey,class: 'btn btn-primary' %>
+<%= link_to "New Quiz", new_survey,class: 'btn btn-primary' %>
 </div>
 <script type="text/javascript">
-    if(window.location.href.substr(-2) !== "?r") {
-        window.location = window.location.href + "?r";
-    }
+  if(window.location.href.substr(-2) !== "?r") {
+    window.location = window.location.href + "?r";
+  }
 </script>
