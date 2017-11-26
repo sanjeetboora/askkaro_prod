@@ -19,15 +19,15 @@
           <%= f.label :active %>
           <%= f.select :active, ['true', 'false'], {}, class: 'form-control' %>
         </div>
-        <div class='col-sm-2'>
+        <div class='form-group col-sm-2'>
 
           <div class="input-group date" id="datetimepicker1">
-            <input type="text" class="form-control" />
+            <label for="">Time</label>
+            <input type="text" class="form-control" id="timepick"/>
             <span class="input-group-addon">
           <span class="glyphicon glyphicon-calendar"></span>
         </span>
           </div>
-        </div>
 
       </div>
       <div class='row'>
