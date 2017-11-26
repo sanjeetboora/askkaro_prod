@@ -6,7 +6,7 @@ json.picture notification.actor.avatar
 json.notifiable do
 json.type ""
 end
-if notification.notifiable_type=="Question"
+if notification.notifiable_type!="User"
 
 json.url question_path(notification.notifiable,anchor: dom_id(notification.notifiable))
 end

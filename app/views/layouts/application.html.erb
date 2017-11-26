@@ -197,8 +197,9 @@
                 <a data-behaviour="notifications-link"><i class="material-icons right" style="padding-top: 7px; margin-left: 0px;">notifications</i>Notification<span class="new badge" data-behaviour="unread-count">0</span></a>
                 <ul id="dropdownnoty" class="nav-dropdown">
                   <% @var.reverse.each do |var| %>
+
                       <% if !var.read_at.nil? %>
-                          <li><a class="unread"><%= var.actor.name %> <%= var.action %></a></li>
+                          <li><a href="<%= %>" class="unread"><%= var.actor.name %> <%= var.action %></a></li>
                       <% end %>
                   <% end %>
                 </ul>
@@ -794,7 +795,7 @@
     //in case you want to think about touch devices...I guess thats cool.
     var toggle = true;
     $('.mobile-dropdown').on('click', function () {
-        alert('oh yeahh');
+//        alert('oh yeahh');
         if (toggle === true) {
             $(this).addClass('active-drop');
             toggle = false;

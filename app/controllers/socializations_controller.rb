@@ -17,7 +17,7 @@ class SocializationsController < ApplicationController
       @is_followed=false
     else
       current_user.toggle_follow!(@socializable)
-      Notification.create(recipient: @question.user,actor: current_user,action: "Followed Your Question",notifiable: @question)
+      Notification.create(recipient: @question.user,actor: current_user,action: "Followed Your Question",notifiable: @question,url: @question_path)
       @is_followed=true
     end
     respond_to do |format|
@@ -35,7 +35,7 @@ class SocializationsController < ApplicationController
 
       current_user.toggle_follow!(@socializable)
 
-      Notification.create(recipient: @user,actor: current_user,action: "Followed You",notifiable: @user)
+      Notification.create(recipient: @user,actor: current_user,action: "Followed You",notifiable: @user,url: @user_path)
       @is_followed=true
     end
     respond_to do |format|
@@ -66,7 +66,7 @@ class SocializationsController < ApplicationController
       @is_liked=false
     else
       current_user.toggle_like!(@socializable)
-      Notification.create(recipient: @question.user,actor: current_user,action: "Liked Your Question",notifiable: @question)
+      Notification.create(recipient: @question.user,actor: current_user,action: "Liked Your Question",notifiable: @question,url: @question_path)
       @is_liked=true
     end
 
@@ -85,7 +85,7 @@ class SocializationsController < ApplicationController
     else
       # byebug
       current_user.toggle_like!(@socializable)
-      Notification.create(recipient: @answer.user,actor: current_user,action: "Liked Your Answer",notifiable: @answer.question)
+      Notification.create(recipient: @answer.user,actor: current_user,action: "Liked Your Answer",notifiable: @answer.question,url: @answer.question_path)
       @is_liked=true
     end
     respond_to do |format|
