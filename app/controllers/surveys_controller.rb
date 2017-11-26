@@ -80,6 +80,11 @@ class SurveysController < ApplicationController
   end
 
   def quiz_confirm_password
+    catch=Survey::Survey.find(params[:survey_id])
+    if(catch.active==false)
+      flash[:alert] = "This test is no longer available for submit"
+      redirect_to '/surveys'
+    end
     respond_to do |format|
       format.html {
         @survey=Survey::Survey.find(params[:survey_id])
