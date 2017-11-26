@@ -89,9 +89,14 @@ class SurveysController < ApplicationController
     end
   end
 
-  def quiz_verfication
+  def quiz_verfication (password)
     byebug
+   if @survey.password==password 
+    redirect_to new_attempt_path(survey_id: @survey.id)
+  else
+     redirect_to '/'
   end
+end
 
   private
 
