@@ -21,7 +21,7 @@ ActiveAdmin.register Survey::Survey do
     column :attempts_number
     column :finished
     column :created_at
-    default_actions
+    actions
   end
 
   form do |f|
@@ -40,7 +40,7 @@ ActiveAdmin.register Survey::Survey do
         end
       end
     end
-    f.buttons
+    f.button
   end
 
 end
