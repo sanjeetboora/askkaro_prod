@@ -38,7 +38,7 @@
     <%= hidden_field_tag :survey_id, @survey.id %>
     <%= hidden_field_tag :enrollment, params["enrollment"] %>
     <ol class="questions">
-      <%= f.fields_for :answers, get_answer_fields(@attempt) do |answer_fields| %>
+      <%= f.fields_for :answers, get_answer_fields(@attempt).sample(@attempt.survey.randomcount) do |answer_fields| %>
           <li>
             <% question = answer_fields.object.question %>
             <p class="question"><%= question.text %></p>
