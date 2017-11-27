@@ -61,7 +61,7 @@ class SurveysController < ApplicationController
   def update
 
     if @survey.update_attributes(params_whitelist)
-
+      @survey.update_attributes(randomcount: params["randomcount"])
       default_redirect
 
     else
