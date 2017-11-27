@@ -34,6 +34,7 @@ class SurveysController < ApplicationController
     @survey.password=SecureRandom.urlsafe_base64(10)
     @survey.period=params["period"]
     @survey.randomcount=params["randomcount"]
+
     if @survey.valid? && @survey.save
       SurveyMailer.added_survey(current_user, @survey).deliver_now
       default_redirect
