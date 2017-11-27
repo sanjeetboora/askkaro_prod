@@ -29,7 +29,9 @@ class AttemptsController < ApplicationController
 
     unless @survey.nil?
 
+
       @attempt = @survey.attempts.new
+      @attempt.enrollment =params["enrollment"]
 
       @attempt.answers.build
 
@@ -41,12 +43,13 @@ class AttemptsController < ApplicationController
   def create
 
     @attempt = @survey.attempts.new(params_whitelist)
-
+    @attempt.enrollment =params["enrollment"]
     @attempt.participant = current_user
+
 
     if @attempt.valid? && @attempt.save
 
-      correct_options_text = @survey.correct_options.present? ? 'Bellow are the correct answers marked in green' : ''
+      correct_options_text = @survey.correct_options.present? ? 'Thank You' : ''
 
       redirect_to attempt_path(@attempt.id), notice: "Thank you for answering #{@survey.name}! #{correct_options_text}"
 

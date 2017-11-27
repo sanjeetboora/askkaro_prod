@@ -6,6 +6,7 @@ class SurveysController < ApplicationController
   before_action :authenticate_user!
   def index
 
+
     type = view_context.get_survey_type(params[:type])
 
 
@@ -32,6 +33,7 @@ class SurveysController < ApplicationController
     @survey.user_id=current_user.id
     @survey.password=SecureRandom.urlsafe_base64(10)
     @survey.period=params["period"]
+    @survey.randomcount=params["randomcount"]
     if @survey.valid? && @survey.save
       SurveyMailer.added_survey(current_user, @survey).deliver_now
       default_redirect
@@ -98,8 +100,9 @@ class SurveysController < ApplicationController
 
     @survey=Survey::Survey.find(params[:survey_id])
 
-   if (@survey.password.eql? params["password"]) 
-    redirect_to new_attempt_path(survey_id: @survey.id)
+   if (@survey.password.eql? params["password"])
+
+    redirect_to new_attempt_path(survey_id: @survey.id,enrollment: params[:enrollment])
    else
      flash[:alert] = "Your given password is incorrect please enter a valid one"
      redirect_to '/surveys'
