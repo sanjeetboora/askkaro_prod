@@ -46,7 +46,6 @@ class AttemptsController < ApplicationController
     @attempt.enrollment =params["enrollment"]
     @attempt.participant = current_user
 
-
     if @attempt.valid? && @attempt.save
 
       correct_options_text = @survey.correct_options.present? ? 'Thank You' : ''
