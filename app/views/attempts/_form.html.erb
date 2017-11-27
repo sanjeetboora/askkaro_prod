@@ -1,7 +1,11 @@
 <h2 class="survey-title">
   <p><small><%= @attempt.survey.description %></small></p>
 </h2>
-<p id="demo"></p>
+<div class="alert alert-info" id="timer">
+  <strong style="font-size: 25px;">Time Left:</strong>
+  <strong><p id="demo"></p></strong>
+</div>
+
 
 <script>
 
@@ -23,13 +27,17 @@
         var mi = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("demo").innerHTML = ho + "h "
-            + mi + "m "+seconds+"s";
+        document.getElementById("demo").innerHTML = ho + " hr "
+            + mi + " min "+seconds+" sec ";
+        if(distance <  60000){
+            document.getElementById("timer").classList.remove('alert-info');
+            document.getElementById("timer").classList.add('alert-danger');
+            console.log("script running");
+        }
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("demo").innerHTML = "EXPIRED";
             document.getElementById('submit_atempt').click();
-
         }
     }, 1000);
 </script>
@@ -41,7 +49,7 @@
       <%= f.fields_for :answers, get_answer_fields(@attempt).sample(@attempt.survey.randomcount) do |answer_fields| %>
           <li>
             <% question = answer_fields.object.question %>
-            <p class="question"><%= question.text %></p>
+            <p class="question" style="font-size: 15px;"><strong><%= question.text %></strong></p>
             <ul class="question">
 
               <%= collection_radio_buttons('survey_attempt[answers_attributes]', question.id, question.options, :id, :text,item_wrapper_tag: false) do |b| %>
