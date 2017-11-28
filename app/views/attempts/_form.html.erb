@@ -75,38 +75,76 @@
     // "librairie" de gestion de la visibilité
     //  var visible = vis(); // donne l'état courant
     //  vis(function(){});   // définit un handler pour les changements de visibilité
-    var vis = (function(){
-        var stateKey, eventKey, keys = {
-            hidden: "visibilitychange",
-            webkitHidden: "webkitvisibilitychange",
-            mozHidden: "mozvisibilitychange",
-            msHidden: "msvisibilitychange"
-        };
-        for (stateKey in keys) {
-            if (stateKey in document) {
-                eventKey = keys[stateKey];
-                break;
-            }
-        }
-        return function(c) {
-            if (c) {
-                document.addEventListener(eventKey, c);
-                //document.addEventListener("blur", c);
-                //document.addEventListener("focus", c);
-            }
-            return !document[stateKey];
-        }
-    })();
-
-    vis(function(){
-        document.title = vis() ? 'Visible' : 'Not visible';
-        alert("You are trying to exit the text window your test will be submitted and you will exit!")
-        document.getElementById('submit_atempt').click();
-//        console.log(new Date, 'visible ?', vis());
-    });
+//    var vis = (function(){
+//        var stateKey, eventKey, keys = {
+//            hidden: "visibilitychange",
+//            webkitHidden: "webkitvisibilitychange",
+//            mozHidden: "mozvisibilitychange",
+//            msHidden: "msvisibilitychange"
+//        };
+//        for (stateKey in keys) {
+//            if (stateKey in document) {
+//                eventKey = keys[stateKey];
+//                break;
+//            }
+//        }
+//        return function(c) {
+//            if (c) {
+//                document.addEventListener(eventKey, c);
+//                //document.addEventListener("blur", c);
+//                //document.addEventListener("focus", c);
+//            }
+//            return !document[stateKey];
+//        }
+//    })();
+//
+//    vis(function(){
+//        document.title = vis() ? 'Visible' : 'Not visible';
+//        alert("You are trying to exit the text window your test will be submitted and you will exit!")
+//        document.getElementById('submit_atempt').click();
+////        console.log(new Date, 'visible ?', vis());
+//    });
 //
 //    // to set the initial state
 //    alert("You are trying to exit the text window your test will be submitted and you will exit!")
 
 
+</script>
+<script type="text/javascript" charset="utf-8">
+    var hidden, visibilityChange;
+    if (typeof document.hidden !== "undefined") {
+        hidden = "hidden";
+        visibilityChange = "visibilitychange";
+    }
+    else if (typeof document.mozHidden !== "undefined") {
+        hidden = "mozHidden";
+        visibilityChange = "mozvisibilitychange";
+    }
+    else if (typeof document.msHidden !== "undefined") {
+        hidden = "msHidden";
+        visibilityChange = "msvisibilitychange";
+    }
+    else if (typeof document.webkitHidden !== "undefined") {
+        hidden = "webkitHidden";
+        visibilityChange = "webkitvisibilitychange";
+    }
+
+    function handleVisibilityChange() {
+        if (document[hidden]) {
+            //Not visible, Do whatever
+            alert("You are trying to exit the text window your test will be submitted and you will exit!")
+            document.getElementById('submit_atempt').click();
+
+        }
+        else {
+            //Visible
+        }
+    }
+
+    if (typeof document.addEventListener === "undefined" ||
+        typeof document[hidden] === "undefined") {
+        alert("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+    }
+    else
+        document.addEventListener(visibilityChange, handleVisibilityChange, false);
 </script>

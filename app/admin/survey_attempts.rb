@@ -4,6 +4,13 @@ ActiveAdmin.register Survey::Attempt do
 #
 # permit_params :list, :of, :attributes, :on, :model
 #
+  filter  :name,
+          :as => :select,
+          :collection => proc {
+            Survey::Attempt.select("distinct(id)").collect { |c|
+              [c.id, c.id]
+            }
+          }
 # or
 #
 # permit_params do
