@@ -153,6 +153,37 @@
 //    else
 //        document.addEventListener(visibilityChange, handleVisibilityChange, false);
 </script>
+<script type="text/javascript" charset="utf-8">
+
+
+
+
+    //    function toggleFullScreen() {
+    document.fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen;
+
+    function requestFullscreen(element) {
+        if (element.requestFullscreen) {
+            element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+            element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        }
+    }
+
+    if (document.fullscreenEnabled) {
+        requestFullscreen(document.documentElement);
+    }
+
+    //    }
+    document.addEventListener("click", function(e) {
+
+            if (document.fullscreenEnabled) {
+                requestFullscreen(document.documentElement);
+            }
+
+    }, false);
+</script>
 
 <script type="text/javascript" charset="utf-8">
     var isActive;
@@ -169,7 +200,7 @@
     var v=0;
     var i=setInterval(function () {
         //console.log(window.isActive ? 'active' : 'inactive');
-        if(window.isActive==false && v==3){
+        if(window.isActive==false && v==2){
             alert("You are trying to exit the text window your test will be submitted and you will exit!")
             document.getElementById('submit_atempt').click();
             clearInterval(i);
