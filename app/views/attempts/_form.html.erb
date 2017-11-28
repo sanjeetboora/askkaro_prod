@@ -1,8 +1,13 @@
 <h2 class="survey-title">
-  <p><small><%= @attempt.survey.description %></small></p>
+  <p style="white-space: pre-wrap"><%= raw(@attempt.survey.description) %></p>
 </h2>
+
+<div class="alert alert-info" id="note">
+  <strong>Please dont click anywhere else aprt from the browser window and current tab else your test will be submitted."</strong>
+</div>
 <div class="alert alert-info" id="timer">
   <strong style="font-size: 25px;">Time Left:</strong>
+
   <strong><p id="demo"></p></strong>
 </div>
 
@@ -161,12 +166,17 @@
     };
 
     // test
+    var v=0;
     var i=setInterval(function () {
-        console.log(window.isActive ? 'active' : 'inactive');
-        if(window.isActive==false){
+        //console.log(window.isActive ? 'active' : 'inactive');
+        if(window.isActive==false && v==3){
             alert("You are trying to exit the text window your test will be submitted and you will exit!")
             document.getElementById('submit_atempt').click();
             clearInterval(i);
+        } else if(window.isActive==false ){
+            v++;
+            document.getElementById("note").classList.remove('alert-info');
+            document.getElementById("note").classList.add('alert-danger');
         }
-    }, 1);
+    }, 100);
 </script>

@@ -4,7 +4,7 @@
 
   <td> <%= link_to survey.name, passwordverification_path(survey_id: survey.id), class: 'survey-name' %> </td>
 
-  <td> <span class="survey-description"> <%= "#{survey.description}" %> </span> </td>
+  <td> <span class="survey-description"><p style="white-space: pre-wrap"><%= raw(survey.description) %></p> </span> </td>
 
   <td class="table-center"> <%= number_of_questions(survey) %> </td>
 
