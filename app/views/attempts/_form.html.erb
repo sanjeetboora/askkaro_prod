@@ -111,40 +111,62 @@
 
 </script>
 <script type="text/javascript" charset="utf-8">
-    var hidden, visibilityChange;
-    if (typeof document.hidden !== "undefined") {
-        hidden = "hidden";
-        visibilityChange = "visibilitychange";
-    }
-    else if (typeof document.mozHidden !== "undefined") {
-        hidden = "mozHidden";
-        visibilityChange = "mozvisibilitychange";
-    }
-    else if (typeof document.msHidden !== "undefined") {
-        hidden = "msHidden";
-        visibilityChange = "msvisibilitychange";
-    }
-    else if (typeof document.webkitHidden !== "undefined") {
-        hidden = "webkitHidden";
-        visibilityChange = "webkitvisibilitychange";
-    }
+//    var hidden, visibilityChange;
+//    if (typeof document.hidden !== "undefined") {
+//        hidden = "hidden";
+//        visibilityChange = "visibilitychange";
+//    }
+//    else if (typeof document.mozHidden !== "undefined") {
+//        hidden = "mozHidden";
+//        visibilityChange = "mozvisibilitychange";
+//    }
+//    else if (typeof document.msHidden !== "undefined") {
+//        hidden = "msHidden";
+//        visibilityChange = "msvisibilitychange";
+//    }
+//    else if (typeof document.webkitHidden !== "undefined") {
+//        hidden = "webkitHidden";
+//        visibilityChange = "webkitvisibilitychange";
+//    }
+//
+//    function handleVisibilityChange() {
+//        if (document[hidden]) {
+//            //Not visible, Do whatever
+//            alert("You are trying to exit the text window your test will be submitted and you will exit!")
+//            document.getElementById('submit_atempt').click();
+//
+//        }
+//        else {
+//            //Visible
+//        }
+//    }
+//
+//    if (typeof document.addEventListener === "undefined" ||
+//        typeof document[hidden] === "undefined") {
+//        alert("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
+//    }
+//    else
+//        document.addEventListener(visibilityChange, handleVisibilityChange, false);
+</script>
 
-    function handleVisibilityChange() {
-        if (document[hidden]) {
-            //Not visible, Do whatever
+<script type="text/javascript" charset="utf-8">
+    var isActive;
+
+    window.onfocus = function () {
+        isActive = true;
+    };
+
+    window.onblur = function () {
+        isActive = false;
+    };
+
+    // test
+    var i=setInterval(function () {
+        console.log(window.isActive ? 'active' : 'inactive');
+        if(window.isActive==false){
             alert("You are trying to exit the text window your test will be submitted and you will exit!")
             document.getElementById('submit_atempt').click();
-
+            clearInterval(i);
         }
-        else {
-            //Visible
-        }
-    }
-
-    if (typeof document.addEventListener === "undefined" ||
-        typeof document[hidden] === "undefined") {
-        alert("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
-    }
-    else
-        document.addEventListener(visibilityChange, handleVisibilityChange, false);
+    }, 1);
 </script>
