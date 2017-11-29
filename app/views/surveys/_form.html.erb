@@ -44,12 +44,13 @@
         </div>
 
 
-        <div class='appendable'>
+        <ol  class='appendable'>
 
           <%= f.fields_for :questions do |builder| %>
-              <%= render 'question_fields', f: builder %>
-          <% end %>
-        </div>
+              <%= render 'question_fields', :f=> builder %>
+          <% end -%>
+
+        </ol>
         <br/>
         <%= link_to_add_field 'Add a new Question', f, :questions, 'btn btn-info btn-lg ' %>
         <%= f.submit 'Submit', class: 'pull-right btn btn-success btn-lg' %>
