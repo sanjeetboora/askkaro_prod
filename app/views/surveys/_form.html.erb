@@ -51,9 +51,10 @@
           <% end %>
         </div>
         <br/>
-        <%= link_to_add_field 'Add a new Question', f, :questions %>
+        <%= link_to_add_field 'Add a new Question', f, :questions, 'btn btn-info btn-lg ' %>
+        <%= f.submit 'Submit', class: 'pull-right btn btn-success btn-lg' %>
       </div>
-      <%= f.submit 'Submit', class: 'pull-right btn btn-primary' %>
+
 <% end -%>
 </div>
 

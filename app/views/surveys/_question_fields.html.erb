@@ -12,6 +12,7 @@
         <%= render 'option_fields', :f => builder %>
     <% end -%>
   </ul>
-  <%= link_to_add_field 'Add option', f, :options %>
-  <%= link_to_remove_field 'Remove question', f %>
+  <%= link_to_add_field 'Add option', f, :options, 'btn btn-primary' %>
+
+  <a id="remove-attach" class="btn btn-danger" onclick="removeField(this)" href="javascript:;">Remove question</a>
 </div>
