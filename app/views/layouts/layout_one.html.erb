@@ -8,9 +8,11 @@
 <div class="container">
   <div class="flash">
     <% flash.each do |name, msg| %>
+        <%if correct_flash_name(name)=='info'%>
         <div class="alert alert-<%= correct_flash_name(name) %>" role="alert">
           <%= msg %>
         </div>
+            <%end%>
     <% end %>
   </div>
  

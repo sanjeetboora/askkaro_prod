@@ -37,6 +37,7 @@ class SurveysController < ApplicationController
 
     if @survey.valid? && @survey.save
       SurveyMailer.added_survey(current_user, @survey).deliver_now
+      flash[:info] = "Your test " + @survey.name+" as successfully been created. Please check your mail for the credentials."
       default_redirect
 
     else
@@ -71,6 +72,7 @@ class SurveysController < ApplicationController
       @survey.password=SecureRandom.urlsafe_base64(10)
       @survey.update_attributes(randomcount: params["randomcount"])
       SurveyMailer.updated_survey(current_user, @survey).deliver_now
+      flash[:info] = "Your test " + @survey.name+" as successfully been updated. Please check your mail for the credentials."
       default_redirect
 
     else
