@@ -3,3 +3,8 @@
   <h2>Edit Quiz</h2>
   <%= render 'form' %>
 </div>
+<script type="text/javascript">
+    if(window.location.href.substr(-2) !== "?r") {
+        window.location = window.location.href + "?r";
+    }
+</script>

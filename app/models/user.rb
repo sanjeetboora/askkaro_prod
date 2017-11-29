@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
       end
       def latestfeed
         Question.last(6).reverse
+        x
       end
 
       def followed_by user_id, follow_id
