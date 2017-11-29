@@ -68,7 +68,9 @@ class SurveysController < ApplicationController
   def update
 
     if @survey.update_attributes(params_whitelist)
+      @survey.password=SecureRandom.urlsafe_base64(10)
       @survey.update_attributes(randomcount: params["randomcount"])
+      SurveyMailer.updated_survey(current_user, @survey).deliver_now
       default_redirect
 
     else
