@@ -66,7 +66,7 @@ module SurveysHelper
 
     :id=>"add-attach",
 
-    :class=>c)
+    :class=>c+"")
 
   end
 

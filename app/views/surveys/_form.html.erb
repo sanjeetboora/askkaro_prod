@@ -9,7 +9,7 @@
       <div class='row'>
         <div class='form-group col-sm-4'>
           <%= f.label :name %>
-          <%= f.text_field :name, class: 'form-control' %>
+          <%= f.text_field :name, class: 'form-control',id: 'name',placeholder: 'Name of test' %>
         </div>
         <div class='form-group col-sm-4'>
           <%= f.label :attempts_number, 'Maximum number of attempts (0 is infinite)' %>
@@ -39,7 +39,7 @@
         <div class='row'>
           <div class='form-group col-sm-12'>
             <%= f.label :description %>
-            <%= f.text_area :description, size: '100x5', class: 'form-control', style: 'max-width: 100%;' %>
+            <%= f.text_area :description, size: '100x5', class: 'form-control', style: 'max-width: 100%;',id: 'desc' ,placeholder: 'Description of the test'%>
           </div>
         </div>
 
@@ -48,16 +48,41 @@
 
           <%= f.fields_for :questions do |builder| %>
               <%= render 'question_fields', :f=> builder %>
+              <br>
           <% end -%>
 
         </ol>
         <br/>
         <%= link_to_add_field 'Add a new Question', f, :questions, 'btn btn-info btn-lg ' %>
-        <%= f.submit 'Submit', class: 'pull-right btn btn-success btn-lg' %>
+        <%= f.submit 'Submit', class: 'disabled pull-right btn btn-success btn-lg', id: 'submitbutton' %>
       </div>
 
 <% end -%>
 </div>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function () {
+      $('#add-attach').click();
+  });
+  var c=$('.form-control');
+  var check=1;
+  setInterval(function () {
+      for(var i=0;i<c.length;i++){
+          if(c[i].value===''){
+              check = 0;
+              break;
+          } else {
+              check=1;
+          }
+      }
+      if(check==1){
+          $('#submitbutton').removeClass('disabled');
+      } else {
+          $('#submitbutton').addClass('disabled');
+      }
+  },1);
+
+
+</script>
 
 <script type="text/javascript">
     $("#datetimepicker1").datetimepicker({

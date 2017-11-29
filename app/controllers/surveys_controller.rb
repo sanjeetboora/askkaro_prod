@@ -41,7 +41,7 @@ class SurveysController < ApplicationController
 
     else
       flash[:alert] = "You must add a valid quiz with questions and description"
-      render :new
+      render :new, remote: true
 
     end
 
