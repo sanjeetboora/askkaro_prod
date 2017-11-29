@@ -4,7 +4,7 @@
     <list default="true" id="9d11ccde-ca1e-4aec-aab7-4c716afde49b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/Jcrop-d893fdfdf36b10457a8bf1ab9fe3165838410ddd318a23b428c33ef6ebf3582d.js.gz" afterPath="$PROJECT_DIR$/public/assets/Jcrop-d893fdfdf36b10457a8bf1ab9fe3165838410ddd318a23b428c33ef6ebf3582d.js.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/surveys_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/surveys_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/attempts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/attempts/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/layout_one.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/layout_one.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -21,17 +21,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/attempts/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="-310">
+              <caret line="52" column="115" lean-forward="false" selection-start-line="52" selection-start-column="115" selection-end-line="52" selection-end-column="115" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="surveys_helper.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/surveys_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-155">
+              <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="surveys_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="surveys_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/surveys_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="689">
@@ -44,8 +56,8 @@
       <file leaf-file-name="layout_one.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/layout_one.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="150">
+              <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -111,16 +123,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quiz_confirm_password.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/surveys/quiz_confirm_password.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -143,14 +145,14 @@
         <option value="$PROJECT_DIR$/app/views/surveys/_question_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/views/surveys/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/surveys/_option_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/attempts/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/surveys/quiz_confirm_password.html.erb" />
         <option value="$PROJECT_DIR$/app/mailers/survey_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/survey_mailer/updated_survey.html.erb" />
         <option value="$PROJECT_DIR$/app/views/survey_mailer/added_survey.html.erb" />
         <option value="$PROJECT_DIR$/app/views/survey_mailer/updated_survey.text.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/layout_one.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/surveys_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/layout_one.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/attempts/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -204,6 +206,12 @@
               <item name="askkaro_prod" type="b2602c69:ProjectViewProjectNode" />
               <item name="askkaro_prod" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="askkaro_prod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="askkaro_prod" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="mailers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -211,6 +219,13 @@
               <item name="askkaro_prod" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="askkaro_prod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="askkaro_prod" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="attempts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="askkaro_prod" type="b2602c69:ProjectViewProjectNode" />
@@ -368,12 +383,12 @@
       <workItem from="1511890171483" duration="1833000" />
       <workItem from="1511893420730" duration="3443000" />
       <workItem from="1511933856256" duration="9185000" />
-      <workItem from="1511948609205" duration="756000" />
+      <workItem from="1511948609205" duration="2104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23559000" />
+    <option name="totallyTimeSpent" value="24907000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -471,7 +486,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2550">
           <caret line="170" column="10" lean-forward="true" selection-start-line="170" selection-start-column="10" selection-end-line="170" selection-end-column="10" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -530,7 +547,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="56" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -662,14 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/surveys_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/surveys/_survey.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -763,27 +774,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/attempts/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/surveys_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state relative-caret-position="689">
+          <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/surveys_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155">
+          <caret line="62" column="7" lean-forward="true" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/layout_one.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="150">
+          <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/surveys_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/attempts/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="74" column="48" lean-forward="true" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
-          <folding />
+        <state relative-caret-position="-310">
+          <caret line="52" column="115" lean-forward="false" selection-start-line="52" selection-start-column="115" selection-end-line="52" selection-end-column="115" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
