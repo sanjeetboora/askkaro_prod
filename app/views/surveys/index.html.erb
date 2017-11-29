@@ -100,38 +100,3 @@
  <%= link_to "New Test", new_survey,class: 'btn btn-primary btn-lg' %>
 </div>
 
-<script type="text/javascript" charset="utf-8">
-
-
-
-
-//    function toggleFullScreen() {
-        document.fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen;
-
-        function requestFullscreen(element) {
-            if (element.requestFullscreen) {
-                element.requestFullscreen();
-            } else if (element.mozRequestFullScreen) {
-                element.mozRequestFullScreen();
-            } else if (element.webkitRequestFullScreen) {
-                element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-            }
-        }
-
-        if (document.fullscreenEnabled) {
-            requestFullscreen(document.documentElement);
-        }
-
-//    }
-    document.addEventListener("keydown", function(e) {
-        if (e.keyCode == 13) {
-//            toggleFullScreen();
-            if (document.fullscreenEnabled) {
-                requestFullscreen(document.documentElement);
-            }
-        } else if(e.keyCode==27){
-            document.documentElement.exitFullscreen();
-        }
-    }, false);
-</script>
-
