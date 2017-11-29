@@ -6,17 +6,23 @@ class SurveysController < ApplicationController
   before_action :authenticate_user!
   def index
 
+    search=params["search"]
+    if(params["search"])
 
-    type = view_context.get_survey_type(params[:type])
-
-
-    query = if type then
-      Survey::Survey.where(survey_type: type)
+      @surveys = Survey::Survey.where('name ILIKE ?',"%#{search}%")
     else
-      Survey::Survey
+      type = view_context.get_survey_type(params[:type])
+
+
+      query = if type then
+                Survey::Survey.where(survey_type: type)
+              else
+                Survey::Survey
+              end
+
+      @surveys = query.order(created_at: :desc).page(params[:page]).per(15)
     end
 
-    @surveys = query.order(created_at: :desc).page(params[:page]).per(15)
 
   end
 
@@ -138,7 +144,7 @@ end
 
 def load_survey
 
-  @survey = Survey::Survey.find(params[:id])
+  @survey = Survey::Survey.all
 
 end
 
