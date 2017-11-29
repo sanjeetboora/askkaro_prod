@@ -61,7 +61,8 @@
 
 		<script type="text/javascript">
 			$("#btnExport").click(function(e) {
-				window.open('data:application/vnd.ms-excel,' + $('#dvData').html());
+//				window.open('data:application/vnd.ms-excel,' + $('#dvData').html());
+          window.open('data:application/vnd.ms-excel,' + encodeURIComponent( $('div[id$=dvData]').html()));
 				e.preventDefault();
 			});
 		</script>

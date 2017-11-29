@@ -7,11 +7,11 @@
       <%= f.text_field :text, placeholder: 'question', class: 'form-control' %>
     </div>
   </div>
-  <ol class='appendable'>
+  <ul style="list-style: none" class='appendable'>
     <%= f.fields_for :options do |builder| %>
         <%= render 'option_fields', :f => builder %>
     <% end -%>
-  </ol>
+  </ul>
   <%= link_to_add_field 'Add option', f, :options %>
   <%= link_to_remove_field 'Remove question', f %>
 </div>
