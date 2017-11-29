@@ -11,10 +11,10 @@ class SurveysController < ApplicationController
 
 
     query = if type then
-              Survey::Survey.where(survey_type: type)
-            else
-              Survey::Survey
-            end
+      Survey::Survey.where(survey_type: type)
+    else
+      Survey::Survey
+    end
 
     @surveys = query.order(created_at: :desc).page(params[:page]).per(15)
 
@@ -55,9 +55,15 @@ class SurveysController < ApplicationController
 
   def show
     @survey.destroy
+    
     redirect_to '/surveys'
   end
 
+  def result
+    a = params["id"]
+    @survey = Survey::Survey.where(id: a).first
+    @attempts = Survey::Attempt.where(survey_id: a)
+  end
 
   def update
 
@@ -101,43 +107,43 @@ class SurveysController < ApplicationController
 
     @survey=Survey::Survey.find(params[:survey_id])
 
-   if (@survey.password.eql? params["password"])
+    if (@survey.password.eql? params["password"])
 
-    redirect_to new_attempt_path(survey_id: @survey.id,enrollment: params[:enrollment])
-   else
+      redirect_to new_attempt_path(survey_id: @survey.id,enrollment: params[:enrollment])
+    else
      flash[:alert] = "Your given password is incorrect please enter a valid one"
      redirect_to '/surveys'
-  end
+   end
+ end
+
+ private
+
+
+ def default_redirect
+
+  redirect_to surveys_path, notice: I18n.t("surveys_controller.#{action_name}")
+
 end
 
-  private
+def default_redirect1
+
+  redirect_to '/'
+
+end
 
 
-  def default_redirect
+def load_survey
 
-    redirect_to surveys_path, notice: I18n.t("surveys_controller.#{action_name}")
+  @survey = Survey::Survey.find(params[:id])
 
-  end
-
-  def default_redirect1
-
-    redirect_to '/'
-
-  end
+end
 
 
-  def load_survey
+def params_whitelist
 
-    @survey = Survey::Survey.find(params[:id])
+  params.require(:survey_survey).permit(Survey::Survey::AccessibleAttributes << :survey_type)
 
-  end
-
-
-  def params_whitelist
-
-    params.require(:survey_survey).permit(Survey::Survey::AccessibleAttributes << :survey_type)
-
-  end
+end
 
 
 end

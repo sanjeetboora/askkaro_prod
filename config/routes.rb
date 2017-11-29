@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   resources :notes
   get 'tags/:tag', to: 'home#index', as: :tag
+ get '/result/:id' => 'surveys#result'
   resources :questions
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -32,7 +33,7 @@ Rails.application.routes.draw do
   resources :users,only: [:show,:edit,:update]
   get '/users_list'=>'home#users_list'
   get '/tags_list'=>'home#tags_list'
-
+ 
   resources :questions do
     post 'like',   to: 'socializations#like'
     post 'follow', to: 'socializations#followQuestion'

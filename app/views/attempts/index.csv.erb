@@ -1,0 +1,5 @@
+<%- headers = ['participant_id', 'participant_type'] -%>
+<%= CSV.generate_line headers %>
+<%- @attempts.each do |attempt| -%>
+<%= CSV.generate_line([attempt.participant_id, attempt.participant_type]) -%>
+<%- end -%>

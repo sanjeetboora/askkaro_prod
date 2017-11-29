@@ -1,0 +1,67 @@
+<style type="text/css">
+	body
+	{
+		font-size: 12pt;
+		font-family: Calibri;
+		padding : 10px;
+	}
+
+	table
+	{
+		border: 1px solid black;
+
+	}
+	th
+	{
+		border: 1px solid black;
+		padding: 5px;
+		background-color:grey;
+		color: white;
+
+	}
+	td
+	{
+		border: 1px solid black;
+		padding: 5px;
+	}
+
+	input
+	{
+		font-size: 12pt;
+		font-family: Calibri;
+	}
+
+</style>
+<div id="dvData">
+	<h3><%= @survey.name %></h3>
+	<p><%= @survey.description %></p>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Enrollment</th>
+			<th>Score</th>
+		</tr>
+		
+		<% @attempts.each do |attempt| %>
+		<tr>
+			
+			<td><%= User.where(id: attempt.participant_id).first.name
+				%></td>
+				<td><%= User.where(id: attempt.participant_id).first.email
+					%></td>
+					<td><%= attempt.enrollment %></td>
+					<td><%= attempt.score %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+		<br>
+		<input type="button" id="btnExport" value=" Download " />
+
+		<script type="text/javascript">
+			$("#btnExport").click(function(e) {
+				window.open('data:application/vnd.ms-excel,' + $('#dvData').html());
+				e.preventDefault();
+			});
+		</script>

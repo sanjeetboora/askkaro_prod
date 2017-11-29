@@ -1,20 +1,26 @@
 class AttemptsController < ApplicationController
   layout 'layout_one'
- helper 'surveys'
+  helper 'surveys'
 
 
   before_filter :load_survey, only: [:new, :create]
   before_action :authenticate_user!
 
-  # def index
+  def index
+    @attempts = Survey::Attempt.all
+    @surveys = Survey::Survey.active
+    byebug
+    respond_to do | format | 
+      format.html
+      format.json { render :json => @attempts }
+      format.csv { send_data @attempts.as_csv, filename: "attempts-#{Date.today}.csv" }
 
-  #   @surveys = Survey::Survey.active
+    end
 
-  # end
+  end
 
 
   def show
-
     @attempt = Survey::Attempt.find_by(id: params[:id])
 
     render :access_error if current_user.id != @attempt.participant_id
