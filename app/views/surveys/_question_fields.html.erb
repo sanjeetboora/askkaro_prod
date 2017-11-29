@@ -1,17 +1,49 @@
+
 <div class='field clearfix'>
   <hr/>
-  <h4>Question</h4>
+
+  <li><h4>Question</h4>
+
   <div class='row'>
     <div class='form-group col-sm-4'>
+
       <%= f.label :text, class: 'sr-only' %>
-      <%= f.text_field :text, placeholder: 'question', class: 'form-control' %>
+      <%= f.text_field :text, placeholder: 'question', class: 'form-control ques' %>
     </div>
   </div>
-  <ol class='appendable'>
+  <ul style="list-style: none" class='appendable'>
     <%= f.fields_for :options do |builder| %>
         <%= render 'option_fields', :f => builder %>
     <% end -%>
-  </ol>
-  <%= link_to_add_field 'Add option', f, :options %>
-  <%= link_to_remove_field 'Remove question', f %>
+  </ul>
+  <%= link_to_add_field 'Add option', f, :options, 'btn btn-primary' %>
+
+  <a id="remove-attach" class="btn btn-danger" onclick="removeField(this)" href="javascript:;">Remove question</a>
+  </li>
 </div>
+<br><br>
+<script type="text/javascript" charset="utf-8">
+    var r=$('#remove-attach');
+    var q=$('.ques');
+    r.click(function () {
+        q.value="";
+        console.log(q.value);
+    });
+    var c=$('.form-control');
+    var check=1;
+    setInterval(function () {
+        for(var i=0;i<c.length;i++){
+            if(c[i].value===''){
+                check = 0;
+                break;
+            } else {
+                check=1;
+            }
+        }
+        if(check==1){
+            $('#submitbutton').removeClass('disabled');
+        } else {
+            $('#submitbutton').addClass('disabled');
+        }
+    },1);
+    </script>

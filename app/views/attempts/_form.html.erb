@@ -1,3 +1,8 @@
+<style>
+  #submit_atempt{
+    margin-left: 500px;
+  }
+</style>
 <h2 class="survey-title">
   <p style="white-space: pre-wrap"><%= raw(@attempt.survey.description) %></p>
 </h2>
@@ -59,8 +64,10 @@
           </li>
       <% end -%>
     </ol>
-    <%= f.submit "Submit", class: 'btn btn-default', id: 'submit_atempt' %>
+    <%= f.submit "Submit", class: 'btn btn-success', id: 'submit_atempt' %>
 <% end -%>
+
+
 <script>
     window.location.hash="no-back-button";
     window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
@@ -159,27 +166,14 @@ var v=1;
         requestFullscreen(document.documentElement);
     }
     //    }
-if(v==1) {
     document.addEventListener("click", function (e) {
         if (document.fullscreenEnabled && v==1) {
             requestFullscreen(document.documentElement);
         }
         v++;
     }, false);
-}
 </script>
-<script type="text/javascript" charset="utf-8">
-    function my_onkeydown_handler() {
-        switch (event.keyCode) {
-            case 116 : // 'F5'
-                event.preventDefault();
-                event.keyCode = 0;
-                window.status = "F5 disabled";
-                break;
-        }
-    }
-    document.addEventListener("keydown", my_onkeydown_handler);
-</script>
+
 <script type="text/javascript" charset="utf-8">
     var isActive;
     window.onfocus = function () {
@@ -192,7 +186,7 @@ if(v==1) {
     var v=0;
     var i=setInterval(function () {
         //console.log(window.isActive ? 'active' : 'inactive');
-        if(window.isActive==false && v==2){
+        if(window.isActive==false && v>=2){
             alert("You are trying to exit the text window your test will be submitted and you will exit!")
             document.getElementById('submit_atempt').click();
             clearInterval(i);
@@ -202,4 +196,7 @@ if(v==1) {
             document.getElementById("note").classList.add('alert-danger');
         }
     }, 100);
+</script>
+<script type="text/javascript" charset="utf-8">
+$('checkbox').addClass('custom-control-input');
 </script>
