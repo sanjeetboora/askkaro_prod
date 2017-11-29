@@ -156,8 +156,7 @@
 <script type="text/javascript" charset="utf-8">
 
 
-
-
+var v=1;
     //    function toggleFullScreen() {
     document.fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen;
 
@@ -176,15 +175,29 @@
     }
 
     //    }
-    document.addEventListener("click", function(e) {
+if(v==1) {
+    document.addEventListener("click", function (e) {
 
-            if (document.fullscreenEnabled) {
-                requestFullscreen(document.documentElement);
-            }
+        if (document.fullscreenEnabled && v==1) {
+            requestFullscreen(document.documentElement);
 
+        }
+        v++;
     }, false);
+}
 </script>
-
+<script type="text/javascript" charset="utf-8">
+    function my_onkeydown_handler() {
+        switch (event.keyCode) {
+            case 116 : // 'F5'
+                event.preventDefault();
+                event.keyCode = 0;
+                window.status = "F5 disabled";
+                break;
+        }
+    }
+    document.addEventListener("keydown", my_onkeydown_handler);
+</script>
 <script type="text/javascript" charset="utf-8">
     var isActive;
 
