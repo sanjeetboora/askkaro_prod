@@ -2,7 +2,11 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-
+<style>
+  #submitbutton{
+    margin-right: 550px;
+  }
+</style>
 <%= form_for(@survey, url: survey_scope(@survey), html: { class: 'survey-form clearfix' }, validate: true) do |f| %>
 
     <div class='field'>
