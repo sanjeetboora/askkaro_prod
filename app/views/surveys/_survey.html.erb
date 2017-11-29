@@ -16,17 +16,17 @@
 
   <div class="btn-group" role="group">
 
-    <%= link_to edit_survey_path(survey.id), class: 'btn btn-default btn-sm' do %>
+    <%= link_to edit_survey_path(survey.id), class: 'btn btn-success btn-sm' do %>
 
     <i class="fa fa-pencil-square-o"> Edit</i>
 
     <% end %>
 
 
-    <%= link_to survey_path(survey.id), class: 'btn btn-default btn-sm', method: :delete, data: {confirm: "Are you sure you want to delete this survey?"} do %>
+    <%= link_to survey_path(survey.id), class: 'btn btn-danger btn-sm', method: :delete, data: {confirm: "Are you sure you want to delete this survey?"} do %>
 
     <i class="fa fa-trash-o"> Delete</i>
-    <a href="/result/<%= survey.id %>" class="btn btn-default btn-sm">view result</a>
+    <a href="/result/<%= survey.id %>" class="btn btn-primary btn-sm">view result</a>
 
     <% end %>
 

@@ -1,9 +1,10 @@
 <li>
   <div class="field">
-    <%= f.label :text %> <br/ >
+    <%= f.label :Option %> <br >
     <%= f.text_field :text %>
     <%= f.check_box :correct %>
     <%= f.label :correct %>
-    <%= link_to_remove_field "Remove", f %>
+
+    <a id="remove-attach" class="btn btn-danger" onclick="removeField(this)" href="javascript:;">Remove</a>
   </div>
 </li>

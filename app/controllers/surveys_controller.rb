@@ -6,17 +6,23 @@ class SurveysController < ApplicationController
   before_action :authenticate_user!
   def index
 
+    search=params["search"]
+    if(params["search"])
 
-    type = view_context.get_survey_type(params[:type])
-
-
-    query = if type then
-      Survey::Survey.where(survey_type: type)
+      @surveys = Survey::Survey.where('name ILIKE ?',"%#{search}%")
     else
-      Survey::Survey
+      type = view_context.get_survey_type(params[:type])
+
+
+      query = if type then
+                Survey::Survey.where(survey_type: type)
+              else
+                Survey::Survey
+              end
+
+      @surveys = query.order(created_at: :desc).page(params[:page]).per(15)
     end
 
-    @surveys = query.order(created_at: :desc).page(params[:page]).per(15)
 
   end
 
@@ -37,11 +43,12 @@ class SurveysController < ApplicationController
 
     if @survey.valid? && @survey.save
       SurveyMailer.added_survey(current_user, @survey).deliver_now
+      flash[:info] = "Your test " + @survey.name+" as successfully been created. Please check your mail for the credentials."
       default_redirect
 
     else
       flash[:alert] = "You must add a valid quiz with questions and description"
-      render :new
+      render :new, remote: true
 
     end
 
@@ -68,7 +75,10 @@ class SurveysController < ApplicationController
   def update
 
     if @survey.update_attributes(params_whitelist)
+      @survey.password=SecureRandom.urlsafe_base64(10)
       @survey.update_attributes(randomcount: params["randomcount"])
+      SurveyMailer.updated_survey(current_user, @survey).deliver_now
+      flash[:info] = "Your test " + @survey.name+" as successfully been updated. Please check your mail for the credentials."
       default_redirect
 
     else
@@ -134,7 +144,7 @@ end
 
 def load_survey
 
-  @survey = Survey::Survey.find(params[:id])
+  @survey = Survey::Survey.all
 
 end
 

@@ -52,7 +52,7 @@ module SurveysHelper
   end
 
 
-  def link_to_add_field(name, f, association)
+  def link_to_add_field(name, f, association, c)
 
     new_object = f.object.class.reflect_on_association(association).klass.new
 
@@ -66,7 +66,7 @@ module SurveysHelper
 
     :id=>"add-attach",
 
-    :class=>"btn btn-default")
+    :class=>c+"")
 
   end
 
