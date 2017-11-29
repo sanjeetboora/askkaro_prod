@@ -18,17 +18,18 @@
 
     <%= link_to edit_survey_path(survey.id), class: 'btn btn-success btn-sm' do %>
 
-    <i class="fa fa-pencil-square-o"> Edit</i>
+    <i class="fa fa-pencil-square-o"> &nbsp;&nbsp; &nbsp;  Edit&nbsp; &nbsp; &nbsp; </i>
 
     <% end %>
 
 
     <%= link_to survey_path(survey.id), class: 'btn btn-danger btn-sm', method: :delete, data: {confirm: "Are you sure you want to delete this survey?"} do %>
 
-    <i class="fa fa-trash-o"> Delete</i>
-    <a href="/result/<%= survey.id %>" class="btn btn-primary btn-sm">view result</a>
+    <i class="fa fa-trash-o"> &nbsp;&nbsp; &nbsp;Delete &nbsp;&nbsp; &nbsp;</i>
+
 
     <% end %>
+    <a href="/result/<%= survey.id %>" class="btn btn-primary btn-sm">&nbsp; view result&nbsp; </a>
 
   </div>
   

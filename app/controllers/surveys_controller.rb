@@ -61,6 +61,8 @@ class SurveysController < ApplicationController
 
 
   def show
+
+    byebug
     @survey.destroy
     
     redirect_to '/surveys'
@@ -144,7 +146,7 @@ end
 
 def load_survey
 
-  @survey = Survey::Survey.all
+  @survey = Survey::Survey.find(params[:id])
 
 end
 
