@@ -57,12 +57,11 @@ class SurveysController < ApplicationController
 
   def edit
 
+
   end
 
 
   def show
-
-    byebug
     @survey.destroy
     
     redirect_to '/surveys'
@@ -79,6 +78,7 @@ class SurveysController < ApplicationController
     if @survey.update_attributes(params_whitelist)
       @survey.password=SecureRandom.urlsafe_base64(10)
       @survey.update_attributes(randomcount: params["randomcount"])
+      @survey.update_attributes(period: params["period"])
       SurveyMailer.updated_survey(current_user, @survey).deliver_now
       flash[:info] = "Your test " + @survey.name+" as successfully been updated. Please check your mail for the credentials."
       default_redirect
