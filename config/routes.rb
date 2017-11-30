@@ -29,7 +29,15 @@ Rails.application.routes.draw do
   get 'home/index'
   get '/sear',to: 'questions#index'
   devise_for :users, :controllers => { sessions: "sessions", registrations: "registrations",:omniauth_callbacks => "omniauth_callbacks" }
-  root to: "home#indexmain"
+  devise_scope :user do
+    authenticated :user do
+      root 'home#indexmain', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
   resources :users,only: [:show,:edit,:update]
   get '/users_list'=>'home#users_list'
   get '/tags_list'=>'home#tags_list'
