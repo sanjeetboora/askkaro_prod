@@ -1,20 +1,50 @@
+
+
 <style>
   #submit_atempt{
     margin-left: 500px;
-  }
+}
 </style>
-<h2 class="survey-title">
-  <p style="white-space: pre-wrap"><%= raw(@attempt.survey.description) %></p>
-</h2>
+<style type="text/css">
+ .banner {
+  background: #fff;
+  font-family: Lato, sans-serif;
+  margin-bottom: 2px;
+}
 
-<div class="alert alert-info" id="note">
-  <strong>Please dont click anywhere else aprt from the browser window and current tab else your test will be submitted."</strong>
-</div>
-<div class="alert alert-info" id="timer">
-  <strong style="font-size: 25px;">Time Left:</strong>
+.navbar-nav-primary {
+  text-transform: uppercase;
+}
 
-  <strong><p id="demo"></p></strong>
+
+</style>
+<nav class="navbar navbar-default banner navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" style="float: none;">
+      <div class="alert alert-info navbar-left" id="note" style="margin-bottom: 1px;">
+          <strong>Please dont click anywhere else aprt from the browser window and current tab else your test will be submitted."</strong>
+      </div>
+
+      <div class="alert alert-info navbar-right" id="timer" style="margin-bottom: 1px;padding-bottom;padding-bottom: 1px;padding-top: 5px;margin-right: 2px;">
+       <span><strong style="font-size: 12px;">Time Left: <p id="demo"></p></strong></span>
+       
+
+   </div>
+
+
 </div>
+
+</div><!-- /.container-fluid -->
+</nav>
+
+<h3 class="survey-title">
+  <p style="white-space: pre-wrap"><%= raw(@attempt.survey.name) %></p>
+</h3>
+<p style="white-space: pre-wrap"><%= raw(@attempt.survey.description) %></p>
+
+
+
 
 
 <script>
@@ -31,7 +61,7 @@
         var mi = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         document.getElementById("demo").innerHTML = ho + " hr "
-            + mi + " min "+seconds+" sec ";
+        + mi + " min "+seconds+" sec ";
         if(distance <  60000){
             document.getElementById("timer").classList.remove('alert-info');
             document.getElementById("timer").classList.add('alert-danger');
@@ -46,25 +76,25 @@
 </script>
 
 <%= form_for(@attempt, url: attempt_scope(@attempt)) do |f| %>
-    <%= hidden_field_tag :survey_id, @survey.id %>
-    <%= hidden_field_tag :enrollment, params["enrollment"] %>
-    <ol class="questions">
-      <%= f.fields_for :answers, get_answer_fields(@attempt).sample(@attempt.survey.randomcount) do |answer_fields| %>
-          <li>
-            <% question = answer_fields.object.question %>
-            <p class="question" style="font-size: 15px;"><strong><%= question.text %></strong></p>
-            <ul class="question">
+<%= hidden_field_tag :survey_id, @survey.id %>
+<%= hidden_field_tag :enrollment, params["enrollment"] %>
+<ol class="questions">
+  <%= f.fields_for :answers, get_answer_fields(@attempt).sample(@attempt.survey.randomcount) do |answer_fields| %>
+  <li>
+    <% question = answer_fields.object.question %>
+    <p class="question" style="font-size: 15px;"><strong><%= question.text %></strong></p>
+    <ul class="question">
 
-              <%= collection_radio_buttons('survey_attempt[answers_attributes]', question.id, question.options, :id, :text,item_wrapper_tag: false) do |b| %>
-                  <li class="radio">
-                    <%= b.label { b.radio_button + b.text } %>
-                  </li>
-              <% end %>
-            </ul>
-          </li>
-      <% end -%>
-    </ol>
-    <%= f.submit "Submit", class: 'btn btn-success', id: 'submit_atempt' %>
+      <%= collection_radio_buttons('survey_attempt[answers_attributes]', question.id, question.options, :id, :text,item_wrapper_tag: false) do |b| %>
+      <li class="radio">
+        <%= b.label { b.radio_button + b.text } %>
+    </li>
+    <% end %>
+</ul>
+</li>
+<% end -%>
+</ol>
+<%= f.submit "Submit", class: 'btn btn-success', id: 'submit_atempt' %>
 <% end -%>
 
 
@@ -74,7 +104,7 @@
     window.onhashchange=function(){window.location.hash="no-back-button";}
 </script>
 
-    <script type="text/javascript" charset="utf-8">
+<script type="text/javascript" charset="utf-8">
     // "librairie" de gestion de la visibilité
     //  var visible = vis(); // donne l'état courant
     //  vis(function(){});   // définit un handler pour les changements de visibilité
@@ -150,30 +180,28 @@
 //        document.addEventListener(visibilityChange, handleVisibilityChange, false);
 </script>
 <script type="text/javascript" charset="utf-8">
-var v=1;
+    var v=1;
     //    function toggleFullScreen() {
-    document.fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen;
-    function requestFullscreen(element) {
-        if (element.requestFullscreen) {
-            element.requestFullscreen();
-        } else if (element.mozRequestFullScreen) {
-            element.mozRequestFullScreen();
-        } else if (element.webkitRequestFullScreen) {
-            element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        document.fullscreenEnabled = document.fullscreenEnabled || document.mozFullScreenEnabled || document.documentElement.webkitRequestFullScreen;
+        function requestFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullScreen) {
+                element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+            }
         }
-    }
-    if (document.fullscreenEnabled) {
-        requestFullscreen(document.documentElement);
-    }
+        if (document.fullscreenEnabled) {
+            requestFullscreen(document.documentElement);
+        }
     //    }
-
     document.addEventListener("click", function (e) {
         if (document.fullscreenEnabled && v==1) {
             requestFullscreen(document.documentElement);
         }
         v++;
     }, false);
-
 </script>
 
 <script type="text/javascript" charset="utf-8">
@@ -200,5 +228,5 @@ var v=1;
     }, 100);
 </script>
 <script type="text/javascript" charset="utf-8">
-$('checkbox').addClass('custom-control-input');
+    $('checkbox').addClass('custom-control-input');
 </script>
