@@ -1,13 +1,11 @@
 class ErrorsController < ApplicationController
   protect_from_forgery except: :all
   def error_404
-
     @exception = env["action_dispatch.exception"]
     respond_to do |format|
       format.html { render action: request.path[1..-1] }
       format.json { render json: {status: request.path[1..-1], error: @exception.message} }
     end
-
   end
 
   def page_not_found

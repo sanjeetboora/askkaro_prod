@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!, only: [:index]
 
+# FOR ALL USERS PAGE
   def users_list
-
     respond_to do |format|
       format.html {
         if params[:search]
@@ -15,6 +15,7 @@ class HomeController < ApplicationController
     end
   end
 
+# FOR ALL QUESTIONS ACCORDING TO TAGS
   def index
     @questagfeed = []
     if params[:question_id]
@@ -22,14 +23,10 @@ class HomeController < ApplicationController
       @question.tag_list.each do |tag|
         @questagfeed += Question.tagged_with(tag)
       end
-
     elsif params[:tag]
-
       @trendtagusers = []
       @tre=Trend.where(name: params[:tag]).first
-
       @trendtagusers += @tre.followers(User)
-      
     else
       @tftags=Question.tag_counts_on(:tags).order('count desc').limit(5)
       @tftags.each do |tag|
@@ -39,10 +36,8 @@ class HomeController < ApplicationController
     respond_to do |format|
       format.html {
         @question = Question.new
-        # byebug
         if params[:tag]
           @trend=Trend.where(name: params[:tag]).first
-          # byebug
           @feed = Question.tagged_with(params[:tag]).paginate(:per_page => 20, :page => params[:page])
         elsif params[:search]
           v=User.search(params[:search]).paginate(:per_page=>20, :page=> params[:page])
@@ -60,11 +55,11 @@ class HomeController < ApplicationController
     end
   end
 
+  # FOR MAIN HOME PAGE
   def indexmain
     respond_to do |format|
       format.html {
         @question = Question.new
-
         if params[:tag]
           @feed = Question.tagged_with(params[:tag]).paginate(:per_page => 4, :page => params[:page])
         else
@@ -80,9 +75,7 @@ class HomeController < ApplicationController
       format.js {}
     end
   end
-
-
-
+  # FOR ALL TAGS
   def tags_list
 
   end

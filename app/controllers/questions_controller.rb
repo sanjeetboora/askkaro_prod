@@ -4,13 +4,7 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
 
-  def index
-    # @question=Question.search(params[:search])
-    # byebug
-  end
-  # GET /questions/1  # GET /questions/1.json
-
-  # GET /questions/new
+# TO SHOW A QUESTION
   def show
     respond_to do |format|
       format.html{
@@ -21,18 +15,16 @@ class QuestionsController < ApplicationController
         end
         @answer = Answer.new(question_id: params[@question.id])
         @answerfeed=@question.answerfeed @question.id
-        # @comment = Comment.new(answer_id: params[@answer.id])
-        # @commentfeed=@answer.commentfeed @answer.id
       }
       format.js{  }
     end
   end
-  # GET /questions/1/edit
+
+# TO EDIT A QUESTION
   def edit
   end
 
-  # POST /questions
-  # POST /questions.json
+# TO CREATE A QUESTION
   def create
     @question = Question.new(question_params)
     @question.user_id = current_user.id
@@ -44,17 +36,10 @@ class QuestionsController < ApplicationController
         var.save!
       end
     end
-
     respond_to do |format|
-
       if @question.save
+        # FOR GENERATING E-MAIL ON NEW QUESTION 
          Resque.enqueue(QuestionMailer,@question.id,current_user.id)
-         # ans=Answer.new
-         # ans.content="a"
-         # ans.question_id=@question.id
-         # ans.user_id=current_user.id
-         # ans.save!
-         # ans.destroy
          format.html { redirect_to '/', notice: 'Question was successfully created.' }
          format.js{  }
          format.json { render :show, status: :created, location: @question }
@@ -65,8 +50,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /questions/1
-  # PATCH/PUT /questions/1.json
+# TO UPDATE A QUESTION
   def update
     respond_to do |format|
       if @question.update(question_params)
@@ -79,8 +63,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  # DELETE /questions/1
-  # DELETE /questions/1.json
+# TO DELETE A QUESTION
   def destroy
     Like.all.where(likeable_type: "Question", likeable_id: @question.id)
     @question.destroy

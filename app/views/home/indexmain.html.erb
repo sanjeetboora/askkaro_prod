@@ -1,14 +1,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Home</title>
+  <title>HOME</title>
   <style media="screen">
     .card.trend, .card.latest{
       height: 360px;
       overflow-x: hidden;
       overflow-y: hidden;
       border: 1px solid #e2e2e2;
-
     }
     div#modal2.modal.modal-fixed-footer.open div.createQuestion div.modal-content span h4{
       margin-bottom: 0;
@@ -23,129 +22,94 @@
   </style>
 </head>
 <body>
+  <% if notice %>
+  <script type="text/javascript">
+    noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
+  </script>
+  <% end %>
+  <% if alert %>
+  <script type="text/javascript">
+    noty({text: '<%= alert %>', type: 'error', timeout: 2500, progressBar: true});
+  </script>
+  <% end %>
 
-<% if notice %>
-    <script type="text/javascript">
-        noty({text: '<%= notice %>', type: 'alert', timeout: 950, progressBar: true});
-    </script>
-<% end %>
-<% if alert %>
-    <script type="text/javascript">
-        noty({text: '<%= alert %>', type: 'error', timeout: 2500, progressBar: true});
-    </script>
-<% end %>
+  <a href="#trendingquestions" class="left btn btn-floating btn-large waves-effect waves-light indigo darken-2 pulse z-depth-4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Trending"><i class="material-icons">trending_up</i></a>
+  <div class="z-depth-0 transparent latest">
+    <a href="#modal2" class="modal-trigger" data-target="modal2">
+      <div class=card class="z-depth-1" style="width: 93%;height: 60px;margin-bottom: 0; margin-top: 10px;margin-left: 25px;padding-left: 45px;padding-top: 0.5px;background: #ffffff;border: 2px solid #949599;border: 1px solid #d1d1d1;border-radius: 6px;">
+        <h5 style="color: #949599; margin-bottom: 10px;">Ask Your Question</h5>
+      </div>
+    </a>
 
-
-<!--   <a class="waves-effect waves-light cyan btn modal-trigger" href="#modal2">Ask Question !</a> -->
-<a href="#trendingquestions" class="left btn btn-floating btn-large waves-effect waves-light indigo darken-2 pulse z-depth-4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Trending"><i class="material-icons">trending_up</i></a>
-
-<!-- <div class="col s12"> -->
-<!-- <div class="container"> -->
-
-<div class="z-depth-0 transparent latest">
-  <a href="#modal2" class="modal-trigger" data-target="modal2">
-    <div class=card class="z-depth-1" style="width: 93%;
-        height: 60px;
-        margin-bottom: 0;
-        margin-top: 10px;
-        margin-left: 25px;
-        padding-left: 45px;
-        padding-top: 0.5px;
-        background: #ffffff;
-        border: 2px solid #949599;
-        border: 1px solid #d1d1d1;
-        border-radius: 6px;">
-      <h5 style="color: #949599; margin-bottom: 10px;">Ask Your Question</h5>
-    </div>
-  </a>
-
-  <div id="modal2" class="modal modal-fixed-footer">
-    <div class="createQuestion">
-      <%= form_for @question, remote: true do |task|%>
-          <div class="modal-content">
-        <span><h4 style="display: inline-block;">ASK QUESTION</h4>
-          <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;padding: 0;"><i class="material-icons">close</i></button>
-        </span>
-
-
-
-            <div class="input-field">
-              <%= task.hidden_field :title, class:'validate', id:'title' %>
-
-            </div>
-            <div class="input-field">
-              <%= task.text_area :content, class:'validate materialize-textarea',id:'content'%><br>
-              <%= task.label :Question, for:'content' %><br>
-              <!-- <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea> -->
-
-            </div>
-
-            <div class="input-field">
-              <%= task.label :tag_list, "Tags (separated by commas)" %>
-              <%= task.text_field :tag_list %>
-            </div>
-
+    <!-- ##################################  MODALFOR ASKING NEW QUESTION  ########################################-->
+    <div id="modal2" class="modal modal-fixed-footer">
+      <div class="createQuestion">
+        <%= form_for @question, remote: true do |task|%>
+        <div class="modal-content">
+          <span><h4 style="display: inline-block;">ASK QUESTION</h4>
+            <button class="modal-action modal-close waves-effect waves-green transparent btn-flat right" style="display: inline-block;padding: 0;"><i class="material-icons">close</i></button>
+          </span>
+          <div class="input-field">
+            <%= task.hidden_field :title, class:'validate', id:'title' %>
           </div>
-          <div class="modal-footer">
-            <!-- <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">
-          --> <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
+          <div class="input-field">
+            <%= task.text_area :content, class:'validate materialize-textarea',id:'content'%><br>
+            <%= task.label :Question, for:'content' %><br>
+          </div>
+          <div class="input-field">
+            <%= task.label :tag_list, "Tags (separated by commas)" %>
+            <%= task.text_field :tag_list %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="actions modal-action modal-close waves-effect waves-green cyan btn-flat">
             <%= task.submit id: 'create_question_submit' %>
           </div>
+        </div>
+        <% end %>
+        <% if @question.errors.any? %>
+        <% @question.errors.full_messages.each do |message| %>
+        <%= message %>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+    <!-- ***********************************  MODALFOR ASKING NEW QUESTION ENDS  ***************************************  -->
 
-          </div>
-      <% end %>
-      <% if @question.errors.any? %>
-          <% @question.errors.full_messages.each do |message| %>
-              <%= message %>
-          <% end %>
-      <% end %>
+
+
+    <div id="questions">
+      <div class="row">
+        <% @latestfeed.each do |question| %>
+        <div class="col s12 m12 l12">
+          <%= render 'question' , question: question %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div id="trendingquestions" class="z-depth-0 transparent trend">
+    <div id="questions">
+      <div style="background-color: white;padding: 3px;border-radius: 9px;margin-bottom: 9px;z-index: 8000;border: 1px solid #d1d1d1;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);display: block;width: 94%;height: auto;margin: 3px auto 6px;"><h5 style="text-align: center;color: #039BE5;font-size: 1.9rem;font-weight: 600;font-family: Verdana, Tahoma, Arial, sans-serif">Trending</h5></div>
+      <div class="row">
+        <% @trendingfeed.each do |question| %>
+        <div class="col s12 m12 l12">
+          <%= render 'question' , question: question %>
+        </div>
+        <% end %>
+      </div>
 
     </div>
   </div>
 
-  <div id="questions">
-    <div class="row">
 
-      <% @latestfeed.each do |question| %>
-          <div class="col s12 m12 l12">
-            <%= render 'question' , question: question %>
-          </div>
-      <% end %>
-    </div>
-
-  </div>
-
-  <!-- </div> -->
-  <!-- <div class="container"> -->
-</div>
-<div id="trendingquestions" class="z-depth-0 transparent trend">
-  <div id="questions">
-    <div style="background-color: white;padding: 3px;border-radius: 9px;margin-bottom: 9px;z-index: 8000;border: 1px solid #d1d1d1;box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);display: block;
-        width: 94%;height: auto;margin: 3px auto 6px;"><h5 style="text-align: center;color: #039BE5;font-size: 1.9rem;font-weight: 600;font-family: Verdana, Tahoma, Arial, sans-serif">Trending</h5></div>
-    <div class="row">
-
-      <% @trendingfeed.each do |question| %>
-          <div class="col s12 m12 l12">
-            <%= render 'question' , question: question %>
-          </div>
-      <% end %>
-    </div>
-
-  </div>
-</div>
-
-<!-- </div> -->
-<!-- </div> -->
-<script type="text/javascript">
-
+  <script type="text/javascript">
     $(document).ready(function(){
-
-        $('.modal').modal();
-
+      $('.modal').modal();
         // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
         $('#modal2').on('click', function () {
         });
-
         $('#modal2').modal({
             dismissible: true, // Modal can be dismissed by clicking outside of the modal
             opacity: 0, // Opacity of modal background
@@ -153,38 +117,33 @@
             outDuration: 200, // Transition out duration
             startingTop: '4%', // Starting top style attribute
             endingTop: '10%', // Ending top style attribute
-        });
-
+          });
         $('#modal2').modal('open');
         $('.trigger-modal').modal();
         $('#modal2').modal('close');
         $('input#title, textarea#content').characterCounter();
-
-    });
-</script>
-<script type="text/javascript" charset="utf-8">
-    <% if current_user!=nil %>
-    $("#create_question_submit").click(function(){
+      });
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      <% if current_user!=nil %>
+      $("#create_question_submit").click(function(){
         noty({
-            text: 'You Successfully posted a new question',
-            type: 'alert',
+          text: 'You Successfully posted a new question',
+          type: 'alert',
 
-            progressBar: true
+          progressBar: true
         });
-    });
-
-    <% else%>
-    $("#create_question_submit").click(function(){
+      });
+      <% else%>
+      $("#create_question_submit").click(function(){
         noty({
-            text: 'You must login or signup before raising a question!!',
-            type: 'error',
-
-            progressBar: true
+          text: 'You must login or signup before raising a question!!',
+          type: 'error',
+          progressBar: true
         });
         $('#log_in_modal').click();
+      });
+      <% end %>
+    </script>
 
-    });
-    <% end %>
-</script>
-
-</body>
+  </body>

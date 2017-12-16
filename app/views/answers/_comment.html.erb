@@ -1,105 +1,98 @@
 <style type="text/css">
   *{font-family:calibri;}
 
-.message .avatar{
-  border-radius:100px;
-  width:80px;
-  height:80px;
-  float:left;
-}
-.message{
-  position:relative;
-  clear:both;
-  width:100%;
-}
-.message .avatar{
-  margin-top:5px;
-}
-.message p{
-  float:left;
-  font-family:calibri;
-  color:#333;
-  width: 85%;
-  margin:0;
-  margin-left:20px;
-  margin-top:5px;
-  padding:10px;
-  background-color:#fafafa;
-  border:1px solid #eee;
-  border-radius:5px;
-  margin-bottom:10px;
-  word-spacing:3px;
-  line-height:22px;
-}
-.message p em.info{
-  display:block;
-  text-align:right;
-  margin-top:10px;
-  font-size:12px;
-  font-weight:bold;
-  color:666px;
-}
-.message p strong{
-  display:block;
-  color:#428bca;
-  border-bottom:1px solid #ddd;
-  margin-bottom:10px;
-}
-.message p strong em{
-  font-weight:normal;
-  color:#333;
-  font-size:10pt;
-}
-.message .triangle{
-  display:block;
-  position:absolute;
-  left:85px;
-  top:25px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 15px 10px 0;
-  border-color: transparent #eeeeee transparent transparent;
-}
+  .message .avatar{
+    border-radius:100px;
+    width:80px;
+    height:80px;
+    float:left;
+  }
+  .message{
+    position:relative;
+    clear:both;
+    width:100%;
+  }
+  .message .avatar{
+    margin-top:5px;
+  }
+  .message p{
+    float:left;
+    font-family:calibri;
+    color:#333;
+    width: 85%;
+    margin:0;
+    margin-left:20px;
+    margin-top:5px;
+    padding:10px;
+    background-color:#fafafa;
+    border:1px solid #eee;
+    border-radius:5px;
+    margin-bottom:10px;
+    word-spacing:3px;
+    line-height:22px;
+  }
+  .message p em.info{
+    display:block;
+    text-align:right;
+    margin-top:10px;
+    font-size:12px;
+    font-weight:bold;
+    color:666px;
+  }
+  .message p strong{
+    display:block;
+    color:#428bca;
+    border-bottom:1px solid #ddd;
+    margin-bottom:10px;
+  }
+  .message p strong em{
+    font-weight:normal;
+    color:#333;
+    font-size:10pt;
+  }
+  .message .triangle{
+    display:block;
+    position:absolute;
+    left:85px;
+    top:25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #eeeeee transparent transparent;
+  }
 
-@media screen and (max-width: 1140px) {
-  #global{width:100%;}
-  .message{float:none;margin:auto;}
-  .messages{float:none;margin:auto;}
+  @media screen and (max-width: 1140px) {
+    #global{width:100%;}
+    .message{float:none;margin:auto;}
+    .messages{float:none;margin:auto;}
 
-}
-@media screen and (max-width: 620px) {
-  
-  body{margin-right:60px;}
-  .message .avatar,.inverse .avatar,.message .triangle,.inverse .triangle{display:none;}
+  }
+  @media screen and (max-width: 620px) {
+    
+    body{margin-right:60px;}
+    .message .avatar,.inverse .avatar,.message .triangle,.inverse .triangle{display:none;}
 
-}
+  }
 </style>
 
 
 <div class="comment">
   <div class="userDetail">
-  <div class="messages">
-<div class="message">
-  <div class="triangle"></div>
-  <div class="avatar"><%=avatar_for(comment.user,size: 40)%></div>
-   
-  <p><strong><%= link_to comment.user.name,user_path(comment.user.id) %>,<em><%= time_ago_in_words(comment.created_at) unless comment.created_at.blank? %> ago</em></strong>
-     <%= comment.content %>
+    <div class="messages">
+      <div class="message">
+        <div class="triangle"></div>
+        <div class="avatar"><%=avatar_for(comment.user,size: 40)%></div>
+        
+        <p><strong><%= link_to comment.user.name,user_path(comment.user.id) %>,<em><%= time_ago_in_words(comment.created_at) unless comment.created_at.blank? %> ago</em></strong>
+         <%= comment.content %>
+         <br>
+         <%if can? :destroy,comment%>
+         <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, comment, method: :delete, data: {confirm: "Are you sure?"}%>
+         <% end %>
+       </p>
+     </div>
      <br>
-     
-<!--   <%if can? :update,comment%>
-    <%= link_to 'Edit', comment %>
-    <% end %> -->
-    <%if can? :destroy,comment%>
-    <%= link_to ('<i class="material-icons tooltipped right" data-position="bottom" data-delay="50" data-tooltip="Delete">delete</i>').html_safe, comment, method: :delete, data: {confirm: "Are you sure?"}%>
-    <% end %>
-
-</p>
+   </div>
+ </div>
 </div>
-<br>
-  </div>
-</div>
-
-
-  </div>

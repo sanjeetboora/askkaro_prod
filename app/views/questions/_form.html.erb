@@ -1,3 +1,8 @@
+ <!-- ########################################################################################################## 
+
+                                       FORM FOR EDIT QUESTION
+                                          
+ ########################################################################################################### -->
 <style type="text/css">
  div.card.z-depth-4.center div.action i.waves-effect.waves-light.btn.green.darken-3.right{
   line-height: 2em;
@@ -49,9 +54,6 @@ border-radius: 10px;">
 </div>
 <% end %>
 
-
-
-
 <script type="text/javascript">
   var formmodified=0;
   $('form *').change(function(){
@@ -67,81 +69,11 @@ border-radius: 10px;">
       confirmationMessage = 'It looks like you have been editing something. '
       + 'If you leave before saving, your changes will be lost.';
     }
-    
-
     (e || window.event).returnValue = confirmationMessage; //Gecko + IE
     return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
   });
-
-
-// $(document).ready(function() {
-//     formmodified=0;
-//     $('form *').change(function(){
-//       formmodified=1;
-//     });
-//     // window.onbeforeunload = confirmExit;
-//     // function confirmExit() {
-//     //   if (formmodified == 1) {
-//     //     return "New information not saved. Do you wish to leave the page?";
-//     //   }
-//     // }
-//     $("input[name='commit']").click(function() {
-//       formmodified = 0;
-//     });
-
-
-
-// // window.onload = function() {
-//     window.addEventListener("beforeunload", function (e) {
-//         if (formmodified == 0) {
-//             return undefined;
-//         }
-
-//         var confirmationMessage = 'It looks like you have been editing something. '
-//                                 + 'If you leave before saving, your changes will be lost.';
-
-//         (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-//         return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
-//     });
-//  };
-
-
-
-
-
-
-
-
-//  $(document).ready(function() {
-//     formmodified=0;
-//     $('.edit_question').change(function(){
-//         formmodified=1;
-//     });
-//     window.onbeforeunload = confirmExit;
-//     function confirmExit() {
-//         if (formmodified == 1) {
-//             return "New information not saved. Do you wish to leave the page?";
-//         }
-//     }
-//     $("input[name='commit']").click(function() {
-//         formmodified = 0;
-//     });
-// });
-
-
-// window.onbeforeunload = function(){
-//   return 'Are you sure you want to leave?';
-// };
-// $('#edit_question_#{@question.id}').data('serialize',$('#edit_question_#{@question.id}').serialize()); // On load save form current state
-
-// $(window).bind('beforeunload', function(e){
-//     if($('#edit_question_#{@question.id}').serialize()!=$('#edit_question_#{@question.id}').data('serialize'))return true;
-//     else e=null; // i.e; if form state change show warning box, else don't show it.
-// });
 </script>
 
 <script type="text/javascript">
   $('.tooltipped').tooltip({delay: 50});
-
-
 </script>

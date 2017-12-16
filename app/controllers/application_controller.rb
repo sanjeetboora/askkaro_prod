@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
         @var=[]
     end
   end
+  
   def addnotes
     @note = Note.new
     @ques=Question.new

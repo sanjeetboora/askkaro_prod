@@ -1,6 +1,7 @@
 class SocializationsController < ApplicationController
   before_filter :load_socializable
 
+
   def follow
     current_user.toggle_follow!(@socializable)
     respond_to do |format|
@@ -8,10 +9,10 @@ class SocializationsController < ApplicationController
     end
   end
 
+# FOR FOLLOWING ON QUESTIONS
   def followQuestion
     @question=Question.find(params[:question_id])
     follow=Follow.where(followable_type: "Question",follower_id: current_user.id,followable_id: @question.id).first
-
     if follow
       current_user.toggle_follow!(@socializable)
       @is_followed=false
@@ -24,17 +25,16 @@ class SocializationsController < ApplicationController
       format.js {}
     end
   end
+
+  # FOR FOLLOWING ON USERS
     def followUser
     @user = User.find(params[:user_id])
     follow=Follow.where(followable_type: "User",follower_id: current_user.id,followable_id: @user.id).first
-    # byebug
     if follow
       current_user.toggle_follow!(@socializable)
       @is_followed=false
     else
-
       current_user.toggle_follow!(@socializable)
-
       Notification.create(recipient: @user,actor: current_user,action: "Followed You",notifiable: @user,url: @user_path)
       @is_followed=true
     end
@@ -42,6 +42,8 @@ class SocializationsController < ApplicationController
       format.js {}
     end
   end
+
+  # FOR FOLLOWING ON TRENDS
   def followTrend
     @trending=Trend.find(params[:trend_id])
     follow=Follow.where(followable_type: "Trend",follower_id: current_user.id,followable_id: @trending.id).first
@@ -57,7 +59,7 @@ class SocializationsController < ApplicationController
       format.js {}
     end
   end
-
+# FOR LIKE ON QUESTIONS
   def like
     @question=Question.find(params[:question_id])
     like=Like.where(likeable_type: "Question",liker_id: current_user.id,likeable_id: @question.id).first
@@ -69,13 +71,12 @@ class SocializationsController < ApplicationController
       Notification.create(recipient: @question.user,actor: current_user,action: "Liked Your Question",notifiable: @question,url: @question_path)
       @is_liked=true
     end
-
-
     respond_to do |format|
       format.js {}
     end
   end
 
+# FOR FOLLOWING ON ANSWERS
   def likeAnswer
     @answer=Answer.find(params[:answer_id])
     like=Like.where(likeable_type: "Answer",liker_id: current_user.id,likeable_id: @answer.id).first
@@ -83,7 +84,6 @@ class SocializationsController < ApplicationController
       current_user.toggle_like!(@socializable)
       @is_liked=false
     else
-      # byebug
       current_user.toggle_like!(@socializable)
       Notification.create(recipient: @answer.user,actor: current_user,action: "Liked Your Answer",notifiable: @answer.question,url: @answer.question_path)
       @is_liked=true
@@ -110,9 +110,6 @@ class SocializationsController < ApplicationController
 
           when id = params[:subtrend_id]
             Subtrend.find(id)
-          # when id = params[:category_id]
-          #   @community.categories.find_by_id(id)
-
           else
             raise ArgumentError, "Unsupported socializable model, params: "
             params.keys.inspect

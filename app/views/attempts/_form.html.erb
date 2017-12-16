@@ -11,12 +11,9 @@
   font-family: Lato, sans-serif;
   margin-bottom: 2px;
 }
-
 .navbar-nav-primary {
   text-transform: uppercase;
 }
-
-
 </style>
 <nav class="navbar navbar-default banner navbar-fixed-top">
   <div class="container-fluid">
@@ -25,28 +22,16 @@
       <div class="alert alert-info navbar-left" id="note" style="margin-bottom: 1px;">
           <strong>Please dont click anywhere else aprt from the browser window and current tab else your test will be submitted."</strong>
       </div>
-
       <div class="alert alert-info navbar-right" id="timer" style="margin-bottom: 1px;padding-bottom;padding-bottom: 1px;padding-top: 5px;margin-right: 2px;">
        <span><strong style="font-size: 12px;">Time Left: <p id="demo"></p></strong></span>
-       
-
    </div>
-
-
 </div>
-
-</div><!-- /.container-fluid -->
+</div>
 </nav>
-
 <h3 class="survey-title">
   <p style="white-space: pre-wrap"><%= raw(@attempt.survey.name) %></p>
 </h3>
 <p style="white-space: pre-wrap"><%= raw(@attempt.survey.description) %></p>
-
-
-
-
-
 <script>
     var now = new Date().getTime();
     var hours = parseInt("<%= @survey.period.to_s[11,13][0,2].to_i %>");
@@ -74,7 +59,6 @@
         }
     }, 1000);
 </script>
-
 <%= form_for(@attempt, url: attempt_scope(@attempt)) do |f| %>
 <%= hidden_field_tag :survey_id, @survey.id %>
 <%= hidden_field_tag :enrollment, params["enrollment"] %>
@@ -96,89 +80,13 @@
 </ol>
 <%= f.submit "Submit", class: 'btn btn-success', id: 'submit_atempt' %>
 <% end -%>
-
-
 <script>
     window.location.hash="no-back-button";
     window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
     window.onhashchange=function(){window.location.hash="no-back-button";}
 </script>
 
-<script type="text/javascript" charset="utf-8">
-    // "librairie" de gestion de la visibilité
-    //  var visible = vis(); // donne l'état courant
-    //  vis(function(){});   // définit un handler pour les changements de visibilité
-//    var vis = (function(){
-//        var stateKey, eventKey, keys = {
-//            hidden: "visibilitychange",
-//            webkitHidden: "webkitvisibilitychange",
-//            mozHidden: "mozvisibilitychange",
-//            msHidden: "msvisibilitychange"
-//        };
-//        for (stateKey in keys) {
-//            if (stateKey in document) {
-//                eventKey = keys[stateKey];
-//                break;
-//            }
-//        }
-//        return function(c) {
-//            if (c) {
-//                document.addEventListener(eventKey, c);
-//                //document.addEventListener("blur", c);
-//                //document.addEventListener("focus", c);
-//            }
-//            return !document[stateKey];
-//        }
-//    })();
-//
-//    vis(function(){
-//        document.title = vis() ? 'Visible' : 'Not visible';
-//        alert("You are trying to exit the text window your test will be submitted and you will exit!")
-//        document.getElementById('submit_atempt').click();
-////        console.log(new Date, 'visible ?', vis());
-//    });
-//
-//    // to set the initial state
-//    alert("You are trying to exit the text window your test will be submitted and you will exit!")
-</script>
-<script type="text/javascript" charset="utf-8">
-//    var hidden, visibilityChange;
-//    if (typeof document.hidden !== "undefined") {
-//        hidden = "hidden";
-//        visibilityChange = "visibilitychange";
-//    }
-//    else if (typeof document.mozHidden !== "undefined") {
-//        hidden = "mozHidden";
-//        visibilityChange = "mozvisibilitychange";
-//    }
-//    else if (typeof document.msHidden !== "undefined") {
-//        hidden = "msHidden";
-//        visibilityChange = "msvisibilitychange";
-//    }
-//    else if (typeof document.webkitHidden !== "undefined") {
-//        hidden = "webkitHidden";
-//        visibilityChange = "webkitvisibilitychange";
-//    }
-//
-//    function handleVisibilityChange() {
-//        if (document[hidden]) {
-//            //Not visible, Do whatever
-//            alert("You are trying to exit the text window your test will be submitted and you will exit!")
-//            document.getElementById('submit_atempt').click();
-//
-//        }
-//        else {
-//            //Visible
-//        }
-//    }
-//
-//    if (typeof document.addEventListener === "undefined" ||
-//        typeof document[hidden] === "undefined") {
-//        alert("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
-//    }
-//    else
-//        document.addEventListener(visibilityChange, handleVisibilityChange, false);
-</script>
+
 <script type="text/javascript" charset="utf-8">
     var v=1;
     //    function toggleFullScreen() {

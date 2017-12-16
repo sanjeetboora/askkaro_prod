@@ -1,30 +1,25 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
-  # GET /notes
-  # GET /notes.json
+# TO SHOW ALL NOTES
   def index
-    # @notes = Note.all
-    # @user=User.find(params[:user_id])
     @notes=Note.where(:user_id => current_user.id).order(updated_at: :desc)
   end
 
-  # GET /notes/1
-  # GET /notes/1.json
+# TO SHOW A NOTE
   def show
   end
 
-  # GET /notes/new
+# FOR NEW NOTE
   def new
     @note = Note.new
   end
 
-  # GET /notes/1/edit
+# TO EDIT A NOTE
   def edit
   end
 
-  # POST /notes
-  # POST /notes.json
+# TO CREATE ALL NOTE
   def create
     @note = Note.new(note_params)
   @note.user_id = current_user.id
@@ -41,8 +36,7 @@ class NotesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /notes/1
-  # PATCH/PUT /notes/1.json
+# TO UPDATE A NOTE
   def update
     respond_to do |format|
       if @note.update(note_params)
@@ -55,8 +49,7 @@ class NotesController < ApplicationController
     end
   end
 
-  # DELETE /notes/1
-  # DELETE /notes/1.json
+# TO DELETE ALL NOTE
   def destroy
     @note.destroy
     respond_to do |format|

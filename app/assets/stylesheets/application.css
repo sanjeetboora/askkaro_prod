@@ -104,7 +104,6 @@ nav ul li a:visited:hover {
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
   transition-property: box-shadow, color;
-  /*box-shadow: 0 0.05em 0.25em 0 rgba(0, 0, 0, 0.35);*/
 }
 nav ul li a:not(:only-child):after,
 nav ul li a:visited:not(:only-child):after {
@@ -196,22 +195,17 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
   margin-right: 35px;
 }
 .card.small.userf {
-
   height: 300px;
   width: 250px;
   margin-top: 43px;
   padding-left: 15px;
   margin-left: -10px;
   margin-right: 11px;
-  
   border-radius: 8px;
-
 }
 
 .card.small.userf:hover {
-
   box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
-
 }
 #user_cloud {
   padding: 2px;
@@ -219,14 +213,11 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
   max-height: 216px;
   overflow-x: hidden;
   overflow-y: auto;
-
-
 }
 
 #user_cloud  div.userfollow{
   padding: 5px 0px;
   border-bottom: 1px solid #e6ecf0;
-
 }
 
 #user_cloud div.userfollow figure {
@@ -237,136 +228,132 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
   border-radius: 50%;
   float: left;
 }
-   /* #user_cloud div.userfollow  div.usertext{
-      margin-top: 2px;
-      margin-bottom: 2px;
-      }*/
-      #user_cloud div.userfollow  div.usertext h5{
-        font-size: 24px;
-        font-weight: normal;
-        line-height: 1;
-        padding: 0;
-        margin: 4px;
-        margin-left: 62px;
-      }
+
+#user_cloud div.userfollow  div.usertext h5{
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1;
+  padding: 0;
+  margin: 4px;
+  margin-left: 62px;
+}
+
+#user_cloud .chip{
+ font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+ display: inline-block;
+ height: 21px;
+ font-size: 13px;
+ font-weight: 500;
+ color: rgba(0,0,0,0.6);
+ line-height: 20px;
+ padding: 0 8px;
+ border-radius: 16px;
+ background-color: #ffffff;
+ margin-bottom: 0px;
+ margin-right: 5px;
+ margin-left: 12px;
+ border: 1px solid #039BE5;
+}
+#user_cloud .chip:hover{
+ background-color: #039BE5;
+ color: #ffffff;
+ z-index: 8000;
+ /*  background-color: #e0f7fa ;*/
+
+}
+
+#user_cloud .chip a{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#00b8d4;
+}
+
+#user_cloud .chip a:hover{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+
+  color:#ffffff;
+}
+#user_cloud .chip:hover a{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#fff;
+}
+.card.small.tag {
+  height: 300px;
+  width: 250px;
+  margin-top: 43px;
+  padding-left: 15px;
+  margin-left: -10px;
+  margin-right: 11px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+}
+
+.card.small.tag:hover {
+
+  box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
+
+}
+
+#tag_cloud {
+  padding: 2px;
+  padding-left: 5px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#tag_cloud .chip{
+  font-family: 'Capriola, sans-serif';font-size: 12px;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 22px;
+  border: 1px solid #00b8d4;
+  background-color: white;
+  height: 32px;
+  color: #00b8d4;
+  margin-bottom: 2px;
+  margin-right: 3px;
+  padding-left: 5px;
+  padding-right: 3px;
+  padding-bottom: 0;
+  padding-top: 4px;
+}
+#tag_cloud .chip:hover{
+ background-color: #00b8d4;
+ color: #ffffff;
+ z-index: 8000;
+ /*  background-color: #e0f7fa ;*/
 
 
-      #user_cloud .chip{
-       font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-       display: inline-block;
-       height: 21px;
-       font-size: 13px;
-       font-weight: 500;
-       color: rgba(0,0,0,0.6);
-       line-height: 20px;
-       padding: 0 8px;
-       border-radius: 16px;
-       background-color: #ffffff;
-       margin-bottom: 0px;
-       margin-right: 5px;
-       margin-left: 12px;
-       border: 1px solid #039BE5;
-     }
-     #user_cloud .chip:hover{
-       background-color: #039BE5;
-       color: #ffffff;
-       z-index: 8000;
-       /*  background-color: #e0f7fa ;*/
+}
+#tag_cloud .chip a{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#00b8d4;
+}
 
-     }
+#tag_cloud .chip:hover a{
+  font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+  font-weight: 400;
+  color:#fff;
+}
+#tag_cloud .chip a.sml{
+  font-size: 14px;
+  font-weight: 700;
 
-     #user_cloud .chip a{
-      font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-      font-weight: 400;
-      color:#00b8d4;
-    }
+}
+#tag_cloud .chip a.med{
 
-    #user_cloud .chip a:hover{
-      font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
+ font-size: 14px;
+ font-weight: 700;
 
-      color:#ffffff;
-    }
-    #user_cloud .chip:hover a{
-      font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-      font-weight: 400;
-      color:#fff;
-    }
-    .card.small.tag {
-      height: 300px;
-      width: 250px;
-      margin-top: 43px;
-      padding-left: 15px;
-      margin-left: -10px;
-      margin-right: 11px;
-      border: 1px solid #d1d1d1;
-      border-radius: 8px;
-    }
+}
+#tag_cloud .chip a.lar{
 
-    .card.small.tag:hover {
-
-      box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
-
-    }
-
-    #tag_cloud {
-      padding: 2px;
-      padding-left: 5px;
-      overflow-x: hidden;
-      overflow-y: hidden;
-    }
-
-    #tag_cloud .chip{
-      font-family: 'Capriola, sans-serif';font-size: 12px;
-      font-weight: 700;
-      font-size: inherit;
-      line-height: 22px;
-      border: 1px solid #00b8d4;
-      background-color: white;
-      height: 32px;
-      color: #00b8d4;
-      margin-bottom: 2px;
-      margin-right: 3px;
-      padding-left: 5px;
-      padding-right: 3px;
-      padding-bottom: 0;
-      padding-top: 4px;
-    }
-    #tag_cloud .chip:hover{
-     background-color: #00b8d4;
-     color: #ffffff;
-     z-index: 8000;
-     /*  background-color: #e0f7fa ;*/
-
-
-   }
-   #tag_cloud .chip a{
-    font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-    font-weight: 400;
-    color:#00b8d4;
-  }
-
-  #tag_cloud .chip:hover a{
-    font-family: "DejaVu Sans",Verdana, Tahoma, Arial, sans-serif;
-    font-weight: 400;
-    color:#fff;
-  }
-  #tag_cloud .chip a.sml{
-    font-size: 14px;
-    font-weight: 700;
-
-  }
-  #tag_cloud .chip a.med{
-
-   font-size: 14px;
-   font-weight: 700;
-
- }
- #tag_cloud .chip a.lar{
-
-   font-size: 14px;
-   font-weight: 700;
- }
- #tag_cloud .chip a .material-icons{
+ font-size: 14px;
+ font-weight: 700;
+}
+#tag_cloud .chip a .material-icons{
   font-size: 16px;
 }
 .car1.small.note {
@@ -376,15 +363,10 @@ html body div#mithu.container div.col.s12.m12.l4.left.taguser{
   margin-top: 43px;
 }
 
-
-
-
 .car1.small.note .wrapper {
   font-family:sans;
   margin: auto 0 auto;
 }
-
-/* Note styles */
 .car1.small.note .note-wrap {
   font-size: 24px;
   font-family: Englebert, Arial;
@@ -497,19 +479,3 @@ div.col.s12.m12.l4.left.taguser div div.card.small.userf div.card-action.center{
   padding: 6px 24px;
   border-radius: 8px;
 }
-  /*.card.small.note:hover {
-  box-shadow: 0 12px 12px rgba(0, 0, .6, .6);
-  }*/
-
-/*.input-field input[type="search"]{
-  background-color: white;
-}
-nav .input-field label i {
-  color: rgba(53, 38, 38, 0.7);
-  transition: color .3s;
-}
-nav ul#nav-mobile.right li{
-  margin-left: 15px;
-  margin-right: 15px;
-}
-*/

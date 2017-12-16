@@ -97,16 +97,11 @@ body {
   <h2 class="login-header">Resend confirmation instructions</h2>
   <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
 			<%= devise_error_messages! %>
-  
-
-
     <p><div class="group">
 					<label for="pass" class="label">Email Address</label>
 					<%= f.email_field :email, autofocus: true,class:"input validate", id:"pass", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
 				</div></p>
-  
     <p><input type="submit" class="button" value="Resend confirmation instructions"></p>
-
   <% end %>
 			<%= render "devise/shared/links" %>
 </div>

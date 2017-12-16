@@ -1,44 +1,46 @@
+ <!-- ########################################################################################################## 
 
+                                       FORM FOR EDIT ANSWER
+                                          
+ ########################################################################################################### -->
 
 <%= form_for(@answer) do |f| %>
-    <% if @answer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+<% if @answer.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
 
-      <ul>
-      <% @answer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% @answer.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 <div class="card z-depth-4 center" style="border: 1px solid #d1d1d1;
 border-radius: 10px;">
-  <div class="green darken-3 z-depth-4" style="padding-bottom:20px;">
-    <br>
-    <span class="card-title white-text">Edit answer</span>
-    <br>
-  </div>
-  <form>
-    <div class="col s12" style="padding:0;">
-        <div class="input-field">
-         <%= f.cktext_area :content, rows: 10,id: 'ckeditid' %>
-        <label for="answer_content" data-error="wrong" data-success="right">Content</label>
-      </div>
-      
-    <br>
-    </div>
+<div class="green darken-3 z-depth-4" style="padding-bottom:20px;">
+  <br>
+  <span class="card-title white-text">Edit answer</span>
+  <br>
+</div>
+<form>
+  <div class="col s12" style="padding:0;">
+    <div class="input-field">
+     <%= f.cktext_area :content, rows: 10,id: 'ckeditid' %>
+     <label for="answer_content" data-error="wrong" data-success="right">Content</label>
+   </div>
 
-    <div class="action" style="padding:40px;">
-      <%= f.submit "Save" , class:"waves-effect waves-light btn green darken-3"%>
-       <%= link_to 'Back', @answer.question, class:"waves-effect waves-light btn green darken-3 left" %>
-    </div>
-  </form>
+   <br>
+ </div>
+
+ <div class="action" style="padding:40px;">
+  <%= f.submit "Save" , class:"waves-effect waves-light btn green darken-3"%>
+  <%= link_to 'Back', @answer.question, class:"waves-effect waves-light btn green darken-3 left" %>
+</div>
+</form>
 </div>
 <% end %>
 
 <script type="text/javascript">
   $('.tooltipped').tooltip({delay: 50});
-
-});
 </script>
