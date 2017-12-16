@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   resources 'surveys'
   resources 'attempts'
-  
-  
   match '(errors)/:status', to: 'errors#error_404', constraints: {status: /\d{3}/}, via: :all
   get '/passwordverification',to: 'surveys#quiz_confirm_password'
   post 'verifyPass',to: 'surveys#quiz_verfication'
