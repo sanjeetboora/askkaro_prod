@@ -17,12 +17,18 @@
         <%= render 'option_fields', :f => builder %>
     <% end -%>
   </ul>
-  <%= link_to_add_field 'Add option', f, :options, 'btn btn-primary' %>
+  <%= link_to_add_field1 'Add option', f, :options, 'btn btn-primary' %>
 
-  <a id="remove-attach" class="btn btn-danger" onclick="removeField(this)" href="javascript:;">Remove question</a>
+  <a id="remove-attach" class="btn btn-danger quesremove" onclick="removeField(this)" href="javascript:;">Remove question</a>
   </li>
 </div>
-
+<script type="text/javascript" charset="utf-8">
+    var iq = $('.quesremove');
+    iq.click(function () {
+        console.log("clicked");
+        console.log(this);
+    })
+</script>
 <script type="text/javascript" charset="utf-8">
     var r=$('#remove-attach');
     var q=$('.ques');
@@ -32,20 +38,21 @@
     });
     var c=$('.form-control');
     var check=1;
-    setInterval(function () {
-        for(var i=0;i<c.length;i++){
-            if(c[i].value===''){
-                check = 0;
-                break;
-            } else {
-                check=1;
-            }
-        }
-        if(check==1){
-            $('#submitbutton').removeClass('disabled');
-        } else {
-            $('#submitbutton').addClass('disabled');
-        }
-    },1);
-    </script>
+//    setInterval(function () {
+//        for(var i=0;i<c.length;i++){
+//            if(c[i].value===''){
+//                check = 0;
+//                break;
+//            } else {
+//                check=1;
+//            }
+//        }
+//        if(check==1){
+//            $('#submitbutton').removeClass('disabled');
+//        } else {
+//            $('#submitbutton').addClass('disabled');
+//        }
+//    },1);
+</script>
+
     

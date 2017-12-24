@@ -69,6 +69,23 @@ module SurveysHelper
     :class=>c+"")
 
   end
+    def link_to_add_field1(name, f, association, c)
+
+      new_object = f.object.class.reflect_on_association(association).klass.new
+
+      fields = f.fields_for(association, new_object,:child_index => "new_#{association}") do |builder|
+
+        render(association.to_s.singularize + "_fields", :f => builder)
+
+      end
+
+      __link_to_function(name, "addField1(this, \"#{association}\", \"#{escape_javascript(fields)}\")",
+
+                         :id=>"add-attach",
+
+                         :class=>c+"")
+
+    end
 
 
   def get_answer_fields attempt

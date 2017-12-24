@@ -63,28 +63,64 @@
 
   <% end -%>
 </div>
+
 <script type="text/javascript" charset="utf-8">
   $(document).ready(function () {
     $('#add-attach').click();
   });
   var c=$('.form-control');
-  var check=1;
+  var que=$('.ques');
+  var check=0;
+  var check1=0;
+
   setInterval(function () {
     for(var i=0;i<c.length;i++){
-      if(c[i].value===''){
+      if(c[i].value==='' ){
         check = 0;
         break;
       } else {
         check=1;
       }
     }
+    for(var i =0 ; i<$('.ques').length;i++){
+      if($('.ques')[i].style.display=='none'){
+          check1=0;
+      } else {
+          check1 =1;
+          break;
+      }
+    }
+
     if(check==1){
-      $('#submitbutton').removeClass('disabled');
+        if(check1==1){
+            $('#submitbutton').removeClass('disabled');
+//            console.log("lll");
+        } else {
+            $('#submitbutton').addClass('disabled');
+        }
     } else {
       $('#submitbutton').addClass('disabled');
     }
+    console.log(check,check1);
   },1);
+//  setInterval(function () {
+//      for(var i =0 ; i<que.length;i++){
+//      if(que[i].value==='<>'){
+//          check1=0;
+//      } else if(que[i].value!=='<>'){
+//          check1 =1;
+//          break;
+//      }
+//      console.log(que);
+//    }
+//      if(check1==1 ){
+//          $('#submitbutton').removeClass('disabled');
+//      } else {
+//          $('#submitbutton').addClass('disabled');
+//      }
+//  },1);
 </script>
+
 
 <script type="text/javascript">
   $("#datetimepicker1").datetimepicker({
@@ -99,8 +135,12 @@
     // remove attachment field
     function removeField(link) {
       $(link).prev("input[type=hidden]").val("true");
+        console.log($(link).prev("input[type=hidden]").context.parentNode.children[1].children[0].children[1].value);
+        $(link).prev("input[type=hidden]").context.parentNode.children[1].children[0].children[1].value='<>';
+        $(link).prev("input[type=hidden]").context.parentNode.children[1].children[0].children[1].style.display='none';
       tag = $(link).closest(".field")
       tag.hide('slow');
+
     }
     // add attachment field
     function addField(link, association, content) {
@@ -112,13 +152,32 @@
       html.appendTo(target).slideDown({
         duration: 'slow',
         progress: function () {
-          delta = $(this).outerHeight(true) - last_height
+          delta = $(this).outerHeight(true) - last_height+100
           $(window).scrollTop( $(window).scrollTop() + delta );
           last_height = $(this).outerHeight(true);
+//          console.log(last_height,delta,$(window).scrollTop());
         },
         complete: function () {
           $(this).find('input[type=text]').focus();
         }});
+    }
+    function addField1(link, association, content) {
+        var new_id = new Date().getTime();
+        var regexp = new RegExp("new_" + association, "g");
+        var html = $(content.replace(regexp, new_id)).hide();
+        var target = $(link).closest("div.field").find(".appendable").first();
+        var last_height = 0
+        html.appendTo(target).slideDown({
+            duration: 'slow',
+            progress: function () {
+                delta = $(this).outerHeight(true) - last_height
+                $(window).scrollTop( $(window).scrollTop() + delta );
+                last_height = $(this).outerHeight(true);
+//                console.log(last_height,delta,$(window).scrollTop());
+            },
+            complete: function () {
+                $(this).find('input[type=text]').focus();
+            }});
     }
   </script>
   <script type="text/javascript">
