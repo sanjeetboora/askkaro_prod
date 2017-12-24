@@ -34,7 +34,7 @@ class SurveysController < ApplicationController
     @survey.period=params["period"]
     @survey.randomcount=params["randomcount"]
     if @survey.valid? && @survey.save
-      # SurveyMailer.added_survey(current_user, @survey).deliver_now
+      SurveyMailer.added_survey(current_user, @survey).deliver_now
       flash[:info] = "Your test " + @survey.name+" as successfully been created. Please check your mail for the credentials."
       default_redirect
     else
